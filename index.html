@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Website Concepts for New York Small Businesses — Portfolio</title>
+<meta name="description" content="Twenty website concepts for New York small businesses: restaurants, pharmacies, cafés, bakeries and barbers. Every concept is a working, mobile-ready static site.">
+<meta property="og:title" content="Website Concepts for New York Small Businesses">
+<meta property="og:description" content="Twenty working website concepts: restaurants, pharmacies, cafés, bakeries and barbers.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="previews/kd-bake-sheet-desktop.jpg">
+<meta name="theme-color" content="#14130f">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#14130f; --ink2:#2a2822; --paper:#f4f0e8; --paper2:#ebe5d8; --line:#d8d0bf;
+  --mute:#6d675b; --accent:#d2492a; --gold:#c49a45;
+  --serif:"Fraunces",Georgia,"Times New Roman",serif;
+  --sans:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  --pad:clamp(16px,4vw,48px); --max:1240px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 16px/1.55 var(--sans);overflow-x:clip}
+img{max-width:100%;display:block}
+a{color:inherit}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.skip{position:absolute;left:-9999px;top:8px;background:var(--ink);color:var(--paper);padding:10px 14px;z-index:99;border-radius:6px}
+.skip:focus{left:8px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+.eyebrow{font:500 12px/1.3 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+
+/* ---------- top bar ---------- */
+.top{position:sticky;top:0;z-index:20;background:rgba(244,240,232,.92);backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:60px}
+.brand{font:600 17px/1 var(--serif);text-decoration:none;letter-spacing:-.01em;white-space:nowrap}
+.brand span{color:var(--accent)}
+.nav{display:flex;gap:4px}
+.nav a{font:500 13px/1 var(--sans);text-decoration:none;padding:9px 12px;border-radius:999px;color:var(--ink2)}
+.nav a:hover{background:var(--paper2)}
+@media (max-width:560px){.nav a.hide-s{display:none}.nav a{padding:9px 9px}}
+@media (max-width:380px){.brand{font-size:15px}.nav{gap:0}.nav a{padding:9px 7px;font-size:12.5px}.top .wrap{gap:8px}}
+
+/* ---------- hero ---------- */
+.hero{padding:clamp(48px,9vw,112px) 0 clamp(36px,6vw,72px);border-bottom:1px solid var(--line)}
+.hero h1{font:400 clamp(40px,7.4vw,96px)/.98 var(--serif);letter-spacing:-.03em;margin:18px 0 26px;max-width:14ch}
+.hero h1 em{font-style:italic;color:var(--accent)}
+.hero__row{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:clamp(24px,5vw,72px);align-items:end}
+.hero p.lede{font-size:clamp(17px,1.6vw,20px);line-height:1.55;color:var(--ink2);margin:0;max-width:52ch}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--ink)}
+.stats div{padding:14px 12px 0 0}
+.stats b{display:block;font:400 clamp(30px,4vw,44px)/1 var(--serif)}
+.stats span{font:500 10.5px/1.35 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--mute)}
+@media (max-width:800px){.hero__row{grid-template-columns:minmax(0,1fr)}}
+
+.promise{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px;padding:0;list-style:none}
+.promise li{font:500 12.5px/1 var(--sans);border:1px solid var(--line);background:#fffaf1;padding:9px 12px;border-radius:999px;color:var(--ink2)}
+.promise li::before{content:"✓ ";color:#2f7a4a;font-weight:600}
+
+/* ---------- section heads ---------- */
+.sec{padding:clamp(56px,8vw,104px) 0}
+.sec__head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:clamp(28px,4vw,48px)}
+.sec__head h2{font:400 clamp(32px,4.6vw,56px)/1.02 var(--serif);letter-spacing:-.02em;margin:10px 0 0}
+.sec__head p{max-width:46ch;margin:0;color:var(--ink2)}
+
+/* ---------- featured proposals ---------- */
+.dark{background:var(--ink);color:var(--paper)}
+.dark .eyebrow{color:#a39d8f}
+.dark .sec__head p{color:#cfc8b8}
+.case{border-top:1px solid #3a372f;padding:clamp(32px,5vw,56px) 0}
+.case:first-of-type{border-top:0;padding-top:0}
+.case__top{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:clamp(20px,4vw,56px);margin-bottom:28px}
+.case h3{font:400 clamp(28px,3.4vw,42px)/1.05 var(--serif);margin:10px 0 12px;letter-spacing:-.015em}
+.case__meta{font:400 13px/1.5 var(--mono);color:#a39d8f;margin:0}
+.case__desc{color:#d9d2c2;margin:0;font-size:16.5px}
+.case__links{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.dirs{display:grid;gap:18px}
+.dirs--2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.dirs--3{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:980px){.dirs--3{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:760px){.dirs--2{grid-template-columns:minmax(0,1fr)}.case__top{grid-template-columns:minmax(0,1fr)}}
+
+.dir{background:#1f1d18;border:1px solid #34312a;border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.dir__shot{position:relative;background:#0c0b09;aspect-ratio:16/10;overflow:hidden}
+.dir__shot .desk{width:100%;height:100%;object-fit:cover;object-position:top}
+.dir__shot .phone{position:absolute;right:5%;bottom:7%;width:19%;height:auto;min-width:58px;border-radius:10px;border:3px solid #0c0b09;box-shadow:0 12px 30px rgba(0,0,0,.6);aspect-ratio:390/844;object-fit:cover;object-position:top;background:#000}
+.dir__body{padding:18px 18px 20px;display:flex;flex-direction:column;gap:10px;flex:1}
+.dir__n{font:500 11px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--gold)}
+.dir h4{font:600 20px/1.2 var(--serif);margin:0}
+.dir p{margin:0;color:#c9c2b2;font-size:14.5px;line-height:1.5}
+.dir__act{display:flex;gap:8px;flex-wrap:wrap;margin-top:auto;padding-top:8px}
+.tag{display:inline-block;font:500 10.5px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;background:var(--accent);color:#fff;padding:5px 7px;border-radius:4px;vertical-align:3px;margin-left:6px}
+
+/* ---------- buttons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:42px;padding:10px 16px;border-radius:999px;font:600 14px/1 var(--sans);text-decoration:none;border:1px solid transparent;cursor:pointer;white-space:nowrap}
+.btn--solid{background:var(--paper);color:var(--ink)}
+.btn--solid:hover{background:#fff}
+.btn--ghost{border-color:#4a463c;color:var(--paper);background:transparent}
+.btn--ghost:hover{border-color:var(--paper)}
+.btn--ink{background:var(--ink);color:var(--paper)}
+.btn--ink:hover{background:#000}
+.btn--line{border-color:var(--line);background:#fffaf1;color:var(--ink)}
+.btn--line:hover{border-color:var(--ink)}
+.btn svg{width:15px;height:15px}
+
+/* ---------- filters + grid ---------- */
+.filters{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding:2px 2px 6px;margin:0 0 26px;-webkit-overflow-scrolling:touch}
+.filters::-webkit-scrollbar{display:none}
+.chip{flex:none;border:1px solid var(--line);background:#fffaf1;border-radius:999px;padding:10px 15px;font:500 13.5px/1 var(--sans);cursor:pointer;min-height:40px}
+.chip span{font-family:var(--mono);font-size:11.5px;color:var(--mute);margin-left:5px}
+.chip[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.chip[aria-pressed="true"] span{color:#bdb6a6}
+
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2.2vw,28px);list-style:none;margin:0;padding:0}
+@media (max-width:980px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:620px){.grid{grid-template-columns:minmax(0,1fr)}}
+.card{background:#fffaf1;border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;transition:transform .25s ease,box-shadow .25s ease}
+.card:hover{transform:translateY(-3px);box-shadow:0 14px 34px -18px rgba(20,19,15,.45)}
+.card[hidden]{display:none}
+.card__img{position:relative;aspect-ratio:4/3;background:var(--c2,#ddd);overflow:hidden}
+.card__img img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.card__img img.is-shot{object-position:top}
+.card:hover .card__img img{transform:scale(1.04)}
+.card__no{position:absolute;left:12px;top:12px;font:500 11px/1 var(--mono);background:rgba(20,19,15,.82);color:#fff;padding:6px 8px;border-radius:5px;letter-spacing:.06em}
+.card__type{position:absolute;right:12px;top:12px;font:500 11px/1 var(--mono);background:rgba(255,250,241,.92);color:var(--ink);padding:6px 8px;border-radius:5px;letter-spacing:.06em;text-transform:uppercase}
+.card__body{padding:18px 18px 18px;display:flex;flex-direction:column;gap:8px;flex:1}
+.card h3{font:600 21px/1.15 var(--serif);margin:0;letter-spacing:-.01em}
+.card__loc{font:400 12.5px/1.3 var(--mono);color:var(--mute);margin:0}
+.card p.d{margin:2px 0 0;color:var(--ink2);font-size:14.5px;line-height:1.5}
+.pal{display:flex;gap:5px;margin:6px 0 2px;padding:0;list-style:none}
+.pal li{width:20px;height:20px;border-radius:50%;border:1px solid rgba(0,0,0,.14)}
+.card__act{display:flex;gap:8px;margin-top:auto;padding-top:10px}
+.card__act .btn{flex:1;min-height:40px;padding:10px 12px;font-size:13.5px}
+
+/* ---------- process / notes ---------- */
+.notes{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border-top:1px solid var(--ink);margin:0;padding:0;list-style:none}
+.notes li{padding:22px 22px 0 0}
+.notes b{display:block;font:600 18px/1.25 var(--serif);margin:8px 0 6px}
+.notes p{margin:0;color:var(--ink2);font-size:14.5px}
+@media (max-width:900px){.notes{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.notes{grid-template-columns:minmax(0,1fr)}}
+
+.foot{border-top:1px solid var(--line);padding:32px 0 44px;font-size:13.5px;color:var(--mute)}
+.foot .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between}
+.foot p{margin:0;max-width:70ch}
+
+/* ---------- preview modal ---------- */
+.pv{position:fixed;inset:0;z-index:50;background:rgba(12,11,9,.96);display:none;flex-direction:column;padding:14px}
+.pv.open{display:flex}
+.pv__bar{display:flex;align-items:center;gap:10px;color:var(--paper);padding:0 2px 12px;flex-wrap:wrap}
+.pv__t{font:600 16px/1.2 var(--serif);flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.seg{display:inline-flex;background:#2a2822;border-radius:999px;padding:3px}
+.seg button{border:0;background:transparent;color:#cfc8b8;padding:8px 13px;border-radius:999px;cursor:pointer;font:500 13px/1 var(--sans);min-height:34px}
+.seg button[aria-pressed="true"]{background:var(--paper);color:var(--ink)}
+.pv__x{border:0;background:#2a2822;color:var(--paper);width:38px;height:38px;border-radius:50%;cursor:pointer;font-size:20px;line-height:1}
+.pv__stage{flex:1;min-height:0;display:flex;justify-content:center;align-items:stretch}
+.pv__frame{width:100%;height:100%;border:0;background:#fff;border-radius:10px;transition:width .3s ease}
+.pv.phone .pv__frame{width:390px;max-width:100%;border-radius:28px;border:10px solid #000;max-height:844px;align-self:center;height:100%}
+@media (max-width:700px){.pv .seg{display:none}.pv{padding:8px}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"CollectionPage","name":"Website Concepts for New York Small Businesses","description":"Twenty working website concepts for New York restaurants, pharmacies, cafés, bakeries and barbers."}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top">NYC Storefronts<span>.</span></a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#proposals">Proposals</a>
+      <a href="#concepts">Concepts</a>
+      <a href="#approach" class="hide-s">Approach</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" id="top">
+    <div class="wrap">
+      <p class="eyebrow">Website concepts · New York City</p>
+      <h1>Websites that feel like the <em>shop</em>, not a template.</h1>
+      <div class="hero__row">
+        <p class="lede">Every concept here is a real, working website. Open them on your phone, tap the buttons, check the hours. Each one is built around how that kind of business actually runs: the bread that sells out, the prescription refill, the walk-in chair.</p>
+        <div class="stats" aria-label="At a glance">
+          <div><b>22</b><span>Working sites</span></div>
+          <div><b>6</b><span>Industries</span></div>
+          <div><b>2</b><span>Client proposals</span></div>
+        </div>
+      </div>
+      <ul class="promise" aria-label="Included in every site">
+        <li>Built for phones first</li>
+        <li>Live open/closed by NY time</li>
+        <li>Tap-to-call &amp; directions</li>
+        <li>Accessible &amp; search-ready</li>
+        <li>No monthly platform fees</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec dark" id="proposals" aria-labelledby="prop-h">
+    <div class="wrap">
+      <div class="sec__head">
+        <div>
+          <p class="eyebrow">Client proposals</p>
+          <h2 id="prop-h">Several directions, one business</h2>
+        </div>
+        <p>For these two shops we designed more than one direction, so the owner could compare different personalities side by side before choosing.</p>
+      </div>
+
+      <article class="case" id="kowal-and-daughter">
+        <div class="case__top">
+          <div>
+            <p class="eyebrow">Bakery · Greenpoint, Brooklyn</p>
+            <h3>Kowal &amp; Daughter</h3>
+            <p class="case__meta">Polish rye bakery · 118 Nassau Ave · since 1991</p>
+          </div>
+          <div>
+            <p class="case__desc">A family bakery whose real story is the morning: what came out of the oven, what's left, and what's gone. Two directions: a practical daily bake sheet, or a bold folk-art poster.</p>
+            <div class="case__links">
+              <a class="btn btn--solid" href="kowal-and-daughter/index.html">Open the full proposal</a>
+            </div>
+          </div>
+        </div>
+        <div class="dirs dirs--2">
+          <div class="dir">
+            <div class="dir__shot"><img class="desk" src="previews/kd-bake-sheet-desktop.jpg" alt="Bake Sheet concept on desktop" loading="lazy" width="1200" height="750"><img class="phone" src="previews/kd-bake-sheet-phone.jpg" alt="" loading="lazy" width="390" height="844"></div>
+            <div class="dir__body">
+              <span class="dir__n">Direction 01</span>
+              <h4>The Bake Sheet <span class="tag">Recommended</span></h4>
+              <p>The site works like the chalkboard by the register: today's loaves, what's sold out, and when the next batch is ready.</p>
+              <div class="dir__act">
+                <a class="btn btn--solid" href="kowal-and-daughter/bake-sheet/index.html">Open site</a>
+                <button class="btn btn--ghost" type="button" data-pv="kowal-and-daughter/bake-sheet/index.html" data-t="Kowal &amp; Daughter: The Bake Sheet">Preview</button>
+              </div>
+            </div>
+          </div>
+          <div class="dir">
+            <div class="dir__shot"><img class="desk" src="previews/kd-wycinanki-desktop.jpg" alt="Wycinanki Poster concept on desktop" loading="lazy" width="1200" height="750"><img class="phone" src="previews/kd-wycinanki-phone.jpg" alt="" loading="lazy" width="390" height="844"></div>
+            <div class="dir__body">
+              <span class="dir__n">Direction 02</span>
+              <h4>Wycinanki Poster</h4>
+              <p>Polish paper-cut folk art turned into a bold, colorful brand. The most memorable direction and the most fun to share.</p>
+              <div class="dir__act">
+                <a class="btn btn--solid" href="kowal-and-daughter/wycinanki/index.html">Open site</a>
+                <button class="btn btn--ghost" type="button" data-pv="kowal-and-daughter/wycinanki/index.html" data-t="Kowal &amp; Daughter: Wycinanki Poster">Preview</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="case" id="duran-hossain">
+        <div class="case__top">
+          <div>
+            <p class="eyebrow">Pharmacy · Jackson Heights, Queens</p>
+            <h3>Durán &amp; Hossain Pharmacy</h3>
+            <p class="case__meta">Independent pharmacy · 74-20 Roosevelt Ave</p>
+          </div>
+          <div>
+            <p class="case__desc">An independent pharmacy in one of the most multilingual neighborhoods in the world. Two directions: a calm, app-like way to handle refills, or a warm site rooted in the block.</p>
+          </div>
+        </div>
+        <div class="dirs dirs--2">
+          <div class="dir">
+            <div class="dir__shot"><img class="desk" src="previews/dh-care-desktop.jpg" alt="Care concept on desktop" loading="lazy" width="1200" height="750"><img class="phone" src="previews/dh-care-phone.jpg" alt="" loading="lazy" width="390" height="844"></div>
+            <div class="dir__body">
+              <span class="dir__n">Direction A</span>
+              <h4>Care</h4>
+              <p>A concierge-style pharmacy: refills, delivery cut-offs, vaccines and insurance answers, with a calm, product-like feel.</p>
+              <div class="dir__act">
+                <a class="btn btn--solid" href="duran-hossain/care.html">Open site</a>
+                <button class="btn btn--ghost" type="button" data-pv="duran-hossain/care.html" data-t="Durán &amp; Hossain: Care">Preview</button>
+              </div>
+            </div>
+          </div>
+          <div class="dir">
+            <div class="dir__shot"><img class="desk" src="previews/dh-neighbors-desktop.jpg" alt="Neighbors concept on desktop" loading="lazy" width="1200" height="750"><img class="phone" src="previews/dh-neighbors-phone.jpg" alt="" loading="lazy" width="390" height="844"></div>
+            <div class="dir__body">
+              <span class="dir__n">Direction B</span>
+              <h4>Neighbors</h4>
+              <p>The corner pharmacy as a community hub: warm, handwritten touches, languages spoken and the people behind the counter.</p>
+              <div class="dir__act">
+                <a class="btn btn--solid" href="duran-hossain/neighbors.html">Open site</a>
+                <button class="btn btn--ghost" type="button" data-pv="duran-hossain/neighbors.html" data-t="Durán &amp; Hossain: Neighbors">Preview</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="sec" id="concepts" aria-labelledby="con-h">
+    <div class="wrap">
+      <div class="sec__head">
+        <div>
+          <p class="eyebrow">The collection</p>
+          <h2 id="con-h">Eighteen shops, eighteen personalities</h2>
+        </div>
+        <p>Each concept has its own brand, layout and features. Filter by type, then open any site, or preview it in desktop and phone sizes.</p>
+      </div>
+      <div class="filters" role="group" aria-label="Filter concepts by type" id="filters"></div>
+      <ul class="grid" id="grid"></ul>
+      <p id="count" class="eyebrow" aria-live="polite" style="margin-top:22px"></p>
+    </div>
+  </section>
+
+  <section class="sec" id="approach" aria-labelledby="ap-h" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec__head">
+        <div>
+          <p class="eyebrow">How these are built</p>
+          <h2 id="ap-h">Fast, simple, yours</h2>
+        </div>
+      </div>
+      <ul class="notes">
+        <li><span class="eyebrow">01</span><b>Phone first</b><p>Most customers find you on a phone, standing on the sidewalk. Every page is tested on small screens from 320px up.</p></li>
+        <li><span class="eyebrow">02</span><b>Real details</b><p>Hours that know when you're open, tap-to-call, directions and menus that are easy to update.</p></li>
+        <li><span class="eyebrow">03</span><b>No platform lock-in</b><p>Plain, fast files you own. Host them almost anywhere, often for free, with no monthly builder fees.</p></li>
+        <li><span class="eyebrow">04</span><b>Findable</b><p>Clean structure, accessible markup and local-business details that help Google and Maps understand you.</p></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p>All businesses, people and addresses on these pages are fictional and used for design concepts only. Some food and interior photography from Unsplash.</p>
+    <p>© <span id="yr">2026</span> NYC Storefronts</p>
+  </div>
+</footer>
+
+<div class="pv" id="pv" role="dialog" aria-modal="true" aria-labelledby="pv-t" hidden>
+  <div class="pv__bar">
+    <span class="pv__t" id="pv-t">Preview</span>
+    <div class="seg" role="group" aria-label="Preview size">
+      <button type="button" data-size="desk" aria-pressed="true">Desktop</button>
+      <button type="button" data-size="phone" aria-pressed="false">Phone</button>
+    </div>
+    <a class="btn btn--solid" id="pv-open" href="#" style="min-height:38px">Open</a>
+    <button class="pv__x" type="button" id="pv-x" aria-label="Close preview">×</button>
+  </div>
+  <div class="pv__stage"><iframe class="pv__frame" id="pv-f" title="Site preview" src="about:blank"></iframe></div>
+</div>
+
+<script>
+(function(){
+  var U = function(id,w){return "https://images.unsplash.com/photo-"+id+"?auto=format&fit=crop&w="+w+"&q=80";};
+  var SITES = [
+    ["halyard","Halyard","Red Hook, Brooklyn","Restaurant","Seafood tavern by the water. Daily catch board, raw bar and the walk from the B61.","1615141982883-c7ad0e69fd62",["#f1ebdf","#14223a","#d23b2a"]],
+    ["hosen","Hōsen","East Village, Manhattan","Restaurant","Ten-seat omakase. Quiet, dark and precise, with seatings and the season's fish.","1553621042-f6e147245754",["#0d0d0c","#ece6da","#b2341f"]],
+    ["bar-ottavia","Bar Ottavia","Carroll Gardens, Brooklyn","Restaurant","Loud, warm neighborhood trattoria. Sunday sauce, the pasta list and a table for six.","1551183053-bf91a1d81141",["#c8341f","#f6eddc","#4f5a2b","#e2a93b"]],
+    ["halvorsen","Halvorsen Apothecary","Upper East Side, Manhattan","Pharmacy","A family pharmacy since 1921: refills by Rx number, a free delivery-zone checker, compounding and Medicare plan help.","local:card-halvorsen",["#17315a","#b8402c","#f7f2e8"]],
+    ["wyckoff","Wyckoff Community Pharmacy","Bushwick / Ridgewood","Pharmacy","A green-cross corner pharmacy in English, Spanish and Polish, with refills by text and walk-in vaccines.","local:card-wyckoff",["#0a6e4e","#eaf5ef","#e4572e"]],
+    ["bond-street-chemists","Bond Street Chemists","NoHo, Manhattan","Pharmacy","A pharmacist-led pharmacy with an at-the-counter board, a travel-vaccine planner and private consultations.","local:card-bond-street-chemists",["#2147d6","#0f1626","#ffd84d"]],
+    ["second-shift","Second Shift","Long Island City, Queens","Café","Espresso by day, amaro by night. One room with two personalities.","1501339847302-ac426a4a7cbb",["#f3efe6","#ff5a1f","#1a0f0e","#ffae3d"]],
+    ["orchard-street-roasting","Orchard Street Roasting Co.","Lower East Side, Manhattan","Café","Roaster and coffee bar. What's on the roaster this week and how to brew it at home.","1442512595331-e89e73853f31",["#d9c7a5","#1f3a5f","#b4482b"]],
+    ["conservatory","The Conservatory","Greenpoint, Brooklyn","Café","A café inside a plant shop: coffee, greenery, pet-safe plant notes and a Sunday plant swap.","1600093463592-8e36ae95ef56",["#f4f3ec","#a9b8a0","#2f4a35","#c66a3d"]],
+    ["ninebark","Ninebark Bakehouse","Prospect Heights, Brooklyn","Bakery","Naturally leavened bread, with the day's bake and loaves you can reserve ahead by email.","1509440159596-0249088772ff",["#efe9df","#312a24","#7a5236"]],
+    ["maison-odile","Maison Odile","Upper West Side, Manhattan","Bakery","A delicate French pâtisserie: viennoiserie, celebration cakes and orders ahead.","1555507036-ab1f4038808a",["#f2d4cf","#b9c79a","#3a2620"]],
+    ["feldman-daughters","Feldman & Daughters","Lower East Side, Manhattan","Bakery","Bagels and babka since 1958. Loud deli signage, the counter order and catering trays.","1585445490387-f47934b73b54",["#c62026","#e3a72f","#f6efdf","#161412"]],
+    ["ferro-sons","Ferro & Sons","Bensonhurst, Brooklyn","Barber","A three-generation barber since 1964. Classic cuts, hot towel shaves and walk-ins.","1585747860715-2ba37e788b70",["#f4ecd8","#1d2a44","#b3262d","#b8913a"]],
+    ["strivers-row","Strivers Row Barbers","Harlem, Manhattan","Barber","A Harlem barbershop with culture and craft: the chairs, the barbers and the wait.","1567894340315-735d7c361db0",["#1a1418","#c9a45c","#d9572b"]],
+    ["hollis","Hollis Grooming Room","Tribeca, Manhattan","Barber","An appointment-only grooming studio. Minimal, dark and precise.","1517832606299-7ae9b720a186",["#0c0b0b","#f2eee8","#7a2329"]],
+    ["press-and-pulp","Press & Pulp","Williamsburg, Brooklyn","Juice bar","Cold-pressed juice on a live freshness clock, a tap-to-explore bottle wall and a bottle-return card.","local:card-press-and-pulp",["#151412","#f77f00","#2f9e44","#b0124b"]],
+    ["la-batidora","La Batidora","Washington Heights, Manhattan","Juice bar","Dominican batidos since 1997. Build your batido, watch the color mix, and text the order ahead.","local:card-la-batidora",["#ffc53d","#ff3d7f","#0b6e74"]],
+    ["track-42","Track 42","Midtown, by Grand Central","Juice bar","A commuter smoothie bar styled like a departure board, with order-by-text and a catch-your-train planner.","local:card-track-42",["#101213","#ffb400","#16c47f"]]
+  ];
+  var grid=document.getElementById("grid"), filters=document.getElementById("filters"), count=document.getElementById("count");
+  var esc=function(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/"/g,"&quot;");};
+  grid.innerHTML = SITES.map(function(s,i){
+    var n=("0"+(i+1)).slice(-2), href=s[0]+"/index.html";
+    return '<li class="card" data-type="'+s[3]+'" style="--c2:'+s[6][0]+'">'+
+      '<div class="card__img">'+(s[5].indexOf("local:")===0?'<img class="is-shot" src="previews/'+s[5].slice(6)+'.jpg" alt="" loading="lazy" width="800" height="600">':'<img src="'+U(s[5],720)+'" srcset="'+U(s[5],480)+' 480w, '+U(s[5],720)+' 720w, '+U(s[5],1000)+' 1000w" sizes="(max-width:620px) 92vw, (max-width:980px) 46vw, 380px" alt="" loading="lazy" width="720" height="540" onerror="this.style.display=\'none\'">')+
+      '<span class="card__no">'+n+'</span><span class="card__type">'+s[3]+'</span></div>'+
+      '<div class="card__body"><h3>'+esc(s[1])+'</h3><p class="card__loc">'+esc(s[2])+'</p><p class="d">'+esc(s[4])+'</p>'+
+      '<ul class="pal" aria-label="Brand palette">'+s[6].map(function(c){return '<li style="background:'+c+'" title="'+c+'"></li>';}).join("")+'</ul>'+
+      '<div class="card__act"><a class="btn btn--ink" href="'+href+'">Open site</a>'+
+      '<button class="btn btn--line" type="button" data-pv="'+href+'" data-t="'+esc(s[1])+'">Preview</button></div></div></li>';
+  }).join("");
+
+  var types=["All","Restaurant","Pharmacy","Café","Bakery","Barber","Juice bar"];
+  filters.innerHTML = types.map(function(t,i){
+    var c = t==="All"?SITES.length:SITES.filter(function(s){return s[3]===t;}).length;
+    return '<button class="chip" type="button" data-f="'+t+'" aria-pressed="'+(i===0)+'">'+t+'<span>'+c+'</span></button>';
+  }).join("");
+  function setFilter(t){
+    var shown=0;
+    [].forEach.call(grid.children,function(li){var ok=t==="All"||li.dataset.type===t;li.hidden=!ok;if(ok)shown++;});
+    [].forEach.call(filters.children,function(b){b.setAttribute("aria-pressed",b.dataset.f===t);});
+    count.textContent = "Showing "+shown+" of "+SITES.length+" concepts";
+  }
+  filters.addEventListener("click",function(e){var b=e.target.closest(".chip");if(b)setFilter(b.dataset.f);});
+  setFilter("All");
+
+  /* preview modal */
+  var pv=document.getElementById("pv"), f=document.getElementById("pv-f"), t=document.getElementById("pv-t"), o=document.getElementById("pv-open"), last=null;
+  function size(s){pv.classList.toggle("phone",s==="phone");[].forEach.call(pv.querySelectorAll(".seg button"),function(b){b.setAttribute("aria-pressed",b.dataset.size===s);});}
+  function open(href,title,btn){
+    last=btn; t.innerHTML=title; o.href=href; f.src=href;
+    size(window.innerWidth<700?"phone":"desk");
+    pv.hidden=false; pv.classList.add("open"); document.body.style.overflow="hidden";
+    document.getElementById("pv-x").focus();
+  }
+  function close(){pv.classList.remove("open");pv.hidden=true;f.src="about:blank";document.body.style.overflow="";if(last)last.focus();}
+  document.addEventListener("click",function(e){
+    var b=e.target.closest("[data-pv]");
+    if(b){
+      if(window.innerWidth<700){location.href=b.dataset.pv;return;}
+      open(b.dataset.pv,b.dataset.t,b);
+    }
+  });
+  pv.querySelector(".seg").addEventListener("click",function(e){var b=e.target.closest("button");if(b)size(b.dataset.size);});
+  document.getElementById("pv-x").addEventListener("click",close);
+  pv.addEventListener("click",function(e){if(e.target===pv||e.target.classList.contains("pv__stage"))close();});
+  document.addEventListener("keydown",function(e){
+    if(pv.hidden)return;
+    if(e.key==="Escape")close();
+    if(e.key==="Tab"){var fs=pv.querySelectorAll("button:not([disabled]),a[href],iframe"),a=fs[0],z=fs[fs.length-1];
+      if(e.shiftKey&&document.activeElement===a){e.preventDefault();z.focus();}else if(!e.shiftKey&&document.activeElement===z){e.preventDefault();a.focus();}}
+  });
+  document.getElementById("yr").textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>

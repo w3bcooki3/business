@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Track 42 · Smoothies by Grand Central · Order Ahead by Text</title>
+<meta name="description" content="Smoothies and protein shakes two minutes from Grand Central. Text your order from the train and pick it up from a numbered shelf on the way to your platform.">
+<meta name="theme-color" content="#101213">
+<meta property="og:title" content="Track 42 · Smoothies by Grand Central">
+<meta property="og:description" content="Text your order from the train. Grab it off the shelf. Make your 5:42.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23101213'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Arial' font-weight='700' font-size='30' fill='%23ffb400'%3E42%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="sitemenu.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"CafeOrCoffeeShop","name":"Track 42","servesCuisine":"Smoothies","telephone":"+1-212-555-0186","address":{"@type":"PostalAddress","streetAddress":"120 E 41st St","addressLocality":"New York","addressRegion":"NY","postalCode":"10017","addressCountry":"US"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"06:00","closes":"20:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"08:00","closes":"16:00"}]}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="hdr" id="top">
+  <div class="wrap hdr__in">
+    <a class="logo" href="#top" aria-label="Track 42, home"><span class="logo__n">42</span><span class="logo__t">Track<small>Smoothies · Grand Central</small></span></a>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="#order">Order ahead</a>
+      <a href="#train">Catch your train</a>
+      <a href="#menu">Menu</a>
+      <a href="#shelf">The pickup shelf</a>
+      <a href="#visit">Find us</a>
+    </nav>
+    <p class="hdr__clock"><span data-clock>--:--</span><b data-status>…</b></p>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero">
+    <div class="wrap hero__g">
+      <div>
+        <p class="eyebrow"><span class="dotg" aria-hidden="true"></span>2 minutes from the 42nd St doors</p>
+        <h1>Order on the train. <span>Grab it on the way.</span></h1>
+        <p class="lede">Smoothies and protein shakes blended in about four minutes. Text your order from the platform, walk in, take the cup with your name from the numbered shelf, and make your train.</p>
+        <div class="hero__btns">
+          <a class="btn btn--amber" href="#order">Build a text order</a>
+          <a class="btn btn--ghost" href="#train">Plan around my train</a>
+        </div>
+      </div>
+      <div class="board" role="img" aria-label="Departure-board style list of smoothies on today’s board">
+        <div class="board__head"><span>Now blending</span><span data-clock>--:--</span></div>
+        <div class="board__cols" aria-hidden="true"><span>Time</span><span>Smoothie</span><span>Shelf</span><span>Status</span></div>
+        <ol class="board__rows" id="rows" aria-hidden="true"></ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="order" aria-labelledby="or-t">
+    <div class="wrap or">
+      <div class="or__menu" id="menu">
+        <div class="head">
+          <p class="kick">Order ahead · Menu</p>
+          <h2 id="or-t">Pick your line.</h2>
+          <p class="sub">All 16 oz. Tap <b>Add</b> and we’ll write the text for you. Swap to oat or almond milk for free.</p>
+        </div>
+        <div class="lines" role="tablist" aria-label="Menu lines">
+          <button role="tab" aria-selected="true" aria-controls="list" data-l="express" style="--lc:#ffb400">Express <small>protein</small></button>
+          <button role="tab" aria-selected="false" aria-controls="list" data-l="local" style="--lc:#ff5e5b">Local <small>fruit</small></button>
+          <button role="tab" aria-selected="false" aria-controls="list" data-l="peak" style="--lc:#16c47f">Peak <small>greens</small></button>
+        </div>
+        <ul class="items" id="list" role="tabpanel"></ul>
+      </div>
+
+      <aside class="ticket" id="ticketBox" aria-labelledby="tk-t">
+        <div class="ticket__top">
+          <h3 id="tk-t">Your text order</h3>
+          <span class="ticket__n" id="count">0 items</span>
+        </div>
+        <ul class="ticket__l" id="ticket"><li class="ticket__empty">Nothing yet. Add a smoothie.</li></ul>
+        <div class="field"><label for="nm">Name for the cup</label><input id="nm" autocomplete="given-name" placeholder="e.g. Dana"></div>
+        <div class="field"><label for="eta">I’ll walk in</label>
+          <select id="eta"><option value="in 5 minutes">in 5 minutes</option><option value="in 10 minutes" selected>in 10 minutes</option><option value="in 15 minutes">in 15 minutes</option><option value="in 20 minutes">in 20 minutes</option></select>
+        </div>
+        <p class="ticket__total"><span>Total</span><b id="total">$0</b></p>
+        <a class="btn btn--amber btn--w" id="send" href="sms:+12125550186" aria-disabled="true">Text this order</a>
+        <p class="fine">Opens your messages. Pay by card or phone when you pick up.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="sec sec--board" id="train" aria-labelledby="tr-t">
+    <div class="wrap tr">
+      <div>
+        <p class="kick">Catch your train</p>
+        <h2 id="tr-t">When should I text?</h2>
+        <p class="sub">Tell us when your train leaves Grand Central. We’ll work backwards: four minutes to blend, two minutes to walk to the doors, a few minutes to find your track.</p>
+        <div class="field field--dark"><label for="dep">My train leaves at</label><input id="dep" type="time" value="17:42"></div>
+      </div>
+      <ol class="plan" id="plan" aria-live="polite"></ol>
+    </div>
+  </section>
+
+  <section class="sec" id="shelf" aria-labelledby="sh-t">
+    <div class="wrap">
+      <div class="head head--row">
+        <div><p class="kick">The pickup shelf</p><h2 id="sh-t">Your cup, your shelf, no line.</h2></div>
+        <p class="sub">When it’s ready we text back a shelf number. Walk past the register, find your shelf, check the name, go.</p>
+      </div>
+      <div class="shelves" aria-hidden="true">
+        <span>1</span><span>2</span><span class="is-on"><i>Dana</i>3</span><span>4</span><span>5</span><span class="is-on"><i>Raj</i>6</span><span>7</span><span>8</span><span>9</span><span class="is-on"><i>Mo</i>10</span><span>11</span><span>12</span>
+      </div>
+      <ul class="rules">
+        <li><b>Ready in about 4 minutes.</b> Longer at 8:15 am. We’ll tell you in the reply.</li>
+        <li><b>Held for 30 minutes.</b> After that it goes to the staff, who are thrilled.</li>
+        <li><b>Allergies?</b> Say so in the text. Nut butters are blended in a separate jug.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec sec--amber" id="visit" aria-labelledby="vi-t">
+    <div class="wrap vi">
+      <div>
+        <p class="kick kick--d">Find us</p>
+        <h2 id="vi-t">120 E 41st Street</h2>
+        <p class="sub">Between Park and Lexington. Out the 42nd Street doors of Grand Central, turn left, then right on Lex.</p>
+        <ul class="trains"><li><span class="tl g">4</span><span class="tl g">5</span><span class="tl g">6</span><span class="tl p">7</span><span class="tl s">S</span> Grand Central–42 St</li><li><span class="mn">MNR</span> Metro-North</li></ul>
+        <div class="hero__btns">
+          <a class="btn btn--dark" href="https://www.google.com/maps/search/?api=1&query=120+E+41st+St+New+York+NY+10017">Directions</a>
+          <a class="btn btn--line" href="tel:+12125550186">(212) 555-0186</a>
+        </div>
+      </div>
+      <table class="hrs" id="hrs">
+        <caption class="sr">Opening hours</caption>
+        <tbody>
+          <tr data-d="1"><th>Monday</th><td>6:00 – 20:00</td></tr>
+          <tr data-d="2"><th>Tuesday</th><td>6:00 – 20:00</td></tr>
+          <tr data-d="3"><th>Wednesday</th><td>6:00 – 20:00</td></tr>
+          <tr data-d="4"><th>Thursday</th><td>6:00 – 20:00</td></tr>
+          <tr data-d="5"><th>Friday</th><td>6:00 – 20:00</td></tr>
+          <tr data-d="6"><th>Saturday</th><td>8:00 – 16:00</td></tr>
+          <tr data-d="0"><th>Sunday</th><td>Closed</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</main>
+<a class="cartbar" id="cartbar" href="#ticketBox" hidden><span id="cartN">1 item</span><b>View text order →</b></a>
+
+<footer class="ft">
+  <div class="wrap ft__in">
+    <p class="ft__logo"><span>42</span>Track</p>
+    <p>120 E 41st St, New York, NY 10017 · <a href="tel:+12125550186">(212) 555-0186</a></p>
+    <p class="ft__fine">A design concept. Track 42 is a fictional business and is not affiliated with Grand Central or the MTA; prices are placeholders. <a href="../index.html">← All concepts</a></p>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+<script>window.SITEMENU={"name": "Track 42", "sub": "Smoothies · Grand Central", "bp": 1140, "nav": "#nav", "mount": ".hdr__in", "mountMode": "append", "actions": [{"label": "Text an order", "href": "#order", "primary": true}, {"label": "Directions", "href": "https://www.google.com/maps/search/?api=1&query=120+E+41st+St+New+York+NY+10017"}], "info": ["120 E 41st St, between Park & Lex", "Mon–Fri 6 am–8 pm · Sat 8 am–4 pm · Sun closed"], "hours": {"1": [360, 1200], "2": [360, 1200], "3": [360, 1200], "4": [360, 1200], "5": [360, 1200], "6": [480, 960]}};</script>
+<script src="sitemenu.js"></script>
+</body>
+</html>

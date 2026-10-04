@@ -1,0 +1,1402 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Durán & Hossain Pharmacy — Neighbors</title>
+<meta name="description" content="Warm and human. Sage, peach and cream, soft rounded shapes and type a notch larger throughout. Aimed at older customers and at the people collecting prescr">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:96px;-webkit-text-size-adjust:100%}
+body{margin:0}
+img,svg{max-width:100%}
+h1,h2,h3,h4,h5,p{margin:0}
+ul,ol{margin:0;padding:0;list-style:none}
+a{color:inherit}
+:focus-visible{outline:3px solid currentColor;outline-offset:3px;border-radius:3px}
+[hidden]{display:none!important}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+.skip{position:absolute;left:-9999px;top:0;z-index:999;padding:13px 20px;font-weight:700}
+.skip:focus{left:8px;top:8px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+:root{
+  --bg:#FDF7F0; --paper:#FFFFFF; --panel:#F6EDE2; --panel2:#EFE3D4;
+  --ink:#2B352E; --ink2:#4E5B52; --faint:#5A665D;
+  --line:#E6D9C9; --line2:#D8C7B2;
+  --brand:#3F7A5E; --brand2:#8E5024;
+  --accent:#E09A6B; --accentink:#8A4D1E;
+  --good:#3F7A5E; --goodsoft:#E4F0E8;
+  --warn:#B4530F; --warnsoft:#FBEBDC;
+  --alert:#B3261E; --alertsoft:#FBE9E7;
+  --r:26px; --rs:16px; --rl:34px;
+  color-scheme:light;
+}
+body{background:var(--bg);color:var(--ink);
+  font:400 17.5px/1.65 "Figtree",system-ui,sans-serif}
+h1,h2,h3,h4,h5{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:700;
+  letter-spacing:-.022em;line-height:1.14;text-wrap:balance;color:var(--ink)}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:clamp(16px,4vw,40px)}
+.wrap--n{max-width:820px}
+
+/* ══ emergency strip — top of every page ════════════════════════════════ */
+.ice{background:var(--alert);color:#fff}
+.ice__in{max-width:1180px;margin:0 auto;padding:9px clamp(16px,4vw,40px);
+  display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-size:14.5px;
+  font-weight:600;line-height:1.45}
+.ice__t{flex:1 1 auto;min-width:0}
+.ice svg{flex:none}
+.ice b{font-weight:800}
+.ice a{color:#fff;font-weight:800;text-decoration:underline;text-underline-offset:3px;
+  white-space:nowrap;display:inline-flex;align-items:center;min-height:40px;padding-inline:4px}
+
+/* ══ direction switcher (concept only) ═══════════════════════════════════ */
+.sw{background:var(--ink);color:#fff;display:flex;align-items:center;gap:13px;
+  flex-wrap:wrap;padding:9px clamp(16px,4vw,40px);font-size:13.5px}
+.sw__l{font-weight:700;letter-spacing:.13em;text-transform:uppercase;font-size:10px;
+  opacity:.62}
+.sw nav{display:flex;gap:3px;flex-wrap:wrap}
+.sw nav a{padding:7px 13px;border-radius:99px;text-decoration:none;opacity:.8;
+  font-weight:600}
+.sw nav a:hover{opacity:1;background:rgba(255,255,255,.16)}
+.sw nav a[aria-current]{background:#fff;color:var(--ink);opacity:1}
+.sw__b{margin-left:auto;text-decoration:underline;opacity:.78;font-weight:600}
+.demo{background:var(--warnsoft);color:var(--ink2);font-size:13px;line-height:1.55;
+  padding:11px clamp(16px,4vw,40px);border-bottom:1px solid var(--line)}
+.demo b{color:var(--ink)}
+
+/* ══ header ══════════════════════════════════════════════════════════════ */
+.hdr{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--paper);
+  border-bottom:1px solid var(--line);box-shadow:0 1px 16px rgba(0,0,0,.05)}
+.hdr__in{max-width:1180px;margin:0 auto;padding:12px clamp(16px,4vw,40px);
+  display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+@media (min-width:1080px){.hdr__in{flex-wrap:nowrap}}
+.logo{display:flex;align-items:center;gap:11px;min-height:48px;text-decoration:none;flex:none}
+.logo__m{width:46px;height:46px;border-radius:var(--rs);background:var(--brand);
+  display:grid;place-items:center;flex:none}
+.logo__t{font:700 19px/1.05 "Bricolage Grotesque",system-ui,sans-serif;letter-spacing:-.028em}
+.logo__t span{display:block;font:600 10px/1.4 "Figtree",system-ui,sans-serif;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--faint);margin-top:5px}
+.hnav{display:none;gap:1px;margin-left:8px}
+@media (min-width:1080px){.hnav{display:flex}}
+.hnav a{padding:11px 12px;border-radius:var(--rs);text-decoration:none;font-weight:600;
+  font-size:14.5px;color:var(--ink2);white-space:nowrap}
+.hnav a:hover{background:var(--panel);color:var(--brand)}
+.hcall{margin-left:auto;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.hcall__n{text-align:right;line-height:1.3}
+.hcall__n small{display:block;font-size:11.5px;color:var(--faint);font-weight:600}
+.hcall__n b{display:block;font:700 17.5px/1.2 "Bricolage Grotesque",system-ui,sans-serif;color:var(--brand);
+  font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+
+/* live open/closed pill, written by hours.js */
+.status{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:99px;
+  font-weight:700;font-size:13px;background:var(--panel);color:var(--ink2);white-space:nowrap}
+.status::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--faint);
+  flex:none}
+.status.is-open{background:var(--goodsoft);color:var(--good)}
+.status.is-open::before{background:var(--good)}
+.status.is-shut{background:var(--warnsoft);color:var(--warn)}
+.status.is-shut::before{background:var(--warn)}
+
+/* ══ buttons ═════════════════════════════════════════════════════════════ */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;
+  padding:0 26px;border-radius:99px;
+  text-decoration:none;font-weight:700;font-size:16.5px;background:var(--brand);color:#fff;
+  border:2px solid var(--brand);line-height:1.2;text-align:center}
+.btn:hover{background:var(--ink);border-color:var(--ink)}
+.btn--o{background:transparent;color:var(--brand);border-color:var(--line2)}
+.btn--o:hover{background:var(--panel);color:var(--brand);border-color:var(--brand)}
+.btn--a{background:var(--accent);border-color:var(--accent);color:#8A4D1E}
+.btn--a:hover{background:var(--ink);border-color:var(--ink);color:#fff}
+.btn--sm{min-height:48px;font-size:14.5px;padding:0 18px}
+.btn--w{width:100%}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.cta--c{justify-content:center}
+
+/* ══ sections ════════════════════════════════════════════════════════════ */
+.sec{padding-block:clamp(50px,6.4vw,92px)}
+.sec--p{background:var(--panel)}
+.sec--w{background:var(--paper)}
+.sec--b{background:var(--brand);color:#fff}
+.sec--b h2,.sec--b h3{color:#fff}
+.hd{max-width:62ch;margin:0 auto;margin-bottom:clamp(30px,3.8vw,50px);
+  text-align:center}
+.hd--l{text-align:left;margin-inline:0}
+.eb{font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--brand2);margin-bottom:13px}
+.sec--b .eb{color:#E09A6B}
+.hd h2{font-size:clamp(27px,3.7vw,43px)}
+.hd p:not(.eb){font-size:clamp(16.5px,1.8vw,19px);color:var(--ink2);margin-top:15px}
+.sec--b .hd p:not(.eb){color:rgba(255,255,255,.92)}
+
+/* ══ hero ════════════════════════════════════════════════════════════════ */
+.hero{position:relative;overflow:hidden;background:var(--paper);
+  padding-block:clamp(32px,4.6vw,62px) clamp(28px,3.6vw,48px)}
+.hero__bg{position:absolute;inset:0;pointer-events:none;opacity:.55}
+.hero__in{position:relative}
+.hero__g{display:grid;gap:clamp(26px,3.6vw,48px);grid-template-columns:1fr;
+  align-items:center}
+@media (min-width:960px){.hero__g{grid-template-columns:1.04fr .96fr}}
+.hero--center .hero__g{grid-template-columns:1fr;text-align:center;justify-items:center}
+.hero--center .hero__l{margin-inline:auto}
+.hero--offset .hero__g{align-items:end}
+.kick{display:inline-flex;align-items:center;gap:9px;padding:9px 17px;border-radius:99px;
+  background:var(--goodsoft);color:var(--good);font-weight:700;font-size:13.5px;
+  margin-bottom:20px;line-height:1.35}
+.hero h1{font-size:clamp(33px,5.2vw,58px)}
+.hero h1 em{font-style:normal;color:var(--brand)}
+.hero__l{font-size:clamp(17px,1.9vw,20.5px);color:var(--ink2);margin-top:19px;max-width:48ch}
+.hero__art{border-radius:var(--r);overflow:hidden;background:#FFFFFF;border-radius:var(--r);box-shadow:0 4px 18px rgba(0,0,0,.06)}
+.trust{display:flex;gap:16px;flex-wrap:wrap;margin-top:26px;padding-top:22px;
+  border-top:1px solid var(--line);justify-content:center}
+.trust div{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--ink2);
+  font-weight:600}
+
+/* ══ quick actions ═══════════════════════════════════════════════════════ */
+.qa{display:grid;gap:12px;grid-template-columns:repeat(2,1fr);
+  margin-top:clamp(26px,3.2vw,40px)}
+@media (min-width:860px){.qa{grid-template-columns:repeat(4,1fr)}}
+.qa a{background:#FFFFFF;border-radius:var(--r);box-shadow:0 4px 18px rgba(0,0,0,.06);padding:20px 18px;text-decoration:none;display:flex;flex-direction:column;
+  gap:9px;min-height:116px}
+.qa a:hover{box-shadow:0 14px 34px rgba(0,0,0,.11)}
+.qa b{font:700 17px/1.2 "Bricolage Grotesque",system-ui,sans-serif;display:block}
+.qa span{font-size:13.5px;color:var(--ink2);line-height:1.45}
+
+/* ══ cards & grids ═══════════════════════════════════════════════════════ */
+.g{display:grid;gap:clamp(14px,1.9vw,22px);grid-template-columns:1fr}
+@media (min-width:640px){.g--2,.g--3,.g--4{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:960px){.g--3{grid-template-columns:repeat(3,1fr)}
+  .g--4{grid-template-columns:repeat(4,1fr)}}
+.g>*{min-width:0}
+.card{background:#FFFFFF;border-radius:var(--r);box-shadow:0 4px 18px rgba(0,0,0,.06);padding:clamp(20px,2.4vw,28px);display:flex;flex-direction:column;gap:11px}
+.card:hover{box-shadow:0 14px 34px rgba(0,0,0,.11)}
+.card h3{font-size:19.5px}
+.card p{color:var(--ink2);font-size:15.5px}
+.badge{width:52px;height:52px;border-radius:50%;
+  background:var(--goodsoft);display:grid;place-items:center;flex:none}
+.lnk{display:inline-flex;align-items:center;gap:7px;min-height:44px;text-decoration:none;
+  font-weight:700;font-size:14.5px;color:var(--brand)}
+.lnk:hover{gap:11px;color:var(--ink)}
+
+/* ══ rating ══════════════════════════════════════════════════════════════ */
+.rate{display:grid;gap:clamp(22px,3vw,40px);grid-template-columns:1fr;align-items:center}
+@media (min-width:880px){.rate{grid-template-columns:.78fr 1.22fr}}
+.rate__s{background:#FFFFFF;border-radius:var(--r);box-shadow:0 4px 18px rgba(0,0,0,.06);padding:clamp(22px,2.6vw,32px);text-align:center}
+.rate__n{font:700 clamp(46px,6vw,66px)/1 "Bricolage Grotesque",system-ui,sans-serif;color:var(--brand);
+  letter-spacing:-.045em}
+.stars{display:flex;gap:4px;justify-content:center;margin:12px 0 10px}
+.rate__c{font-size:14.5px;color:var(--ink2)}
+.revs{display:grid;gap:12px}
+.rev{background:#FFFFFF;border-radius:var(--r);box-shadow:0 4px 18px rgba(0,0,0,.06);padding:20px 22px}
+.rev p{font-size:15.5px;color:var(--ink);line-height:1.6}
+.rev footer{display:flex;align-items:center;gap:10px;margin-top:13px;font-size:13.5px;
+  color:var(--faint);font-weight:600}
+.rev__av{width:32px;height:32px;border-radius:50%;background:var(--panel2);
+  display:grid;place-items:center;font-weight:800;font-size:13px;color:var(--ink2);flex:none}
+.rate__note{font-size:12.5px;color:var(--faint);margin-top:14px;line-height:1.5}
+
+/* ══ services list ═══════════════════════════════════════════════════════ */
+.svc{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);
+  border-radius:var(--r);overflow:hidden;grid-template-columns:1fr}
+@media (min-width:700px){.svc{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1020px){.svc{grid-template-columns:repeat(3,1fr)}}
+.svc>div{background:var(--paper);padding:22px 20px;display:flex;gap:14px;min-width:0}
+.svc>div:hover{background:var(--panel)}
+.svc h3{font-size:17px;margin-bottom:6px}
+.svc p{font-size:14.5px;color:var(--ink2);line-height:1.55}
+.svc svg{flex:none;margin-top:2px}
+
+/* ══ specialty ═══════════════════════════════════════════════════════════ */
+.spec{display:grid;gap:clamp(16px,2vw,24px);grid-template-columns:1fr}
+@media (min-width:820px){.spec{grid-template-columns:repeat(2,1fr)}}
+.spec>article{background:#FFFFFF;border-radius:var(--r);box-shadow:0 4px 18px rgba(0,0,0,.06);padding:clamp(22px,2.6vw,32px);display:flex;flex-direction:column;gap:13px}
+.spec h3{font-size:21px}
+.spec__s{font-size:14px;font-weight:700;color:var(--brand2);letter-spacing:.01em}
+.spec p{font-size:15.5px;color:var(--ink2)}
+.spec ul{display:grid;gap:9px;margin-top:4px;padding-top:15px;border-top:1px solid var(--line)}
+.spec li{display:flex;gap:10px;font-size:14.5px;color:var(--ink2);line-height:1.5}
+.spec li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent);
+  flex:none;margin-top:8px}
+
+/* ══ products ════════════════════════════════════════════════════════════ */
+.prods{display:grid;gap:clamp(13px,1.6vw,18px);grid-template-columns:repeat(2,1fr)}
+@media (min-width:900px){.prods{grid-template-columns:repeat(4,1fr)}}
+.prod{background:#FFFFFF;border-radius:var(--r);box-shadow:0 4px 18px rgba(0,0,0,.06);padding:18px 17px;display:flex;flex-direction:column;gap:9px;min-width:0}
+.prod:hover{box-shadow:0 14px 34px rgba(0,0,0,.11)}
+.prod__t{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--brand2)}
+.prod h3{font-size:16.5px;line-height:1.25}
+.prod__p{font-weight:800;font-size:15.5px;color:var(--brand);font-variant-numeric:tabular-nums;
+  font-family:"Bricolage Grotesque",system-ui,sans-serif}
+.prod p{font-size:13.5px;color:var(--ink2);line-height:1.5}
+.aisles{display:grid;gap:12px;grid-template-columns:1fr;margin-top:clamp(22px,2.6vw,32px)}
+@media (min-width:720px){.aisles{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1020px){.aisles{grid-template-columns:repeat(3,1fr)}}
+.aisle{background:#FFFFFF;border-radius:var(--r);box-shadow:0 4px 18px rgba(0,0,0,.06);padding:20px;display:flex;flex-direction:column;gap:10px}
+.aisle__h{display:flex;align-items:center;gap:11px}
+.aisle h3{font-size:17px}
+.aisle__c{margin-left:auto;font-size:12px;font-weight:700;color:var(--faint);white-space:nowrap}
+.aisle ul{display:grid;gap:6px}
+.aisle li{font-size:13.5px;color:var(--ink2);line-height:1.45;padding-left:13px;position:relative}
+.aisle li::before{content:"";position:absolute;left:0;top:9px;width:5px;height:1.5px;
+  background:var(--accent)}
+
+/* ══ hours ═══════════════════════════════════════════════════════════════ */
+.hours{display:grid;gap:clamp(20px,2.6vw,34px);grid-template-columns:1fr}
+@media (min-width:880px){.hours{grid-template-columns:1fr 1fr}}
+.hcard{background:#FFFFFF;border-radius:var(--r);box-shadow:0 4px 18px rgba(0,0,0,.06);padding:clamp(22px,2.6vw,30px)}
+.hcard h3{font-size:20px;margin-bottom:4px}
+.htoday{font-size:14.5px;color:var(--ink2);margin-bottom:18px;font-weight:600}
+.hrow{display:flex;justify-content:space-between;gap:16px;padding:11px 12px;
+  border-radius:var(--rs);font-size:15.5px;color:var(--ink2)}
+.hrow b{color:var(--ink);font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
+.hrow.is-today{background:var(--goodsoft);color:var(--good)}
+.hrow.is-today b{color:var(--good)}
+.hol{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;padding:12px 0;
+  border-bottom:1px dotted var(--line2)}
+.hol:last-child{border-bottom:0}
+.hol__d{font-size:13.5px;color:var(--faint);font-weight:600;min-width:150px}
+.hol__n{font-weight:700;font-size:15.5px;flex:1;min-width:120px}
+.hol__s{font-size:13px;font-weight:700;padding:5px 11px;border-radius:99px;white-space:nowrap}
+.hol__s.is-shut{background:var(--alertsoft);color:var(--alert)}
+.hol__s.is-short{background:var(--warnsoft);color:var(--warn)}
+.hol__none{font-size:15px;color:var(--ink2)}
+.hbanner{display:block;background:var(--warnsoft);border:1px solid var(--warn);
+  border-radius:var(--rs);padding:15px 18px;font-size:15px;color:var(--ink);
+  line-height:1.55;margin-bottom:18px}
+.hbanner b{color:var(--warn);display:block;margin-bottom:3px;font-size:15.5px}
+
+/* ══ languages ═══════════════════════════════════════════════════════════ */
+.langs{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.lang{background:#FFFFFF;border-radius:var(--r);box-shadow:0 4px 18px rgba(0,0,0,.06);padding:13px 19px;display:flex;align-items:baseline;gap:9px}
+.lang b{font-size:19px;font-family:system-ui,"Segoe UI","Noto Sans",sans-serif;font-weight:600}
+.lang span{font-size:11px;color:var(--faint);font-weight:700;letter-spacing:.08em;
+  text-transform:uppercase}
+
+/* ══ split rows ══════════════════════════════════════════════════════════ */
+.split{display:grid;gap:clamp(26px,3.6vw,52px);grid-template-columns:1fr;align-items:center}
+@media (min-width:900px){.split{grid-template-columns:1fr 1fr}
+  .split--r>*:first-child{order:2}}
+.split>*{min-width:0}
+.art{border-radius:var(--r);overflow:hidden;background:#FFFFFF;border-radius:var(--r);box-shadow:0 4px 18px rgba(0,0,0,.06)}
+.ticks{display:grid;gap:13px;margin-top:22px}
+.ticks li{display:flex;gap:12px;font-size:16px;color:var(--ink2);line-height:1.55}
+.ticks li b{color:var(--ink);font-weight:700}
+.ticks svg{flex:none;margin-top:2px}
+.sec--b .ticks li{color:rgba(255,255,255,.92)}
+.sec--b .ticks li b{color:#fff}
+
+/* ══ notice ══════════════════════════════════════════════════════════════ */
+.note{background:var(--paper);border:1px solid var(--accent);border-left-width:6px;
+  border-radius:var(--rs);padding:clamp(22px,2.8vw,36px)}
+.note h2,.note h3{color:var(--accentink)}
+.note>p{margin-top:14px;font-size:16.5px;color:var(--ink2)}
+.note ul{margin-top:18px;display:grid;gap:11px}
+.note li{display:flex;gap:11px;font-size:15.5px;color:var(--ink2)}
+.note li::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--accent);
+  flex:none;margin-top:9px}
+
+/* ══ table ═══════════════════════════════════════════════════════════════ */
+.tbl{background:#FFFFFF;border-radius:var(--r);box-shadow:0 4px 18px rgba(0,0,0,.06);overflow:hidden}
+.tscroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:540px}
+th,td{text-align:left;padding:14px 18px;border-bottom:1px solid var(--line);font-size:15.5px}
+th{background:var(--panel);font-weight:700;font-size:11px;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--ink2);white-space:nowrap}
+tr:last-child td{border-bottom:0}
+td:first-child{font-weight:700}
+td.age{color:var(--good);font-weight:700;white-space:nowrap}
+td.n{color:var(--ink2);font-size:14.5px}
+
+/* ══ plan chips ══════════════════════════════════════════════════════════ */
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-size:14px;font-weight:600;padding:9px 15px;border-radius:99px;
+  background:var(--paper);border:1px solid var(--line2);color:var(--ink2)}
+
+/* ══ contact ═════════════════════════════════════════════════════════════ */
+.lines{display:grid;gap:12px;grid-template-columns:1fr}
+@media (min-width:700px){.lines{grid-template-columns:repeat(2,1fr)}}
+.line{background:#FFFFFF;border-radius:var(--r);box-shadow:0 4px 18px rgba(0,0,0,.06);padding:20px 22px;display:flex;flex-direction:column;gap:5px}
+.line__l{font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--brand2)}
+.line__v{display:inline-flex;align-items:center;min-height:48px;text-decoration:none;
+  font:700 clamp(21px,2.3vw,27px)/1.15 "Bricolage Grotesque",system-ui,sans-serif;color:var(--brand);
+  letter-spacing:-.03em;font-variant-numeric:tabular-nums;word-break:break-word}
+.line__v:hover{color:var(--ink);text-decoration:underline;text-underline-offset:4px}
+.line__v--sm{font-size:clamp(16px,1.7vw,19px);letter-spacing:-.01em}
+.line p{font-size:13.5px;color:var(--ink2);line-height:1.5}
+.when{display:grid;gap:12px;grid-template-columns:1fr}
+@media (min-width:860px){.when{grid-template-columns:repeat(3,1fr)}}
+.when>div{background:#FFFFFF;border-radius:var(--r);box-shadow:0 4px 18px rgba(0,0,0,.06);padding:20px 22px}
+.when h3{font-size:17px;margin-bottom:12px}
+.when li{display:flex;gap:10px;font-size:14.5px;color:var(--ink2);line-height:1.5;
+  padding:6px 0}
+.when li::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--accent);
+  flex:none;margin-top:8px}
+
+/* ══ quote & about ═══════════════════════════════════════════════════════ */
+.quote{background:var(--brand);color:#fff;border-radius:var(--r);
+  padding:clamp(26px,3.4vw,46px)}
+.quote p{font:700 clamp(20px,2.5vw,29px)/1.35 "Bricolage Grotesque",system-ui,sans-serif;letter-spacing:-.022em}
+.quote cite{display:block;margin-top:18px;font-style:normal;font-size:14px;opacity:.86;
+  font-weight:600}
+
+/* ══ emergency callout ═══════════════════════════════════════════════════ */
+.ec{background:var(--alertsoft);border:2px solid var(--alert);border-radius:var(--r);
+  padding:clamp(22px,2.8vw,34px);display:grid;gap:16px;grid-template-columns:1fr;
+  align-items:center}
+@media (min-width:760px){.ec{grid-template-columns:auto 1fr auto}}
+.ec__i{width:54px;height:54px;border-radius:50%;background:var(--alert);display:grid;
+  place-items:center;flex:none}
+.ec h3{font-size:20px;color:var(--alert)}
+.ec p{font-size:15.5px;color:var(--ink2);margin-top:7px}
+.ec .btn{background:var(--alert);border-color:var(--alert)}
+.ec .btn:hover{background:var(--ink);border-color:var(--ink)}
+
+/* ══ footer ══════════════════════════════════════════════════════════════ */
+.ft{background:var(--ink);color:#fff;padding-block:clamp(42px,5vw,66px) 28px}
+.ft__g{display:grid;gap:clamp(24px,3vw,42px);grid-template-columns:1fr}
+@media (min-width:760px){.ft__g{grid-template-columns:1.4fr 1fr 1fr}}
+.ft h4{font-size:11px;letter-spacing:.14em;text-transform:uppercase;opacity:.58;
+  margin-bottom:15px;color:#fff}
+.ft ul{display:grid;gap:10px}
+.ft a{text-decoration:none;opacity:.84;font-size:15px}
+.ft a:hover{opacity:1;text-decoration:underline}
+.ft__tel{font:700 23px/1 "Bricolage Grotesque",system-ui,sans-serif;color:#fff;text-decoration:none;
+  display:inline-flex;min-height:48px;align-items:center;margin-top:10px;letter-spacing:-.025em}
+.ft__b{margin-top:32px;padding-top:22px;border-top:1px solid rgba(255,255,255,.17);
+  font-size:12.5px;opacity:.66;line-height:1.7;display:grid;gap:8px}
+.fine{font-size:13.5px;color:var(--faint);line-height:1.6}
+.sec--b .fine{color:rgba(255,255,255,.8)}
+</style>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<style>
+/* ══════════════════════════════════════════════════════════════════════
+   NEIGHBORS — below the hero. The shop window, the corkboard, the counter.
+   ══════════════════════════════════════════════════════════════════════ */
+:root{--hf:"Bricolage Grotesque",system-ui,sans-serif;--bf:"Figtree",system-ui,sans-serif;--hand:"Caveat",cursive;--deep:#22302A}
+.n-sec{padding-block:clamp(80px,10vw,140px);background:var(--paper)}
+.n-sec--warm{background:var(--bg)}
+.n-sec--green{background:var(--brand);color:#fff}
+.n-kick{display:inline-block;font:700 12.5px var(--bf);letter-spacing:.16em;text-transform:uppercase;color:var(--brand2);margin-bottom:16px;padding-bottom:6px;border-bottom:2px solid var(--accent)}
+.n-kick--light{color:#fff;border-color:#F3C9A8}
+.n-sec h2,.n-window h2,.n-cork h2{font:800 clamp(34px,4.6vw,62px)/1.02 var(--hf);letter-spacing:-.035em;color:var(--ink)}
+h2 em{font-style:normal;color:var(--brand)}
+.n-sec--green h2{color:#fff}.n-sec--green h2 em{color:#F7D9C2}
+.n-hand{font:600 24px/1.2 var(--hand);color:var(--brand2);margin:0}
+.n-lede{font-size:clamp(17px,1.5vw,19.5px);color:var(--ink2);margin-top:18px;max-width:48ch}
+.n-fine{font-size:13.5px;color:var(--faint);margin-top:14px;line-height:1.6}
+.n-head{margin-bottom:clamp(36px,4.5vw,60px);max-width:760px}
+.n-head>p:not(.n-kick){font-size:clamp(17px,1.5vw,19px);color:var(--ink2);margin-top:16px}
+.n-head--split{max-width:none;display:grid;gap:18px 60px;grid-template-columns:minmax(0,1fr);align-items:end}
+@media (min-width:960px){.n-head--split{grid-template-columns:1.2fr .8fr}}
+.n-head--c{margin-inline:auto;text-align:center}
+.n-head__sub{text-align:center;max-width:58ch;margin:40px auto 0;color:var(--ink2)}
+
+/* ── ribbon ───────────────────────────────────────────────────────────── */
+.n-ribbon{background:var(--brand);color:#fff;overflow:hidden;border-block:3px solid var(--ink);transform:rotate(-1.2deg);margin:8px -20px 0;position:relative;z-index:2}
+.n-ribbon__t{display:flex;gap:26px;width:max-content;padding:14px 0;font:700 clamp(18px,2vw,26px) var(--hf);white-space:nowrap;animation:n-tick 45s linear infinite}
+.n-ribbon i{font-style:normal;color:#F3C9A8}
+@keyframes n-tick{to{transform:translateX(-50%)}}
+
+/* ── 01 window ────────────────────────────────────────────────────────── */
+.n-window{background:linear-gradient(180deg,var(--bg),var(--panel));padding-block:clamp(80px,9vw,130px)}
+.n-window__g{display:grid;gap:clamp(40px,6vw,96px);grid-template-columns:minmax(0,1fr);align-items:center}
+@media (min-width:980px){.n-window__g{grid-template-columns:.8fr 1.2fr}}
+.n-sign{display:flex;flex-direction:column;align-items:center}
+.n-sign__string{width:150px;height:70px;border:2px solid var(--brand2);border-bottom:0;border-radius:75px 75px 0 0;position:relative}
+.n-sign__string::before{content:"";position:absolute;top:-10px;left:50%;width:14px;height:14px;margin-left:-7px;border-radius:50%;background:var(--ink)}
+.n-sign__board{position:relative;width:min(340px,90%);aspect-ratio:2.1;perspective:900px;transform-origin:top center;animation:n-sway 5s ease-in-out infinite}
+@keyframes n-sway{50%{transform:rotate(1.6deg)}}
+.n-sign__face{position:absolute;inset:0;display:grid;place-items:center;border-radius:14px;font:800 clamp(46px,6vw,70px)/1 var(--hf);letter-spacing:-.02em;
+  backface-visibility:hidden;transition:transform .9s cubic-bezier(.4,1.5,.5,1);box-shadow:0 18px 30px -12px rgba(43,53,46,.45),inset 0 0 0 6px rgba(255,255,255,.18)}
+.n-sign__face--open{background:var(--brand);color:#fff}
+.n-sign__face--closed{background:var(--accentink);color:#FDF7F0;transform:rotateY(180deg)}
+.n-sign__board.is-closed .n-sign__face--open{transform:rotateY(-180deg)}
+.n-sign__board.is-closed .n-sign__face--closed{transform:rotateY(0)}
+.n-sign__note{font:600 26px/1.2 var(--hand);color:var(--ink2);margin-top:26px;text-align:center;transform:rotate(-2deg)}
+.n-glass{background:rgba(255,255,255,.65);border:2px solid var(--line2);border-radius:var(--rl);padding:clamp(26px,3.6vw,50px);box-shadow:inset 0 0 0 10px rgba(255,255,255,.5)}
+.n-glass h2{margin:6px 0 20px}
+.n-glass__live{display:flex;flex-wrap:wrap;align-items:center;gap:10px;font:700 17px var(--hf);margin-bottom:18px}
+.n-hours{display:grid;grid-template-columns:minmax(0,1fr);gap:0;font:700 19px var(--hf)}
+@media (min-width:560px){.n-hours{grid-template-columns:1fr 1fr;column-gap:36px}}
+.n-hours div{display:flex;justify-content:space-between;padding:10px 0;border-bottom:2px dotted var(--line2)}
+.n-hours dt{color:var(--ink2);font-weight:600}
+.n-hours dd{margin:0;font-variant-numeric:tabular-nums}
+.n-hours div.is-today{color:var(--brand)}
+.n-hours div.is-today dt{color:var(--brand)}
+.n-hours div.is-today dt::after{content:" ← today";font:600 20px var(--hand);color:var(--accentink)}
+.n-banner{display:block;margin-top:18px;background:var(--warnsoft);border-radius:var(--rs);padding:12px 16px;font-size:15px}
+.n-banner b{color:var(--warn);display:block}
+.n-holi{margin-top:18px}
+.n-holi summary{cursor:pointer;font:700 16px var(--hf);color:var(--brand);padding:8px 0}
+.n-holi .hol{display:grid;grid-template-columns:1fr auto;gap:0 12px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line)}
+.n-holi .hol__d{grid-row:2;font-size:13px;color:var(--faint)}
+.n-holi .hol__n{font-weight:700}
+.n-holi .hol__s{grid-column:2;grid-row:1/3;font-size:12.5px;font-weight:700;padding:5px 11px;border-radius:99px}
+.n-addr{margin-top:18px;font-size:15px;color:var(--ink2)}
+.n-addr a{color:var(--brand);font-weight:700}
+
+/* ── 02 corkboard ─────────────────────────────────────────────────────── */
+.n-cork{padding-block:clamp(80px,10vw,140px);background:#C79A6B;
+  background-image:radial-gradient(rgba(90,55,25,.35) 1px,transparent 1.6px),radial-gradient(rgba(255,240,220,.25) 1px,transparent 1.6px);
+  background-size:7px 7px,11px 11px;background-position:0 0,3px 4px;box-shadow:inset 0 0 0 14px #8A5A32,inset 0 0 0 18px #6E4524}
+.n-cork .n-head{background:var(--paper);padding:26px 30px;border-radius:4px;transform:rotate(-.8deg);box-shadow:0 14px 26px -12px rgba(0,0,0,.4);max-width:640px}
+.n-cork .n-kick{color:var(--brand2)}
+.n-cork h2{font-size:clamp(28px,3.4vw,44px)}
+.n-notes{display:grid;gap:22px;grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (min-width:760px){.n-notes{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (min-width:1080px){.n-notes{grid-template-columns:repeat(4,minmax(0,1fr));gap:28px}}
+.n-notes li{transform:rotate(var(--r));transition:transform .3s}
+.n-notes li:hover{transform:rotate(0) scale(1.03);z-index:2}
+.n-notes button{position:relative;width:100%;min-height:150px;text-align:left;background:var(--c);border:0;padding:30px 18px 18px;cursor:pointer;
+  box-shadow:0 12px 20px -10px rgba(0,0,0,.45);font:inherit;color:var(--ink);border-radius:2px}
+.n-notes button::before{content:"";position:absolute;top:10px;left:50%;width:16px;height:16px;margin-left:-8px;border-radius:50%;
+  background:radial-gradient(circle at 35% 35%,#F28C6B,#B4442A);box-shadow:0 3px 4px rgba(0,0,0,.35)}
+.n-notes b{display:block;font:800 clamp(19px,1.7vw,23px)/1.1 var(--hf);letter-spacing:-.02em}
+.n-notes span{display:block;font:600 21px/1.2 var(--hand);color:var(--ink2);margin-top:10px;max-height:0;overflow:hidden;opacity:0;transition:max-height .45s,opacity .3s}
+.n-notes button[aria-expanded="true"] span{max-height:200px;opacity:1}
+.n-notes button::after{content:"tap to read";position:absolute;right:14px;bottom:10px;font:600 17px var(--hand);color:var(--brand2);opacity:.8}
+.n-notes button[aria-expanded="true"]::after{content:""}
+.no-js .n-notes span{max-height:none;opacity:1}
+
+/* ── 03 coupons ───────────────────────────────────────────────────────── */
+.n-coupons{display:grid;gap:22px;grid-template-columns:minmax(0,1fr)}
+@media (min-width:900px){.n-coupons{grid-template-columns:1fr 1fr}}
+.n-coupon{display:grid;grid-template-columns:120px minmax(0,1fr);background:var(--paper);border:2px dashed var(--line2);border-radius:14px;position:relative;transition:transform .25s,border-color .25s}
+.n-coupon.n-coupon:hover{transform:translateY(-4px);border-color:var(--k)}
+.n-coupon::before,.n-coupon::after{content:"";position:absolute;left:111px;width:18px;height:18px;border-radius:50%;background:var(--paper);border:2px dashed var(--line2)}
+.n-coupon::before{top:-11px;border-bottom-color:transparent;border-left-color:transparent;transform:rotate(-45deg)}
+.n-coupon::after{bottom:-11px;border-top-color:transparent;border-right-color:transparent;transform:rotate(-45deg)}
+.n-coupon__l{background:var(--k);color:#fff;border-radius:11px 0 0 11px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:16px 8px;border-right:2px dashed rgba(255,255,255,.6)}
+.n-coupon__l span{font:700 11px var(--bf);letter-spacing:.14em;text-transform:uppercase;opacity:.85}
+.n-coupon__l b{font:800 54px/1 var(--hf);letter-spacing:-.04em}
+.n-coupon__l small{font:600 19px/1.05 var(--hand)}
+.n-coupon__r{padding:22px 24px}
+.n-coupon h3{font:800 21px/1.15 var(--hf);letter-spacing:-.02em;margin-bottom:8px}
+.n-coupon p{font-size:15px;color:var(--ink2);line-height:1.55}
+.n-coupon__f{margin-top:12px;font-weight:700;color:var(--k)!important;font-size:13.5px!important}
+@media (max-width:520px){.n-coupon{grid-template-columns:84px minmax(0,1fr)}.n-coupon__r{padding:18px 16px}.n-coupon::before,.n-coupon::after{left:83px}.n-coupon__l b{font-size:42px}}
+
+/* ── 04 basket + receipt ──────────────────────────────────────────────── */
+.n-shop{display:grid;gap:clamp(36px,5vw,72px);grid-template-columns:minmax(0,1fr);align-items:start}
+@media (min-width:1000px){.n-shop{grid-template-columns:1.35fr .65fr}}
+.n-aisles{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.n-aisles button{border:2px solid var(--ink);background:none;border-radius:99px;padding:9px 18px;font:700 14.5px var(--bf);color:var(--ink);cursor:pointer}
+.n-aisles button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.n-items{display:grid;gap:12px;grid-template-columns:minmax(0,1fr)}
+@media (min-width:620px){.n-items{grid-template-columns:1fr 1fr}}
+.n-item{display:none}
+.n-item.is-on{display:block}
+.n-item button{width:100%;display:grid;grid-template-columns:52px 1fr auto;gap:14px;align-items:center;text-align:left;background:var(--paper);border:2px solid var(--line);
+  border-radius:var(--rs);padding:12px 14px;cursor:pointer;font:inherit;color:var(--ink);transition:border-color .2s,transform .2s}
+.n-item button:hover{border-color:var(--brand);transform:translateY(-2px)}
+.n-item__ico{width:52px;height:52px;border-radius:12px;display:grid;place-items:center;font:800 15px var(--hf);color:#fff}
+.n-item b{display:block;font:700 16px/1.25 var(--hf)}
+.n-item small{display:block;font-size:13px;color:var(--faint);margin-top:2px}
+.n-item__p{font:700 14px var(--hf);color:var(--brand2);white-space:nowrap}
+.n-item__add{grid-column:3;font:600 13px var(--bf);color:var(--brand)}
+.n-item button[aria-pressed="true"]{border-color:var(--brand);background:var(--goodsoft)}
+.n-receipt{position:sticky;top:150px}
+.n-receipt__paper{background:#FFFEFA;font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace;color:#2B2B2B;padding:28px 24px 34px;font-size:13.5px;position:relative;
+  box-shadow:0 30px 50px -24px rgba(43,53,46,.45);transform:rotate(1.2deg)}
+.n-receipt__paper::after{content:"";position:absolute;left:0;right:0;bottom:-12px;height:12px;background:linear-gradient(-45deg,transparent 8px,#FFFEFA 0) 0 0/16px 12px,linear-gradient(45deg,transparent 8px,#FFFEFA 0) 0 0/16px 12px}
+.n-receipt__h{text-align:center;font-weight:700;font-size:15px;letter-spacing:.04em}
+.n-receipt__h small{font-weight:400;font-size:10.5px;letter-spacing:.08em}
+.n-receipt__d{text-align:center;font-size:11.5px;margin:6px 0 14px;color:#777}
+.n-receipt__lines{border-block:1.5px dashed #999;padding:10px 0;min-height:90px}
+.n-receipt__lines li{display:flex;justify-content:space-between;gap:10px;padding:4px 0;animation:n-print .3s ease}
+@keyframes n-print{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.n-receipt__lines li button{background:none;border:0;color:#B4442A;cursor:pointer;font:inherit;padding:0 0 0 6px}
+.n-receipt__empty{display:block!important;text-align:center;color:#999;font-size:12.5px;padding:18px 0!important}
+.n-receipt__tot,.n-receipt__dl{display:flex;justify-content:space-between;margin-top:10px;font-weight:700}
+.n-receipt__tot b{font-size:18px}
+.n-receipt__dl{margin-top:4px;color:var(--brand)}
+.n-receipt__msg{font-size:11.5px;color:#777;margin:12px 0 16px;line-height:1.5}
+.n-receipt__btn{display:flex;justify-content:center;align-items:center;min-height:50px;border-radius:99px;background:var(--brand);color:#fff;text-decoration:none;font:700 15px var(--bf)}
+.n-receipt__btn[aria-disabled="true"]{background:#CFCBC2;pointer-events:none}
+.n-receipt__foot{text-align:center;margin-top:16px;font-size:11px;letter-spacing:.2em;color:#999}
+
+/* ── 05 delivery ──────────────────────────────────────────────────────── */
+.n-deliv{display:grid;gap:clamp(40px,6vw,90px);grid-template-columns:minmax(0,1fr);align-items:center}
+@media (min-width:980px){.n-deliv{grid-template-columns:1fr 1fr}}
+.n-deliv__art{margin:0;position:relative;border-radius:var(--rl);overflow:visible;background:transparent}
+.n-deliv__art svg{display:block;width:100%;height:auto;border-radius:var(--rl)}
+.n-stamp{position:absolute;right:-14px;top:-24px;width:118px;height:118px;border-radius:50%;background:var(--accent);color:var(--ink);display:grid;place-content:center;text-align:center;
+  font:800 26px/1 var(--hf);transform:rotate(12deg);box-shadow:0 0 0 5px var(--paper),0 0 0 7px var(--accent)}
+.n-stamp small{display:block;font:600 16px/1 var(--hand);margin-top:4px}
+.n-route{counter-reset:r;margin:30px 0 10px;position:relative}
+.n-route::before{content:"";position:absolute;left:15px;top:14px;bottom:14px;border-left:3px dotted var(--brand)}
+.n-route li{position:relative;padding:10px 0 10px 50px;font-size:16px;color:var(--ink2)}
+.n-route li::before{content:"";position:absolute;left:5px;top:14px;width:20px;height:20px;border-radius:50%;background:var(--paper);border:4px solid var(--brand)}
+.n-route li:last-child::before{background:var(--accent);border-color:var(--accent)}
+.n-route b{display:block;font:800 19px var(--hf);color:var(--ink)}
+
+/* ── 06 flyer ─────────────────────────────────────────────────────────── */
+.n-vx{display:grid;gap:clamp(40px,6vw,90px);grid-template-columns:minmax(0,1fr);align-items:center}
+@media (min-width:980px){.n-vx{grid-template-columns:1fr 1fr}}
+.n-vx__copy>p:not(.n-kick){color:rgba(255,255,255,.86);font-size:clamp(17px,1.5vw,19px);margin-top:18px;max-width:46ch}
+.n-cant{margin-top:28px;display:grid;gap:10px}
+.n-cant li{background:rgba(0,0,0,.14);border-radius:var(--rs);padding:14px 18px;font-size:15px;color:rgba(255,255,255,.9)}
+.n-cant b{color:#fff}
+.n-flyer{position:relative;background:#FFFDF6;color:var(--ink);padding:36px 32px 0;--r:-1.6deg;transform:rotate(var(--r));box-shadow:0 30px 50px -20px rgba(0,0,0,.45)}
+.n-tape{position:absolute;top:-14px;width:110px;height:30px;background:rgba(255,236,190,.85);box-shadow:0 2px 4px rgba(0,0,0,.12)}
+.n-tape--l{left:-8px;transform:rotate(-24deg)}.n-tape--r{right:-8px;transform:rotate(22deg)}
+.n-flyer__top{font:700 12px var(--bf);letter-spacing:.14em;text-transform:uppercase;color:var(--accentink)}
+.n-flyer h3{font:800 clamp(44px,5.2vw,68px)/.95 var(--hf);letter-spacing:-.04em;color:var(--brand);margin:6px 0 18px}
+.n-flyer table{width:100%;border-collapse:collapse}
+.n-flyer th,.n-flyer td{padding:9px 0;border-bottom:2px dotted #DCCFBF;text-align:left;font-size:16px}
+.n-flyer thead th{font:700 11.5px var(--bf);letter-spacing:.14em;text-transform:uppercase;color:var(--faint);background:none}
+.n-flyer tbody th{font:700 17px var(--hf)}
+.n-flyer tbody th small{font:600 18px var(--hand);color:var(--brand2);margin-left:6px}
+.n-flyer td{text-align:right;font:800 18px var(--hf);color:var(--brand)}
+.n-tabs{display:grid;grid-template-columns:repeat(6,1fr);margin:22px -32px 0;border-top:2px dashed #CDBFAE}
+.n-tabs li{writing-mode:vertical-rl;transform:rotate(180deg);font:600 11px var(--bf);letter-spacing:.06em;padding:12px 0;text-align:center;border-left:2px dashed #CDBFAE;color:var(--ink2);margin-inline:auto;width:100%;display:flex;align-items:center;justify-content:center}
+
+/* ── 07 checklist ─────────────────────────────────────────────────────── */
+.n-ins{display:grid;gap:clamp(40px,6vw,90px);grid-template-columns:minmax(0,1fr);align-items:start}
+@media (min-width:980px){.n-ins{grid-template-columns:1.15fr .85fr}}
+.n-hand--ins{margin:26px 0 8px;transform:rotate(-2deg);display:inline-block}
+.n-check{display:grid;gap:10px}
+.n-check label{display:grid;grid-template-columns:34px 1fr;gap:14px;align-items:start;background:var(--bg);border-radius:var(--rs);padding:16px 18px;cursor:pointer;border:2px solid transparent;transition:border-color .2s}
+.n-check input{appearance:none;-webkit-appearance:none;width:30px;height:30px;border-radius:8px;border:2.5px solid var(--brand);margin:0;display:grid;place-items:center;cursor:pointer;background:var(--paper)}
+.n-check input::after{content:"";width:12px;height:7px;border-left:3px solid #fff;border-bottom:3px solid #fff;transform:rotate(-45deg) translate(1px,-2px);opacity:0}
+.n-check input:checked{background:var(--brand)}
+.n-check input:checked::after{opacity:1}
+.n-check input:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.n-check span{font-size:15.5px;color:var(--ink2);line-height:1.5}
+.n-check b{color:var(--ink)}
+.n-check label:has(input:checked){border-color:var(--brand)}
+.n-check label:has(input:checked) b{text-decoration:line-through;text-decoration-color:var(--accent);text-decoration-thickness:2px}
+.n-check__done{font:600 26px var(--hand);color:var(--brand);margin-top:14px;min-height:1.3em}
+.n-plans{background:var(--panel);border-radius:var(--rl);padding:clamp(24px,3vw,38px)}
+.n-plans h3{font:800 24px var(--hf);letter-spacing:-.02em;margin-bottom:16px}
+.n-plans__chips{display:flex;flex-wrap:wrap;gap:7px}
+.n-plans__chips span{background:var(--paper);border:1.5px solid var(--line2);border-radius:99px;padding:7px 13px;font-size:13.5px;font-weight:600}
+.n-plans__no{margin-top:20px;font-size:15.5px;color:var(--ink2)}
+.n-plans__no b{color:var(--ink)}
+
+/* ── 08 stickers ──────────────────────────────────────────────────────── */
+.n-stickers{display:flex;flex-wrap:wrap;justify-content:center;gap:clamp(14px,2vw,26px);max-width:1080px;margin:0 auto}
+.n-stickers li{transform:rotate(var(--r));background:var(--c);color:#fff;border-radius:22px;padding:18px 26px 14px;box-shadow:0 0 0 5px #fff,0 14px 24px -12px rgba(43,53,46,.5);
+  display:flex;flex-direction:column;align-items:center;transition:transform .3s}
+.n-stickers li.n-rv:hover,.n-stickers li:hover{transform:rotate(0) scale(1.06)}
+.n-stickers b{font:600 clamp(26px,3vw,40px)/1.25 system-ui,"Noto Sans","Segoe UI",sans-serif}
+.n-stickers span{font-size:13px;opacity:.8;margin-top:2px}
+
+/* ── 09 scrapbook ─────────────────────────────────────────────────────── */
+.n-story{display:grid;gap:clamp(40px,6vw,90px);grid-template-columns:minmax(0,1fr);align-items:center}
+@media (min-width:980px){.n-story{grid-template-columns:1.15fr .85fr}}
+.n-story h2{font-size:clamp(28px,3.4vw,46px);line-height:1.12;margin-bottom:20px}
+.n-polaroid{margin:0;background:#fff;padding:14px 14px 0;box-shadow:0 26px 46px -22px rgba(43,53,46,.5);--r:3deg;transform:rotate(var(--r))}
+.n-polaroid svg{display:block;width:100%;height:auto}
+.n-polaroid figcaption{font:600 26px var(--hand);color:var(--ink2);text-align:center;padding:12px 0 16px}
+.n-scrap{display:grid;gap:18px;grid-template-columns:repeat(2,1fr);margin-top:clamp(56px,6vw,90px)}
+@media (min-width:760px){.n-scrap{grid-template-columns:repeat(3,1fr)}}
+@media (min-width:1100px){.n-scrap{grid-template-columns:repeat(6,1fr)}}
+.n-scrap li{background:var(--panel);padding:20px 16px 18px;transform:rotate(var(--r));position:relative;box-shadow:0 10px 18px -12px rgba(43,53,46,.4)}
+.n-scrap li::before{content:"";position:absolute;top:-10px;left:50%;width:62px;height:20px;margin-left:-31px;background:rgba(224,154,107,.55);transform:rotate(-3deg)}
+.n-scrap b{display:block;font:800 30px var(--hf);letter-spacing:-.03em;color:var(--brand)}
+.n-scrap p{font:600 21px/1.15 var(--hand);color:var(--ink);margin-top:6px}
+.n-promise{margin-top:clamp(56px,6vw,80px);background:var(--deep);color:#FDF7F0;border-radius:var(--rl);padding:clamp(28px,4vw,52px);display:grid;gap:20px;grid-template-columns:minmax(0,1fr)}
+@media (min-width:900px){.n-promise{grid-template-columns:auto 1fr;align-items:center}}
+.n-promise__h{font:600 40px/1 var(--hand);color:#F3C9A8;transform:rotate(-4deg)}
+.n-promise ol{display:grid;gap:0;grid-template-columns:minmax(0,1fr);counter-reset:p}
+@media (min-width:700px){.n-promise ol{grid-template-columns:1fr 1fr}}
+.n-promise li{counter-increment:p;font:700 clamp(18px,1.8vw,23px)/1.25 var(--hf);padding:12px 0 12px 44px;position:relative;border-bottom:1px solid rgba(253,247,240,.15)}
+.n-promise li::before{content:counter(p);position:absolute;left:0;top:10px;width:30px;height:30px;border-radius:50%;background:var(--accent);color:var(--ink);display:grid;place-items:center;font-size:15px}
+
+/* ── 10 postcard ──────────────────────────────────────────────────────── */
+.n-post{display:grid;grid-template-columns:minmax(0,1fr);background:#FFFDF6;border-radius:6px;box-shadow:0 34px 60px -30px rgba(43,53,46,.5),0 0 0 1px var(--line);position:relative}
+@media (min-width:960px){.n-post{grid-template-columns:1.1fr .9fr}
+  .n-post::before{content:"";position:absolute;top:40px;bottom:40px;left:55%;border-left:2px solid var(--line2)}}
+.n-post__l,.n-post__r{padding:clamp(28px,4vw,56px)}
+.n-post__l>p:not(.n-kick){font-size:17px;color:var(--ink2);margin-top:16px;max-width:44ch}
+.n-post__ways{margin-top:26px;display:grid;gap:12px}
+.n-post__ways li{font:600 21px/1.2 var(--hand);color:var(--ink2)}
+.n-post__ways span{display:block;font:800 16px var(--hf);color:var(--ink);font-family:var(--hf)}
+.n-post__r{position:relative}
+.n-post__stamp{float:right;width:92px;height:110px;background:var(--brand);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  outline:6px dotted #FFFDF6;outline-offset:-3px;transform:rotate(4deg);margin:0 0 16px 16px}
+.n-post__stamp span{font:700 9px/1.2 var(--bf);letter-spacing:.12em;text-align:center}
+.n-post__stamp b{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:#B03CB0;font:800 26px var(--hf);margin-top:6px}
+.n-post__to{font:600 26px/1.25 var(--hand);color:var(--ink);padding-top:12px;border-bottom:2px solid var(--line2);padding-bottom:10px}
+.n-post__lines{margin-top:18px;clear:both}
+.n-post__lines li{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:10px 0;border-bottom:2px solid var(--line)}
+.n-post__lines span{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--faint)}
+.n-post__lines a,.n-post__lines b{font:800 21px var(--hf);color:var(--brand);text-decoration:none;font-variant-numeric:tabular-nums}
+.n-post__lines a:hover{text-decoration:underline}
+
+.n-911{background:var(--alert);color:#fff;padding-block:20px}
+.n-911__in{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.n-911 a{display:inline-flex;align-items:center;min-height:46px;padding:0 22px;border-radius:99px;background:#fff;color:var(--alert);font-weight:800;text-decoration:none}
+
+.n-rv{opacity:0;transform:translateY(22px) rotate(var(--r,0deg));transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+.n-rv.in{opacity:1;transform:rotate(var(--r,0deg))}
+@media (prefers-reduced-motion:reduce){.n-ribbon__t,.n-sign__board{animation:none}.n-rv{opacity:1;transform:rotate(var(--r,0deg))}}
+body{overflow-x:clip}
+@media (max-width:600px){.n-stamp{right:6px;top:-30px;width:96px;height:96px;font-size:21px}}
+.n-flyer table{min-width:0}
+html{overflow-x:clip}
+.n-flyer th,.n-flyer td{background:none!important;white-space:normal}
+.n-flyer tbody th{text-transform:none;letter-spacing:-.01em;font:700 17px var(--hf)}
+.n-flyer tbody th small{text-transform:none;letter-spacing:0}
+.n-coupon::before,.n-coupon::after{display:none}
+</style>
+
+
+<style id="dh-chrome">
+/* ══ concept bar (presentation only) ═════════════════════════════════════ */
+.cbar{background:#0d1512;color:#e9efe9;font:500 12.5px/1.3 var(--bf)}
+.cbar__in{max-width:1320px;margin:0 auto;padding:6px clamp(16px,3vw,40px);display:flex;align-items:center;gap:14px;min-height:42px}
+.cbar__tag{font:700 10px/1 var(--bf);letter-spacing:.16em;text-transform:uppercase;color:#9fb0a8}
+.cbar__sw{display:flex;background:rgba(255,255,255,.08);border-radius:99px;padding:3px}
+.cbar__sw a{color:#cfd9d4;text-decoration:none;padding:6px 13px;border-radius:99px;font-weight:600}
+.cbar__sw a:hover{color:#fff}
+.cbar__sw a[aria-current]{background:#fff;color:#0d1512}
+.cbar__note{color:#9fb0a8;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cbar__back{margin-left:auto;display:inline-flex;align-items:center;gap:6px;color:#fff;text-decoration:none;font-weight:600;white-space:nowrap;padding:6px 4px}
+.cbar__back:hover{text-decoration:underline;text-underline-offset:3px}
+
+/* ══ utility bar: safety line + live status ══════════════════════════════ */
+.util{background:var(--panel);border-bottom:1px solid var(--line);color:var(--ink2);font:500 13px/1.3 var(--bf)}
+.util__in{max-width:1320px;margin:0 auto;padding:0 clamp(16px,3vw,40px);min-height:40px;display:flex;align-items:center;gap:18px}
+.util__sos{margin:0;display:flex;align-items:center;gap:8px;white-space:nowrap;min-width:0}
+.util__dot{width:8px;height:8px;border-radius:50%;background:var(--alert);box-shadow:0 0 0 4px rgba(179,38,30,.14);flex:none}
+.util__sos b{color:var(--ink);font-weight:700}
+.util__sos a{color:var(--alert);font-weight:800;text-decoration:none;border-bottom:1.5px solid currentColor;padding:6px 0 1px}
+.util__pc{color:var(--faint)}
+.util__pc a{color:var(--ink2);border-color:var(--line2);font-weight:700}
+.util__info{margin:0 0 0 auto;display:flex;align-items:center;gap:18px;white-space:nowrap}
+.util__info span{display:inline-flex;align-items:center;gap:6px;color:var(--faint)}
+.util__info svg{width:15px;height:15px;color:var(--brand)}
+.util .status{padding:5px 11px;font-size:12.5px;background:var(--paper);border:1px solid var(--line)}
+.util .status.is-open{background:var(--goodsoft);border-color:transparent}
+@media (max-width:1180px){.util__addr{display:none!important}}
+@media (max-width:900px){.util__lang,.util__pc{display:none!important}}
+@media (max-width:420px){.util__long{display:none}.util__in{gap:10px}.util .status{font-size:12px;padding:4px 9px}}
+
+/* ══ header ══════════════════════════════════════════════════════════════ */
+.hdr{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.94);-webkit-backdrop-filter:saturate(1.6) blur(14px);backdrop-filter:saturate(1.6) blur(14px);border-bottom:1px solid var(--line);box-shadow:none;transition:box-shadow .25s ease}
+.hdr.is-stuck{box-shadow:0 8px 24px -16px rgba(0,0,0,.28)}
+.hdr__in{max-width:1320px;margin:0 auto;padding:0 clamp(16px,3vw,40px);min-height:76px;display:flex;align-items:center;gap:20px;flex-wrap:nowrap}
+.hdr .logo{min-height:56px}
+.hnav{display:none;align-items:stretch;gap:2px;margin:0 auto;align-self:stretch}
+.hnav a{position:relative;display:flex;align-items:center;padding:0 12px;border-radius:0;font:600 14.5px/1 var(--bf);color:var(--ink2);text-decoration:none;white-space:nowrap;background:none}
+.hnav a::after{content:"";position:absolute;left:12px;right:12px;bottom:-1px;height:2.5px;border-radius:2px;background:var(--brand);transform:scaleX(0);transform-origin:left;transition:transform .25s ease}
+.hnav a:hover{color:var(--ink);background:none}
+.hnav a:hover::after{transform:scaleX(.35)}
+.hnav a[aria-current="true"]{color:var(--brand)}
+.hnav a[aria-current="true"]::after{transform:scaleX(1)}
+.hact{display:flex;align-items:center;gap:10px;margin-left:auto;flex:none}
+.hnav + .hact{margin-left:0}
+.htel{display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);min-height:48px;padding:0 4px}
+.htel__i{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:var(--panel);color:var(--brand);flex:none;transition:background .2s}
+.htel:hover .htel__i{background:var(--panel2)}
+.htel__t{display:none;line-height:1.15}
+.htel__t small{display:block;font:600 11px/1.3 var(--bf);color:var(--faint);letter-spacing:.02em}
+.htel__t b{font:700 16.5px/1.2 var(--hf);color:var(--ink);font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.hcta{min-height:48px!important;padding:0 20px!important;font-size:14.5px!important;white-space:nowrap}
+.hcta__s{display:none}
+.mbtn{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 16px 0 14px;border-radius:99px;border:1.5px solid var(--line2);background:var(--paper);color:var(--ink);font:700 14.5px/1 var(--bf);cursor:pointer}
+.mbtn:hover{border-color:var(--ink)}
+.mbtn__i{position:relative;width:18px;height:12px;flex:none}
+.mbtn__i::before,.mbtn__i::after,.mbtn__i span{content:"";position:absolute;left:0;right:0;height:2px;border-radius:2px;background:currentColor}
+.mbtn__i::before{top:0}.mbtn__i span{top:5px;right:5px}.mbtn__i::after{bottom:0}
+@media (min-width:1100px){.hnav{display:flex}.mbtn{display:none}}
+@media (min-width:1300px){.htel__t{display:block}}
+@media (max-width:1099px){.hcta{display:none}.htel__t{display:block}}
+@media (max-width:640px){
+  .hdr__in{min-height:64px;gap:10px}
+  .hdr .logo__m{width:40px;height:40px}
+  .hdr .logo__t{font-size:17px}
+  .hdr .logo__t span{font-size:9px;letter-spacing:.11em}
+  .htel__t{display:none}
+  .htel__i{width:46px;height:46px;background:var(--brand);color:#fff}
+  .mbtn{padding:0 14px;min-height:46px}
+}
+@media (max-width:440px){.hdr .logo__t span{display:none}.hdr .logo__t{font-size:16.5px}.hdr .logo{gap:9px;min-width:0}}
+@media (max-width:350px){.mbtn__l{display:none}.mbtn{padding:0;width:46px;justify-content:center}}
+
+/* ══ mobile drawer ═══════════════════════════════════════════════════════ */
+.mnav{position:fixed;inset:0;z-index:90;display:flex;justify-content:flex-end;visibility:hidden;pointer-events:none}
+.mnav.is-open{visibility:visible;pointer-events:auto}
+.mnav__scrim{position:absolute;inset:0;background:rgba(10,20,18,.48);opacity:0;transition:opacity .3s ease;border:0;padding:0;cursor:pointer}
+.mnav.is-open .mnav__scrim{opacity:1}
+.mnav__p{position:relative;width:min(440px,100%);height:100%;background:var(--paper);display:flex;flex-direction:column;transform:translateX(100%);transition:transform .34s cubic-bezier(.2,.8,.2,1);box-shadow:-20px 0 60px -20px rgba(0,0,0,.35)}
+.mnav.is-open .mnav__p{transform:none}
+.mnav__top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px 12px 20px;border-bottom:1px solid var(--line);min-height:68px}
+.mnav__top .status{font-size:12.5px}
+.mnav__x{width:46px;height:46px;border-radius:50%;border:1.5px solid var(--line2);background:var(--paper);color:var(--ink);display:grid;place-items:center;cursor:pointer;flex:none}
+.mnav__body{flex:1;overflow-y:auto;overscroll-behavior:contain;padding:8px 20px 24px}
+.mnav__list{list-style:none;margin:0;padding:0}
+.mnav__list li+li{border-top:1px solid var(--line)}
+.mnav__list a{display:flex;align-items:center;gap:14px;padding:15px 2px;text-decoration:none;color:var(--ink)}
+.mnav__list b{display:block;font:700 20px/1.2 var(--hf);letter-spacing:-.015em}
+.mnav__list small{display:block;font:500 13.5px/1.35 var(--bf);color:var(--faint);margin-top:3px}
+.mnav__list svg{margin-left:auto;color:var(--brand);flex:none}
+.mnav__list a[aria-current="true"] b{color:var(--brand)}
+.mnav__q{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:18px 0}
+.mnav__q a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;min-height:78px;border-radius:var(--rs);background:var(--panel);color:var(--ink);text-decoration:none;font:700 13px/1.2 var(--bf);text-align:center;padding:10px 6px}
+.mnav__q a svg{color:var(--brand);width:22px;height:22px}
+.mnav__q a.is-p{background:var(--brand);color:#fff}
+.mnav__q a.is-p svg{color:#fff}
+.mnav__sos{display:flex;gap:12px;align-items:flex-start;border:1px solid #f0c9c4;background:var(--alertsoft);border-radius:var(--rs);padding:14px 16px;font:500 14px/1.45 var(--bf);color:var(--ink2);margin:0}
+.mnav__sos b{color:var(--alert)}
+.mnav__sos a{color:var(--alert);font-weight:800}
+.mnav__addr{margin:16px 0 0;font:500 14px/1.5 var(--bf);color:var(--faint)}
+body.is-locked{overflow:hidden}
+@media (prefers-reduced-motion:reduce){.mnav__p,.mnav__scrim,.hnav a::after{transition:none}}
+
+/* ══ safety card (above footer) ══════════════════════════════════════════ */
+.safe{padding:clamp(40px,6vw,72px) 0;background:var(--bg)}
+.safe__card{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:0 24px 50px -36px rgba(0,0,0,.35)}
+.safe__head{display:flex;gap:16px;align-items:flex-start;padding:clamp(22px,3vw,32px);border-bottom:1px solid var(--line)}
+.safe__ic{width:46px;height:46px;border-radius:14px;background:var(--alertsoft);color:var(--alert);display:grid;place-items:center;flex:none}
+.safe__head h2{font-size:clamp(22px,2.6vw,30px);margin:2px 0 6px}
+.safe__head p{margin:0;color:var(--ink2);max-width:60ch}
+.safe__g{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.safe__g li{padding:22px clamp(18px,2.4vw,28px) 24px;display:flex;flex-direction:column;gap:8px;border-left:1px solid var(--line)}
+.safe__g li:first-child{border-left:0;background:var(--alertsoft)}
+.safe__k{font:700 11px/1 var(--bf);letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
+.safe__g li:first-child .safe__k{color:var(--alert)}
+.safe__g b{font:700 21px/1.15 var(--hf);color:var(--ink);letter-spacing:-.015em}
+.safe__g p{margin:0;font-size:14.5px;line-height:1.5;color:var(--ink2);flex:1}
+.safe__g a{align-self:flex-start;display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 16px;border-radius:99px;border:1.5px solid var(--line2);color:var(--ink);text-decoration:none;font-weight:700;font-size:14.5px;margin-top:6px;font-variant-numeric:tabular-nums}
+.safe__g a:hover{border-color:var(--ink)}
+.safe__g li:first-child a{background:var(--alert);border-color:var(--alert);color:#fff}
+.safe__g li:first-child a:hover{background:#8f1e17}
+@media (max-width:980px){.safe__g{grid-template-columns:repeat(2,minmax(0,1fr))}.safe__g li:nth-child(3){border-left:0}.safe__g li:nth-child(n+3){border-top:1px solid var(--line)}}
+@media (max-width:560px){.safe__g{grid-template-columns:minmax(0,1fr)}.safe__g li{border-left:0!important}.safe__g li+li{border-top:1px solid var(--line)}.safe__head{flex-direction:column;gap:12px}}
+
+@media (max-width:760px){.cbar__note{display:none}}
+@media (max-width:420px){.cbar__in{gap:8px;padding:5px 12px}.cbar__tag{display:none}.cbar__sw a{padding:6px 11px}.cbar__back span{display:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main" style="background:#2B352E;color:#fff">Skip to content</a><div class="cbar" role="region" aria-label="Design concept"><div class="cbar__in"><span class="cbar__tag">Concept</span><nav class="cbar__sw" aria-label="Design directions"><a href="neighbors.html" aria-current="page">Neighbors</a><a href="care.html">Care</a></nav><span class="cbar__note">Fictional pharmacy · names, numbers and reviews are placeholders</span><a class="cbar__back" href="../index.html#duran-hossain"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 6l-6 6 6 6"/></svg>All <span>concepts</span></a></div></div>
+<div class="util"><div class="util__in"><p class="util__sos"><span class="util__dot" aria-hidden="true"></span><span><b>Emergency?</b> <span class="util__long">Call</span> <a href="tel:911">911</a></span><span class="util__pc">&nbsp;· Poison Control <a href="tel:18002221222">1-800-222-1222</a></span></p><p class="util__info"><span class="util__addr"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.1-7-11.4A7 7 0 0 1 19 9.6C19 14.9 12 21 12 21z"/><circle cx="12" cy="9.6" r="2.6"/></svg>74-20 Roosevelt Ave, Jackson Heights</span><span class="util__lang"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 10h8M8 13h5"/></svg>9 languages at the counter</span><span class="status" data-rx-status>Checking hours…</span></p></div></div>
+<header class="hdr"><div class="hdr__in"><a class="logo" href="neighbors.html"><span class="logo__m"><svg viewBox="0 0 24 24" width="25" height="25" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M12 8v8M8 12h8"/></svg></span><span class="logo__t">Durán &amp; Hossain<span>Jackson Heights · Est 2009</span></span></a><nav class="hnav" aria-label="Main"><a href="#services" aria-current="false">Services</a><a href="#specialty" aria-current="false">Specialty</a><a href="#shop" aria-current="false">Shop</a><a href="#vaccines" aria-current="false">Vaccines</a><a href="#insurance" aria-current="false">Insurance</a><a href="#hours" aria-current="false">Hours</a><a href="#contact" aria-current="false">Contact</a></nav><div class="hact"><a class="htel" href="tel:+17185550175" aria-label="Call the pharmacy, (718) 555-0175"><span class="htel__i"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 3.5h3.2l1.6 4.3-2.1 1.4a12 12 0 0 0 7.1 7.1l1.4-2.1 4.3 1.6V19a1.6 1.6 0 0 1-1.7 1.6A17.2 17.2 0 0 1 3.4 5.2 1.6 1.6 0 0 1 5 3.5z"/></svg></span><span class="htel__t"><small>Pharmacy line</small><b>(718) 555-0175</b></span></a><a class="btn btn--sm hcta" href="sms:+17185550100">Text a refill</a><button class="mbtn" type="button" aria-expanded="false" aria-controls="mnav"><span class="mbtn__i" aria-hidden="true"><span></span></span><span class="mbtn__l">Menu</span></button></div></div></header>
+<div class="mnav" id="mnav" role="dialog" aria-modal="true" aria-label="Menu" hidden><button class="mnav__scrim" type="button" tabindex="-1" aria-label="Close menu"></button><div class="mnav__p"><div class="mnav__top"><span class="status" data-rx-status>Checking hours…</span><button class="mnav__x" type="button" aria-label="Close menu"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div><div class="mnav__body"><div class="mnav__q"><a class="is-p" href="tel:+17185550175"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 3.5h3.2l1.6 4.3-2.1 1.4a12 12 0 0 0 7.1 7.1l1.4-2.1 4.3 1.6V19a1.6 1.6 0 0 1-1.7 1.6A17.2 17.2 0 0 1 3.4 5.2 1.6 1.6 0 0 1 5 3.5z"/></svg>Call us</a><a href="sms:+17185550100"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 10h8M8 13h5"/></svg>Text a refill</a><a href="https://maps.google.com/?q=74-20+Roosevelt+Ave+Jackson+Heights+NY+11372"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.1-7-11.4A7 7 0 0 1 19 9.6C19 14.9 12 21 12 21z"/><circle cx="12" cy="9.6" r="2.6"/></svg>Directions</a></div><ul class="mnav__list"><li><a href="#services" aria-current="false"><span><b>Services</b><small>Prescriptions, refills, transfers</small></span><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 6l6 6-6 6"/></svg></a></li><li><a href="#specialty" aria-current="false"><span><b>Specialty</b><small>Compounding, adherence packs, equipment</small></span><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 6l6 6-6 6"/></svg></a></li><li><a href="#shop" aria-current="false"><span><b>Shop</b><small>Over-the-counter, vitamins, baby care</small></span><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 6l6 6-6 6"/></svg></a></li><li><a href="#vaccines" aria-current="false"><span><b>Vaccines</b><small>Walk-in shots, no appointment</small></span><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 6l6 6-6 6"/></svg></a></li><li><a href="#insurance" aria-current="false"><span><b>Insurance</b><small>NYRx, Medicare, work plans</small></span><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 6l6 6-6 6"/></svg></a></li><li><a href="#hours" aria-current="false"><span><b>Hours</b><small>Today, holidays, delivery cut-off</small></span><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 6l6 6-6 6"/></svg></a></li><li><a href="#contact" aria-current="false"><span><b>Contact</b><small>Call, text, visit</small></span><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 6l6 6-6 6"/></svg></a></li></ul><p class="mnav__sos"><span><b>In an emergency, call <a href="tel:911">911</a></b>, not the pharmacy. Poison Control: <a href="tel:18002221222">1-800-222-1222</a>.</span></p><p class="mnav__addr">74-20 Roosevelt Avenue, Jackson Heights, NY 11372</p></div></div></div><main id="main"><section class="hero hero--center"><div class="hero__bg"><svg width="100%" height="100%" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><circle cx="70" cy="60" r="110" fill="#E09A6B" opacity=".22"/><circle cx="330" cy="200" r="130" fill="#8E5024" opacity=".20"/><circle cx="210" cy="30" r="80" fill="#3F7A5E" opacity=".13"/></svg></div><div class="wrap hero__in"><div class="hero__g"><div><span class="kick"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#3F7A5E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 20.5S3.5 15 3.5 9.2A4.7 4.7 0 0 1 12 6.5a4.7 4.7 0 0 1 8.5 2.7c0 5.8-8.5 11.3-8.5 11.3z"/></svg>One shop on Roosevelt Avenue since 2009</span><h1>The pharmacy that has <em>time for you.</em></h1><p class="hero__l">An independent pharmacy in Jackson Heights. Nine languages at the counter, free same-day delivery, walk-in vaccinations, and a pharmacist who will go through every bottle with you — no appointment, no charge.</p><div class="cta cta--c"><a class="btn" href="tel:+17185550175">Call (718) 555-0175</a><a class="btn btn--o" href="#hours">Hours &amp; directions</a></div><div class="trust"><div><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="#3F7A5E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 2.5l8 3.2v6c0 5-3.4 9.2-8 10.3-4.6-1.1-8-5.3-8-10.3v-6z"/><path d="M8.8 12.2l2.2 2.2 4.2-4.4"/></svg>Licensed NYS pharmacy</div><div><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="#3F7A5E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 6.5h11v10H2zM13 10h4l3 3.2v3.3h-7z"/><circle cx="6.2" cy="18.5" r="2"/><circle cx="17" cy="18.5" r="2"/></svg>Free delivery, no minimum</div><div><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="#3F7A5E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3.2 9.5h17.6M3.2 14.5h17.6"/><path d="M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18z"/></svg>9 languages</div></div></div><div class="hero__art"><svg viewBox="0 0 680 520" role="img" aria-label="A pharmacy storefront on a Queens avenue, under the elevated train" style="width:100%;height:auto;display:block"><defs><clipPath id="neighborshero-win"><rect x="112" y="302" width="248" height="120" rx="14"/></clipPath><linearGradient id="neighborshero-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F7E6D6"/><stop offset="1" stop-color="#FDF3E8"/></linearGradient></defs><rect x="0" y="0" width="680" height="520" rx="0" fill="url(#neighborshero-sky)"/><circle cx="120" cy="110" r="95" fill="#E09A6B" opacity=".20"/><circle cx="575" cy="70" r="70" fill="#8E5024" opacity=".22"/><rect x="0" y="150" width="86" height="300" rx="0" fill="#E8D5C2"/><rect x="612" y="128" width="68" height="322" rx="0" fill="#E8D5C2"/><rect x="16" y="176" width="18" height="24" rx="1" fill="#DCC6B0"/><rect x="16" y="216" width="18" height="24" rx="1" fill="#DCC6B0"/><rect x="16" y="256" width="18" height="24" rx="1" fill="#DCC6B0"/><rect x="46" y="176" width="18" height="24" rx="1" fill="#DCC6B0"/><rect x="46" y="216" width="18" height="24" rx="1" fill="#DCC6B0"/><rect x="46" y="256" width="18" height="24" rx="1" fill="#DCC6B0"/><rect x="632" y="154" width="18" height="24" rx="1" fill="#DCC6B0"/><rect x="632" y="194" width="18" height="24" rx="1" fill="#DCC6B0"/><rect x="632" y="234" width="18" height="24" rx="1" fill="#DCC6B0"/><rect x="632" y="274" width="18" height="24" rx="1" fill="#DCC6B0"/><rect x="62" y="96" width="22" height="338" rx="1" fill="#B7A694"/><rect x="62" y="96" width="22" height="338" fill="none" stroke="#2B352E" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/><rect x="53" y="424" width="40" height="12" rx="2" fill="#9B8975"/><rect x="58" y="130" width="30" height="9" rx="2" fill="#9B8975"/><rect x="58" y="176" width="30" height="9" rx="2" fill="#9B8975"/><rect x="58" y="222" width="30" height="9" rx="2" fill="#9B8975"/><rect x="58" y="268" width="30" height="9" rx="2" fill="#9B8975"/><rect x="58" y="314" width="30" height="9" rx="2" fill="#9B8975"/><rect x="58" y="360" width="30" height="9" rx="2" fill="#9B8975"/><rect x="58" y="406" width="30" height="9" rx="2" fill="#9B8975"/><rect x="556" y="96" width="22" height="338" rx="1" fill="#B7A694"/><rect x="556" y="96" width="22" height="338" fill="none" stroke="#2B352E" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/><rect x="547" y="424" width="40" height="12" rx="2" fill="#9B8975"/><rect x="552" y="130" width="30" height="9" rx="2" fill="#9B8975"/><rect x="552" y="176" width="30" height="9" rx="2" fill="#9B8975"/><rect x="552" y="222" width="30" height="9" rx="2" fill="#9B8975"/><rect x="552" y="268" width="30" height="9" rx="2" fill="#9B8975"/><rect x="552" y="314" width="30" height="9" rx="2" fill="#9B8975"/><rect x="552" y="360" width="30" height="9" rx="2" fill="#9B8975"/><rect x="552" y="406" width="30" height="9" rx="2" fill="#9B8975"/><rect x="0" y="62" width="680" height="38" rx="0" fill="#B7A694"/><rect x="0" y="62" width="680" height="38" fill="none" stroke="#2B352E" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/><rect x="0" y="100" width="680" height="9" rx="0" fill="#9B8975"/><path d="M84 100 L143 62 M84 62 L143 100 M143 100 L202 62 M143 62 L202 100 M202 100 L261 62 M202 62 L261 100 M261 100 L320 62 M261 62 L320 100 M320 100 L379 62 M320 62 L379 100 M379 100 L438 62 M379 62 L438 100 M438 100 L497 62 M438 62 L497 100 M497 100 L556 62 M497 62 L556 100" fill="none" stroke="#9B8975" stroke-width="3" opacity=".85"/><rect x="138" y="14" width="404" height="50" rx="16" fill="#4F8A6E"/><rect x="138" y="14" width="404" height="50" rx="16" fill="none" stroke="#2B352E" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/><rect x="138" y="36" width="404" height="7" rx="0" fill="#E09A6B"/><rect x="158" y="22" width="34" height="13" rx="2" fill="#D9EAE0"/><rect x="212" y="22" width="34" height="13" rx="2" fill="#D9EAE0"/><rect x="266" y="22" width="34" height="13" rx="2" fill="#D9EAE0"/><rect x="320" y="22" width="34" height="13" rx="2" fill="#D9EAE0"/><rect x="374" y="22" width="34" height="13" rx="2" fill="#D9EAE0"/><rect x="428" y="22" width="34" height="13" rx="2" fill="#D9EAE0"/><rect x="482" y="22" width="34" height="13" rx="2" fill="#D9EAE0"/><circle cx="528" cy="54" r="6" fill="#F5C98A"/><rect x="72" y="150" width="540" height="284" rx="0" fill="#FFFCF8"/><rect x="72" y="150" width="540" height="284" fill="none" stroke="#2B352E" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/><rect x="72" y="150" width="540" height="17" rx="1" fill="#F2E6D8"/><rect x="92" y="182" width="500" height="58" rx="14" fill="#3F7A5E"/><rect x="92" y="182" width="500" height="58" rx="14" fill="none" stroke="#2B352E" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/><text x="342" y="221" text-anchor="middle" fill="#FDF7F0" font-family="'Bricolage Grotesque',sans-serif" font-size="31" font-weight="800" letter-spacing="1.5">DURÁN &amp; HOSSAIN</text><path d="M88 248 L506 248 L506 294 q -19.0 13 -38.0 0 q -19.0 13 -38.0 0 q -19.0 13 -38.0 0 q -19.0 13 -38.0 0 q -19.0 13 -38.0 0 q -19.0 13 -38.0 0 q -19.0 13 -38.0 0 q -19.0 13 -38.0 0 q -19.0 13 -38.0 0 q -19.0 13 -38.0 0 q -19.0 13 -38.0 0 L88 248" fill="#3F7A5E" stroke="#2B352E" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/><clipPath id="neighborshero-aw"><path d="M88 248 L506 248 L506 294 q -19.0 13 -38.0 0 q -19.0 13 -38.0 0 q -19.0 13 -38.0 0 q -19.0 13 -38.0 0 q -19.0 13 -38.0 0 q -19.0 13 -38.0 0 q -19.0 13 -38.0 0 q -19.0 13 -38.0 0 q -19.0 13 -38.0 0 q -19.0 13 -38.0 0 q -19.0 13 -38.0 0 L88 248"/></clipPath><g clip-path="url(#neighborshero-aw)"><rect x="126.0" y="248" width="38.0" height="62" rx="0" fill="#FDF7F0"/><rect x="202.0" y="248" width="38.0" height="62" rx="0" fill="#FDF7F0"/><rect x="278.0" y="248" width="38.0" height="62" rx="0" fill="#FDF7F0"/><rect x="354.0" y="248" width="38.0" height="62" rx="0" fill="#FDF7F0"/><rect x="430.0" y="248" width="38.0" height="62" rx="0" fill="#FDF7F0"/></g><path d="M88 248 L506 248" stroke="#2B352E" stroke-width="1.8" fill="none"/><rect x="112" y="302" width="248" height="120" rx="14" fill="#D9EAE0"/><g clip-path="url(#neighborshero-win)"><rect x="112" y="302" width="248" height="120" rx="0" fill="#FBF2E8"/><rect x="124" y="336" width="224" height="4" rx="1" fill="#C9B49E"/><rect x="130" y="320" width="9" height="16" rx="1.5" fill="#E09A6B"/><rect x="144" y="320" width="10" height="16" rx="1.5" fill="#4F8A6E"/><rect x="159" y="317" width="13" height="19" rx="1.5" fill="#4F8A6E"/><rect x="177" y="318" width="13" height="18" rx="1.5" fill="#E09A6B"/><rect x="195" y="318" width="13" height="18" rx="1.5" fill="#C77F6B"/><rect x="213" y="323" width="12" height="13" rx="1.5" fill="#4F8A6E"/><rect x="230" y="317" width="15" height="19" rx="1.5" fill="#E09A6B"/><rect x="250" y="318" width="13" height="18" rx="1.5" fill="#E09A6B"/><rect x="268" y="320" width="13" height="16" rx="1.5" fill="#4F8A6E"/><rect x="286" y="323" width="14" height="13" rx="1.5" fill="#E09A6B"/><rect x="305" y="320" width="12" height="16" rx="1.5" fill="#E09A6B"/><rect x="124" y="372" width="224" height="4" rx="1" fill="#C9B49E"/><rect x="130" y="360" width="10" height="12" rx="1.5" fill="#C77F6B"/><rect x="145" y="355" width="15" height="17" rx="1.5" fill="#C77F6B"/><rect x="165" y="357" width="14" height="15" rx="1.5" fill="#C77F6B"/><rect x="184" y="359" width="13" height="13" rx="1.5" fill="#4F8A6E"/><rect x="202" y="355" width="9" height="17" rx="1.5" fill="#E09A6B"/><rect x="216" y="356" width="14" height="16" rx="1.5" fill="#4F8A6E"/><rect x="235" y="360" width="12" height="12" rx="1.5" fill="#4F8A6E"/><rect x="252" y="356" width="9" height="16" rx="1.5" fill="#8FB89E"/><rect x="266" y="358" width="12" height="14" rx="1.5" fill="#4F8A6E"/><rect x="283" y="357" width="9" height="15" rx="1.5" fill="#8FB89E"/><rect x="297" y="352" width="14" height="20" rx="1.5" fill="#C77F6B"/><rect x="124" y="408" width="224" height="4" rx="1" fill="#C9B49E"/><rect x="130" y="395" width="13" height="13" rx="1.5" fill="#C77F6B"/><rect x="148" y="393" width="11" height="15" rx="1.5" fill="#C77F6B"/><rect x="164" y="394" width="15" height="14" rx="1.5" fill="#C77F6B"/><rect x="184" y="394" width="11" height="14" rx="1.5" fill="#4F8A6E"/><rect x="200" y="390" width="10" height="18" rx="1.5" fill="#8FB89E"/><rect x="215" y="389" width="13" height="19" rx="1.5" fill="#8FB89E"/><rect x="233" y="396" width="10" height="12" rx="1.5" fill="#E09A6B"/><rect x="248" y="395" width="15" height="13" rx="1.5" fill="#4F8A6E"/><rect x="268" y="392" width="11" height="16" rx="1.5" fill="#8FB89E"/><rect x="284" y="394" width="15" height="14" rx="1.5" fill="#8FB89E"/><rect x="304" y="390" width="11" height="18" rx="1.5" fill="#C77F6B"/></g><rect x="112" y="302" width="248" height="120" rx="14" fill="none" stroke="#2B352E" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/><rect x="232" y="302" width="4" height="120" rx="0" fill="#9B8975"/><rect x="392" y="300" width="92" height="134" rx="14" fill="#E09A6B"/><rect x="392" y="300" width="92" height="134" rx="14" fill="none" stroke="#2B352E" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/><rect x="404" y="312" width="68" height="62" rx="2" fill="#D9EAE0"/><circle cx="472" cy="372" r="5" fill="#9B8975"/><rect x="404" y="388" width="68" height="16" rx="2" fill="#E09A6B"/><rect x="556" y="196" width="10" height="54" rx="0" fill="#9B8975"/><rect x="528" y="250" width="66" height="66" rx="16" fill="#FFFFFF"/><rect x="528" y="250" width="66" height="66" rx="16" fill="none" stroke="#2B352E" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/><path d="M554 264h14v15h15v14h-15v15h-14v-15h-15v-14h15z" fill="#3F7A5E"/><rect x="0" y="434" width="680" height="44" rx="0" fill="#EFE2D2"/><rect x="0" y="478" width="680" height="42" rx="0" fill="#C4B5A3"/><path d="M0 456 H680" stroke="#DDCBB6" stroke-width="2" opacity=".5"/><rect x="14" y="496" width="34" height="5" rx="2" fill="#FDF7F0"/><rect x="84" y="496" width="34" height="5" rx="2" fill="#FDF7F0"/><rect x="154" y="496" width="34" height="5" rx="2" fill="#FDF7F0"/><rect x="224" y="496" width="34" height="5" rx="2" fill="#FDF7F0"/><rect x="294" y="496" width="34" height="5" rx="2" fill="#FDF7F0"/><rect x="364" y="496" width="34" height="5" rx="2" fill="#FDF7F0"/><rect x="434" y="496" width="34" height="5" rx="2" fill="#FDF7F0"/><rect x="504" y="496" width="34" height="5" rx="2" fill="#FDF7F0"/><rect x="574" y="496" width="34" height="5" rx="2" fill="#FDF7F0"/><rect x="644" y="496" width="34" height="5" rx="2" fill="#FDF7F0"/><rect x="137.0" y="404.0" width="26.0" height="44.0" rx="9.0" fill="#E09A6B"/><rect x="140.0" y="446.0" width="8.0" height="20.0" rx="3" fill="#7A6855"/><rect x="152.0" y="446.0" width="8.0" height="20.0" rx="3" fill="#7A6855"/><circle cx="150" cy="400.0" r="11.0" fill="#D7A077"/><rect x="184.82" y="416.68" width="22.36" height="37.839999999999996" rx="7.74" fill="#8FB89E"/><rect x="187.4" y="452.8" width="6.88" height="17.2" rx="3" fill="#7A6855"/><rect x="197.72" y="452.8" width="6.88" height="17.2" rx="3" fill="#7A6855"/><circle cx="196" cy="413.24" r="9.459999999999999" fill="#A9713F"/><rect x="507.65" y="409.1" width="24.7" height="41.8" rx="8.549999999999999" fill="#4F8A6E"/><rect x="510.5" y="449.0" width="7.6" height="19.0" rx="3" fill="#7A6855"/><rect x="521.9" y="449.0" width="7.6" height="19.0" rx="3" fill="#7A6855"/><circle cx="520" cy="405.3" r="10.45" fill="#C08A5C"/><rect x="534" y="426" width="20" height="24" rx="3" fill="#4F8A6E"/><rect x="534" y="426" width="20" height="24" rx="3" fill="none" stroke="#2B352E" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/><path d="M539 426v-5a5 5 0 0 1 10 0v5" fill="none" stroke="#2B352E" stroke-width="2"/><rect x="626" y="404" width="16" height="34" rx="5" fill="#C77F6B"/><rect x="620" y="400" width="28" height="7" rx="3" fill="#C77F6B"/><rect x="36" y="396" width="30" height="42" rx="3" fill="#B7A694"/><rect x="36" y="396" width="30" height="42" rx="3" fill="none" stroke="#2B352E" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/></svg></div></div><div class="qa"><a href="tel:+17185550175"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#3F7A5E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="8.5" width="19" height="7" rx="3.5" transform="rotate(-38 12 12)"/><path d="M9.6 7.2l4.8 4.8"/></svg><b>Refill a prescription</b><span>Call or text the Rx number</span></a><a href="tel:+17185550175"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#3F7A5E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 8h16l-1.2 12.1A2 2 0 0 1 16.8 22H7.2a2 2 0 0 1-2-1.9z"/><path d="M8.5 8V6a3.5 3.5 0 0 1 7 0v2"/><path d="M12 12v5M9.5 14.5h5"/></svg><b>Transfer to us</b><span>One call — we do the rest</span></a><a href="#vaccines"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#3F7A5E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 3l3 3M16.5 4.5l3 3M13 8l3 3M9.5 11.5L4 17v3h3l5.5-5.5"/><path d="M10.5 6.5l7 7"/></svg><b>Walk in for a shot</b><span>No appointment needed</span></a><a href="#delivery"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#3F7A5E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 6.5h11v10H2zM13 10h4l3 3.2v3.3h-7z"/><circle cx="6.2" cy="18.5" r="2"/><circle cx="17" cy="18.5" r="2"/></svg><b>Free delivery</b><span>Order by 3 pm</span></a></div></div></section><!-- ═══ RIBBON ═════════════════════════════════════════════════════════════ -->
+<div class="n-ribbon" aria-hidden="true">
+  <div class="n-ribbon__t">
+    <span>Hola, vecino</span><i>✦</i><span>নমস্কার</span><i>✦</i><span>Free delivery by 3 pm</span><i>✦</i><span>नमस्ते</span><i>✦</i><span>Walk-in flu shots</span><i>✦</i><span>Kumusta</span><i>✦</i><span>السلام علیکم</span><i>✦</i><span>Nobody on commission</span><i>✦</i><span>ਸਤ ਸ੍ਰੀ ਅਕਾਲ</span><i>✦</i>
+    <span>Hola, vecino</span><i>✦</i><span>নমস্কার</span><i>✦</i><span>Free delivery by 3 pm</span><i>✦</i><span>नमस्ते</span><i>✦</i><span>Walk-in flu shots</span><i>✦</i><span>Kumusta</span><i>✦</i><span>السلام علیکم</span><i>✦</i><span>Nobody on commission</span><i>✦</i><span>ਸਤ ਸ੍ਰੀ ਅਕਾਲ</span><i>✦</i>
+  </div>
+</div>
+
+<!-- ═══ 01 WINDOW SIGN (hours) ═════════════════════════════════════════════ -->
+<section class="n-window" id="hours" aria-labelledby="hw-t">
+  <div class="wrap n-window__g">
+    <div class="n-sign" aria-hidden="true">
+      <div class="n-sign__string"></div>
+      <div class="n-sign__board" id="n-sign"><span class="n-sign__face n-sign__face--open">Open</span><span class="n-sign__face n-sign__face--closed">Closed</span></div>
+      <p class="n-sign__note" id="n-sign-note">—</p>
+    </div>
+    <div class="n-glass">
+      <p class="n-hand">painted on the door since 2009</p>
+      <h2 id="hw-t">Come by. <em>We’re right under the 7.</em></h2>
+      <p class="n-glass__live"><span class="status" data-rx-status>Checking…</span> <span data-rx-today>—</span></p>
+      <dl class="n-hours">
+        <div data-rx-day="1"><dt>Monday</dt><dd>9 – 7</dd></div>
+        <div data-rx-day="2"><dt>Tuesday</dt><dd>9 – 7</dd></div>
+        <div data-rx-day="3"><dt>Wednesday</dt><dd>9 – 7</dd></div>
+        <div data-rx-day="4"><dt>Thursday</dt><dd>9 – 7</dd></div>
+        <div data-rx-day="5"><dt>Friday</dt><dd>9 – 7</dd></div>
+        <div data-rx-day="6"><dt>Saturday</dt><dd>9 – 5</dd></div>
+        <div data-rx-day="0"><dt>Sunday</dt><dd>10 – 2</dd></div>
+      </dl>
+      <p class="n-banner" data-rx-banner hidden></p>
+      <details class="n-holi"><summary>Holiday hours coming up</summary><div data-rx-upcoming></div><p class="n-fine">Worked out from the federal calendar every year.</p></details>
+      <p class="n-addr">74-20 Roosevelt Avenue · top of the 74 St–Broadway stairs · <a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=74-20+Roosevelt+Avenue%2C+Jackson+Heights%2C+NY+11372">directions ↗</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 02 THE CORKBOARD (services) ════════════════════════════════════════ -->
+<section class="n-cork" id="services" aria-labelledby="ck-t">
+  <div class="wrap">
+    <header class="n-head">
+      <p class="n-kick">The board by the register</p>
+      <h2 id="ck-t">Everything we do, <em>pinned up where you can see it.</em></h2>
+      <p>Tap a note for the details. None of it costs extra.</p>
+    </header>
+    <ul class="n-notes">
+      <li style="--r:-2deg;--c:#FFF6C9"><button aria-expanded="false"><b>Prescriptions</b><span>Ready in about fifteen minutes. If your doctor sent it electronically, it’s probably waiting already.</span></button></li>
+      <li style="--r:1.5deg;--c:#E4F0E8"><button aria-expanded="false"><b>Refills by text</b><span>Send the Rx number — or the medicine’s name and your birthday — to (718) 555-0100.</span></button></li>
+      <li style="--r:-1deg;--c:#FBE3D3"><button aria-expanded="false"><b>Switching to us?</b><span>One call. We ring your old pharmacy, not you. Usually done the same day.</span></button></li>
+      <li style="--r:2.5deg;--c:#fff"><button aria-expanded="false"><b>Renewals</b><span>If your prescriber needs to sign again, we make that call. You shouldn’t be the go-between.</span></button></li>
+      <li style="--r:-2.5deg;--c:#E4F0E8"><button aria-expanded="false"><b>Free delivery</b><span>Order by 3 pm, at your door 4–8 pm. No minimum, no fee, no tip.</span></button></li>
+      <li style="--r:1deg;--c:#FFF6C9"><button aria-expanded="false"><b>Walk-in shots</b><span>Eleven vaccines, no appointment, about ten minutes.</span></button></li>
+      <li style="--r:-1.5deg;--c:#fff"><button aria-expanded="false"><b>Quick tests</b><span>Rapid COVID-19 and flu tests, and a free blood-pressure check any time we’re open.</span></button></li>
+      <li style="--r:2deg;--c:#FBE3D3"><button aria-expanded="false"><b>Insurance help</b><span>NYRx, Medicare, union and work plans. Price quoted before we fill.</span></button></li>
+      <li style="--r:-1deg;--c:#E4F0E8"><button aria-expanded="false"><b>Nine languages</b><span>Counseling in your language, free, even if the prescription isn’t from us.</span></button></li>
+      <li style="--r:1.5deg;--c:#fff"><button aria-expanded="false"><b>Compounding</b><span>Creams, liquids and dye-free versions — plus free flavoring for anything a child refuses.</span></button></li>
+      <li style="--r:-2deg;--c:#FFF6C9"><button aria-expanded="false"><b>Bag of bottles?</b><span>Bring every one, vitamins too. We’ll look for clashes and duplicates.</span></button></li>
+      <li style="--r:2.5deg;--c:#FBE3D3"><button aria-expanded="false"><b>Equipment</b><span>Compression and braces measured properly. Meters, nebulizers, walkers, commodes.</span></button></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ═══ 03 COUPONS (specialty programs) ════════════════════════════════════ -->
+<section class="n-sec" id="specialty" aria-labelledby="cp-t">
+  <div class="wrap">
+    <header class="n-head n-head--split">
+      <div><p class="n-kick">Specialty programs</p><h2 id="cp-t">Six things the chain <em>can’t clip for you.</em></h2></div>
+      <p>Programs independent pharmacies run and big chains mostly don’t. Every one of these is free or covered for most people — show the coupon at the counter, or just ask.</p>
+    </header>
+    <div class="n-coupons">
+      <article class="n-coupon" style="--k:var(--brand)"><div class="n-coupon__l"><span>Good for</span><b>1</b><small>sit-down review</small></div><div class="n-coupon__r"><h3>Medication Therapy Management</h3><p>Thirty minutes with a pharmacist and everything you take — prescriptions, supplements, the one your cousin gave you. A written summary for your doctor.</p><p class="n-coupon__f">Free for most Medicare Part D members</p></div></article>
+      <article class="n-coupon" style="--k:#B4530F"><div class="n-coupon__l"><span>Good for</span><b>1</b><small>pickup a month</small></div><div class="n-coupon__r"><h3>Medication synchronization</h3><p>Six medicines running out on five different days? We line them up so everything is ready on one day you choose.</p><p class="n-coupon__f">With your prescriber’s agreement</p></div></article>
+      <article class="n-coupon" style="--k:#8E5024"><div class="n-coupon__l"><span>Good for</span><b>28</b><small>sealed doses</small></div><div class="n-coupon__r"><h3>Blister packs</h3><p>Your month sorted into bubbles marked morning, noon, evening and bed. The usual reason: a parent, or a hospital discharge with nine new bottles.</p><p class="n-coupon__f">No extra charge</p></div></article>
+      <article class="n-coupon" style="--k:var(--brand)"><div class="n-coupon__l"><span>Good for</span><b>1</b><small>custom strength</small></div><div class="n-coupon__r"><h3>Compounding</h3><p>The cream at a strength nobody makes, the liquid for someone who can’t swallow tablets, the dye-free version.</p><p class="n-coupon__f">Non-sterile only — we refer the rest</p></div></article>
+      <article class="n-coupon" style="--k:#B4530F"><div class="n-coupon__l"><span>Good for</span><b>∞</b><small>questions</small></div><div class="n-coupon__r"><h3>Diabetes care</h3><p>Meters, strips, monitors — and somebody who sits down and shows you what the numbers mean. Insulin travels in a cold pack.</p><p class="n-coupon__f">Free blood-pressure check every visit</p></div></article>
+      <article class="n-coupon" style="--k:#8E5024"><div class="n-coupon__l"><span>Good for</span><b>1</b><small>proper fitting</small></div><div class="n-coupon__r"><h3>Fitted equipment</h3><p>Compression stockings and braces measured in store, coverage checked before you buy. Walkers, commodes, ostomy supplies in stock.</p><p class="n-coupon__f">No appointment needed</p></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 04 BASKET + RECEIPT (shop) ═════════════════════════════════════════ -->
+<section class="n-sec n-sec--warm" id="shop" aria-labelledby="sh-t">
+  <div class="wrap n-shop">
+    <div>
+      <header class="n-head">
+        <p class="n-kick">Front of the store</p>
+        <h2 id="sh-t">Make a list. <em>We’ll bag it and bring it.</em></h2>
+        <p>Tap what you need. We’ll turn it into a text you can send us — no account, no checkout, no card on a website. We confirm the exact price and bring it on the next run.</p>
+      </header>
+      <div class="n-aisles" role="group" aria-label="Aisles">
+        <button aria-pressed="true" data-a="all">Everything</button>
+        <button aria-pressed="false" data-a="h">Health</button>
+        <button aria-pressed="false" data-a="b">Mother &amp; baby</button>
+        <button aria-pressed="false" data-a="s">Skin &amp; hair</button>
+        <button aria-pressed="false" data-a="v">Vitamins</button>
+      </div>
+      <ul class="n-items" id="n-items"></ul>
+    </div>
+    <aside class="n-receipt" aria-labelledby="rc-t">
+      <div class="n-receipt__paper">
+        <p class="n-receipt__h" id="rc-t">DURÁN &amp; HOSSAIN<br><small>74-20 ROOSEVELT AVE · JACKSON HTS</small></p>
+        <p class="n-receipt__d" id="n-rdate">—</p>
+        <ul class="n-receipt__lines" id="n-lines" aria-live="polite"><li class="n-receipt__empty">Your list is empty.<br>Tap something on the left.</li></ul>
+        <p class="n-receipt__tot"><span>ESTIMATE</span><b id="n-tot">$0</b></p>
+        <p class="n-receipt__dl"><span>DELIVERY</span><b>FREE</b></p>
+        <p class="n-receipt__msg">Prices are typical ranges — brands vary. We text the real total before anything is charged.</p>
+        <a class="n-receipt__btn" id="n-send" href="sms:+17185550100" aria-disabled="true">Text this list to us</a>
+        <p class="n-receipt__foot">THANK YOU, NEIGHBOR</p>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- ═══ 05 DELIVERY ════════════════════════════════════════════════════════ -->
+<section class="n-sec" id="delivery" aria-labelledby="dv-t">
+  <div class="wrap n-deliv">
+    <figure class="n-deliv__art"><svg viewBox="0 0 560 400" role="img" aria-label="A delivery rider from the pharmacy, carrying an insulated bag" style="width:100%;height:auto;display:block"><rect x="0" y="0" width="560" height="400" rx="0" fill="#FDF3E8"/><circle cx="430" cy="110" r="92" fill="#E09A6B" opacity=".22"/><rect x="14" y="172" width="92" height="128" rx="2" fill="#DCC6B0"/><rect x="26" y="188" width="13" height="17" rx="1" fill="#D9EAE0" opacity=".75"/><rect x="52" y="188" width="13" height="17" rx="1" fill="#D9EAE0" opacity=".75"/><rect x="78" y="188" width="13" height="17" rx="1" fill="#D9EAE0" opacity=".75"/><rect x="26" y="222" width="13" height="17" rx="1" fill="#D9EAE0" opacity=".75"/><rect x="52" y="222" width="13" height="17" rx="1" fill="#D9EAE0" opacity=".75"/><rect x="78" y="222" width="13" height="17" rx="1" fill="#D9EAE0" opacity=".75"/><rect x="26" y="256" width="13" height="17" rx="1" fill="#D9EAE0" opacity=".75"/><rect x="52" y="256" width="13" height="17" rx="1" fill="#D9EAE0" opacity=".75"/><rect x="78" y="256" width="13" height="17" rx="1" fill="#D9EAE0" opacity=".75"/><rect x="112" y="142" width="76" height="158" rx="2" fill="#E8D5C2"/><rect x="124" y="158" width="13" height="17" rx="1" fill="#D9EAE0" opacity=".75"/><rect x="150" y="158" width="13" height="17" rx="1" fill="#D9EAE0" opacity=".75"/><rect x="124" y="192" width="13" height="17" rx="1" fill="#D9EAE0" opacity=".75"/><rect x="150" y="192" width="13" height="17" rx="1" fill="#D9EAE0" opacity=".75"/><rect x="124" y="226" width="13" height="17" rx="1" fill="#D9EAE0" opacity=".75"/><rect x="150" y="226" width="13" height="17" rx="1" fill="#D9EAE0" opacity=".75"/><rect x="124" y="260" width="13" height="17" rx="1" fill="#D9EAE0" opacity=".75"/><rect x="150" y="260" width="13" height="17" rx="1" fill="#D9EAE0" opacity=".75"/><rect x="186" y="188" width="104" height="112" rx="2" fill="#DCC6B0"/><rect x="198" y="204" width="13" height="17" rx="1" fill="#D9EAE0" opacity=".75"/><rect x="224" y="204" width="13" height="17" rx="1" fill="#D9EAE0" opacity=".75"/><rect x="250" y="204" width="13" height="17" rx="1" fill="#D9EAE0" opacity=".75"/><rect x="198" y="238" width="13" height="17" rx="1" fill="#D9EAE0" opacity=".75"/><rect x="224" y="238" width="13" height="17" rx="1" fill="#D9EAE0" opacity=".75"/><rect x="250" y="238" width="13" height="17" rx="1" fill="#D9EAE0" opacity=".75"/><rect x="198" y="272" width="13" height="17" rx="1" fill="#D9EAE0" opacity=".75"/><rect x="224" y="272" width="13" height="17" rx="1" fill="#D9EAE0" opacity=".75"/><rect x="250" y="272" width="13" height="17" rx="1" fill="#D9EAE0" opacity=".75"/><rect x="288" y="154" width="84" height="146" rx="2" fill="#E8D5C2"/><rect x="300" y="170" width="13" height="17" rx="1" fill="#D9EAE0" opacity=".75"/><rect x="326" y="170" width="13" height="17" rx="1" fill="#D9EAE0" opacity=".75"/><rect x="352" y="170" width="13" height="17" rx="1" fill="#D9EAE0" opacity=".75"/><rect x="300" y="204" width="13" height="17" rx="1" fill="#D9EAE0" opacity=".75"/><rect x="326" y="204" width="13" height="17" rx="1" fill="#D9EAE0" opacity=".75"/><rect x="352" y="204" width="13" height="17" rx="1" fill="#D9EAE0" opacity=".75"/><rect x="300" y="238" width="13" height="17" rx="1" fill="#D9EAE0" opacity=".75"/><rect x="326" y="238" width="13" height="17" rx="1" fill="#D9EAE0" opacity=".75"/><rect x="352" y="238" width="13" height="17" rx="1" fill="#D9EAE0" opacity=".75"/><rect x="300" y="272" width="13" height="17" rx="1" fill="#D9EAE0" opacity=".75"/><rect x="326" y="272" width="13" height="17" rx="1" fill="#D9EAE0" opacity=".75"/><rect x="352" y="272" width="13" height="17" rx="1" fill="#D9EAE0" opacity=".75"/><rect x="376" y="176" width="96" height="124" rx="2" fill="#DCC6B0"/><rect x="388" y="192" width="13" height="17" rx="1" fill="#D9EAE0" opacity=".75"/><rect x="414" y="192" width="13" height="17" rx="1" fill="#D9EAE0" opacity=".75"/><rect x="440" y="192" width="13" height="17" rx="1" fill="#D9EAE0" opacity=".75"/><rect x="388" y="226" width="13" height="17" rx="1" fill="#D9EAE0" opacity=".75"/><rect x="414" y="226" width="13" height="17" rx="1" fill="#D9EAE0" opacity=".75"/><rect x="440" y="226" width="13" height="17" rx="1" fill="#D9EAE0" opacity=".75"/><rect x="388" y="260" width="13" height="17" rx="1" fill="#D9EAE0" opacity=".75"/><rect x="414" y="260" width="13" height="17" rx="1" fill="#D9EAE0" opacity=".75"/><rect x="440" y="260" width="13" height="17" rx="1" fill="#D9EAE0" opacity=".75"/><rect x="468" y="150" width="80" height="150" rx="2" fill="#E8D5C2"/><rect x="480" y="166" width="13" height="17" rx="1" fill="#D9EAE0" opacity=".75"/><rect x="506" y="166" width="13" height="17" rx="1" fill="#D9EAE0" opacity=".75"/><rect x="480" y="200" width="13" height="17" rx="1" fill="#D9EAE0" opacity=".75"/><rect x="506" y="200" width="13" height="17" rx="1" fill="#D9EAE0" opacity=".75"/><rect x="480" y="234" width="13" height="17" rx="1" fill="#D9EAE0" opacity=".75"/><rect x="506" y="234" width="13" height="17" rx="1" fill="#D9EAE0" opacity=".75"/><rect x="480" y="268" width="13" height="17" rx="1" fill="#D9EAE0" opacity=".75"/><rect x="506" y="268" width="13" height="17" rx="1" fill="#D9EAE0" opacity=".75"/><rect x="0" y="300" width="560" height="12" rx="0" fill="#EFE2D2"/><rect x="0" y="312" width="560" height="88" rx="0" fill="#C4B5A3"/><rect x="10" y="356" width="40" height="6" rx="3" fill="#FDF7F0"/><rect x="86" y="356" width="40" height="6" rx="3" fill="#FDF7F0"/><rect x="162" y="356" width="40" height="6" rx="3" fill="#FDF7F0"/><rect x="238" y="356" width="40" height="6" rx="3" fill="#FDF7F0"/><rect x="314" y="356" width="40" height="6" rx="3" fill="#FDF7F0"/><rect x="390" y="356" width="40" height="6" rx="3" fill="#FDF7F0"/><rect x="466" y="356" width="40" height="6" rx="3" fill="#FDF7F0"/><rect x="542" y="356" width="40" height="6" rx="3" fill="#FDF7F0"/><circle cx="176" cy="332" r="38" fill="none" stroke="#E6D9C9" stroke-width="5"/><circle cx="176" cy="332" r="29" fill="none" stroke="#9B8975" stroke-width="2"/><circle cx="176" cy="332" r="5" fill="#2B352E"/><circle cx="346" cy="332" r="38" fill="none" stroke="#E6D9C9" stroke-width="5"/><circle cx="346" cy="332" r="29" fill="none" stroke="#9B8975" stroke-width="2"/><circle cx="346" cy="332" r="5" fill="#2B352E"/><path d="M176 332 L246 266 L316 266 L346 332 M246 266 L286 332 M286 332 L316 266" fill="none" stroke="#9B8975" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><path d="M316 266 L330 246" stroke="#9B8975" stroke-width="5" stroke-linecap="round"/><path d="M318 244 h26" stroke="#2B352E" stroke-width="6" stroke-linecap="round"/><rect x="238" y="254" width="34" height="10" rx="4" fill="#2B352E"/><circle cx="286" cy="332" r="11" fill="#9B8975"/><path d="M272 222 L248 262 M282 222 L306 254" stroke="#7A6855" stroke-width="13" stroke-linecap="round" fill="none"/><rect x="252" y="180" width="48" height="54" rx="14" fill="#4F8A6E"/><rect x="252" y="180" width="48" height="54" rx="14" fill="none" stroke="#2B352E" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/><path d="M292 194 L324 240" stroke="#4F8A6E" stroke-width="13" stroke-linecap="round" fill="none"/><circle cx="278" cy="160" r="21" fill="#C08A5C"/><path d="M257 156 a21 21 0 0 1 42 0 z" fill="#E09A6B"/><path d="M297 156 h16" stroke="#E09A6B" stroke-width="7" stroke-linecap="round"/><circle cx="278" cy="160" r="21" fill="none" stroke="#2B352E" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/><rect x="190" y="198" width="74" height="70" rx="17" fill="#4F8A6E"/><rect x="190" y="198" width="74" height="70" rx="17" fill="none" stroke="#2B352E" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/><rect x="190" y="198" width="74" height="17" rx="2" fill="#3F7A5E"/><path d="M212 198v-9a15 15 0 0 1 30 0v9" fill="none" stroke="#2B352E" stroke-width="3.5"/><path d="M220 232h8v-8h8v8h8v8h-8v8h-8v-8h-8z" fill="#3F7A5E"/></svg><span class="n-stamp" aria-hidden="true">FREE<br><small>no tip expected</small></span></figure>
+    <div>
+      <p class="n-kick">Free delivery</p>
+      <h2 id="dv-t">Somebody from the shop <em>rings your bell.</em></h2>
+      <p class="n-lede">Not an app driver — one of us. So whoever is at your door can answer a question about what’s in the bag.</p>
+      <ol class="n-route">
+        <li><b>by 3 pm</b><span>You call or text the order</span></li>
+        <li><b>3–4 pm</b><span>We pack it, cold items in a cold pack</span></li>
+        <li><b>4–8 pm</b><span>At your door — ID and signature for controlled medicines</span></li>
+      </ol>
+      <p class="n-fine">Same day in Jackson Heights, Elmhurst, Corona, East Elmhurst and Woodside. Next morning further out. Mon–Sat.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 06 FLYER (vaccines) ════════════════════════════════════════════════ -->
+<section class="n-sec n-sec--green" id="vaccines" aria-labelledby="vx-t">
+  <div class="wrap n-vx">
+    <div class="n-vx__copy">
+      <p class="n-kick n-kick--light">Vaccinations</p>
+      <h2 id="vx-t">Walk in. <em>Roll up your sleeve.</em> Ten minutes.</h2>
+      <p>This is the real list — New York sets exactly what a pharmacist may give, and from what age. If it isn’t here, we’re not allowed to, and we’ll tell you who is.</p>
+      <ul class="n-cant">
+        <li><b>Yellow fever, typhoid, rabies:</b> travel clinic — we’ll name one nearby.</li>
+        <li><b>Bloodwork:</b> your doctor, or a lab like Quest or Labcorp.</li>
+        <li><b>Kids under 19:</b> most vaccines free at the doctor’s through Vaccines for Children. Flu from 2 and COVID-19 from 3 we can do.</li>
+      </ul>
+    </div>
+    <div class="n-flyer">
+      <span class="n-tape n-tape--l" aria-hidden="true"></span><span class="n-tape n-tape--r" aria-hidden="true"></span>
+      <p class="n-flyer__top">No appointment · Bring ID &amp; insurance card</p>
+      <h3>Walk-in shots</h3>
+      <table>
+        <caption class="sr">Vaccines and minimum ages</caption>
+        <thead><tr><th scope="col">Vaccine</th><th scope="col">Ages</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Flu <small>Sept–March</small></th><td>2+</td></tr>
+          <tr><th scope="row">COVID-19 <small>current formula</small></th><td>3+</td></tr>
+          <tr><th scope="row">Shingles <small>2 doses</small></th><td>18+</td></tr>
+          <tr><th scope="row">Pneumococcal</th><td>18+</td></tr>
+          <tr><th scope="row">Tdap <small>after a deep cut, too</small></th><td>18+</td></tr>
+          <tr><th scope="row">Hepatitis A &amp; B</th><td>18+</td></tr>
+          <tr><th scope="row">HPV</th><td>18+</td></tr>
+          <tr><th scope="row">MMR</th><td>18+</td></tr>
+          <tr><th scope="row">Meningococcal <small>college</small></th><td>18+</td></tr>
+          <tr><th scope="row">Varicella (chickenpox)</th><td>18+</td></tr>
+        </tbody>
+      </table>
+      <ul class="n-tabs" aria-hidden="true"><li>(718) 555-0175</li><li>(718) 555-0175</li><li>(718) 555-0175</li><li>(718) 555-0175</li><li>(718) 555-0175</li><li>(718) 555-0175</li></ul>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 07 CHECKLIST (insurance) ═══════════════════════════════════════════ -->
+<section class="n-sec" id="insurance" aria-labelledby="ck2-t">
+  <div class="wrap n-ins">
+    <div>
+      <p class="n-kick">Insurance</p>
+      <h2 id="ck2-t">Before you come in, <em>check your pocket.</em></h2>
+      <p class="n-lede">Since April 2023, New York Medicaid prescriptions run through a state program called <b>NYRx</b> — not your plan. It’s the number one reason a card “didn’t work” at a chain.</p>
+      <p class="n-hand n-hand--ins">↓ tick them off as you go</p>
+      <ul class="n-check" id="n-check">
+        <li><label><input type="checkbox"><span><b>Your plan card</b> — Healthfirst, Fidelis, MetroPlus, EmblemHealth, Medicare, work or union plan.</span></label></li>
+        <li><label><input type="checkbox"><span><b>The white New York State Benefit card</b> — if you have Medicaid. That’s the one NYRx uses.</span></label></li>
+        <li><label><input type="checkbox"><span><b>Photo ID</b> — for vaccines and controlled medicines.</span></label></li>
+        <li><label><input type="checkbox"><span><b>Every bottle you take</b> — only if you’d like a free medication review.</span></label></li>
+      </ul>
+      <p class="n-check__done" id="n-check-done" aria-live="polite"></p>
+    </div>
+    <div class="n-plans">
+      <h3>Plans we take</h3>
+      <p class="n-plans__chips"><span>NYRx</span><span>Medicare Part D</span><span>Medicare Advantage</span><span>Healthfirst</span><span>Fidelis Care</span><span>MetroPlus</span><span>EmblemHealth</span><span>Aetna</span><span>Cigna</span><span>UnitedHealthcare</span><span>Anthem</span><span>Oxford</span><span>MagnaCare</span><span>1199SEIU</span><span>Essential Plan</span><span>Child Health Plus</span></p>
+      <p class="n-plans__no"><b>No insurance?</b> Ask for the cash price. For many generics it beats a copay — we’ll say so even though it pays us less.</p>
+      <p class="n-fine">Networks change without telling anybody, us included. One call confirms yours. Essential Plan, Child Health Plus and Managed Long-Term Care still bill through the plan.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 08 WINDOW STICKERS (languages) ═════════════════════════════════════ -->
+<section class="n-sec n-sec--warm" aria-labelledby="lg-t">
+  <div class="wrap">
+    <header class="n-head n-head--c">
+      <p class="n-kick">Nine languages</p>
+      <h2 id="lg-t">Nobody should have to bring <em>their child along to translate.</em></h2>
+    </header>
+    <ul class="n-stickers">
+      <li lang="en" style="--r:-4deg;--c:#3F7A5E"><b>Hello</b><span>English</span></li>
+      <li lang="es" style="--r:3deg;--c:#B4530F"><b>Hola</b><span>Español</span></li>
+      <li lang="bn" style="--r:-2deg;--c:#8E5024"><b>নমস্কার</b><span>বাংলা</span></li>
+      <li lang="hi" style="--r:5deg;--c:#2B352E"><b>नमस्ते</b><span>हिन्दी</span></li>
+      <li lang="ur" style="--r:-3deg;--c:#3F7A5E"><b dir="rtl">السلام علیکم</b><span dir="rtl">اردو</span></li>
+      <li lang="pa" style="--r:2deg;--c:#E09A6B"><b>ਸਤ ਸ੍ਰੀ ਅਕਾਲ</b><span>ਪੰਜਾਬੀ</span></li>
+      <li lang="ne" style="--r:-5deg;--c:#8E5024"><b>नमस्ते</b><span>नेपाली</span></li>
+      <li lang="bo" style="--r:4deg;--c:#B4530F"><b>བཀྲ་ཤིས་བདེ་ལེགས།</b><span>བོད་སྐད་</span></li>
+      <li lang="tl" style="--r:-2deg;--c:#2B352E"><b>Kumusta</b><span>Tagalog</span></li>
+    </ul>
+    <p class="n-head__sub">Your directions go home written in the script you read. If yours isn’t here, say its name — we’ll find someone, usually the same day.</p>
+  </div>
+</section>
+
+<!-- ═══ 09 SCRAPBOOK (story) ═══════════════════════════════════════════════ -->
+<section class="n-sec" id="about" aria-labelledby="ab-t">
+  <div class="wrap">
+    <div class="n-story">
+      <div class="n-story__q">
+        <p class="n-kick">Who runs it</p>
+        <h2 id="ab-t">“My mother waited eleven years for somebody at a counter to explain her prescriptions in Spanish. <em>That’s the whole reason this place exists.”</em></h2>
+        <p class="n-hand">— Luz Durán, PharmD, co-owner with Nasir Hossain, PharmD</p>
+      </div>
+      <figure class="n-polaroid n-polaroid--a"><svg viewBox="0 0 640 460" role="img" aria-label="A pharmacist talking to a customer across the counter, in front of a wall of stock" style="width:100%;height:auto;display:block"><rect x="0" y="0" width="640" height="460" rx="0" fill="#FBF2E8"/><circle cx="500" cy="96" r="104" fill="#E09A6B" opacity=".20"/><rect x="40" y="26" width="560" height="250" rx="14" fill="#FFFCF8"/><rect x="40" y="26" width="560" height="250" rx="14" fill="none" stroke="#2B352E" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/><rect x="56" y="92" width="528" height="5" rx="2" fill="#C9B49E"/><rect x="64" y="70" width="16" height="22" rx="2" fill="#E09A6B"/><rect x="86" y="63" width="18" height="29" rx="2" fill="#C77F6B"/><rect x="110" y="61" width="23" height="31" rx="2" fill="#E09A6B"/><rect x="112" y="67" width="19" height="5" rx="1" fill="#FFFFFF"/><rect x="139" y="69" width="23" height="23" rx="2" fill="#4F8A6E"/><rect x="141" y="75" width="19" height="5" rx="1" fill="#FFFFFF"/><rect x="168" y="53" width="23" height="39" rx="2" fill="#C77F6B"/><rect x="170" y="59" width="19" height="5" rx="1" fill="#FFFFFF"/><rect x="197" y="56" width="25" height="36" rx="2" fill="#E09A6B"/><rect x="228" y="58" width="17" height="34" rx="2" fill="#8FB89E"/><rect x="230" y="64" width="13" height="5" rx="1" fill="#FFFFFF"/><rect x="251" y="50" width="20" height="42" rx="2" fill="#E09A6B"/><rect x="253" y="56" width="16" height="5" rx="1" fill="#FFFFFF"/><rect x="277" y="68" width="20" height="24" rx="2" fill="#E09A6B"/><rect x="279" y="74" width="16" height="5" rx="1" fill="#FFFFFF"/><rect x="303" y="56" width="15" height="36" rx="2" fill="#E09A6B"/><rect x="324" y="51" width="21" height="41" rx="2" fill="#8FB89E"/><rect x="351" y="52" width="23" height="40" rx="2" fill="#C77F6B"/><rect x="353" y="58" width="19" height="5" rx="1" fill="#FFFFFF"/><rect x="380" y="62" width="19" height="30" rx="2" fill="#8FB89E"/><rect x="405" y="65" width="23" height="27" rx="2" fill="#4F8A6E"/><rect x="407" y="71" width="19" height="5" rx="1" fill="#FFFFFF"/><rect x="434" y="66" width="14" height="26" rx="2" fill="#4F8A6E"/><rect x="436" y="72" width="10" height="5" rx="1" fill="#FFFFFF"/><rect x="454" y="58" width="25" height="34" rx="2" fill="#8FB89E"/><rect x="485" y="61" width="19" height="31" rx="2" fill="#E09A6B"/><rect x="510" y="63" width="23" height="29" rx="2" fill="#C77F6B"/><rect x="512" y="69" width="19" height="5" rx="1" fill="#FFFFFF"/><rect x="539" y="69" width="21" height="23" rx="2" fill="#4F8A6E"/><rect x="56" y="152" width="528" height="5" rx="2" fill="#C9B49E"/><rect x="64" y="117" width="20" height="35" rx="2" fill="#4F8A6E"/><rect x="66" y="123" width="16" height="5" rx="1" fill="#FFFFFF"/><rect x="90" y="130" width="21" height="22" rx="2" fill="#C77F6B"/><rect x="117" y="122" width="21" height="30" rx="2" fill="#4F8A6E"/><rect x="144" y="128" width="20" height="24" rx="2" fill="#8FB89E"/><rect x="146" y="134" width="16" height="5" rx="1" fill="#FFFFFF"/><rect x="170" y="128" width="23" height="24" rx="2" fill="#E09A6B"/><rect x="172" y="134" width="19" height="5" rx="1" fill="#FFFFFF"/><rect x="199" y="122" width="21" height="30" rx="2" fill="#8FB89E"/><rect x="226" y="110" width="20" height="42" rx="2" fill="#E09A6B"/><rect x="228" y="116" width="16" height="5" rx="1" fill="#FFFFFF"/><rect x="252" y="122" width="24" height="30" rx="2" fill="#4F8A6E"/><rect x="282" y="123" width="23" height="29" rx="2" fill="#E09A6B"/><rect x="284" y="129" width="19" height="5" rx="1" fill="#FFFFFF"/><rect x="311" y="110" width="23" height="42" rx="2" fill="#C77F6B"/><rect x="313" y="116" width="19" height="5" rx="1" fill="#FFFFFF"/><rect x="340" y="125" width="16" height="27" rx="2" fill="#E09A6B"/><rect x="362" y="118" width="25" height="34" rx="2" fill="#4F8A6E"/><rect x="393" y="112" width="24" height="40" rx="2" fill="#C77F6B"/><rect x="423" y="115" width="17" height="37" rx="2" fill="#C77F6B"/><rect x="425" y="121" width="13" height="5" rx="1" fill="#FFFFFF"/><rect x="446" y="119" width="16" height="33" rx="2" fill="#8FB89E"/><rect x="468" y="125" width="15" height="27" rx="2" fill="#C77F6B"/><rect x="489" y="112" width="14" height="40" rx="2" fill="#4F8A6E"/><rect x="491" y="118" width="10" height="5" rx="1" fill="#FFFFFF"/><rect x="509" y="113" width="17" height="39" rx="2" fill="#4F8A6E"/><rect x="511" y="119" width="13" height="5" rx="1" fill="#FFFFFF"/><rect x="532" y="115" width="22" height="37" rx="2" fill="#8FB89E"/><rect x="560" y="130" width="16" height="22" rx="2" fill="#8FB89E"/><rect x="56" y="212" width="528" height="5" rx="2" fill="#C9B49E"/><rect x="64" y="180" width="22" height="32" rx="2" fill="#8FB89E"/><rect x="92" y="185" width="16" height="27" rx="2" fill="#8FB89E"/><rect x="114" y="179" width="25" height="33" rx="2" fill="#E09A6B"/><rect x="145" y="171" width="24" height="41" rx="2" fill="#E09A6B"/><rect x="175" y="170" width="14" height="42" rx="2" fill="#8FB89E"/><rect x="177" y="176" width="10" height="5" rx="1" fill="#FFFFFF"/><rect x="195" y="187" width="15" height="25" rx="2" fill="#E09A6B"/><rect x="216" y="170" width="15" height="42" rx="2" fill="#4F8A6E"/><rect x="237" y="181" width="24" height="31" rx="2" fill="#8FB89E"/><rect x="267" y="171" width="23" height="41" rx="2" fill="#E09A6B"/><rect x="269" y="177" width="19" height="5" rx="1" fill="#FFFFFF"/><rect x="296" y="184" width="25" height="28" rx="2" fill="#C77F6B"/><rect x="327" y="178" width="22" height="34" rx="2" fill="#E09A6B"/><rect x="355" y="179" width="23" height="33" rx="2" fill="#E09A6B"/><rect x="357" y="185" width="19" height="5" rx="1" fill="#FFFFFF"/><rect x="384" y="176" width="18" height="36" rx="2" fill="#4F8A6E"/><rect x="408" y="169" width="22" height="43" rx="2" fill="#8FB89E"/><rect x="436" y="186" width="16" height="26" rx="2" fill="#E09A6B"/><rect x="458" y="178" width="24" height="34" rx="2" fill="#C77F6B"/><rect x="488" y="171" width="16" height="41" rx="2" fill="#8FB89E"/><rect x="510" y="172" width="16" height="40" rx="2" fill="#C77F6B"/><rect x="532" y="180" width="22" height="32" rx="2" fill="#4F8A6E"/><rect x="56" y="266" width="528" height="5" rx="2" fill="#C9B49E"/><rect x="64" y="233" width="15" height="33" rx="2" fill="#E09A6B"/><rect x="85" y="229" width="14" height="37" rx="2" fill="#E09A6B"/><rect x="87" y="235" width="10" height="5" rx="1" fill="#FFFFFF"/><rect x="105" y="236" width="14" height="30" rx="2" fill="#E09A6B"/><rect x="107" y="242" width="10" height="5" rx="1" fill="#FFFFFF"/><rect x="125" y="229" width="18" height="37" rx="2" fill="#8FB89E"/><rect x="149" y="231" width="15" height="35" rx="2" fill="#4F8A6E"/><rect x="170" y="241" width="17" height="25" rx="2" fill="#C77F6B"/><rect x="172" y="247" width="13" height="5" rx="1" fill="#FFFFFF"/><rect x="193" y="233" width="18" height="33" rx="2" fill="#C77F6B"/><rect x="217" y="235" width="22" height="31" rx="2" fill="#E09A6B"/><rect x="245" y="241" width="21" height="25" rx="2" fill="#E09A6B"/><rect x="272" y="240" width="15" height="26" rx="2" fill="#E09A6B"/><rect x="293" y="226" width="21" height="40" rx="2" fill="#E09A6B"/><rect x="320" y="231" width="18" height="35" rx="2" fill="#E09A6B"/><rect x="344" y="228" width="22" height="38" rx="2" fill="#8FB89E"/><rect x="372" y="228" width="14" height="38" rx="2" fill="#C77F6B"/><rect x="374" y="234" width="10" height="5" rx="1" fill="#FFFFFF"/><rect x="392" y="237" width="19" height="29" rx="2" fill="#C77F6B"/><rect x="417" y="234" width="24" height="32" rx="2" fill="#E09A6B"/><rect x="447" y="235" width="18" height="31" rx="2" fill="#8FB89E"/><rect x="471" y="227" width="17" height="39" rx="2" fill="#C77F6B"/><rect x="473" y="233" width="13" height="5" rx="1" fill="#FFFFFF"/><rect x="494" y="228" width="17" height="38" rx="2" fill="#C77F6B"/><rect x="496" y="234" width="13" height="5" rx="1" fill="#FFFFFF"/><rect x="517" y="244" width="15" height="22" rx="2" fill="#C77F6B"/><rect x="538" y="227" width="20" height="39" rx="2" fill="#E09A6B"/><rect x="540" y="233" width="16" height="5" rx="1" fill="#FFFFFF"/><text x="320" y="56" text-anchor="middle" fill="#2B352E" opacity=".55" font-family="'Bricolage Grotesque',sans-serif" font-size="15" font-weight="700" letter-spacing="3.5">PRESCRIPTIONS</text><rect x="180" y="214" width="68" height="96" rx="16" fill="#FFFFFF"/><path d="M201 214 L214 242 L227 214 Z" fill="#E09A6B"/><rect x="168" y="224" width="16" height="64" rx="8" fill="#FFFFFF"/><rect x="244" y="224" width="16" height="64" rx="8" fill="#FFFFFF"/><circle cx="214" cy="192" r="25" fill="#D7A077"/><path d="M189 188a25 25 0 0 1 50 0 l0-6a25 25 0 0 0-50 0z" fill="#4A3A2E"/><rect x="188" y="172" width="52" height="13" rx="6" fill="#4A3A2E"/><circle cx="214" cy="192" r="25" fill="none" stroke="#2B352E" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/><rect x="180" y="214" width="68" height="96" rx="16" fill="none" stroke="#2B352E" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/><rect x="226" y="240" width="14" height="19" rx="2" fill="#FFFFFF"/><rect x="414" y="226" width="76" height="104" rx="18" fill="#8FB89E"/><rect x="402" y="238" width="17" height="66" rx="8" fill="#8FB89E"/><circle cx="452" cy="200" r="27" fill="#A9713F"/><path d="M425 198a27 27 0 0 1 54 0 l0-10a27 27 0 0 0-54 0z" fill="#33281F"/><circle cx="452" cy="200" r="27" fill="none" stroke="#2B352E" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/><rect x="414" y="226" width="76" height="104" rx="18" fill="none" stroke="#2B352E" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/><rect x="286" y="96" width="134" height="62" rx="14" fill="#E4F0E8"/><rect x="286" y="96" width="134" height="62" rx="14" fill="none" stroke="#2B352E" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/><path d="M318 158 l-6 20 l26-20z" fill="#E4F0E8" stroke="#2B352E" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/><text x="353" y="124" text-anchor="middle" fill="#2B352E" font-size="21" font-family="system-ui,sans-serif">বাংলা</text><text x="353" y="147" text-anchor="middle" fill="#2B352E" font-size="19" font-family="system-ui,sans-serif">Español</text><rect x="0" y="330" width="640" height="22" rx="3" fill="#D6C2A9"/><rect x="0" y="352" width="640" height="108" rx="0" fill="#E8D7C2"/><path d="M0 330 H640" stroke="#2B352E" stroke-width="1.8" fill="none"/><rect x="26" y="372" width="58" height="70" rx="3" fill="#D6C2A9"/><rect x="112" y="372" width="58" height="70" rx="3" fill="#D6C2A9"/><rect x="198" y="372" width="58" height="70" rx="3" fill="#D6C2A9"/><rect x="284" y="372" width="58" height="70" rx="3" fill="#D6C2A9"/><rect x="370" y="372" width="58" height="70" rx="3" fill="#D6C2A9"/><rect x="456" y="372" width="58" height="70" rx="3" fill="#D6C2A9"/><rect x="542" y="372" width="58" height="70" rx="3" fill="#D6C2A9"/><rect x="628" y="372" width="58" height="70" rx="3" fill="#D6C2A9"/><rect x="70" y="292" width="34" height="40" rx="4" fill="#E09A6B"/><rect x="70" y="292" width="34" height="40" rx="4" fill="none" stroke="#2B352E" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/><rect x="74" y="282" width="26" height="11" rx="3" fill="#6E5B49"/><rect x="76" y="302" width="22" height="15" rx="1" fill="#FFFFFF"/><rect x="534" y="286" width="60" height="46" rx="4" fill="#6E5B49"/><rect x="534" y="286" width="60" height="46" rx="4" fill="none" stroke="#2B352E" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/><rect x="540" y="292" width="48" height="28" rx="2" fill="#D9EAE0"/><rect x="548" y="332" width="32" height="6" rx="2" fill="#6E5B49"/></svg><figcaption>the counter, a Tuesday</figcaption></figure>
+    </div>
+    <ol class="n-scrap">
+      <li style="--r:-2deg"><b>2007</b><p>Luz and Nasir meet in pharmacy school at St. John’s.</p></li>
+      <li style="--r:1.5deg"><b>2009</b><p>A failing storefront under the 7 train becomes ours. Luz’s mom does the books.</p></li>
+      <li style="--r:-1deg"><b>2012</b><p>One bicycle, one cooler bag: free delivery begins.</p></li>
+      <li style="--r:2deg"><b>2016</b><p>The counter now speaks nine languages.</p></li>
+      <li style="--r:-1.5deg"><b>2023</b><p>NYRx arrives. We spend spring sorting out neighbors’ cards.</p></li>
+      <li style="--r:1deg"><b>Today</b><p>Still one shop. On purpose.</p></li>
+    </ol>
+    <div class="n-promise">
+      <p class="n-promise__h">House rules</p>
+      <ol>
+        <li>We hire from the block.</li>
+        <li>Nobody is on commission.</li>
+        <li>We tell you the price before we fill it.</li>
+        <li>We say when it isn’t us — and who it is.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 10 POSTCARD (contact) ══════════════════════════════════════════════ -->
+<section class="n-sec n-sec--warm" id="contact" aria-labelledby="pc-t">
+  <div class="wrap">
+    <div class="n-post">
+      <div class="n-post__l">
+        <p class="n-kick">Contact</p>
+        <h2 id="pc-t">No forms. <em>A person answers.</em></h2>
+        <p>There’s no contact form here on purpose — your medicine and your birthday don’t belong in a website inbox. Text us, call us, or come say hi.</p>
+        <ul class="n-post__ways">
+          <li><span>Just walk in</span>flu or COVID shot · blood-pressure check · a medication review · anything on the shelves</li>
+          <li><span>Text us</span>refills · a photo of a box you need · delivery</li>
+          <li><span>Call the counter</span>is it ready · prices · insurance · switching · two medicines that might clash</li>
+        </ul>
+      </div>
+      <div class="n-post__r">
+        <div class="n-post__stamp" aria-hidden="true"><span>JACKSON<br>HEIGHTS</span><b>7</b></div>
+        <p class="n-post__to">Durán &amp; Hossain Pharmacy<br>74-20 Roosevelt Avenue<br>Jackson Heights, NY 11372</p>
+        <ul class="n-post__lines">
+          <li><span>Text</span><a href="sms:+17185550100">(718) 555-0100</a></li>
+          <li><span>Pharmacy</span><a href="tel:+17185550175">(718) 555-0175</a></li>
+          <li><span>Front of store</span><a href="tel:+17185550174">(718) 555-0174</a></li>
+          <li><span>Prescriber fax</span><b>(718) 555-0176</b></li>
+        </ul>
+        <p class="n-fine">Getting here: 7 · E · F · M · R to 74 St–Broadway. Q32, Q33, Q47, Q49 outside. Step-free door, a chair at the counter, a quieter end for private questions.</p>
+        <p class="n-fine">hello@duranhossain.example — general questions only, please, no prescription details.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="safe" aria-labelledby="safe-t"><div class="wrap"><div class="safe__card"><div class="safe__head"><span class="safe__ic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 2.5l8 3.2v6c0 5-3.4 9.2-8 10.3-4.6-1.1-8-5.3-8-10.3v-6z"/><path d="M12 8v4.5M12 16h.01"/></svg></span><div><h2 id="safe-t">Who to call, and when</h2><p>We’re a pharmacy, not an emergency room. If someone is in danger, don’t call us first. Call 911.</p></div></div><ul class="safe__g"><li><span class="safe__k">Emergency</span><b>911</b><p>Chest pain, trouble breathing, a severe allergic reaction, an overdose, or someone who won’t wake up.</p><a href="tel:911">Call 911</a></li><li><span class="safe__k">Poisoning</span><b>Poison Control</b><p>Took the wrong medicine or a double dose? Free and confidential, 24 hours a day.</p><a href="tel:18002221222">1-800-222-1222</a></li><li><span class="safe__k">Crisis</span><b>988 Lifeline</b><p>Suicide and mental-health crisis support. Call or text any time, in English or Spanish.</p><a href="tel:988">Call or text 988</a></li><li><span class="safe__k">Questions</span><b>Your pharmacist</b><p>Side effects, a missed dose, or whether two medicines mix. A pharmacist picks up.</p><a href="tel:+17185550175">(718) 555-0175</a></li></ul></div></div></section>
+</main><footer class="ft"><div class="wrap"><div class="ft__g"><div><a class="logo" href="neighbors.html" style="color:#fff"><span class="logo__m" style="background:#fff"><svg viewBox="0 0 24 24" width="25" height="25" fill="none" stroke="#3F7A5E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M12 8v8M8 12h8"/></svg></span><span class="logo__t">Durán &amp; Hossain<span style="color:rgba(255,255,255,.62)">Jackson Heights · Est 2009</span></span></a><p style="margin-top:16px;opacity:.82;font-size:15px;max-width:34ch">74-20 Roosevelt Avenue<br>Jackson Heights, NY 11372</p><a class="ft__tel" href="tel:+17185550175">(718) 555-0175</a></div><div><h4>Sections</h4><ul><li><a href="#services">Services</a></li><li><a href="#specialty">Specialty</a></li><li><a href="#shop">Shop</a></li><li><a href="#vaccines">Vaccines</a></li><li><a href="#insurance">Insurance</a></li><li><a href="#hours">Hours</a></li><li><a href="#contact">Contact</a></li></ul></div><div><h4>Reach us</h4><ul><li><a href="tel:+17185550175">Pharmacy · (718) 555-0175</a></li><li><a href="tel:+17185550174">Front of store · (718) 555-0174</a></li><li><a href="sms:+17185550100">Text · (718) 555-0100</a></li><li><span style="opacity:.84;font-size:15px">Fax · (718) 555-0176</span></li><li><a href="tel:911">Emergency · 911</a></li></ul></div></div><div class="ft__b"><p><b>Design concept.</b> Durán &amp; Hossain is an invented pharmacy. The name, address, phone numbers, license numbers and reviews are placeholders. The vaccine list, the ages, the NYRx rules and the federal-holiday dates are real.</p><p>NYS Pharmacy Establishment License 000000 · NPI 0000000000 — placeholders in this concept. Supervising pharmacists Luz Durán, PharmD · Nasir Hossain, PharmD.</p><p>We handle protected health information under HIPAA. We do not collect any of it through this website, which is why there are no forms on it.</p><p>Nothing here is medical advice. Talk to a pharmacist or your doctor about your own medicines. Vaccine ages, NYRx details and federal holiday dates follow current policy. © <span data-rx-year>2026</span> Durán &amp; Hossain Pharmacy.</p></div></div></footer>
+<script>
+window.RX_HOURS = [["Sunday", "10:00", "14:00"], ["Monday", "09:00", "19:00"], ["Tuesday", "09:00", "19:00"], ["Wednesday", "09:00", "19:00"], ["Thursday", "09:00", "19:00"], ["Friday", "09:00", "19:00"], ["Saturday", "09:00", "17:00"]];
+window.RX_HOLIDAYS = {"newyear": ["New Year's Day", "closed", "", "Back to regular hours the next day."], "mlk": ["Martin Luther King Jr. Day", "open", "", "Open regular hours."], "presidents": ["Presidents' Day", "open", "", "Open regular hours."], "memorial": ["Memorial Day", "short", "10:00-14:00", "Short day — the pharmacist is in all morning."], "juneteenth": ["Juneteenth", "open", "", "Open regular hours."], "independence": ["Independence Day", "closed", "", "Order refills the day before — we are busy on the 3rd."], "labor": ["Labor Day", "short", "10:00-14:00", "Delivery runs as usual in the afternoon."], "columbus": ["Indigenous Peoples' Day", "open", "", "Open regular hours."], "veterans": ["Veterans Day", "open", "", "Open regular hours."], "thanksgiving": ["Thanksgiving Day", "closed", "", "We deliver the Wednesday before — call Tuesday to get on the run."], "christmas": ["Christmas Day", "closed", "", "Open again on the 26th at regular hours."], "xmaseve": ["Christmas Eve", "short", "09:00-15:00", "Last delivery run leaves at 1 pm."], "nyeve": ["New Year's Eve", "short", "09:00-17:00", "Back to regular hours on the 2nd."]};
+</script>
+<script>/* ═══════════════════════════════════════════════════════════════════════════
+   Store hours, and the federal holidays — computed, not listed.
+
+   The point of this file is that nobody ever has to edit it. Every US federal
+   holiday is defined by a rule ("third Monday of January", "fourth Thursday of
+   November"), so the page works the dates out for whatever year it happens to
+   be. A hardcoded list would be wrong by next January.
+
+   It does three things:
+     1. says whether the pharmacy is open right now, against today's real hours
+     2. applies the holiday policy to today if today is one
+     3. shows the next few schedule changes so people can plan around them
+
+   No forms, no network, no storage. Pure computation on the visitor's clock.
+   ═══════════════════════════════════════════════════════════════════════════ */
+(function () {
+  "use strict";
+
+  var REG = window.RX_HOURS;        // [[label, "09:00", "19:00"] ...] index 0 = Sunday
+  var POLICY = window.RX_HOLIDAYS;  // { key: [name, kind, "HH:MM-HH:MM", note] }
+  if (!REG || !POLICY) return;
+
+  /* ── date helpers ──────────────────────────────────────────────────────── */
+  function d(y, m, day) { return new Date(y, m, day); }      // m is 0-indexed
+
+  // the nth given weekday of a month, e.g. nth(2026, 10, 4, 4) = 4th Thursday of November
+  function nth(y, m, weekday, n) {
+    var first = new Date(y, m, 1);
+    var shift = (weekday - first.getDay() + 7) % 7;
+    return new Date(y, m, 1 + shift + (n - 1) * 7);
+  }
+
+  // the last given weekday of a month, e.g. Memorial Day
+  function last(y, m, weekday) {
+    var endOfMonth = new Date(y, m + 1, 0);
+    var shift = (endOfMonth.getDay() - weekday + 7) % 7;
+    return new Date(y, m + 1, 0 - shift);
+  }
+
+  // federal rule: a fixed-date holiday falling on Saturday is observed on the
+  // Friday before, and one falling on Sunday on the Monday after
+  function observed(dt) {
+    var g = dt.getDay();
+    if (g === 6) return new Date(dt.getFullYear(), dt.getMonth(), dt.getDate() - 1);
+    if (g === 0) return new Date(dt.getFullYear(), dt.getMonth(), dt.getDate() + 1);
+    return dt;
+  }
+
+  /* ── the eleven federal holidays, plus the two eves every pharmacy posts ── */
+  function holidaysFor(y) {
+    return [
+      { key: "newyear",      date: observed(d(y, 0, 1)),   actual: d(y, 0, 1) },
+      { key: "mlk",          date: nth(y, 0, 1, 3) },                 // 3rd Monday, January
+      { key: "presidents",   date: nth(y, 1, 1, 3) },                 // 3rd Monday, February
+      { key: "memorial",     date: last(y, 4, 1) },                   // last Monday, May
+      { key: "juneteenth",   date: observed(d(y, 5, 19)),  actual: d(y, 5, 19) },
+      { key: "independence", date: observed(d(y, 6, 4)),   actual: d(y, 6, 4) },
+      { key: "labor",        date: nth(y, 8, 1, 1) },                 // 1st Monday, September
+      { key: "columbus",     date: nth(y, 9, 1, 2) },                 // 2nd Monday, October
+      { key: "veterans",     date: observed(d(y, 10, 11)), actual: d(y, 10, 11) },
+      { key: "thanksgiving", date: nth(y, 10, 4, 4) },                // 4th Thursday, November
+      { key: "xmaseve",      date: d(y, 11, 24) },
+      { key: "christmas",    date: observed(d(y, 11, 25)), actual: d(y, 11, 25) },
+      { key: "nyeve",        date: d(y, 11, 31) }
+    ].filter(function (h) { return POLICY[h.key]; });
+  }
+
+  /* ── formatting ────────────────────────────────────────────────────────── */
+  var MON = ["January", "February", "March", "April", "May", "June", "July",
+             "August", "September", "October", "November", "December"];
+  var DAY = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+  function pretty(dt) { return DAY[dt.getDay()] + " " + MON[dt.getMonth()] + " " + dt.getDate(); }
+  function key(dt) { return dt.getFullYear() + "-" + dt.getMonth() + "-" + dt.getDate(); }
+  function mins(hhmm) { var p = hhmm.split(":"); return (+p[0]) * 60 + (+p[1]); }
+  function clock(hhmm) {
+    var p = hhmm.split(":"), h = +p[0], m = p[1];
+    var ap = h >= 12 ? "pm" : "am", hr = h % 12 === 0 ? 12 : h % 12;
+    return hr + (m === "00" ? "" : ":" + m) + " " + ap;
+  }
+  function span(range) {
+    var p = range.split("-");
+    return clock(p[0]) + " – " + clock(p[1]);
+  }
+
+  /* ── what applies on a given day ───────────────────────────────────────── */
+  function scheduleFor(dt) {
+    var list = holidaysFor(dt.getFullYear());
+    var k = key(dt);
+    for (var i = 0; i < list.length; i++) {
+      if (key(list[i].date) === k) {
+        var pol = POLICY[list[i].key];
+        return { holiday: pol[0], kind: pol[1], range: pol[2], note: pol[3] };
+      }
+    }
+    var reg = REG[dt.getDay()];
+    if (!reg || !reg[1]) return { kind: "closed", holiday: null, note: "" };
+    return { kind: "open", holiday: null, range: reg[1] + "-" + reg[2], note: "" };
+  }
+
+  /* ── render ────────────────────────────────────────────────────────────── */
+  var now = (function(){try{var p={};new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',year:'numeric',month:'numeric',day:'numeric',hour:'numeric',minute:'numeric',hour12:false}).formatToParts(new Date()).forEach(function(x){p[x.type]=x.value});return new Date(+p.year,+p.month-1,+p.day,(+p.hour)%24,+p.minute);}catch(e){return new Date();}})(); // New York time
+  var today = scheduleFor(now);
+  var nowMins = now.getHours() * 60 + now.getMinutes();
+  var openNow = false, until = "";
+
+  if (today.kind !== "closed" && today.range) {
+    var a = mins(today.range.split("-")[0]), b = mins(today.range.split("-")[1]);
+    openNow = nowMins >= a && nowMins < b;
+    until = openNow ? clock(today.range.split("-")[1]) : clock(today.range.split("-")[0]);
+  }
+
+  // 1. the live status pill
+  var statusEls = document.querySelectorAll("[data-rx-status]");
+  for (var s = 0; s < statusEls.length; s++) {
+    var el = statusEls[s];
+    el.classList.toggle("is-open", openNow);
+    el.classList.toggle("is-shut", !openNow);
+    var label = openNow
+      ? "Open now · until " + until
+      : (today.kind === "closed"
+          ? "Closed today" + (today.holiday ? " · " + today.holiday : "")
+          : (nowMins < mins(today.range.split("-")[0])
+              ? "Closed · opens " + until
+              : "Closed · opens tomorrow"));
+    el.textContent = label;
+  }
+
+  // 2. today's line under the hours table
+  var todayEls = document.querySelectorAll("[data-rx-today]");
+  for (var t = 0; t < todayEls.length; t++) {
+    todayEls[t].textContent = today.holiday
+      ? today.holiday + " — " + (today.kind === "closed" ? "closed all day" : span(today.range))
+      : (today.kind === "closed" ? "Closed today" : "Today " + span(today.range));
+  }
+
+  // 3. highlight the current weekday in the hours list
+  var rows = document.querySelectorAll("[data-rx-day]");
+  for (var r = 0; r < rows.length; r++) {
+    if (+rows[r].getAttribute("data-rx-day") === now.getDay()) rows[r].classList.add("is-today");
+  }
+
+  // 4. a banner when a special day is today or close
+  var banner = document.querySelector("[data-rx-banner]");
+  if (banner) {
+    var upcoming = null, soon = holidaysFor(now.getFullYear())
+      .concat(holidaysFor(now.getFullYear() + 1));
+    for (var u = 0; u < soon.length; u++) {
+      var diff = Math.round((soon[u].date - new Date(now.getFullYear(), now.getMonth(), now.getDate())) / 86400000);
+      var pol2 = POLICY[soon[u].key];
+      if (diff >= 0 && diff <= 14 && pol2[1] !== "open") { upcoming = { h: soon[u], diff: diff, pol: pol2 }; break; }
+    }
+    if (upcoming) {
+      var when = upcoming.diff === 0 ? "Today" : upcoming.diff === 1 ? "Tomorrow" : pretty(upcoming.h.date);
+      banner.innerHTML =
+        '<b>' + when + ' · ' + upcoming.pol[0] + '</b> ' +
+        (upcoming.pol[1] === "closed"
+          ? "We are closed all day."
+          : "Open " + span(upcoming.pol[2]) + ".") +
+        (upcoming.pol[3] ? " " + upcoming.pol[3] : "");
+      banner.hidden = false;
+    }
+  }
+
+  // 5. the upcoming-changes list
+  var listEl = document.querySelector("[data-rx-upcoming]");
+  if (listEl) {
+    var all = holidaysFor(now.getFullYear()).concat(holidaysFor(now.getFullYear() + 1));
+    var midnight = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    var out = [];
+    for (var i2 = 0; i2 < all.length && out.length < 5; i2++) {
+      if (all[i2].date < midnight) continue;
+      var pol3 = POLICY[all[i2].key];
+      if (pol3[1] === "open") continue;
+      out.push(
+        '<div class="hol"><span class="hol__d">' + pretty(all[i2].date) + '</span>' +
+        '<span class="hol__n">' + pol3[0] + '</span>' +
+        '<span class="hol__s ' + (pol3[1] === "closed" ? "is-shut" : "is-short") + '">' +
+        (pol3[1] === "closed" ? "Closed" : span(pol3[2])) + '</span></div>');
+    }
+    listEl.innerHTML = out.join("") ||
+      '<p class="hol__none">No changes to the schedule in the next few months.</p>';
+  }
+
+  // 6. the year, so the footer never goes stale either
+  var yrs = document.querySelectorAll("[data-rx-year]");
+  for (var y2 = 0; y2 < yrs.length; y2++) yrs[y2].textContent = now.getFullYear();
+})();
+</script>
+<script>
+(function () {
+  "use strict";
+  var $ = function (s) { return document.querySelector(s); };
+  var $$ = function (s) { return Array.prototype.slice.call(document.querySelectorAll(s)); };
+  var reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  function ny() {
+    var o = {};
+    try { new Intl.DateTimeFormat("en-US", { timeZone: "America/New_York", year: "numeric", month: "long", day: "numeric", hour: "numeric", minute: "numeric", hour12: false, weekday: "long" }).formatToParts(new Date()).forEach(function (p) { o[p.type] = p.value; }); }
+    catch (e) {}
+    var dn = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    return { h: (+o.hour) % 24, m: +o.minute, dow: dn.indexOf(o.weekday), wd: o.weekday, mo: o.month, d: o.day, y: o.year };
+  }
+  var n = ny(), t = n.h + n.m / 60;
+  var HRS = (window.RX_HOURS || []).map(function (r) { return [+r[1].split(":")[0] + r[1].split(":")[1] / 60, +r[2].split(":")[0] + r[2].split(":")[1] / 60]; });
+  function ap(h) { return ((h % 12) || 12) + (h >= 12 ? " pm" : " am"); }
+
+  /* window sign */
+  var today = HRS[n.dow], open = today && t >= today[0] && t < today[1];
+  var sign = $("#n-sign"), note = $("#n-sign-note");
+  if (sign) {
+    if (!open) sign.classList.add("is-closed");
+    if (open) note.textContent = "Come on in — open till " + ap(today[1]) + ".";
+    else if (today && t < today[0]) note.textContent = "Back at " + ap(today[0]) + " this morning.";
+    else note.textContent = "Back tomorrow at " + ap(HRS[(n.dow + 1) % 7][0]) + ". Text us tonight!";
+    sign.addEventListener("click", function () { sign.classList.toggle("is-closed"); });
+  }
+
+  /* corkboard notes */
+  $$(".n-notes button").forEach(function (b) {
+    b.addEventListener("click", function () { b.setAttribute("aria-expanded", String(b.getAttribute("aria-expanded") !== "true")); });
+  });
+
+  /* basket */
+  var ITEMS = [
+    ["h", "Blood-pressure monitor", "cuffs in 3 sizes", 39, 89, "#3F7A5E", "BP"],
+    ["h", "Compression stockings", "measured in store", 24, 58, "#2B352E", "CS"],
+    ["h", "Diabetic test strips", "common meters", 18, 46, "#8E5024", "TS"],
+    ["h", "Rapid COVID-19 test", "2-pack", 8, 16, "#B4530F", "CV"],
+    ["b", "Prenatal vitamins", "folic acid + iron", 14, 34, "#C46A7E", "PN"],
+    ["b", "Infant acetaminophen", "dose written on the box", 6, 11, "#5A7FB5", "IA"],
+    ["b", "Diapers", "newborn to size 6", 12, 32, "#7A9E8B", "DI"],
+    ["b", "Electrolyte freezer pops", "for kids who won’t drink it", 5, 9, "#E09A6B", "EP"],
+    ["s", "Ceramide moisturizer", "fragrance-free", 12, 28, "#C9A227", "CM"],
+    ["s", "Mineral sunscreen SPF 30+", "including tinted", 11, 24, "#B4530F", "SP"],
+    ["s", "Hair oil", "amla · castor · argan", 7, 19, "#6B4E8C", "HO"],
+    ["v", "Vitamin D & B12", "most-asked on the block", 8, 22, "#3F7A5E", "D3"],
+    ["v", "Omega-3", "fish oil", 9, 26, "#2B6F8E", "Ω3"],
+    ["v", "Probiotics", "fridge-kept", 14, 32, "#8E5024", "PB"]
+  ];
+  var list = $("#n-items"), lines = $("#n-lines"), tot = $("#n-tot"), send = $("#n-send"), picked = [];
+  if (list) {
+    list.innerHTML = ITEMS.map(function (it, i) {
+      return '<li class="n-item is-on" data-a="' + it[0] + '"><button type="button" aria-pressed="false" data-i="' + i + '"><span class="n-item__ico" style="background:' + it[5] + '" aria-hidden="true">' + it[6] + '</span><span><b>' + it[1] + '</b><small>' + it[2] + '</small></span><span class="n-item__p">$' + it[3] + "–" + it[4] + "</span></button></li>";
+    }).join("");
+    list.addEventListener("click", function (e) {
+      var b = e.target.closest("button"); if (!b) return;
+      var i = +b.getAttribute("data-i"), k = picked.indexOf(i);
+      if (k > -1) picked.splice(k, 1); else picked.push(i);
+      render();
+    });
+    lines.addEventListener("click", function (e) {
+      var b = e.target.closest("button"); if (!b) return;
+      picked.splice(picked.indexOf(+b.getAttribute("data-i")), 1); render();
+    });
+    $$(".n-aisles button").forEach(function (a) {
+      a.addEventListener("click", function () {
+        $$(".n-aisles button").forEach(function (x) { x.setAttribute("aria-pressed", String(x === a)); });
+        var f = a.getAttribute("data-a");
+        $$(".n-item").forEach(function (li) { li.classList.toggle("is-on", f === "all" || li.getAttribute("data-a") === f); });
+      });
+    });
+  }
+  function render() {
+    $$(".n-item button").forEach(function (b) { b.setAttribute("aria-pressed", String(picked.indexOf(+b.getAttribute("data-i")) > -1)); });
+    if (!picked.length) {
+      lines.innerHTML = '<li class="n-receipt__empty">Your list is empty.<br>Tap something on the left.</li>';
+      tot.textContent = "$0"; send.setAttribute("aria-disabled", "true"); send.href = "sms:+17185550100"; return;
+    }
+    var lo = 0, hi = 0;
+    lines.innerHTML = picked.map(function (i) {
+      var it = ITEMS[i]; lo += it[3]; hi += it[4];
+      return "<li><span>" + it[1] + "</span><span>$" + it[3] + "–" + it[4] + '<button type="button" data-i="' + i + '" aria-label="Remove ' + it[1] + '">×</button></span></li>';
+    }).join("");
+    tot.textContent = "$" + lo + "–" + hi;
+    send.removeAttribute("aria-disabled");
+    var body = "Hi! Delivery please:\n" + picked.map(function (i) { return "- " + ITEMS[i][1]; }).join("\n") + "\nName: \nAddress: ";
+    send.href = "sms:+17185550100?&body=" + encodeURIComponent(body);
+  }
+  var rd = $("#n-rdate");
+  if (rd) rd.textContent = (n.wd || "").toUpperCase() + " " + (n.mo || "").toUpperCase() + " " + n.d + ", " + n.y;
+
+  /* checklist */
+  var checks = $$("#n-check input"), done = $("#n-check-done");
+  checks.forEach(function (c) {
+    c.addEventListener("change", function () {
+      var k = checks.filter(function (x) { return x.checked; }).length;
+      done.textContent = k === checks.length ? "All set — see you at the counter!" : k >= 2 ? "Almost there…" : "";
+    });
+  });
+
+  /* reveals */
+  if ("IntersectionObserver" in window && !reduce) {
+    var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }); }, { rootMargin: "0px 0px -8% 0px" });
+    $$(".n-notes li, .n-coupon, .n-stickers li, .n-scrap li, .n-flyer, .n-polaroid, .n-post").forEach(function (el) { el.classList.add("n-rv"); io.observe(el); });
+  }
+})();
+</script>
+
+<script>
+/* header: scroll shadow, scroll-spy, mobile drawer */
+(function(){
+  var hdr=document.querySelector(".hdr"), links=[].slice.call(document.querySelectorAll(".hnav a, .mnav__list a"));
+  function onScroll(){hdr.classList.toggle("is-stuck",window.scrollY>8);}
+  window.addEventListener("scroll",onScroll,{passive:true});onScroll();
+  if("IntersectionObserver" in window){
+    var ids=["services","specialty","shop","vaccines","insurance","hours","contact"],vis={};
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){vis[e.target.id]=e.isIntersecting?e.intersectionRatio:0;});
+      var best=null,bv=0;ids.forEach(function(id){if((vis[id]||0)>bv){bv=vis[id];best=id;}});
+      links.forEach(function(a){a.setAttribute("aria-current",best&&a.getAttribute("href")==="#"+best?"true":"false");});
+    },{rootMargin:"-30% 0px -55% 0px",threshold:[0,.01,.25,.5,1]});
+    ids.forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});
+  }
+  var m=document.getElementById("mnav"),btn=document.querySelector(".mbtn"),last;
+  if(!m||!btn)return;
+  function focusables(){return m.querySelectorAll("a[href],button");}
+  function open(){last=document.activeElement;m.hidden=false;requestAnimationFrame(function(){m.classList.add("is-open");});
+    btn.setAttribute("aria-expanded","true");document.body.classList.add("is-locked");
+    setTimeout(function(){m.querySelector(".mnav__x").focus();},60);}
+  function close(go){m.classList.remove("is-open");btn.setAttribute("aria-expanded","false");document.body.classList.remove("is-locked");
+    setTimeout(function(){if(!m.classList.contains("is-open"))m.hidden=true;},360);if(!go&&last)last.focus();}
+  btn.addEventListener("click",open);
+  m.querySelector(".mnav__x").addEventListener("click",function(){close();});
+  m.querySelector(".mnav__scrim").addEventListener("click",function(){close();});
+  m.addEventListener("click",function(e){var a=e.target.closest("a[href^='#']");if(a)close(true);});
+  document.addEventListener("keydown",function(e){
+    if(!m.classList.contains("is-open"))return;
+    if(e.key==="Escape")close();
+    if(e.key==="Tab"){var f=focusables(),a=f[0],z=f[f.length-1];
+      if(e.shiftKey&&document.activeElement===a){e.preventDefault();z.focus();}
+      else if(!e.shiftKey&&document.activeElement===z){e.preventDefault();a.focus();}}
+  });
+  window.matchMedia("(min-width:1100px)").addEventListener("change",function(q){if(q.matches&&m.classList.contains("is-open"))close();});
+})();
+</script>
+</body>
+</html>
