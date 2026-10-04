@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en" data-shift="day">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Second Shift — Coffee by Day, Amaro by Night · Long Island City</title>
+<meta name="description" content="A café and amaro bar in a former printing plant two blocks from Court Square. First shift 7–5: coffee and laptops. Second shift 5–midnight: spritzes, natural wine, vinyl Thursdays.">
+<meta name="theme-color" content="#f3efe6">
+<meta property="og:title" content="Second Shift — Long Island City, Queens">
+<meta property="og:description" content="Coffee by day. Amaro by night. 7am to midnight, every day.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1600&q=80">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23ff5a1f'/%3E%3Ctext x='32' y='44' font-size='30' font-weight='800' text-anchor='middle' fill='%23161210' font-family='Arial'%3E2%2F%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="sitemenu.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"CafeOrCoffeeShop","name":"Second Shift","servesCuisine":["Coffee","Bar snacks"],"telephone":"+1-718-555-0128","email":"hi@secondshift.cafe","address":{"@type":"PostalAddress","streetAddress":"45-12 Davis St","addressLocality":"Long Island City","addressRegion":"NY","postalCode":"11101","addressCountry":"US"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"07:00","closes":"24:00"}]}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="head">
+  <a class="mark" href="#top" aria-label="Second Shift home"><b>Second</b><b>Shift</b><span aria-hidden="true">®</span></a>
+  <nav class="nav" aria-label="Main">
+    <a href="#menu">Menu</a>
+    <a href="#shifts">Two shifts</a>
+    <a href="#weekly">Weekly</a>
+    <a href="#space">The space</a>
+    <a href="#find">Find us</a>
+  </nav>
+  <button class="pill" id="toggle" aria-pressed="false"><span class="pill__dot"></span><span id="pillTxt">First shift</span><span class="pill__sw">Switch</span></button>
+</header>
+
+<main id="main">
+  <section class="hero" id="top" aria-labelledby="h1">
+    <div class="reg reg--tl" aria-hidden="true"></div><div class="reg reg--br" aria-hidden="true"></div>
+    <p class="hero__k"><span class="dayonly">Now running — First shift</span><span class="nightonly">Now running — Second shift</span></p>
+    <h1 id="h1">
+      <span class="dayonly">Coffee<br>until five.</span>
+      <span class="nightonly">Amaro<br>until twelve.</span>
+    </h1>
+    <div class="hero__row">
+      <p class="hero__lede dayonly">Espresso, pastries from a Sunnyside bakery, and long tables built from the plant’s old type cabinets. Laptops welcome until 5&nbsp;pm — then we flip the lights.</p>
+      <p class="hero__lede nightonly">Laptops away. Lights down. Forty bottles of amaro, spritzes on tap, natural wine and small plates until midnight. The press room never really stopped working late.</p>
+      <figure class="hero__img">
+        <img class="dayonly" src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1100&q=80" alt="Two people clinking latte cups over a wooden table" width="1100" height="800">
+        <img class="nightonly" src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1100&q=80" alt="A dim bar with stools and warm low lights" width="1100" height="800">
+      </figure>
+    </div>
+  </section>
+
+  <section class="clock" aria-label="Today's timeline">
+    <div class="clock__labels" aria-hidden="true"><span>07</span><span>10</span><span>13</span><span>17</span><span>20</span><span>24</span></div>
+    <div class="clock__bar" role="img" id="clockBar" aria-label="Open 7 am to midnight">
+      <div class="clock__day"><span>First shift · 7–5</span></div>
+      <div class="clock__night"><span>Second shift · 5–12</span></div>
+      <div class="clock__now" id="clockNow"><b id="clockTime">—</b></div>
+    </div>
+  </section>
+
+  <section class="menu" id="menu" aria-labelledby="menu-t">
+    <header class="menu__head">
+      <h2 id="menu-t">On the board</h2>
+      <div class="seg" role="tablist" aria-label="Choose menu">
+        <button role="tab" id="t-day" aria-controls="m-day" aria-selected="true">Day menu</button>
+        <button role="tab" id="t-night" aria-controls="m-night" aria-selected="false">Night menu</button>
+      </div>
+    </header>
+    <div class="board" role="tabpanel" id="m-day" aria-labelledby="t-day">
+      <div class="board__col">
+        <h3>Espresso bar</h3>
+        <ul class="list">
+          <li><span>Espresso / macchiato</span><b>3.75</b></li>
+          <li><span>Cortado</span><b>4.50</b></li>
+          <li><span>Flat white</span><b>5.00</b></li>
+          <li><span>Cappuccino</span><b>5.25</b></li>
+          <li><span>Oat latte, honey &amp; sea salt</span><b>6.50</b></li>
+          <li><span>Batch brew, refills free before 9</span><b>3.50</b></li>
+          <li><span>Cold brew, on nitro</span><b>5.50</b></li>
+        </ul>
+      </div>
+      <div class="board__col">
+        <h3>Not coffee</h3>
+        <ul class="list">
+          <li><span>Hojicha latte</span><b>6.00</b></li>
+          <li><span>Hot chocolate, 70%</span><b>5.50</b></li>
+          <li><span>Fresh mint tea</span><b>4.00</b></li>
+          <li><span>Yuzu tonic, no booze yet</span><b>6.00</b></li>
+        </ul>
+        <h3>From the oven</h3>
+        <ul class="list">
+          <li><span>Cardamom knot</span><b>4.75</b></li>
+          <li><span>Ham, gruyère &amp; mustard croissant</span><b>7.50</b></li>
+          <li><span>Egg &amp; chili crisp sandwich</span><b>9.00</b></li>
+          <li><span>Banana bread, brown butter</span><b>4.50</b></li>
+        </ul>
+      </div>
+      <p class="board__note">Beans from a roaster in Ridgewood, rotated monthly. Oat, almond and whole milk at no extra cost — we don’t charge rent on milk.</p>
+    </div>
+    <div class="board" role="tabpanel" id="m-night" aria-labelledby="t-night" hidden>
+      <div class="board__col">
+        <h3>Amaro, poured neat</h3>
+        <ul class="list">
+          <li><span>Montenegro — the gateway</span><b>12</b></li>
+          <li><span>Nonino Quintessentia</span><b>15</b></li>
+          <li><span>Braulio, alpine &amp; piney</span><b>13</b></li>
+          <li><span>Cynar 70, for the brave</span><b>12</b></li>
+          <li><span>Flight of three, bartender’s choice</span><b>24</b></li>
+        </ul>
+        <h3>Spritz on tap</h3>
+        <ul class="list">
+          <li><span>The Second Shift — Cappelletti, prosecco, orange</span><b>14</b></li>
+          <li><span>Bianco — Select, dry vermouth, soda</span><b>14</b></li>
+        </ul>
+      </div>
+      <div class="board__col">
+        <h3>Wine by the glass</h3>
+        <ul class="list">
+          <li><span>Skin-contact Malvasia, Slovenia</span><b>15</b></li>
+          <li><span>Chilled Frappato, Sicily</span><b>14</b></li>
+          <li><span>Pét-nat of the week</span><b>14</b></li>
+        </ul>
+        <h3>To share</h3>
+        <ul class="list">
+          <li><span>Marinated olives &amp; taralli</span><b>7</b></li>
+          <li><span>Burrata, chili oil, focaccia</span><b>16</b></li>
+          <li><span>Potato chips, crème fraîche &amp; roe</span><b>13</b></li>
+          <li><span>Affogato with Fernet</span><b>11</b></li>
+        </ul>
+      </div>
+      <p class="board__note">Espresso and decaf are always available — someone has to drive home. Last call 11:30.</p>
+    </div>
+  </section>
+
+  <section class="shifts" id="shifts" aria-labelledby="sh-t">
+    <h2 id="sh-t" class="sr">Two shifts</h2>
+    <article class="shift shift--day">
+      <p class="num">01</p>
+      <h3>First shift</h3>
+      <p class="hrs">7:00 am – 5:00 pm</p>
+      <p>Bright, a bit loud, smells like toast. Wi-Fi is fast and the outlets run along every table. Stay as long as you like; we just ask for a new order every couple of hours.</p>
+      <ul><li>Laptops welcome</li><li>Calls in the phone booth, please</li><li>Dogs on the patio</li></ul>
+    </article>
+    <article class="shift shift--night">
+      <p class="num">02</p>
+      <h3>Second shift</h3>
+      <p class="hrs">5:00 pm – midnight</p>
+      <p>At five the overheads go off, the amber sconces come on, and the laptops go into a cubby by the door (we’ll mind it). It’s a bar now. Conversation is the only screen.</p>
+      <ul><li>Laptops away</li><li>Walk-ins only</li><li>21+ after 8 pm</li></ul>
+    </article>
+  </section>
+
+  <section class="weekly" id="weekly" aria-labelledby="wk-t">
+    <h2 id="wk-t">Every week, <em>on schedule</em></h2>
+    <ol class="cal" id="cal">
+      <li data-d="1"><b>Mon</b><span>Industry night</span><small>Half-price amaro for anyone in hospitality, 8 till close</small></li>
+      <li data-d="2"><b>Tue</b><span>Quiet table</span><small>One long table, phones in a basket, a stranger to talk to</small></li>
+      <li data-d="3"><b>Wed</b><span>Cupping, 8 am</span><small>Free tasting of next month’s coffee with our roaster</small></li>
+      <li data-d="4"><b>Thu</b><span>Vinyl Thursdays</span><small>Bring a record, we play a side. Soul, jazz, Italo disco</small></li>
+      <li data-d="5"><b>Fri</b><span>Aperitivo hour</span><small>5–7 pm, a spritz comes with snacks on the house</small></li>
+      <li data-d="6"><b>Sat</b><span>Printers’ market</span><small>First Saturday of the month, local risograph &amp; zine makers</small></li>
+      <li data-d="0"><b>Sun</b><span>Long breakfast</span><small>Kitchen does eggs until 2. No rush. Ever.</small></li>
+    </ol>
+  </section>
+
+  <section class="space" id="space" aria-labelledby="sp-t">
+    <div class="space__imgs">
+      <figure class="a"><img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=900&q=80" alt="A moody café interior with a lit sign" loading="lazy" width="900" height="1100"></figure>
+      <figure class="b"><img src="https://images.unsplash.com/photo-1453614512568-c4024d13c247?auto=format&fit=crop&w=800&q=80" alt="An espresso bar with hanging bulbs and shelves" loading="lazy" width="800" height="600"></figure>
+      <figure class="c"><img src="https://images.unsplash.com/photo-1525610553991-2bede1a236e2?auto=format&fit=crop&w=800&q=80" alt="People talking at tables in a café in the evening" loading="lazy" width="800" height="600"></figure>
+    </div>
+    <div class="space__text">
+      <h2 id="sp-t">Book the press room.</h2>
+      <p>Built in 1931 for a company that printed subway maps and racing forms. Sixteen-foot ceilings, the original steel trusses, and windows facing the Citi tower.</p>
+      <dl>
+        <div><dt>Photo &amp; film shoots</dt><dd>Mornings before 7 or Mondays</dd></div>
+        <div><dt>Private parties</dt><dd>Up to 80 standing, Sun–Wed nights</dd></div>
+        <div><dt>Team offsites</dt><dd>Daytime buyout with unlimited coffee</dd></div>
+      </dl>
+      <a class="btn" href="mailto:hi@secondshift.cafe?subject=Booking%20the%20press%20room&body=Date%3A%0AType%20of%20event%3A%0AHeadcount%3A">Email about the space</a>
+    </div>
+  </section>
+
+  <section class="find" id="find" aria-labelledby="fd-t">
+    <figure class="find__img"><img src="https://images.unsplash.com/photo-1546436836-07a91091f160?auto=format&fit=crop&w=1800&q=70" alt="The Manhattan skyline at golden hour" loading="lazy" width="1800" height="900"></figure>
+    <div class="find__card">
+      <h2 id="fd-t">45-12 Davis Street</h2>
+      <p>Long Island City, Queens 11101<br>Two blocks from Court Sq — <b>7</b> <b>E</b> <b>M</b> <b>G</b></p>
+      <p class="big">Open every day<br>7 am – midnight</p>
+      <p class="status" id="status" aria-live="polite"></p>
+      <p class="links"><a href="tel:+17185550128">(718) 555-0128</a><a href="mailto:hi@secondshift.cafe">hi@secondshift.cafe</a><a href="https://www.google.com/maps/search/?api=1&query=45-12+Davis+St+Long+Island+City+NY+11101" target="_blank" rel="noopener">Map ↗</a></p>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <p class="foot__big"><span>7→5</span><span>5→12</span></p>
+  <p class="foot__fine"><span>A design concept. Second Shift is a fictional business.</span><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram ↗</a><a href="../index.html">← All concepts</a></p>
+</footer>
+<script src="main.js"></script>
+<script>window.SITEMENU={"name": "Second Shift", "sub": "Coffee by day · amaro by night", "bp": 980, "nav": ".head .nav", "mount": "#toggle", "mountMode": "after", "links": [["#menu", "The food & drink menu"], ["#shifts", "Two shifts"], ["#weekly", "Weekly"], ["#space", "The space"], ["#find", "Find us"]], "actions": [{"label": "Directions", "href": "https://www.google.com/maps/search/?api=1&query=45-12+Davis+St+Long+Island+City+NY+11101", "primary": true}, {"label": "Call", "href": "tel:+17185550128"}], "info": ["45-12 Davis St, Long Island City", "Coffee from 7 am · amaro until midnight"], "hours": {"0": [420, 1440], "1": [420, 1440], "2": [420, 1440], "3": [420, 1440], "4": [420, 1440], "5": [420, 1440], "6": [420, 1440]}};</script>
+<script src="sitemenu.js"></script>
+</body>
+</html>

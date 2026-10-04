@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Press &amp; Pulp · Cold-Pressed Juice on Bedford Avenue, Williamsburg</title>
+<meta name="description" content="Cold-pressed juice, pressed every morning at 5:30 on Bedford Avenue. Eight juices, four smoothies, glass bottles you can bring back. No cleanses, no claims.">
+<meta name="theme-color" content="#151412">
+<meta property="og:title" content="Press &amp; Pulp · Williamsburg">
+<meta property="og:description" content="Pressed this morning. Eight juices in glass bottles on Bedford Avenue.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23151412'/%3E%3Ccircle cx='32' cy='34' r='16' fill='%23f77f00'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="sitemenu.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"CafeOrCoffeeShop","name":"Press & Pulp","servesCuisine":"Juice bar","telephone":"+1-718-555-0134","address":{"@type":"PostalAddress","streetAddress":"171 Bedford Ave","addressLocality":"Brooklyn","addressRegion":"NY","postalCode":"11211","addressCountry":"US"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"07:00","closes":"19:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday","Sunday"],"opens":"08:00","closes":"18:00"}]}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="hdr" id="top">
+  <div class="wrap hdr__in">
+    <a class="logo" href="#top" aria-label="Press and Pulp, home"><span class="logo__dot" aria-hidden="true"></span>Press<i>&amp;</i>Pulp</a>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="#wall">The juice wall</a>
+      <a href="#smoothies">Smoothies</a>
+      <a href="#press">How we press</a>
+      <a href="#bottles">Bottle return</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <p class="hdr__live"><span class="pulse" aria-hidden="true"></span><span data-status>…</span></p>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero">
+    <div class="wrap hero__g">
+      <div class="hero__copy">
+        <p class="eyebrow">Cold-pressed juice · Bedford Ave, Williamsburg</p>
+        <h1>Pressed <span class="hl">this morning.</span> Gone by tonight.</h1>
+        <p class="lede">Every bottle on our wall was pressed at 5:30 am, a few feet from where you’re standing. Eight juices, four smoothies, and no promises that juice will fix your life. It’s just very good juice.</p>
+        <div class="clock" aria-live="polite">
+          <span class="clock__k">Today’s batch</span>
+          <b class="clock__v" id="ago">—</b>
+          <span class="clock__s" id="agoSub">pressed at 5:30 am</span>
+        </div>
+        <div class="hero__btns">
+          <a class="btn btn--ink" href="#wall">See today’s wall</a>
+          <a class="btn btn--line" href="#visit">Find us</a>
+        </div>
+      </div>
+      <div class="hero__shelf" aria-hidden="true">
+        <div class="shelf" id="heroShelf"></div>
+        <div class="shelf__board"></div>
+      </div>
+    </div>
+    <div class="ticker" aria-hidden="true"><div class="ticker__t">BEET · GINGER · KALE · CARROT · TURMERIC · PINEAPPLE · MINT · CUCUMBER · CELERY · GRAPEFRUIT · LEMON · APPLE · BEET · GINGER · KALE · CARROT · TURMERIC · PINEAPPLE · MINT · CUCUMBER · CELERY · GRAPEFRUIT · LEMON · APPLE ·</div></div>
+  </section>
+
+  <section class="sec" id="wall" aria-labelledby="wall-t">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <p class="num">01</p>
+          <h2 id="wall-t">The juice wall</h2>
+        </div>
+        <p class="sub">Tap a bottle to see what’s in it. Everything is 12 oz, in glass, and pressed in the order you see it.</p>
+      </div>
+      <div class="filters" role="group" aria-label="Filter juices">
+        <button type="button" aria-pressed="true" data-f="all">All</button>
+        <button type="button" aria-pressed="false" data-f="green">Green</button>
+        <button type="button" aria-pressed="false" data-f="root">Root</button>
+        <button type="button" aria-pressed="false" data-f="citrus">Citrus</button>
+        <button type="button" aria-pressed="false" data-f="shot">Shots</button>
+      </div>
+      <div class="wall">
+        <ul class="wall__g" id="wallGrid"></ul>
+        <aside class="detail" id="detail" aria-live="polite"></aside>
+      </div>
+      <p class="warn"><b>Unpasteurized.</b> This product has not been pasteurized and therefore may contain harmful bacteria that can cause serious illness in children, the elderly, and persons with weakened immune systems.</p>
+    </div>
+  </section>
+
+  <section class="sec sec--ink" id="smoothies" aria-labelledby="sm-t">
+    <div class="wrap">
+      <div class="head">
+        <div><p class="num">02</p><h2 id="sm-t">Smoothies, blended to order</h2></div>
+        <p class="sub">Frozen fruit, nothing from a syrup pump. Ask for oat, almond or whole milk. Add peanut butter or a scoop of whey for $2.</p>
+      </div>
+      <ul class="smoothies">
+        <li style="--c:#e85d75"><b>Pink Elephant</b><span>Strawberry, banana, beet, oat milk</span><em>$11</em></li>
+        <li style="--c:#7a4b2a"><b>Bedford Ave</b><span>Banana, date, peanut butter, cacao, almond milk</span><em>$12</em></li>
+        <li style="--c:#f2a541"><b>Golden Hour</b><span>Mango, pineapple, turmeric, coconut water</span><em>$11</em></li>
+        <li style="--c:#5b8c3a"><b>Garden Variety</b><span>Spinach, kale, banana, apple, ginger</span><em>$11</em></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec" id="press" aria-labelledby="pr-t">
+    <div class="wrap">
+      <div class="head">
+        <div><p class="num">03</p><h2 id="pr-t">How a morning goes</h2></div>
+        <p class="sub">We press in small batches on a hydraulic press, the slow way. It takes about three pounds of produce to fill one green-juice bottle.</p>
+      </div>
+      <ol class="steps">
+        <li><span>4:45</span><b>Produce in</b><p>Delivered from the Brooklyn Terminal Market and two farms upstate.</p></li>
+        <li><span>5:00</span><b>Wash &amp; chop</b><p>Everything scrubbed. Nothing peeled that doesn’t need it.</p></li>
+        <li><span>5:30</span><b>Press</b><p>Ground into pulp, wrapped in cloth, pressed under 20 tons.</p></li>
+        <li><span>6:45</span><b>Bottle &amp; label</b><p>Each label is dated by hand.</p></li>
+        <li><span>7:00</span><b>Doors open</b><p>The pulp goes to a community garden on North 7th.</p></li>
+      </ol>
+      <div class="stance">
+        <p><b>We don’t sell cleanses.</b> Your liver and kidneys already do that job. Drink juice because it tastes good, alongside real meals.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec sec--tint" id="bottles" aria-labelledby="bt-t">
+    <div class="wrap bt">
+      <div>
+        <p class="num">04</p>
+        <h2 id="bt-t">Bring back five bottles, get a juice.</h2>
+        <p class="sub">Rinse them, bring them in, and we’ll stamp your card. Five returns and the next juice is on us. The bottles get sanitized and go back on the wall.</p>
+      </div>
+      <div class="card" aria-label="Bottle-return card">
+        <p class="card__t">Bottle-return card</p>
+        <div class="card__dots" id="dots">
+          <button type="button" aria-pressed="false" aria-label="Stamp 1"></button>
+          <button type="button" aria-pressed="false" aria-label="Stamp 2"></button>
+          <button type="button" aria-pressed="false" aria-label="Stamp 3"></button>
+          <button type="button" aria-pressed="false" aria-label="Stamp 4"></button>
+          <button type="button" aria-pressed="false" aria-label="Stamp 5"></button>
+        </div>
+        <p class="card__m" id="dotsMsg" aria-live="polite">Tap to try it: 0 of 5</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="visit" aria-labelledby="vi-t">
+    <div class="wrap vi">
+      <div>
+        <p class="num">05</p>
+        <h2 id="vi-t">171 Bedford Avenue</h2>
+        <p class="sub">Between North 7th and North 8th, two minutes from the Bedford Av L stop.</p>
+        <div class="hero__btns">
+          <a class="btn btn--ink" href="https://www.google.com/maps/search/?api=1&query=171+Bedford+Ave+Brooklyn+NY+11211">Directions</a>
+          <a class="btn btn--line" href="tel:+17185550134">(718) 555-0134</a>
+        </div>
+      </div>
+      <table class="hrs" id="hrs">
+        <caption class="sr">Opening hours</caption>
+        <tbody>
+          <tr data-d="1"><th>Monday</th><td>7 am – 7 pm</td></tr>
+          <tr data-d="2"><th>Tuesday</th><td>7 am – 7 pm</td></tr>
+          <tr data-d="3"><th>Wednesday</th><td>7 am – 7 pm</td></tr>
+          <tr data-d="4"><th>Thursday</th><td>7 am – 7 pm</td></tr>
+          <tr data-d="5"><th>Friday</th><td>7 am – 7 pm</td></tr>
+          <tr data-d="6"><th>Saturday</th><td>8 am – 6 pm</td></tr>
+          <tr data-d="0"><th>Sunday</th><td>8 am – 6 pm</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</main>
+
+<footer class="ft">
+  <div class="wrap ft__in">
+    <p class="ft__logo">Press<i>&amp;</i>Pulp</p>
+    <p>171 Bedford Ave, Brooklyn, NY 11211 · <a href="tel:+17185550134">(718) 555-0134</a> · <a href="mailto:hello@pressandpulp.nyc">hello@pressandpulp.nyc</a></p>
+    <p class="ft__fine">A design concept. Press &amp; Pulp is a fictional business; prices are placeholders. <a href="../index.html">← All concepts</a></p>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+<script>window.SITEMENU={"name": "Press & Pulp", "sub": "Cold-pressed juice · Williamsburg", "bp": 1060, "nav": "#nav", "mount": ".hdr__in", "mountMode": "append", "actions": [{"label": "Directions", "href": "https://www.google.com/maps/search/?api=1&query=171+Bedford+Ave+Brooklyn+NY+11211", "primary": true}, {"label": "Call", "href": "tel:+17185550134"}], "info": ["171 Bedford Ave, Williamsburg", "Mon–Fri 7 am–7 pm · Sat–Sun 8 am–6 pm"], "hours": {"0": [480, 1080], "1": [420, 1140], "2": [420, 1140], "3": [420, 1140], "4": [420, 1140], "5": [420, 1140], "6": [480, 1080]}};</script>
+<script src="sitemenu.js"></script>
+</body>
+</html>
