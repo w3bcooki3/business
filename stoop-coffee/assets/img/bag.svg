@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 340" width="260" height="340">
+<title>A 12-ounce bag of Brownstone blend coffee beans with the Stoop stair logo</title>
+<g stroke="#1E2A24" stroke-width="4" stroke-linejoin="round">
+<path d="M40 60 L28 318 H232 L220 60Z" fill="#B68A5E"/>
+<path d="M40 60 L56 30 H204 L220 60Z" fill="#9C7249"/>
+<path d="M56 30 L60 14 H200 L204 30Z" fill="#B68A5E"/>
+<rect x="52" y="120" width="156" height="150" fill="#F1E6D6"/>
+</g>
+<path d="M60 22 H200" stroke="#1E2A24" stroke-width="2" stroke-dasharray="6 5"/>
+<path d="M98 176h16v-14h16v-14h16v-14h16v42z" fill="#7A3E2B"/>
+<path d="M96 178h68" stroke="#D49A3A" stroke-width="4"/>
+<g font-family="Archivo, sans-serif" fill="#1E2A24" text-anchor="middle">
+<text x="130" y="208" font-size="18" font-weight="900" style="font-stretch:112%" textLength="136" lengthAdjust="spacingAndGlyphs">BROWNSTONE</text>
+<text x="130" y="230" font-size="11" font-weight="600">chocolate, toasted pecan</text>
+<text x="130" y="256" font-size="10" font-weight="700" letter-spacing="1.5">12 OZ WHOLE BEAN</text>
+</g>
+<path d="M60 92 L200 92" stroke="#1E2A24" stroke-width="2" opacity=".3"/>
+<g fill="#5A3A22"><ellipse cx="62" cy="300" rx="7" ry="10" transform="rotate(30 62 300)"/><ellipse cx="200" cy="296" rx="7" ry="10" transform="rotate(-20 200 296)"/></g>
+</svg>

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" width="600" height="420" font-family="Archivo, Arial, sans-serif">
+<title>Schematic map of the blocks around Stoop Coffee on Halsey Street near Throop Avenue, with the nearest A and C train station on Fulton Street</title>
+<rect width="600" height="420" fill="#FBF4E8"/>
+<g fill="#E9DCC8">
+<rect x="0" y="0" width="600" height="420"/>
+</g>
+<g stroke="#FBF4E8" stroke-width="18">
+<path d="M0 70H600M0 150H600M0 230H600M0 310H600"/>
+<path d="M90 0V420M250 0V420M410 0V420M560 0V420"/>
+</g>
+<path d="M0 392L600 352" stroke="#FBF4E8" stroke-width="26"/>
+<path d="M0 392L600 352" stroke="#D49A3A" stroke-width="3" stroke-dasharray="10 8"/>
+<rect x="268" y="80" width="124" height="60" fill="#7A3E2B" opacity=".18"/>
+<g fill="#1E2A24" font-size="13" font-weight="700">
+<text x="8" y="146" fill="#7A3E2B" font-weight="900" font-size="15">HALSEY ST</text>
+<text x="8" y="226">MACON ST</text>
+<text x="8" y="66">HANCOCK ST</text>
+<text x="8" y="306">MACDONOUGH ST</text>
+<text x="150" y="398" transform="rotate(-3.8 150 398)">FULTON ST</text>
+</g>
+<g fill="#1E2A24" font-size="13" font-weight="700">
+<text transform="translate(86 412) rotate(-90)">MARCY AVE</text>
+<text transform="translate(246 412) rotate(-90)">TOMPKINS AVE</text>
+<text transform="translate(406 412) rotate(-90)" fill="#7A3E2B" font-weight="900">THROOP AVE</text>
+<text transform="translate(556 300) rotate(-90)">MARCUS GARVEY</text>
+</g>
+<path d="M0 70H600M0 150H600M0 230H600M0 310H600" stroke="#1E2A24" stroke-width="0" />
+<g transform="translate(372 142)">
+<circle r="24" fill="#7A3E2B" stroke="#1E2A24" stroke-width="3"/>
+<path d="M-12 8h6v-6h6v-6h6v-6h6v18z" fill="#F1E6D6"/>
+</g>
+<g transform="translate(372 102)">
+<rect y="-30" width="150" height="28" x="-75" fill="#1E2A24"/>
+<text x="0" y="-11" fill="#F1E6D6" font-size="13" font-weight="800" text-anchor="middle">STOOP · 387 HALSEY</text>
+</g>
+<g transform="translate(430 362)">
+<circle r="14" fill="#0039A6"/><text y="5" fill="#fff" font-size="15" font-weight="700" text-anchor="middle" font-family="Helvetica, Arial, sans-serif">A</text>
+<circle cx="32" r="14" fill="#0039A6"/><text x="32" y="5" fill="#fff" font-size="15" font-weight="700" text-anchor="middle" font-family="Helvetica, Arial, sans-serif">C</text>
+</g>
+<text x="476" y="342" font-size="12" font-weight="700" fill="#1E2A24">Kingston–Throop</text>
+<g transform="translate(22 22)"><path d="M0 18V0l-6 8M0 0l6 8" stroke="#1E2A24" stroke-width="2.5" fill="none"/><text x="10" y="16" font-size="12" font-weight="800" fill="#1E2A24">N</text></g>
+<text x="590" y="16" font-size="11" fill="#4A4038" text-anchor="end">Not to scale</text>
+</svg>

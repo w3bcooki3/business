@@ -31,10 +31,9 @@ html.sm-lock,html.sm-lock body{overflow:hidden}
 @media (prefers-reduced-motion:reduce){.sm,.sm__list li{transition:none}}
 
 /* site theme */
-:root{--sm-bg:#f6eddc;--sm-fg:#2a1a12;--sm-mut:#6e5b4c;--sm-line:rgba(42,26,18,.16);--sm-line2:rgba(42,26,18,.35);--sm-acc:#c8341f;--sm-accfg:#fff;
---sm-disp:"Gloock",Georgia,serif;--sm-body:"Instrument Sans",system-ui,sans-serif;--sm-r:0px;
+:root{--sm-bg:#f6eddc;--sm-fg:#2a1a12;--sm-mut:#6b5547;--sm-line:rgba(42,26,18,.16);--sm-line2:rgba(42,26,18,.35);--sm-acc:#c8341f;--sm-accfg:#fff;
+--sm-disp:"DM Serif Display",Georgia,serif;--sm-body:"Instrument Sans",system-ui,sans-serif;--sm-r:0px;
 --sm-btn-bg:#2a1a12;--sm-btn-fg:#f6eddc;--sm-btn-bd:#2a1a12;--sm-btn-font:600 15px/1 "Instrument Sans",system-ui,sans-serif;
---sm-link-font:400 36px/1.05 "Gloock",Georgia,serif;--sm-name-font:400 26px/1 "Gloock",Georgia,serif;--sm-chip:#efe2c8;--sm-open:#4f5a2b;}
-@media (max-width:1020px){.sm-btn{display:inline-flex}.burger{display:none!important}}
-@media (max-width:360px){.sm-btn__l{display:none}.sm-btn{padding:0;width:46px;justify-content:center}}
-
+--sm-link-font:400 36px/1.05 "DM Serif Display",Georgia,serif;--sm-name-font:italic 400 28px/1 "DM Serif Display",Georgia,serif;--sm-chip:#efe2c8;--sm-open:#2f7d3a;}
+@media (max-width:1023px){.sm-btn{display:inline-flex}}
+@media (max-width:359px){.sm-btn__l{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}.sm-btn{padding:0;width:46px;justify-content:center}}

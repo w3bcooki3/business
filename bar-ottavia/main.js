@@ -1,19 +1,41 @@
 (function () {
   'use strict';
+  var DAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+  var HOURS = (window.SITEMENU && window.SITEMENU.hours) || {};
+
+  /* Current time in New York, whatever the visitor's time zone. */
   function ny() {
     var o = {};
     new Intl.DateTimeFormat('en-US', { timeZone: 'America/New_York', hour: 'numeric', minute: 'numeric', hour12: false, weekday: 'short' })
       .formatToParts(new Date()).forEach(function (p) { o[p.type] = p.value; });
-    return { h: (+o.hour) % 24, m: +o.minute, dow: { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 }[o.weekday] };
+    return { dow: DAYS.indexOf(o.weekday), min: ((+o.hour) % 24) * 60 + (+o.minute) };
+  }
+  function clock(m) {
+    var h = Math.floor(m / 60) % 24, mm = m % 60;
+    return ((h % 12) || 12) + (mm ? ':' + ('0' + mm).slice(-2) : '') + (h >= 12 ? ' pm' : ' am');
   }
   var now = ny();
 
-  /* nav */
-  var burger = document.querySelector('.burger'), nav = document.getElementById('nav');
-  function setNav(o) { nav.classList.toggle('open', o); burger.setAttribute('aria-expanded', String(o)); burger.setAttribute('aria-label', o ? 'Close menu' : 'Open menu'); }
-  burger.addEventListener('click', function () { setNav(!nav.classList.contains('open')); });
-  nav.addEventListener('click', function (e) { if (e.target.closest('a')) setNav(false); });
-  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && nav.classList.contains('open')) { setNav(false); burger.focus(); } });
+  /* Open / closed status (hero + visit section) */
+  function statusText() {
+    var h = HOURS[now.dow];
+    if (h && now.min >= h[0] && now.min < h[1]) {
+      return { open: true, text: 'Open now · kitchen until ' + clock(h[1]) };
+    }
+    if (h && now.min < h[0]) return { open: false, text: 'Opens today at ' + clock(h[0]) + ' · walk-ins welcome' };
+    var k = 1; while (!HOURS[(now.dow + k) % 7] && k < 7) k++;
+    var next = HOURS[(now.dow + k) % 7];
+    return { open: false, text: 'Closed now · back ' + (k === 1 ? 'tomorrow' : DAYS[(now.dow + k) % 7]) + ' at ' + clock(next[0]) };
+  }
+  var st = statusText();
+  [].forEach.call(document.querySelectorAll('[data-status]'), function (el) {
+    el.textContent = st.text; el.classList.toggle('is-open', st.open);
+  });
+  [].forEach.call(document.querySelectorAll('#hours li'), function (li) {
+    if (li.getAttribute('data-days').split(' ').indexOf(String(now.dow)) > -1) {
+      li.classList.add('is-today'); li.setAttribute('aria-current', 'date');
+    }
+  });
 
   /* Nonna's week */
   var specials = [
@@ -32,14 +54,14 @@
   document.getElementById('nonnaPrice').textContent = '$' + t[3];
   var week = document.getElementById('week');
   [1, 2, 3, 4, 5, 6, 0].forEach(function (d) {
-    var li = document.createElement('li');
+    var li = document.createElement('li'), b = document.createElement('b'), s = document.createElement('span');
+    b.textContent = specials[d][0]; s.textContent = specials[d][1];
     if (d === now.dow) { li.className = 'is-today'; li.setAttribute('aria-current', 'date'); }
-    li.innerHTML = '<b>' + specials[d][0] + '</b><span>' + specials[d][1] + '</span>';
-    week.appendChild(li);
+    li.appendChild(b); li.appendChild(s); week.appendChild(li);
   });
 
-  /* menu tabs */
-  var tabs = Array.prototype.slice.call(document.querySelectorAll('[role="tab"]'));
+  /* Menu tabs (roving tabindex, arrow keys, Home/End) */
+  var tabs = [].slice.call(document.querySelectorAll('.menu__tabs [role="tab"]'));
   function sel(tab) {
     tabs.forEach(function (x) {
       var on = x === tab;
@@ -50,27 +72,30 @@
   tabs.forEach(function (tab, i) {
     tab.addEventListener('click', function () { sel(tab); });
     tab.addEventListener('keydown', function (e) {
-      var n = null;
-      if (e.key === 'ArrowDown' || e.key === 'ArrowRight') n = tabs[(i + 1) % tabs.length];
-      if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') n = tabs[(i - 1 + tabs.length) % tabs.length];
+      var n = null, L = tabs.length;
+      if (e.key === 'ArrowDown' || e.key === 'ArrowRight') n = tabs[(i + 1) % L];
+      if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') n = tabs[(i - 1 + L) % L];
+      if (e.key === 'Home') n = tabs[0];
+      if (e.key === 'End') n = tabs[L - 1];
       if (n) { e.preventDefault(); sel(n); n.focus(); }
     });
   });
 
-  /* hours / live status */
-  var H = { 0: [13, 21.5], 1: [17, 22.5], 2: [17, 22.5], 3: [17, 22.5], 4: [17, 22.5], 5: [17, 23.5], 6: [17, 23.5] };
-  var key = now.dow === 0 ? 0 : (now.dow >= 5 ? 5 : 1);
-  var row = document.querySelector('#hours li[data-d="' + key + '"]');
-  if (row) row.classList.add('is-today');
-  var live = document.getElementById('live'), tt = now.h + now.m / 60, hh = H[now.dow];
-  function f(x) { var h = Math.floor(x), m = Math.round((x - h) * 60); return ((h % 12) || 12) + (m ? ':' + String(m).padStart(2, '0') : '') + (h >= 12 ? ' pm' : ' am'); }
-  if (tt >= hh[0] && tt < hh[1]) { live.classList.add('is-open'); live.textContent = 'Open now — kitchen until ' + f(hh[1]); }
-  else if (tt < hh[0]) live.textContent = 'Opens today at ' + f(hh[0]);
-  else live.textContent = 'Closed for the night — back tomorrow';
+  /* Ticker pause */
+  var ticker = document.querySelector('.ticker'), pause = document.querySelector('.ticker__pause');
+  if (pause) pause.addEventListener('click', function () {
+    var p = ticker.classList.toggle('is-paused');
+    pause.setAttribute('aria-pressed', String(p));
+    pause.setAttribute('aria-label', p ? 'Play scrolling' : 'Pause scrolling');
+  });
 
-  /* reveal */
+  /* Gentle reveal on scroll */
   if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }); }, { rootMargin: '0px 0px -8% 0px' });
-    document.querySelectorAll('.nonna__card, .week, .card, .timeline li, .garden__text, .visit__grid > div, .family__intro').forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { rootMargin: '0px 0px -8% 0px' });
+    document.querySelectorAll('.nonna__card, .nonna__week, .timeline li, .garden__text, .visit__col').forEach(function (el) {
+      el.classList.add('reveal'); io.observe(el);
+    });
   }
 })();

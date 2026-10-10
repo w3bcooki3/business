@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" width="480" height="360">
+<title>Desmond Clarke at the order window holding a cortado</title>
+<rect width="480" height="360" fill="#7A3E2B"/>
+<g stroke="#683322" stroke-width="3"><path d="M0 60H480M0 112H480M0 164H480"/></g>
+<rect x="60" y="34" width="360" height="326" fill="#1E2A24"/>
+<rect x="76" y="50" width="328" height="310" fill="#2B1A12"/>
+<rect x="76" y="50" width="328" height="310" fill="#D49A3A" opacity=".12"/>
+<path d="M90 120H180" stroke="#D49A3A" stroke-width="2" opacity=".5"/>
+<g fill="#F1E6D6" opacity=".35"><rect x="96" y="100" width="14" height="20"/><rect x="116" y="96" width="14" height="24"/><rect x="136" y="100" width="14" height="20"/></g>
+<path d="M352 50V80" stroke="#120C08" stroke-width="2"/><path d="M336 94Q352 72 368 94Z" fill="#D49A3A"/>
+<g stroke="#1E2A24" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+<path d="M150 360 C150 270 180 236 240 232 C300 236 330 270 330 360Z" fill="#3E6FD8"/>
+<path d="M196 248 L240 300 L284 248 L284 360 L196 360Z" fill="#F1E6D6"/>
+<path d="M212 360 V286 h56 V360" fill="#B68A5E"/>
+<path d="M222 236 V212 h36 V236 C254 246 226 246 222 236Z" fill="#6B4630"/>
+<ellipse cx="240" cy="168" rx="46" ry="54" fill="#6B4630"/>
+<path d="M194 160 C192 118 214 104 240 104 C268 104 288 120 286 160 C282 140 270 132 240 132 C212 132 198 142 194 160Z" fill="#1E2A24"/>
+<path d="M206 190 C214 222 266 222 274 190 C268 210 250 216 240 216 C230 216 212 210 206 190Z" fill="#1E2A24"/>
+</g>
+<path d="M226 196 Q240 204 254 196" fill="none" stroke="#F1E6D6" stroke-width="3" stroke-linecap="round"/>
+<g fill="#1E2A24"><circle cx="222" cy="166" r="4.5"/><circle cx="258" cy="166" r="4.5"/></g>
+<path d="M212 150 q10 -6 20 0 M248 150 q10 -6 20 0" stroke="#1E2A24" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+<rect x="40" y="300" width="400" height="26" fill="#E4D3BC"/><rect x="40" y="326" width="400" height="10" fill="#000" opacity=".2"/>
+<g stroke="#1E2A24" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+<path d="M300 302 C300 276 320 268 340 270 L350 300Z" fill="#6B4630"/>
+<path d="M330 266 L336 300 H372 L378 266Z" fill="#FBF4E8"/>
+</g>
+<path d="M334 270 h40" stroke="#7A3E2B" stroke-width="5"/>
+<path d="M346 258c-5-6 5-10 0-16M360 258c-5-6 5-10 0-16" fill="none" stroke="#F1E6D6" stroke-width="3" stroke-linecap="round" opacity=".7"/>
+<path d="M98 288h12v-10h12v-10h12v-10h12v30z" fill="#D49A3A" opacity=".85"/>
+</svg>

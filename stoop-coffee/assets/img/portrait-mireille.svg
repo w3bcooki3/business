@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" width="480" height="360">
+<title>Mireille Joseph holding a tray of pain patate</title>
+<rect width="480" height="360" fill="#D49A3A"/>
+<g fill="#C88A2C"><circle cx="60" cy="60" r="3"/><circle cx="420" cy="80" r="3"/><circle cx="90" cy="250" r="3"/><circle cx="400" cy="280" r="3"/><circle cx="380" cy="40" r="3"/></g>
+<path d="M0 300h80v-24h80v-24h80v-24h80v-24h80v-24h80V360H0z" fill="#B57A28" opacity=".45"/>
+<g stroke="#1E2A24" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+<path d="M140 360 C140 276 176 240 240 236 C304 240 340 276 340 360Z" fill="#1E2A24"/>
+<path d="M200 252 C210 290 270 290 280 252" fill="#F1E6D6"/>
+<path d="M224 236 V214 h32 V236 C252 246 228 246 224 236Z" fill="#5A3A22"/>
+<path d="M170 112 C150 60 210 34 240 40 C280 34 330 60 310 112 C316 150 300 160 290 140 L190 140 C180 160 164 150 170 112Z" fill="#1E2A24"/>
+<ellipse cx="240" cy="170" rx="44" ry="52" fill="#5A3A22"/>
+<path d="M196 150 C196 110 220 98 240 98 C262 98 286 110 284 150 C278 128 262 122 240 122 C220 122 202 128 196 150Z" fill="#1E2A24"/>
+<path d="M200 76 C214 54 266 54 280 76 C270 66 252 64 240 64 C228 64 212 66 200 76Z" fill="#3E6FD8"/>
+<path d="M188 92 C196 60 284 60 292 92 C280 80 262 76 240 76 C218 76 200 80 188 92Z" fill="#3E6FD8"/>
+</g>
+<g fill="#1E2A24"><circle cx="223" cy="168" r="4.5"/><circle cx="257" cy="168" r="4.5"/></g>
+<path d="M224 196 Q240 208 256 196" fill="none" stroke="#1E2A24" stroke-width="3.5" stroke-linecap="round"/>
+<circle cx="196" cy="182" r="5" fill="#D49A3A" stroke="#1E2A24" stroke-width="2"/><circle cx="284" cy="182" r="5" fill="#D49A3A" stroke="#1E2A24" stroke-width="2"/>
+<g stroke="#1E2A24" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+<path d="M150 296 L330 296 L320 316 L160 316Z" fill="#B68A5E"/>
+<path d="M176 296 V272 L236 256 L300 270 V296Z" fill="#C97A3E"/>
+<path d="M176 272 L236 256 L300 270 L240 286Z" fill="#7A3E2B"/>
+<path d="M240 286 V296"/>
+<path d="M136 300 C130 316 150 326 168 314 M344 300 C350 316 330 326 312 314" fill="#5A3A22"/>
+</g>
+<g fill="#F1E6D6"><path d="M220 270l8-4 5 3-8 4z"/><path d="M254 268l8-4 5 3-8 4z"/></g>
+</svg>

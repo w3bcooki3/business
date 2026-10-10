@@ -2,17 +2,18 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Bar Ottavia — Calabrian Trattoria on Court Street, Carroll Gardens</title>
 <meta name="description" content="Hand-rolled pasta every morning, Sunday gravy, a back garden and walk-ins always welcome. A loud, generous trattoria at 371 Court Street, Brooklyn.">
-<meta name="theme-color" content="#c8341f">
+<meta name="theme-color" content="#f6eddc">
+<meta property="og:type" content="website">
 <meta property="og:title" content="Bar Ottavia — Carroll Gardens, Brooklyn">
 <meta property="og:description" content="Hand-rolled pasta, Sunday gravy, back garden. Walk-ins welcome.">
-<meta property="og:image" content="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=1600&q=80">
+<meta property="og:image" content="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&amp;fit=crop&amp;w=1200&amp;h=630&amp;q=75">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23c8341f'/%3E%3Ctext x='32' y='44' font-size='34' text-anchor='middle' fill='%23f6eddc' font-family='Georgia' font-style='italic'%3EO%3C/text%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Instrument+Sans:wght@400;500;600&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<link rel="preload" href="fonts/dm-serif-display-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/instrument-sans-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="sitemenu.css">
 <script type="application/ld+json">
@@ -22,8 +23,15 @@
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
+<svg class="sprite" aria-hidden="true" focusable="false">
+  <symbol id="i-out" viewBox="0 0 16 16"><path d="M5 3h8v8M13 3 3 13" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.6 2.8 9.4 6c.5.6.5 1.4 0 2L8 9.6a12 12 0 0 0 6.4 6.4l1.6-1.4c.6-.5 1.4-.5 2 0l3.2 2.8c.6.5.6 1.4.1 2l-1.6 1.9c-.6.7-1.6 1-2.5.7A19 19 0 0 1 2 5.8c-.3-.9 0-1.9.7-2.5L4.6 1.7c.6-.5 1.5-.5 2 .1Z" fill="currentColor"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 22s7-6.5 7-12.2A7 7 0 0 0 5 9.8C5 15.5 12 22 12 22Z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="2.6" fill="currentColor"/></symbol>
+  <symbol id="i-star" viewBox="0 0 20 20"><path d="M10 0v20M0 10h20M2.9 2.9l14.2 14.2M17.1 2.9 2.9 17.1" stroke="currentColor" stroke-width="2.6"/></symbol>
+</svg>
+
 <header class="top">
-  <a class="logo" href="#top" aria-label="Bar Ottavia home"><span class="logo__bar">Bar</span> <span class="logo__o">Ottavia</span></a>
+  <a class="logo" href="#top"><span class="logo__bar">Bar</span> <span class="logo__o">Ottavia</span></a>
   <nav class="nav" id="nav" aria-label="Main">
     <a href="#nonna">Today</a>
     <a href="#menu">Menu</a>
@@ -31,37 +39,58 @@
     <a href="#garden">The garden</a>
     <a href="#visit">Find us</a>
   </nav>
-  <a class="call" href="tel:+17185550119" aria-label="Call for a table, (718) 555-0119"><span>Call for a table</span><b>(718) 555-0119</b></a>
-  <button class="burger" aria-expanded="false" aria-controls="nav" aria-label="Open menu"><span></span><span></span></button>
+  <a class="call" href="tel:+17185550119"><span class="call__k">Call for a table</span> <b>(718) 555-0119</b></a>
 </header>
 
 <main id="main">
   <section class="hero" id="top" aria-labelledby="hero-t">
-    <div class="hero__text">
-      <p class="kicker">Trattoria · 371 Court Street · Carroll Gardens</p>
-      <h1 id="hero-t">Pasta rolled by hand at nine.<br><em>Gone</em> by nine-thirty.</h1>
+    <div class="hero__head">
+      <p class="kicker">Calabrian trattoria <span aria-hidden="true">·</span> Carroll Gardens</p>
+      <h1 id="hero-t">Pasta rolled by hand at nine. <em>Gone</em> by nine&#8209;thirty.</h1>
+    </div>
+    <figure class="hero__img">
+      <div class="frame">
+        <picture>
+          <source media="(max-width: 759px)" type="image/jpeg"
+            srcset="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&amp;fit=crop&amp;w=480&amp;h=360&amp;q=70 480w,
+                    https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&amp;fit=crop&amp;w=800&amp;h=600&amp;q=70 800w,
+                    https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&amp;fit=crop&amp;w=1200&amp;h=900&amp;q=70 1200w"
+            sizes="(max-width: 600px) calc(100vw - 52px), 560px" width="800" height="600">
+          <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&amp;fit=crop&amp;w=900&amp;h=1080&amp;q=75"
+            srcset="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&amp;fit=crop&amp;w=600&amp;h=720&amp;q=75 600w,
+                    https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&amp;fit=crop&amp;w=900&amp;h=1080&amp;q=75 900w,
+                    https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&amp;fit=crop&amp;w=1200&amp;h=1440&amp;q=75 1200w"
+            sizes="(max-width: 759px) calc(100vw - 52px), 40vw"
+            alt="A heaping plate of tagliatelle with slow-cooked ragù" width="900" height="1080" fetchpriority="high">
+        </picture>
+      </div>
+      <div class="stamp" aria-hidden="true">
+        <svg viewBox="0 0 200 200"><defs><path id="circ" d="M100,100 m-74,0 a74,74 0 1,1 148,0 a74,74 0 1,1 -148,0"/></defs><text><textPath href="#circ" textLength="458" lengthAdjust="spacing">FATTA A MANO · OGNI MATTINA · DAL 2016 ·</textPath></text></svg>
+        <span>O</span>
+      </div>
+    </figure>
+    <div class="hero__body">
       <p class="lede">A loud, generous Calabrian table run by two siblings who argue about salt. Walk-ins welcome every night; a back garden when the weather agrees.</p>
+      <p class="status" data-status>Dinner nightly from 5 · Sundays from 1 pm</p>
       <div class="hero__btns">
         <a class="btn btn--red" href="#menu">See the menu</a>
         <a class="btn" href="#nonna">What’s Nonna making?</a>
       </div>
-      <p class="scribble" aria-hidden="true">← the cacio e pepe is non-negotiable</p>
+      <p class="scribble" aria-hidden="true">psst — the cacio e pepe is non-negotiable</p>
     </div>
-    <figure class="hero__img">
-      <div class="scallop"><img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=1200&q=80" alt="A heaping plate of tagliatelle with slow-cooked ragù" width="1200" height="1400"></div>
-      <div class="stamp" aria-hidden="true">
-        <svg viewBox="0 0 200 200"><defs><path id="circ" d="M100,100 m-74,0 a74,74 0 1,1 148,0 a74,74 0 1,1 -148,0"/></defs><text><textPath href="#circ">FATTA A MANO · OGNI MATTINA · DAL 2016 ·</textPath></text></svg>
-        <span>O</span>
-      </div>
-    </figure>
   </section>
 
-  <div class="ticker" aria-hidden="true">
+  <section class="ticker" aria-label="House rules and good news">
     <div class="ticker__track">
-      <span>Walk-ins welcome</span><i>✺</i><span>Mondays: free corkage</span><i>✺</i><span>Kids eat cacio e pepe free · Sundays before 6</span><i>✺</i><span>Garden open till October 31</span><i>✺</i>
-      <span>Walk-ins welcome</span><i>✺</i><span>Mondays: free corkage</span><i>✺</i><span>Kids eat cacio e pepe free · Sundays before 6</span><i>✺</i><span>Garden open till October 31</span><i>✺</i>
+      <ul>
+        <li>Walk-ins welcome</li><li>Mondays: free corkage</li><li>Kids eat cacio e pepe free · Sundays before 6</li><li>Garden open till October 31</li>
+      </ul>
+      <ul aria-hidden="true">
+        <li>Walk-ins welcome</li><li>Mondays: free corkage</li><li>Kids eat cacio e pepe free · Sundays before 6</li><li>Garden open till October 31</li>
+      </ul>
     </div>
-  </div>
+    <button class="ticker__pause" type="button" aria-pressed="false" aria-label="Pause scrolling"><span aria-hidden="true"></span></button>
+  </section>
 
   <section class="nonna" id="nonna" aria-labelledby="nonna-t">
     <div class="nonna__card">
@@ -72,75 +101,78 @@
       <p class="nonna__price" id="nonnaPrice">$29</p>
       <p class="hand">Until it runs out. It runs out.</p>
     </div>
-    <ol class="week" id="week" aria-label="This week's specials"></ol>
+    <div class="nonna__week">
+      <h3 class="eyebrow">The week at Nonna’s stove</h3>
+      <ol class="week" id="week"></ol>
+    </div>
   </section>
 
   <section class="menu" id="menu" aria-labelledby="menu-t">
     <header class="menu__head">
       <h2 id="menu-t">Il menù</h2>
-      <p class="hand hand--red">we change it when the market does ↓</p>
+      <p class="hand hand--red">we change it when the market does</p>
     </header>
     <div class="menu__wrap">
       <div class="menu__tabs" role="tablist" aria-label="Menu sections">
-        <button role="tab" id="tab-a" aria-controls="p-a" aria-selected="true">Antipasti</button>
-        <button role="tab" id="tab-p" aria-controls="p-p" aria-selected="false" tabindex="-1">Pasta</button>
-        <button role="tab" id="tab-s" aria-controls="p-s" aria-selected="false" tabindex="-1">Secondi</button>
-        <button role="tab" id="tab-c" aria-controls="p-c" aria-selected="false" tabindex="-1">Contorni</button>
-        <button role="tab" id="tab-d" aria-controls="p-d" aria-selected="false" tabindex="-1">Dolci</button>
-        <button role="tab" id="tab-v" aria-controls="p-v" aria-selected="false" tabindex="-1">Vino</button>
+        <button type="button" role="tab" id="tab-a" aria-controls="p-a" aria-selected="true">Antipasti</button>
+        <button type="button" role="tab" id="tab-p" aria-controls="p-p" aria-selected="false" tabindex="-1">Pasta</button>
+        <button type="button" role="tab" id="tab-s" aria-controls="p-s" aria-selected="false" tabindex="-1">Secondi</button>
+        <button type="button" role="tab" id="tab-c" aria-controls="p-c" aria-selected="false" tabindex="-1">Contorni</button>
+        <button type="button" role="tab" id="tab-d" aria-controls="p-d" aria-selected="false" tabindex="-1">Dolci</button>
+        <button type="button" role="tab" id="tab-v" aria-controls="p-v" aria-selected="false" tabindex="-1">Vino</button>
       </div>
       <div class="card">
-        <div role="tabpanel" id="p-a" aria-labelledby="tab-a" class="pane">
+        <div role="tabpanel" id="p-a" aria-labelledby="tab-a" class="pane" tabindex="0">
           <dl class="items">
-            <div><dt>Burrata, ’nduja honey</dt><dd>Grilled bread, too much olive oil</dd><span>17</span></div>
-            <div><dt>Fried artichokes</dt><dd>Lemon, anchovy aioli</dd><span>15</span></div>
-            <div><dt>Meatballs, in the pan</dt><dd>Three of them, pork &amp; veal, Nonna’s ratio</dd><span>16</span></div>
-            <div><dt>Bruschetta della casa</dt><dd>Tomato, ricotta, whatever the farmers had</dd><span>12</span></div>
-            <div><dt>Calamari fritti</dt><dd>Calabrian chili, lemon</dd><span>18</span></div>
-            <div><dt>Escarole &amp; beans</dt><dd>Garlic, parm rind broth</dd><span>13</span></div>
+            <div><dt>Burrata, ’nduja honey</dt><dd>Grilled bread, too much olive oil</dd><dd class="pr">17</dd></div>
+            <div><dt>Fried artichokes</dt><dd>Lemon, anchovy aioli</dd><dd class="pr">15</dd></div>
+            <div><dt>Meatballs, in the pan</dt><dd>Three of them, pork &amp; veal, Nonna’s ratio</dd><dd class="pr">16</dd></div>
+            <div><dt>Bruschetta della casa</dt><dd>Tomato, ricotta, whatever the farmers had</dd><dd class="pr">12</dd></div>
+            <div><dt>Calamari fritti</dt><dd>Calabrian chili, lemon</dd><dd class="pr">18</dd></div>
+            <div><dt>Escarole &amp; beans</dt><dd>Garlic, parm rind broth</dd><dd class="pr">13</dd></div>
           </dl>
         </div>
-        <div role="tabpanel" id="p-p" aria-labelledby="tab-p" class="pane" hidden>
+        <div role="tabpanel" id="p-p" aria-labelledby="tab-p" class="pane" tabindex="0" hidden>
           <dl class="items">
-            <div><dt>Cacio e pepe</dt><dd>Tonnarelli, pecorino, a violent amount of pepper</dd><span>21</span></div>
-            <div><dt>Tagliatelle al ragù</dt><dd>Six-hour beef &amp; pork, nutmeg</dd><span>26</span></div>
-            <div><dt>Fileja ’nduja</dt><dd>Calabrian twisted pasta, spicy pork, tomato, ricotta salata</dd><span>25</span></div>
-            <div><dt>Spaghetti alle vongole</dt><dd>Littlenecks, white wine, parsley</dd><span>28</span></div>
-            <div><dt>Ricotta gnudi</dt><dd>Brown butter, sage, lemon zest</dd><span>24</span></div>
-            <div><dt>Lasagna verde</dt><dd>Fridays &amp; Saturdays only, twelve layers</dd><span>27</span></div>
+            <div><dt>Cacio e pepe</dt><dd>Tonnarelli, pecorino, a violent amount of pepper</dd><dd class="pr">21</dd></div>
+            <div><dt>Tagliatelle al ragù</dt><dd>Six-hour beef &amp; pork, nutmeg</dd><dd class="pr">26</dd></div>
+            <div><dt>Fileja ’nduja</dt><dd>Calabrian twisted pasta, spicy pork, tomato, ricotta salata</dd><dd class="pr">25</dd></div>
+            <div><dt>Spaghetti alle vongole</dt><dd>Littlenecks, white wine, parsley</dd><dd class="pr">28</dd></div>
+            <div><dt>Ricotta gnudi</dt><dd>Brown butter, sage, lemon zest</dd><dd class="pr">24</dd></div>
+            <div><dt>Lasagna verde</dt><dd>Fridays &amp; Saturdays only, twelve layers</dd><dd class="pr">27</dd></div>
           </dl>
         </div>
-        <div role="tabpanel" id="p-s" aria-labelledby="tab-s" class="pane" hidden>
+        <div role="tabpanel" id="p-s" aria-labelledby="tab-s" class="pane" tabindex="0" hidden>
           <dl class="items">
-            <div><dt>Chicken scarpariello</dt><dd>Sausage, cherry peppers, potatoes</dd><span>32</span></div>
-            <div><dt>Veal milanese</dt><dd>Pounded thin, arugula, lemon</dd><span>38</span></div>
-            <div><dt>Whole branzino</dt><dd>Salmoriglio, roasted fennel</dd><span>36</span></div>
-            <div><dt>Eggplant parm</dt><dd>The one people drive in from Jersey for</dd><span>26</span></div>
+            <div><dt>Chicken scarpariello</dt><dd>Sausage, cherry peppers, potatoes</dd><dd class="pr">32</dd></div>
+            <div><dt>Veal milanese</dt><dd>Pounded thin, arugula, lemon</dd><dd class="pr">38</dd></div>
+            <div><dt>Whole branzino</dt><dd>Salmoriglio, roasted fennel</dd><dd class="pr">36</dd></div>
+            <div><dt>Eggplant parm</dt><dd>The one people drive in from Jersey for</dd><dd class="pr">26</dd></div>
           </dl>
         </div>
-        <div role="tabpanel" id="p-c" aria-labelledby="tab-c" class="pane" hidden>
+        <div role="tabpanel" id="p-c" aria-labelledby="tab-c" class="pane" tabindex="0" hidden>
           <dl class="items">
-            <div><dt>Broccoli rabe</dt><dd>Garlic, chili</dd><span>11</span></div>
-            <div><dt>Roast potatoes</dt><dd>Rosemary, crispy bits</dd><span>10</span></div>
-            <div><dt>Insalata verde</dt><dd>Red wine vinaigrette</dd><span>11</span></div>
-            <div><dt>Garlic bread</dt><dd>Yes, we know. It’s very good.</dd><span>8</span></div>
+            <div><dt>Broccoli rabe</dt><dd>Garlic, chili</dd><dd class="pr">11</dd></div>
+            <div><dt>Roast potatoes</dt><dd>Rosemary, crispy bits</dd><dd class="pr">10</dd></div>
+            <div><dt>Insalata verde</dt><dd>Red wine vinaigrette</dd><dd class="pr">11</dd></div>
+            <div><dt>Garlic bread</dt><dd>Yes, we know. It’s very good.</dd><dd class="pr">8</dd></div>
           </dl>
         </div>
-        <div role="tabpanel" id="p-d" aria-labelledby="tab-d" class="pane" hidden>
+        <div role="tabpanel" id="p-d" aria-labelledby="tab-d" class="pane" tabindex="0" hidden>
           <dl class="items">
-            <div><dt>Tiramisù</dt><dd>Made by Nico, the only thing he’s allowed to make</dd><span>12</span></div>
-            <div><dt>Cannoli, filled to order</dt><dd>Two shells, orange, pistachio</dd><span>10</span></div>
-            <div><dt>Olive oil cake</dt><dd>Lemon curd, whipped mascarpone</dd><span>11</span></div>
-            <div><dt>Affogato</dt><dd>Fior di latte, espresso, optional amaro</dd><span>9</span></div>
+            <div><dt>Tiramisù</dt><dd>Made by Nico, the only thing he’s allowed to make</dd><dd class="pr">12</dd></div>
+            <div><dt>Cannoli, filled to order</dt><dd>Two shells, orange, pistachio</dd><dd class="pr">10</dd></div>
+            <div><dt>Olive oil cake</dt><dd>Lemon curd, whipped mascarpone</dd><dd class="pr">11</dd></div>
+            <div><dt>Affogato</dt><dd>Fior di latte, espresso, optional amaro</dd><dd class="pr">9</dd></div>
           </dl>
         </div>
-        <div role="tabpanel" id="p-v" aria-labelledby="tab-v" class="pane" hidden>
+        <div role="tabpanel" id="p-v" aria-labelledby="tab-v" class="pane" tabindex="0" hidden>
           <dl class="items">
-            <div><dt>Gaglioppo, Cirò Rosso</dt><dd>Calabria · by the quartino / bottle</dd><span>14 / 52</span></div>
-            <div><dt>Greco Bianco</dt><dd>Calabria · crisp, salty</dd><span>13 / 48</span></div>
-            <div><dt>Lambrusco di Sorbara</dt><dd>Emilia · cold, fizzy, pink</dd><span>12 / 44</span></div>
-            <div><dt>Montepulciano d’Abruzzo</dt><dd>House red · the carafe</dd><span>30</span></div>
-            <div><dt>Negroni sbagliato</dt><dd>Campari, vermouth, Lambrusco</dd><span>14</span></div>
+            <div><dt>Gaglioppo, Cirò Rosso</dt><dd>Calabria · by the quartino / bottle</dd><dd class="pr">14 / 52</dd></div>
+            <div><dt>Greco Bianco</dt><dd>Calabria · crisp, salty</dd><dd class="pr">13 / 48</dd></div>
+            <div><dt>Lambrusco di Sorbara</dt><dd>Emilia · cold, fizzy, pink</dd><dd class="pr">12 / 44</dd></div>
+            <div><dt>Montepulciano d’Abruzzo</dt><dd>House red · the carafe</dd><dd class="pr">30</dd></div>
+            <div><dt>Negroni sbagliato</dt><dd>Campari, vermouth, Lambrusco</dd><dd class="pr">14</dd></div>
           </dl>
         </div>
         <p class="card__foot">Bread is free and it comes back if you ask nicely. Gluten-free pasta available — tell your server.</p>
@@ -148,19 +180,32 @@
     </div>
   </section>
 
-  <section class="collage" aria-label="At the table">
-    <figure class="c1"><img src="https://images.unsplash.com/photo-1592861956120-e524fc739696?auto=format&fit=crop&w=900&q=80" alt="Friends laughing over dinner" loading="lazy" width="900" height="700"></figure>
-    <figure class="c2"><img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=700&q=80" alt="A pizza from above" loading="lazy" width="700" height="700"></figure>
-    <figure class="c3"><img src="https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?auto=format&fit=crop&w=900&q=80" alt="Hands reaching across a crowded table of plates" loading="lazy" width="900" height="900"></figure>
-    <figure class="c4"><img src="https://images.unsplash.com/photo-1516100882582-96c3a05fe590?auto=format&fit=crop&w=700&q=80" alt="A twirl of spaghetti in tomato sauce" loading="lazy" width="700" height="900"></figure>
-    <p class="collage__note hand">Tuesday, 8:40 pm. Table 6 ordered everything.</p>
+  <section class="collage" aria-labelledby="col-t">
+    <h2 class="collage__note hand" id="col-t">Tuesday, 8:40 pm. Table 6 ordered everything.</h2>
+    <div class="collage__strip" tabindex="0" role="group" aria-label="Photos from the dining room, scrolls sideways">
+      <figure class="c1"><img src="https://images.unsplash.com/photo-1592861956120-e524fc739696?auto=format&amp;fit=crop&amp;w=800&amp;h=600&amp;q=70"
+        srcset="https://images.unsplash.com/photo-1592861956120-e524fc739696?auto=format&amp;fit=crop&amp;w=480&amp;h=360&amp;q=70 480w, https://images.unsplash.com/photo-1592861956120-e524fc739696?auto=format&amp;fit=crop&amp;w=800&amp;h=600&amp;q=70 800w, https://images.unsplash.com/photo-1592861956120-e524fc739696?auto=format&amp;fit=crop&amp;w=1100&amp;h=825&amp;q=70 1100w"
+        sizes="(max-width: 759px) 78vw, 42vw" alt="Friends laughing over dinner" loading="lazy" width="800" height="600"></figure>
+      <figure class="c2"><img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&amp;fit=crop&amp;w=600&amp;h=600&amp;q=70"
+        srcset="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&amp;fit=crop&amp;w=400&amp;h=400&amp;q=70 400w, https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&amp;fit=crop&amp;w=600&amp;h=600&amp;q=70 600w"
+        sizes="(max-width: 759px) 60vw, 24vw" alt="A pizza from above" loading="lazy" width="600" height="600"></figure>
+      <figure class="c3"><img src="https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?auto=format&amp;fit=crop&amp;w=640&amp;h=800&amp;q=70"
+        srcset="https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?auto=format&amp;fit=crop&amp;w=400&amp;h=500&amp;q=70 400w, https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?auto=format&amp;fit=crop&amp;w=640&amp;h=800&amp;q=70 640w"
+        sizes="(max-width: 759px) 60vw, 26vw" alt="Hands reaching across a crowded table of plates" loading="lazy" width="640" height="800"></figure>
+      <figure class="c4"><img src="https://images.unsplash.com/photo-1516100882582-96c3a05fe590?auto=format&amp;fit=crop&amp;w=600&amp;h=800&amp;q=70"
+        srcset="https://images.unsplash.com/photo-1516100882582-96c3a05fe590?auto=format&amp;fit=crop&amp;w=400&amp;h=533&amp;q=70 400w, https://images.unsplash.com/photo-1516100882582-96c3a05fe590?auto=format&amp;fit=crop&amp;w=600&amp;h=800&amp;q=70 600w"
+        sizes="(max-width: 759px) 56vw, 24vw" alt="A twirl of spaghetti in tomato sauce" loading="lazy" width="600" height="800"></figure>
+    </div>
   </section>
 
   <section class="family" id="family" aria-labelledby="fam-t">
     <div class="family__intro">
+      <p class="eyebrow eyebrow--light">La famiglia</p>
       <h2 id="fam-t">Named for a grandmother who fed the whole block.</h2>
       <p>Ottavia Ferrante came to Union Street from Tropea in 1962 with a pasta board, a rolling pin as long as her arm, and strong opinions about garlic. Her grandchildren Ottavia (yes, same name) and Nico grew up under that board. They opened this place to keep feeding the neighborhood the way she did — too much, and with commentary.</p>
-      <figure class="family__img"><img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=900&q=80" alt="Hands chopping fresh herbs on a wooden board" loading="lazy" width="900" height="700"></figure>
+      <figure class="family__img"><img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&amp;fit=crop&amp;w=800&amp;h=600&amp;q=70"
+        srcset="https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&amp;fit=crop&amp;w=480&amp;h=360&amp;q=70 480w, https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&amp;fit=crop&amp;w=800&amp;h=600&amp;q=70 800w, https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&amp;fit=crop&amp;w=1100&amp;h=825&amp;q=70 1100w"
+        sizes="(max-width: 759px) calc(100vw - 40px), 44vw" alt="Hands chopping fresh herbs on a wooden board" loading="lazy" width="800" height="600"></figure>
     </div>
     <ol class="timeline">
       <li><b>1962</b><p>Nonna Ottavia arrives from Tropea, Calabria. Moves into a third-floor walk-up on Union Street.</p></li>
@@ -172,8 +217,11 @@
   </section>
 
   <section class="garden" id="garden" aria-labelledby="garden-t">
-    <div class="garden__img"><img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=1400&q=80" alt="A long, busy dinner table full of people" loading="lazy" width="1400" height="900"></div>
+    <div class="garden__img"><img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&amp;fit=crop&amp;w=1100&amp;h=800&amp;q=70"
+      srcset="https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&amp;fit=crop&amp;w=600&amp;h=440&amp;q=70 600w, https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&amp;fit=crop&amp;w=1100&amp;h=800&amp;q=70 1100w, https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&amp;fit=crop&amp;w=1600&amp;h=1160&amp;q=70 1600w"
+      sizes="(max-width: 759px) 100vw, 58vw" alt="A long, busy dinner table full of people" loading="lazy" width="1100" height="800"></div>
     <div class="garden__text">
+      <p class="eyebrow eyebrow--light">Parties &amp; long tables</p>
       <h2 id="garden-t">The garden, for your people.</h2>
       <p>Birthdays, rehearsal dinners, the “we finally all got a sitter” night. The back garden seats 30 under the fig tree, family-style. Heated and tented from November.</p>
       <ul class="ticks">
@@ -181,48 +229,72 @@
         <li>Whole-garden buyouts Mon–Thu</li>
         <li>Bring your own cake, no plating fee</li>
       </ul>
-      <a class="btn btn--red" href="mailto:ciao@barottavia.com?subject=Garden%20party%20inquiry&body=Date%3A%0AGuests%3A%0AOccasion%3A%0A">Email about a party</a>
+      <a class="btn btn--cream" href="mailto:ciao@barottavia.com?subject=Garden%20party%20inquiry&amp;body=Date%3A%0AGuests%3A%0AOccasion%3A%0A">Email about a party</a>
+      <p class="garden__fine">Opens your email app with a short note to fill in: date, guests, occasion.</p>
     </div>
   </section>
 
   <section class="visit" id="visit" aria-labelledby="visit-t">
-    <h2 id="visit-t">Come hungry. Come as you are.</h2>
+    <h2 id="visit-t">Come hungry. <em>Come as you are.</em></h2>
     <div class="visit__grid">
-      <div>
+      <div class="visit__col">
         <h3>Find us</h3>
-        <p>371 Court Street at 1st Place<br>Carroll Gardens, Brooklyn 11231</p>
+        <p class="visit__addr">371 Court Street at 1st Place<br>Carroll Gardens, Brooklyn 11231</p>
         <p>F or G to Carroll Street — walk two blocks south on Court.</p>
-        <a class="link" href="https://www.google.com/maps/search/?api=1&query=371+Court+St+Brooklyn+NY+11231" target="_blank" rel="noopener">Directions ↗</a>
+        <a class="btn btn--sm" href="https://www.google.com/maps/search/?api=1&amp;query=371+Court+St+Brooklyn+NY+11231" target="_blank" rel="noopener">Get directions<svg class="i" aria-hidden="true"><use href="#i-out"/></svg><span class="sr"> (opens Google Maps)</span></a>
       </div>
-      <div>
+      <div class="visit__col">
         <h3>Hours</h3>
         <ul class="hours" id="hours">
-          <li data-d="1"><span>Mon–Thu</span><span>5 – 10:30</span></li>
-          <li data-d="5"><span>Fri–Sat</span><span>5 – 11:30</span></li>
-          <li data-d="0"><span>Sunday</span><span>1 – 9:30</span></li>
+          <li data-days="1 2 3 4"><span>Mon – Thu</span><span>5 – 10:30 pm</span></li>
+          <li data-days="5 6"><span>Fri – Sat</span><span>5 – 11:30 pm</span></li>
+          <li data-days="0"><span>Sunday</span><span>1 – 9:30 pm</span></li>
         </ul>
-        <p class="live" id="live" aria-live="polite"></p>
+        <p class="status status--plain" data-status>Kitchen hours above · last orders 30 min before close</p>
       </div>
-      <div>
+      <div class="visit__col">
         <h3>Tables</h3>
         <p>No reservations for parties under six — just come by. We’ll text you when your table’s ready; Court Street has excellent bars for waiting.</p>
-        <p>Six or more? <a class="link" href="tel:+17185550119">Call us</a> and we’ll save you a spot.</p>
+        <p>Six or more? Call and we’ll save you a spot.</p>
+        <a class="btn btn--sm btn--red" href="tel:+17185550119"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg>(718) 555-0119</a>
       </div>
     </div>
   </section>
 </main>
 
 <footer class="foot">
-  <p class="foot__big">Bar Ottavia</p>
+  <p class="foot__big" aria-hidden="true">Bar Ottavia</p>
   <div class="foot__cols">
-    <p><a href="tel:+17185550119">(718) 555-0119</a><br><a href="mailto:ciao@barottavia.com">ciao@barottavia.com</a></p>
-    <p>371 Court St, Brooklyn<br><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram ↗</a></p>
+    <div>
+      <h2 class="foot__h">Call or write</h2>
+      <p><a href="tel:+17185550119">(718) 555-0119</a><br><a href="mailto:ciao@barottavia.com">ciao@barottavia.com</a></p>
+    </div>
+    <div>
+      <h2 class="foot__h">Visit</h2>
+      <p>371 Court St, Brooklyn 11231<br><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram<svg class="i" aria-hidden="true"><use href="#i-out"/></svg></a></p>
+    </div>
     <p class="hand">Grazie, see you Sunday.</p>
   </div>
-  <p class="foot__fine">A design concept. Bar Ottavia is a fictional business. <a href="../index.html">← All concepts</a></p>
+  <p class="foot__fine"><span>A design concept. Bar Ottavia is a fictional business.</span> <a href="../index.html">← All concepts</a></p>
 </footer>
+
+<nav class="dock" aria-label="Quick actions">
+  <a class="dock__a dock__a--p" href="tel:+17185550119"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg>Call</a>
+  <a class="dock__a" href="https://www.google.com/maps/search/?api=1&amp;query=371+Court+St+Brooklyn+NY+11231" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg>Directions</a>
+  <a class="dock__a" href="#menu">Menu</a>
+</nav>
+
+<script>
+/* Edit hours here: minutes after midnight, New York time. Drives "open now", the hours highlight and the mobile menu. */
+window.SITEMENU = {
+  name: "Bar Ottavia", sub: "Trattoria · Carroll Gardens", bp: 1023, nav: "#nav", mount: ".call", mountMode: "after",
+  links: [["#nonna", "Today’s special"], ["#menu", "The food menu"], ["#family", "La famiglia"], ["#garden", "The garden"], ["#visit", "Hours & directions"]],
+  actions: [{ label: "Call for a table", href: "tel:+17185550119", primary: true }, { label: "Directions", href: "https://www.google.com/maps/search/?api=1&query=371+Court+St+Brooklyn+NY+11231" }],
+  info: ["371 Court St, Carroll Gardens", "Dinner nightly from 5 · Sunday from 1 pm"],
+  hours: { 0: [780, 1290], 1: [1020, 1350], 2: [1020, 1350], 3: [1020, 1350], 4: [1020, 1350], 5: [1020, 1410], 6: [1020, 1410] }
+};
+</script>
 <script src="main.js"></script>
-<script>window.SITEMENU={"name": "Bar Ottavia", "sub": "Trattoria · Carroll Gardens", "bp": 1020, "nav": "#nav", "mount": ".burger", "links": [["#nonna", "Today"], ["#menu", "The food menu"], ["#family", "La famiglia"], ["#garden", "The garden"], ["#visit", "Find us"]], "actions": [{"label": "Call for a table", "href": "tel:+17185550119", "primary": true}, {"label": "Directions", "href": "https://www.google.com/maps/search/?api=1&query=371+Court+St+Brooklyn+NY+11231"}], "info": ["371 Court St, Carroll Gardens", "Dinner nightly · Sunday lunch from 1 pm"], "hours": {"0": [780, 1290], "1": [1020, 1350], "2": [1020, 1350], "3": [1020, 1350], "4": [1020, 1350], "5": [1020, 1410], "6": [1020, 1410]}};</script>
 <script src="sitemenu.js"></script>
 </body>
 </html>

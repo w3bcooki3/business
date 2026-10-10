@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 220" width="300" height="220">
+<title>A slice of pain patate, Haitian sweet-potato pudding cake, on a paper napkin</title>
+<path d="M20 170 L150 205 L284 160 L156 132Z" fill="#FBF4E8" stroke="#1E2A24" stroke-width="3" stroke-linejoin="round"/>
+<path d="M40 168 L150 196 L262 160" fill="none" stroke="#1E2A24" stroke-width="2" opacity=".2"/>
+<g stroke="#1E2A24" stroke-width="4" stroke-linejoin="round">
+<path d="M60 150 L60 104 L210 60 L250 92 L250 140 L118 178Z" fill="#B0602C"/>
+<path d="M60 104 L210 60 L250 92 L118 132Z" fill="#7A3E2B"/>
+<path d="M118 132 L118 178 M118 132 L250 92" fill="none"/>
+<path d="M60 104 L118 132 L118 178 L60 150Z" fill="#C97A3E"/>
+</g>
+<g fill="#E8A35A" opacity=".8"><circle cx="78" cy="132" r="3"/><circle cx="96" cy="146" r="2.5"/><circle cx="86" cy="158" r="2"/><circle cx="150" cy="150" r="3"/><circle cx="190" cy="138" r="2.5"/><circle cx="222" cy="126" r="3"/></g>
+<g fill="#F1E6D6"><path d="M144 92 l10 -6 l6 4 l-10 6z"/><path d="M178 82 l9 -5 l5 4 l-9 5z"/><path d="M118 102 l8 -4 l5 3 l-8 5z"/></g>
+</svg>

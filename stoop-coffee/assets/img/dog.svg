@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 320" width="420" height="320">
+<title>A brindle dog sitting on a brownstone step next to a blue water bowl</title>
+<path d="M0 230H420V320H0Z" fill="#7A3E2B"/><path d="M0 222H420V234H0Z" fill="#A9634A"/><path d="M0 234H420V240H0Z" fill="#000" opacity=".2"/>
+<path d="M0 282H420" stroke="#683322" stroke-width="3"/>
+<ellipse cx="190" cy="224" rx="92" ry="8" fill="#000" opacity=".18"/>
+<g stroke="#1E2A24" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+<path d="M136 222 C118 170 130 120 170 104 C196 94 226 104 236 130 C248 162 246 200 242 222 Z" fill="#9A6B47"/>
+<path d="M120 222 C110 210 112 196 126 196 C150 196 160 210 160 222Z" fill="#9A6B47"/>
+<path d="M196 222 V170 M220 222 V174" fill="none"/>
+<path d="M186 222 h20 M212 222 h20" />
+<path d="M158 120 C150 90 160 62 190 56 C222 50 246 70 248 96 C250 120 232 136 206 138 C184 140 164 136 158 120Z" fill="#9A6B47"/>
+<path d="M236 92 C258 92 276 100 276 114 C276 128 258 134 240 130" fill="#C99A70"/>
+<path d="M174 64 C160 46 166 30 172 26 C182 36 190 48 192 58Z" fill="#6B4630"/>
+<path d="M214 58 C222 40 236 32 242 34 C244 48 236 60 226 66Z" fill="#6B4630"/>
+<path d="M120 212 C92 214 86 196 96 186" fill="none"/>
+</g>
+<path d="M188 150 C196 166 214 168 222 150" fill="none" stroke="#1E2A24" stroke-width="3" opacity=".5"/>
+<path d="M150 150 C158 180 152 200 160 212 M226 140 C238 160 232 190 236 210" fill="none" stroke="#6B4630" stroke-width="5" stroke-linecap="round" opacity=".7"/>
+<circle cx="222" cy="88" r="5.5" fill="#1E2A24"/><circle cx="224" cy="86" r="1.6" fill="#F1E6D6"/>
+<ellipse cx="274" cy="108" rx="7" ry="6" fill="#1E2A24"/>
+<path d="M262 124 C266 136 258 142 252 132" fill="#E07A6A" stroke="#1E2A24" stroke-width="3"/>
+<path d="M164 128 C186 142 218 142 238 132" fill="none" stroke="#D49A3A" stroke-width="8" stroke-linecap="round"/>
+<path d="M196 140 l-6 14 h14z" fill="#D49A3A" stroke="#1E2A24" stroke-width="2.5" stroke-linejoin="round"/>
+<path d="M188 160" />
+<g transform="translate(296 186)">
+<ellipse cx="44" cy="38" rx="50" ry="7" fill="#000" opacity=".18"/>
+<path d="M0 6H88L80 36H8Z" fill="#3E6FD8" stroke="#1E2A24" stroke-width="4" stroke-linejoin="round"/>
+<ellipse cx="44" cy="6" rx="44" ry="7" fill="#2C56B5" stroke="#1E2A24" stroke-width="4"/>
+<ellipse cx="44" cy="6" rx="34" ry="3.5" fill="#9DBBF5"/>
+<text x="44" y="28" font-family="Archivo, sans-serif" font-size="13" font-weight="900" fill="#F1E6D6" text-anchor="middle" letter-spacing="2" style="font-stretch:125%">DOGS</text>
+</g>
+<g transform="translate(60 196) rotate(-18)"><path d="M0 6c0-8 10-8 10-2h16c0-6 10-6 10 2s-10 8-10 2H10c0 6-10 6-10-2z" fill="#E4D3BC" stroke="#1E2A24" stroke-width="3" stroke-linejoin="round"/></g>
+</svg>
