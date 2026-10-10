@@ -4,15 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Halvorsen Apothecary · Family Pharmacy on Lexington Avenue since 1921</title>
-<meta name="description" content="Independent family pharmacy on the Upper East Side since 1921. Refills by Rx number, free same-day delivery from 59th to 110th Street, in-house compounding and Medicare Part D help.">
+<meta name="description" content="Independent family pharmacy on the Upper East Side since 1921. Refills by phone or email, free same-day delivery from 59th to 110th Street, in-house compounding and Medicare Part D help.">
 <meta name="theme-color" content="#17315a">
 <meta property="og:title" content="Halvorsen Apothecary · Lexington at 81st since 1921">
 <meta property="og:description" content="Refills, free same-day delivery, compounding and Medicare help from a family pharmacy.">
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23b8402c'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-family='Georgia' font-weight='700' font-size='32' fill='%23fff'%3EH%3C/text%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&family=Source+Sans+3:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
+<link rel="preload" href="fonts/source-serif-4-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/source-sans-3-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="styles.css">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Pharmacy","name":"Halvorsen Apothecary","foundingDate":"1921","telephone":"+1-212-555-0136","email":"rx@halvorsenapothecary.com","address":{"@type":"PostalAddress","streetAddress":"1187 Lexington Ave","addressLocality":"New York","addressRegion":"NY","postalCode":"10028","addressCountry":"US"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"20:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"10:00","closes":"16:00"}]}
@@ -36,7 +35,7 @@
 
 <header class="hdr">
   <div class="wrap hdr__in">
-    <a class="logo" href="#top" aria-label="Halvorsen Apothecary, home">
+    <a class="logo" href="#top">
       <span class="logo__b" aria-hidden="true"><b>H</b><small>1921</small></span>
       <span class="logo__t"><b>Halvorsen</b><span>Family pharmacy · Lexington at 81st</span></span>
     </a>
@@ -67,13 +66,14 @@
       <a class="btn btn--red btn--w" href="#refill">Refill a prescription</a>
       <a class="btn btn--line btn--w" href="tel:+12125550136">Call a pharmacist · (212) 555-0136</a>
       <ul class="drawer__list">
-        <li><a href="#refill"><b>Refills</b><small>By Rx number, ready in about two hours</small></a></li>
+        <li><a href="#refill"><b>Refills</b><small>Call or email, ready in about two hours</small></a></li>
         <li><a href="#delivery"><b>Delivery</b><small>Free, 59th to 110th, river to river</small></a></li>
         <li><a href="#compounding"><b>Compounding</b><small>Made here, for one person</small></a></li>
         <li><a href="#medicare"><b>Medicare help</b><small>Part D plan reviews</small></a></li>
         <li><a href="#services"><b>Services</b><small>Vaccines, blister packs, supplies</small></a></li>
         <li><a href="#visit"><b>Visit</b><small>Hours, address, subway</small></a></li>
       </ul>
+      <p class="drawer__sos"><b>Emergency? Call <a href="tel:911">911</a>.</b> Poison Control: <a href="tel:18002221222">1-800-222-1222</a></p>
       <div class="tsz tsz--drawer" role="group" aria-label="Text size">
         <span class="tsz__l">Text size</span>
         <button type="button" data-size="1" aria-pressed="true" aria-label="Standard text">A</button>
@@ -103,7 +103,7 @@
         </div>
         <dl class="today__l">
           <div><dt>Hours today</dt><dd data-today-hours>—</dd></div>
-          <div><dt>Same-day delivery</dt><dd data-delivery>—</dd></div>
+          <div class="is-stack"><dt>Same-day delivery</dt><dd data-delivery>—</dd></div>
           <div><dt>Refill ready in</dt><dd>About 2 hours</dd></div>
           <div><dt>Pharmacist line</dt><dd><a href="tel:+12125550136">(212) 555-0136</a></dd></div>
         </dl>
@@ -128,8 +128,16 @@
     <div class="wrap rf">
       <div>
         <p class="kick">Refills</p>
-        <h2 id="rf-t">Request a refill in thirty seconds.</h2>
+        <h2 id="rf-t">Refills by phone or email, ready in about two hours.</h2>
         <p class="sub">Your Rx number is printed at the top left of every Halvorsen label and starts with <b>H-</b>. We confirm by phone before anything is charged.</p>
+        <div class="have">
+          <p class="have__t">Calling? Have these ready</p>
+          <ul>
+            <li>Your Rx number, starting with <b>H-</b></li>
+            <li>The name on the label and your date of birth</li>
+            <li>Pick up or delivery, and the address if delivering</li>
+          </ul>
+        </div>
 
         <figure class="label" aria-label="Where to find your Rx number on a Halvorsen label">
           <div class="label__card">
@@ -143,22 +151,44 @@
         </figure>
       </div>
 
-      <form class="card form" id="rfForm" novalidate>
-        <h3>Refill request</h3>
-        <div class="field"><label for="f-rx">Rx number</label><input id="f-rx" placeholder="H-" autocomplete="off"></div>
-        <div class="f2">
-          <div class="field"><label for="f-nm">Full name</label><input id="f-nm" autocomplete="name"></div>
-          <div class="field"><label for="f-dob">Date of birth</label><input id="f-dob" placeholder="MM/DD/YYYY" inputmode="numeric"></div>
+      <div class="card rb" id="rb">
+        <h3>Build your refill email</h3>
+        <p class="rb__intro">Tap your choices. Your email app opens with a short message ready for you to finish. Nothing is typed into or saved by this website.</p>
+
+        <div class="rb__q" role="group" aria-labelledby="rb-n-l">
+          <p class="rb__l" id="rb-n-l">How many prescriptions?</p>
+          <div class="step">
+            <button type="button" class="step__b" data-step="-1" aria-label="One fewer prescription">&minus;</button>
+            <span class="step__v" id="rbN" aria-live="polite">1</span>
+            <button type="button" class="step__b" data-step="1" aria-label="One more prescription">+</button>
+          </div>
         </div>
-        <div class="field"><label for="f-ph">Phone number</label><input id="f-ph" type="tel" autocomplete="tel"></div>
-        <fieldset class="seg">
-          <legend>How would you like it?</legend>
-          <label><input type="radio" name="how" value="pickup" checked><span>Pick up at the counter</span></label>
-          <label><input type="radio" name="how" value="deliver"><span>Same-day delivery</span></label>
-        </fieldset>
-        <a class="btn btn--red btn--w" id="rfGo" href="mailto:rx@halvorsenapothecary.com">Email this request</a>
-        <p class="fine">Opens your email with everything filled in. Please don’t include diagnoses; the Rx number is all we need. Prefer the phone? <a href="tel:+12125550136">(212) 555-0136</a>.</p>
-      </form>
+
+        <div class="rb__q" role="group" aria-labelledby="rb-h-l">
+          <p class="rb__l" id="rb-h-l">Pick up or delivery?</p>
+          <div class="chips" data-key="how">
+            <button type="button" aria-pressed="true" data-v="pickup">Pick up at the counter</button>
+            <button type="button" aria-pressed="false" data-v="delivery">Free same-day delivery</button>
+          </div>
+        </div>
+
+        <div class="rb__q" role="group" aria-labelledby="rb-w-l">
+          <p class="rb__l" id="rb-w-l">When do you need it?</p>
+          <div class="chips" data-key="when">
+            <button type="button" aria-pressed="true" data-v="today">Today</button>
+            <button type="button" aria-pressed="false" data-v="tomorrow">Tomorrow</button>
+            <button type="button" aria-pressed="false" data-v="this week">This week</button>
+          </div>
+        </div>
+
+        <div class="rb__pre">
+          <p class="rb__pl">Your email will say</p>
+          <pre id="rbPre"></pre>
+          <p class="rb__fill">You fill in the <mark>highlighted</mark> parts in your email app. The Rx number is all we need; please don’t include diagnoses.</p>
+        </div>
+        <a class="btn btn--red btn--w" id="rbGo" href="mailto:rx@halvorsenapothecary.com">Open my email</a>
+        <a class="btn btn--line btn--w" href="tel:+12125550136">Or call (212) 555-0136</a>
+      </div>
     </div>
   </section>
 
@@ -175,23 +205,36 @@
           <li><b>Cold-chain</b><span>Insulin and refrigerated medicines in insulated bags</span></li>
         </ul>
       </div>
-      <form class="card zone" id="zone" novalidate>
+      <div class="card zone" id="zone">
         <h3>Are you in the free zone?</h3>
-        <div class="f2">
-          <div class="field"><label for="z-st">Cross street</label><input id="z-st" inputmode="numeric" placeholder="e.g. 86"></div>
-          <div class="field"><label for="z-av">Avenue</label>
-            <select id="z-av">
-              <option value="e">East End Ave</option><option value="e">York Ave</option><option value="e">1st Ave</option><option value="e">2nd Ave</option><option value="e">3rd Ave</option><option value="e" selected>Lexington Ave</option><option value="e">Park Ave</option><option value="e">Madison Ave</option><option value="e">5th Ave</option>
-              <option value="w">Central Park West</option><option value="w">Columbus Ave</option><option value="w">Amsterdam Ave</option><option value="w">Broadway</option><option value="w">West End Ave</option><option value="w">Riverside Dr</option>
-            </select>
+        <div class="zone__ctl">
+          <div role="group" aria-labelledby="z-side-l">
+            <p class="rb__l" id="z-side-l">Which side of the park?</p>
+            <div class="chips chips--2" data-key="side">
+              <button type="button" aria-pressed="true" data-v="e">East Side</button>
+              <button type="button" aria-pressed="false" data-v="w">West Side</button>
+            </div>
+          </div>
+          <div class="zone__sel">
+            <label class="rb__l" for="z-st">Nearest cross street</label>
+            <select id="z-st"></select>
           </div>
         </div>
-        <button class="btn btn--red btn--w" type="submit">Check my address</button>
-        <p class="zone__r" id="zoneR" aria-live="polite"></p>
-        <div class="zone__map" aria-hidden="true">
-          <svg viewBox="0 0 300 120"><rect x="0" y="0" width="300" height="120" rx="10" fill="#f6efe2"/><rect x="40" y="18" width="220" height="84" rx="6" fill="#e3d6bd"/><rect x="118" y="18" width="64" height="84" fill="#c9d8b5"/><text x="150" y="64" text-anchor="middle" font-size="10" font-family="Source Sans 3,sans-serif" fill="#3c5a2c">Central Park</text><text x="40" y="12" font-size="9" font-family="Source Sans 3,sans-serif" fill="#6b5b45">110th St</text><text x="40" y="115" font-size="9" font-family="Source Sans 3,sans-serif" fill="#6b5b45">59th St</text><g id="zpin" transform="translate(205 66)"><circle r="7" fill="#b8402c"/><circle r="2.5" fill="#fff"/></g></svg>
+        <div class="zone__out">
+          <figure class="zone__fig" aria-hidden="true">
+            <span>110th St</span>
+            <svg class="zone__map" viewBox="0 0 160 200">
+              <rect width="160" height="200" rx="8" fill="#f6efe2"/>
+              <rect x="14" y="14" width="132" height="172" rx="4" fill="#e6d9bf"/>
+              <rect x="62" y="14" width="36" height="172" fill="#c9d8b5"/>
+              <path d="M80 30v140" stroke="#b3c79c" stroke-width="2" stroke-dasharray="4 6"/>
+              <g id="zpin" transform="translate(118 120)"><circle r="11" fill="#b8402c" stroke="#fff" stroke-width="3"/><circle r="3.5" fill="#fff"/></g>
+            </svg>
+            <span>59th St</span>
+          </figure>
+          <p class="zone__r" id="zoneR" aria-live="polite"></p>
         </div>
-      </form>
+      </div>
     </div>
   </section>
 
@@ -327,6 +370,12 @@
     <p class="ft__fine">A design concept. Halvorsen Apothecary, its staff and history are fictional. <a href="../index.html">← All concepts</a></p>
   </div>
 </footer>
+
+<nav class="mbar" aria-label="Quick actions">
+  <a href="tel:+12125550136"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3.5h3.2l1.6 4.3-2.1 1.4a12 12 0 0 0 7.1 7.1l1.4-2.1 4.3 1.6V19a1.6 1.6 0 0 1-1.7 1.6A17.2 17.2 0 0 1 3.4 5.2 1.6 1.6 0 0 1 5 3.5z"/></svg>Call</a>
+  <a class="is-p" href="#refill"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="3" width="10" height="5" rx="1"/><path d="M6 8h12v12a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1z"/><path d="M12 11.5v6M9 14.5h6"/></svg>Refill</a>
+  <a href="https://maps.google.com/?q=1187+Lexington+Ave+New+York+NY+10028"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.1-7-11.4A7 7 0 0 1 19 9.6C19 14.9 12 21 12 21z"/><circle cx="12" cy="9.6" r="2.6"/></svg>Directions</a>
+</nav>
 
 <script src="main.js"></script>
 </body>

@@ -2,18 +2,20 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Maison Odile — Pâtisserie Française, Upper West Side</title>
 <meta name="description" content="Viennoiserie at dawn, entremets by afternoon and celebration cakes made to order. A Lyonnaise pâtisserie on Amsterdam Avenue at West 80th Street.">
-<meta name="theme-color" content="#f2d4cf">
+<meta name="theme-color" content="#fbf6ee">
+<meta property="og:type" content="website">
 <meta property="og:title" content="Maison Odile — Pâtisserie, New York">
 <meta property="og:description" content="Croissants at 7, entremets by noon, celebration cakes with 72 hours’ notice.">
-<meta property="og:image" content="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=1600&q=80">
+<meta property="og:image" content="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&amp;fit=crop&amp;w=1200&amp;h=630&amp;q=75">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23f2d4cf'/%3E%3Ctext x='32' y='46' font-size='40' text-anchor='middle' fill='%233a2620' font-family='Didot,Georgia' font-style='italic'%3EO%3C/text%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="preload" href="fonts/bodoni-moda.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/bodoni-moda-italic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="sitemenu.css">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Bakery","name":"Maison Odile","servesCuisine":"French pastry","telephone":"+1-212-555-0123","email":"commandes@maisonodile.com","address":{"@type":"PostalAddress","streetAddress":"418 Amsterdam Ave","addressLocality":"New York","addressRegion":"NY","postalCode":"10024","addressCountry":"US"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday","Friday"],"opens":"07:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday","Sunday"],"opens":"08:00","closes":"18:00"}]}
 </script>
@@ -22,186 +24,282 @@
 <a class="skip" href="#main">Skip to content</a>
 
 <header class="head">
-  <nav class="nav nav--l" aria-label="Primary left">
+  <nav class="nav nav--l" aria-label="Primary">
     <a href="#viennoiserie">Viennoiserie</a>
     <a href="#collection">Automne</a>
     <a href="#gateau">Gâteaux</a>
   </nav>
-  <a class="logo" href="#top" aria-label="Maison Odile home"><small>Maison</small>Odile<small class="est">Pâtisserie · New York</small></a>
-  <nav class="nav nav--r" aria-label="Primary right">
-    <a href="#odile">La chef</a>
-    <a href="#visit">Visite</a>
-    <a class="nav__cta" href="#gateau">Commander</a>
-  </nav>
-  <button class="drawer-btn" aria-expanded="false" aria-controls="drawer">Menu</button>
+  <p class="head__status status" data-status><span class="dot" aria-hidden="true"></span><span data-status-short>Mar–dim</span></p>
+  <a class="logo" href="#top"><small>Maison</small>Odile<small class="est">Pâtisserie · New York</small></a>
+  <div class="head__r">
+    <nav class="nav nav--r" aria-label="More">
+      <a href="#odile">La chef</a>
+      <a href="#visit">Visite</a>
+      <a class="nav__cta" href="#gateau">Commander</a>
+    </nav>
+    <div class="head__menu"></div>
+  </div>
 </header>
-<div class="drawer" id="drawer" hidden>
-  <nav aria-label="Mobile">
-    <a href="#viennoiserie">Viennoiserie</a><a href="#collection">Collection d’automne</a><a href="#gateau">Gâteaux sur commande</a><a href="#odile">La chef</a><a href="#visit">Visite</a>
-  </nav>
-</div>
 
 <main id="main">
+  <!-- Hero -->
   <section class="hero" id="top" aria-labelledby="h1">
-    <figure class="hero__a"><img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=1300&q=80" alt="A croissant on a dark surface under a fall of powdered flour" width="1300" height="1600"></figure>
     <div class="hero__text">
-      <p class="kicker">418 Amsterdam Avenue · depuis 2018</p>
-      <h1 id="h1">Le beurre,<br><i>la patience,</i><br>et un peu de Lyon.</h1>
+      <p class="kicker"><span>418 Amsterdam Avenue</span> · <span>depuis 2018</span></p>
+      <h1 id="h1"><span>Le beurre,</span> <i>la patience,</i> <span>et un peu de Lyon.</span></h1>
       <p class="sub">Butter, patience, and a little Lyon. Croissants laminated over three days, entremets assembled by hand, and celebration cakes made only for you.</p>
-      <a class="btn" href="#gateau">Composez votre gâteau</a>
+      <div class="hero__acts">
+        <a class="btn" href="#gateau">Composez votre gâteau</a>
+        <a class="btn btn--ghost" href="#viennoiserie">Ce matin</a>
+      </div>
+      <p class="hero__status status" data-status><span class="dot" aria-hidden="true"></span><span data-status-long>Tue–Fri 7 am – 6 pm · Sat–Sun 8 am – 6 pm</span></p>
     </div>
-    <figure class="hero__b"><img src="https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?auto=format&fit=crop&w=800&q=80" alt="Pastel flower-shaped pastries on a wooden board" width="800" height="1000"></figure>
+    <figure class="hero__a">
+      <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&amp;fit=crop&amp;w=900&amp;h=1170&amp;q=70"
+           srcset="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&amp;fit=crop&amp;w=600&amp;h=780&amp;q=70 600w, https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&amp;fit=crop&amp;w=900&amp;h=1170&amp;q=70 900w, https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&amp;fit=crop&amp;w=1300&amp;h=1690&amp;q=60 1300w"
+           sizes="(min-width: 1050px) 36vw, (min-width: 780px) 50vw, 72vw" width="900" height="1170" fetchpriority="high"
+           alt="A croissant on a dark surface under a fall of powdered flour">
+    </figure>
+    <figure class="hero__b">
+      <img src="https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?auto=format&amp;fit=crop&amp;w=600&amp;h=750&amp;q=70"
+           srcset="https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?auto=format&amp;fit=crop&amp;w=400&amp;h=500&amp;q=70 400w, https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?auto=format&amp;fit=crop&amp;w=600&amp;h=750&amp;q=70 600w, https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?auto=format&amp;fit=crop&amp;w=900&amp;h=1125&amp;q=60 900w"
+           sizes="(min-width: 1050px) 20vw, 42vw" width="600" height="750"
+           alt="Pastel flower-shaped pastries on a wooden board">
+    </figure>
     <p class="hero__vert" aria-hidden="true">Collection Automne 2026</p>
   </section>
 
+  <!-- I. Viennoiserie -->
   <section class="vien" id="viennoiserie" aria-labelledby="vn-t">
     <header class="sec">
-      <p class="sec__no">I.</p>
+      <p class="sec__no" aria-hidden="true">I.</p>
       <h2 id="vn-t">Viennoiserie <i>du matin</i></h2>
       <p class="sec__en">Morning pastries, and the hour each one leaves the oven.</p>
     </header>
     <ol class="times" id="times">
-      <li data-h="7"><time>7:00</time><span class="fr">Croissant au beurre</span><span class="en">Butter croissant — AOP Charentes butter</span><b>$4.75</b></li>
-      <li data-h="7"><time>7:00</time><span class="fr">Pain au chocolat</span><span class="en">Two batons of 64% chocolate</span><b>$5.25</b></li>
-      <li data-h="8"><time>8:00</time><span class="fr">Kouign-amann</span><span class="en">Caramelized Breton butter cake</span><b>$5.50</b></li>
-      <li data-h="8.5"><time>8:30</time><span class="fr">Croissant aux amandes</span><span class="en">Twice-baked, frangipane, flaked almonds</span><b>$6.25</b></li>
-      <li data-h="9"><time>9:00</time><span class="fr">Brioche praluline</span><span class="en">Lyon’s pink praline brioche — Odile’s hometown</span><b>$7.00</b></li>
-      <li data-h="10"><time>10:00</time><span class="fr">Chausson aux pommes</span><span class="en">Apple turnover, Hudson Valley apples</span><b>$5.75</b></li>
+      <li data-h="7"><time datetime="07:00">7:00</time><span class="fr">Croissant au beurre</span><span class="en">Butter croissant — AOP Charentes butter</span><b>$4.75</b></li>
+      <li data-h="7"><time datetime="07:00">7:00</time><span class="fr">Pain au chocolat</span><span class="en">Two batons of 64% chocolate</span><b>$5.25</b></li>
+      <li data-h="8"><time datetime="08:00">8:00</time><span class="fr">Kouign-amann</span><span class="en">Caramelized Breton butter cake</span><b>$5.50</b></li>
+      <li data-h="8.5"><time datetime="08:30">8:30</time><span class="fr">Croissant aux amandes</span><span class="en">Twice-baked, frangipane, flaked almonds</span><b>$6.25</b></li>
+      <li data-h="9"><time datetime="09:00">9:00</time><span class="fr">Brioche praluline</span><span class="en">Lyon’s pink praline brioche — Odile’s hometown</span><b>$7.00</b></li>
+      <li data-h="10"><time datetime="10:00">10:00</time><span class="fr">Chausson aux pommes</span><span class="en">Apple turnover, Hudson Valley apples</span><b>$5.75</b></li>
     </ol>
     <p class="note">Weekends: arrive before nine for the praluline. We bake 40 and they leave quickly.</p>
+    <p class="times__key" id="timesKey" hidden><span class="dot" aria-hidden="true"></span> Sorti du four — already out of the oven today</p>
   </section>
 
+  <!-- II. Collection -->
   <section class="collection" id="collection" aria-labelledby="col-t">
-    <header class="sec sec--light">
-      <p class="sec__no">II.</p>
+    <header class="sec">
+      <p class="sec__no" aria-hidden="true">II.</p>
       <h2 id="col-t">Collection <i>d’automne</i></h2>
       <p class="sec__en">The autumn collection, September through November.</p>
     </header>
-    <div class="look">
+    <div class="look" id="look" tabindex="0" role="region" aria-label="Autumn collection, scrolls sideways on small screens">
       <article class="look__item look__item--1">
-        <figure><img src="https://images.unsplash.com/photo-1464305795204-6f5bbfc7fb81?auto=format&fit=crop&w=900&q=80" alt="Lattice-topped tarts with berries" loading="lazy" width="900" height="1100"></figure>
+        <figure><img src="https://images.unsplash.com/photo-1464305795204-6f5bbfc7fb81?auto=format&amp;fit=crop&amp;w=800&amp;h=1000&amp;q=70"
+             srcset="https://images.unsplash.com/photo-1464305795204-6f5bbfc7fb81?auto=format&amp;fit=crop&amp;w=500&amp;h=625&amp;q=70 500w, https://images.unsplash.com/photo-1464305795204-6f5bbfc7fb81?auto=format&amp;fit=crop&amp;w=800&amp;h=1000&amp;q=70 800w, https://images.unsplash.com/photo-1464305795204-6f5bbfc7fb81?auto=format&amp;fit=crop&amp;w=1200&amp;h=1500&amp;q=60 1200w"
+             sizes="(min-width: 780px) 40vw, 76vw" width="800" height="1000" loading="lazy" decoding="async" alt="Lattice-topped tarts with berries"></figure>
         <h3>Tarte Tatin</h3><p>Caramelized apples, inverted on pâte brisée, crème fraîche d’Isigny.</p><b>$8 · 8-inch $48</b>
       </article>
       <article class="look__item look__item--2">
-        <figure><img src="https://images.unsplash.com/photo-1571115177098-24ec42ed204d?auto=format&fit=crop&w=800&q=80" alt="A slice of layered cake" loading="lazy" width="800" height="800"></figure>
+        <figure><img src="https://images.unsplash.com/photo-1571115177098-24ec42ed204d?auto=format&amp;fit=crop&amp;w=800&amp;h=800&amp;q=70"
+             srcset="https://images.unsplash.com/photo-1571115177098-24ec42ed204d?auto=format&amp;fit=crop&amp;w=500&amp;h=500&amp;q=70 500w, https://images.unsplash.com/photo-1571115177098-24ec42ed204d?auto=format&amp;fit=crop&amp;w=800&amp;h=800&amp;q=70 800w"
+             sizes="(min-width: 780px) 32vw, 76vw" width="800" height="800" loading="lazy" decoding="async" alt="A slice of layered cake"></figure>
         <h3>Mont-Blanc</h3><p>Chestnut cream piped like vermicelli over meringue and whipped cream.</p><b>$9.50</b>
       </article>
       <article class="look__item look__item--3">
-        <figure><img src="https://images.unsplash.com/photo-1483695028939-5bb13f8648b0?auto=format&fit=crop&w=800&q=80" alt="A tray of assorted pastries" loading="lazy" width="800" height="1000"></figure>
+        <figure><img src="https://images.unsplash.com/photo-1483695028939-5bb13f8648b0?auto=format&amp;fit=crop&amp;w=800&amp;h=1000&amp;q=70"
+             srcset="https://images.unsplash.com/photo-1483695028939-5bb13f8648b0?auto=format&amp;fit=crop&amp;w=500&amp;h=625&amp;q=70 500w, https://images.unsplash.com/photo-1483695028939-5bb13f8648b0?auto=format&amp;fit=crop&amp;w=800&amp;h=1000&amp;q=70 800w"
+             sizes="(min-width: 780px) 32vw, 76vw" width="800" height="1000" loading="lazy" decoding="async" alt="A tray of assorted pastries"></figure>
         <h3>Paris-Brest</h3><p>Choux ring, hazelnut praliné mousseline, a hidden heart of liquid praline.</p><b>$9 · for six $54</b>
       </article>
       <article class="look__item look__item--4">
-        <figure><img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80" alt="A rich chocolate cake" loading="lazy" width="800" height="900"></figure>
+        <figure><img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&amp;fit=crop&amp;w=1000&amp;h=690&amp;q=70"
+             srcset="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&amp;fit=crop&amp;w=600&amp;h=414&amp;q=70 600w, https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&amp;fit=crop&amp;w=1000&amp;h=690&amp;q=70 1000w, https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&amp;fit=crop&amp;w=1400&amp;h=966&amp;q=60 1400w"
+             sizes="(min-width: 780px) 48vw, 76vw" width="1000" height="690" loading="lazy" decoding="async" alt="A rich chocolate cake"></figure>
         <h3>Forêt Noire</h3><p>Odile’s black forest: kirsch-soaked chocolate sponge, griottine cherries, Chantilly.</p><b>$9 · 6-inch $56</b>
       </article>
     </div>
+    <p class="look__hint" aria-hidden="true">Faites glisser — swipe for more →</p>
   </section>
 
+  <!-- III. Cake builder: radio choices compose a prefilled email. No form, no personal data collected. -->
   <section class="gateau" id="gateau" aria-labelledby="gt-t">
     <header class="sec">
-      <p class="sec__no">III.</p>
+      <p class="sec__no" aria-hidden="true">III.</p>
       <h2 id="gt-t">Composez <i>votre gâteau</i></h2>
       <p class="sec__en">Design a celebration cake. 72 hours’ notice; six weeks for weddings.</p>
     </header>
-    <form class="builder" id="builder" novalidate>
-      <div class="builder__steps">
+    <div class="builder" id="builder">
+      <div class="builder__steps" id="steps">
         <fieldset>
           <legend><span>01</span> Taille — Size</legend>
-          <div class="opts">
-            <label><input type="radio" name="size" value="6-inch" data-p="68" data-s="6–8" checked><span><b>6″</b><small>serves 6–8</small></span></label>
-            <label><input type="radio" name="size" value="8-inch" data-p="96" data-s="10–14"><span><b>8″</b><small>serves 10–14</small></span></label>
-            <label><input type="radio" name="size" value="10-inch" data-p="138" data-s="18–24"><span><b>10″</b><small>serves 18–24</small></span></label>
+          <div class="opts opts--size">
+            <label><input type="radio" name="size" value="6-inch" data-p="68" data-s="6–8" data-w="120" data-h="62" checked><span><b>6″</b><small>serves 6–8</small><small class="opts__p">$68</small></span></label>
+            <label><input type="radio" name="size" value="8-inch" data-p="96" data-s="10–14" data-w="160" data-h="72"><span><b>8″</b><small>serves 10–14</small><small class="opts__p">$96</small></span></label>
+            <label><input type="radio" name="size" value="10-inch" data-p="138" data-s="18–24" data-w="200" data-h="82"><span><b>10″</b><small>serves 18–24</small><small class="opts__p">$138</small></span></label>
           </div>
         </fieldset>
         <fieldset>
           <legend><span>02</span> Biscuit — Sponge</legend>
-          <div class="opts opts--txt">
-            <label><input type="radio" name="sponge" value="Génoise vanille" data-p="0" checked><span>Génoise vanille</span></label>
-            <label><input type="radio" name="sponge" value="Chocolat noir" data-p="0"><span>Chocolat noir</span></label>
-            <label><input type="radio" name="sponge" value="Pistache" data-p="10"><span>Pistache <small>+$10</small></span></label>
-            <label><input type="radio" name="sponge" value="Amande-citron" data-p="0"><span>Amande-citron</span></label>
+          <div class="opts">
+            <label><input type="radio" name="sponge" value="Génoise vanille" data-p="0" data-c="#f3e3c3" checked><span>Génoise vanille</span></label>
+            <label><input type="radio" name="sponge" value="Chocolat noir" data-p="0" data-c="#6b4234"><span>Chocolat noir</span></label>
+            <label><input type="radio" name="sponge" value="Pistache" data-p="10" data-c="#c9d4a6"><span>Pistache <small>+$10</small></span></label>
+            <label><input type="radio" name="sponge" value="Amande-citron" data-p="0" data-c="#f6eab0"><span>Amande-citron</span></label>
           </div>
         </fieldset>
         <fieldset>
           <legend><span>03</span> Garniture — Filling</legend>
-          <div class="opts opts--txt">
-            <label><input type="radio" name="filling" value="Framboise & crème mousseline" data-p="0" checked><span>Framboise &amp; mousseline</span></label>
-            <label><input type="radio" name="filling" value="Praliné noisette" data-p="8"><span>Praliné noisette <small>+$8</small></span></label>
-            <label><input type="radio" name="filling" value="Ganache chocolat" data-p="0"><span>Ganache chocolat</span></label>
-            <label><input type="radio" name="filling" value="Crémeux passion" data-p="6"><span>Crémeux passion <small>+$6</small></span></label>
+          <div class="opts">
+            <label><input type="radio" name="filling" value="Framboise &amp; crème mousseline" data-p="0" data-c="#d8506b" checked><span>Framboise &amp; mousseline</span></label>
+            <label><input type="radio" name="filling" value="Praliné noisette" data-p="8" data-c="#b07b4f"><span>Praliné noisette <small>+$8</small></span></label>
+            <label><input type="radio" name="filling" value="Ganache chocolat" data-p="0" data-c="#3a2620"><span>Ganache chocolat</span></label>
+            <label><input type="radio" name="filling" value="Crémeux passion" data-p="6" data-c="#f0b429"><span>Crémeux passion <small>+$6</small></span></label>
           </div>
         </fieldset>
         <fieldset>
           <legend><span>04</span> Finition — Finish</legend>
-          <div class="opts opts--txt">
-            <label><input type="radio" name="finish" value="Chantilly & fresh fruit" data-p="0" checked><span>Chantilly &amp; fruits</span></label>
-            <label><input type="radio" name="finish" value="Mirror glaze" data-p="18"><span>Glaçage miroir <small>+$18</small></span></label>
-            <label><input type="radio" name="finish" value="Pressed flowers" data-p="22"><span>Fleurs pressées <small>+$22</small></span></label>
+          <div class="opts opts--3">
+            <label><input type="radio" name="finish" value="Chantilly &amp; fresh fruit" data-p="0" data-c="#fffdf8" checked><span>Chantilly &amp; fruits</span></label>
+            <label><input type="radio" name="finish" value="Mirror glaze" data-p="18" data-c="#e7a3b0"><span>Glaçage miroir <small>+$18</small></span></label>
+            <label><input type="radio" name="finish" value="Pressed flowers" data-p="22" data-c="#f6eee0"><span>Fleurs pressées <small>+$22</small></span></label>
           </div>
         </fieldset>
-        <label class="field"><span><b>05</b> Plaque en chocolat — message (optional, 30 characters)</span><input name="msg" maxlength="30" placeholder="Joyeux anniversaire, Clara"></label>
-        <div class="field-row">
-          <label class="field"><span>Your name</span><input name="name" autocomplete="name"></label>
-          <label class="field"><span>Pickup date</span><input name="date" type="date" id="pickup"></label>
-        </div>
+        <fieldset>
+          <legend><span>05</span> Plaque en chocolat — Message</legend>
+          <div class="opts opts--chips">
+            <label><input type="radio" name="plaque" value="" data-p="0" checked><span>Sans plaque</span></label>
+            <label><input type="radio" name="plaque" value="Joyeux anniversaire" data-p="6"><span>Joyeux anniversaire</span></label>
+            <label><input type="radio" name="plaque" value="Happy birthday" data-p="6"><span>Happy birthday</span></label>
+            <label><input type="radio" name="plaque" value="Félicitations" data-p="6"><span>Félicitations</span></label>
+            <label><input type="radio" name="plaque" value="Your own words (written in the email)" data-p="6"><span>Vos mots</span></label>
+          </div>
+          <p class="hint">Chocolate plaque +$6, up to 30 characters. Want a name on it, or your own words? Add them in the email.</p>
+        </fieldset>
+        <fieldset>
+          <legend><span>06</span> Retrait — Pickup day</legend>
+          <div class="opts opts--dates" id="dates">
+            <p class="hint">Pickup from noon, at least 72 hours after you order. Tell us the date in your email.</p>
+          </div>
+          <p class="hint" id="datesHint" hidden>From noon. We’re closed Mondays. Wedding or a later date? Write it in the email.</p>
+        </fieldset>
       </div>
-      <aside class="ticket" aria-live="polite">
-        <p class="ticket__h">Votre gâteau</p>
-        <div class="cake" aria-hidden="true"><div class="cake__top" id="cakeTop"></div><div class="cake__body" id="cakeBody"></div><div class="cake__plate"></div></div>
-        <dl id="summary"></dl>
+
+      <aside class="ticket" id="ticket" aria-labelledby="ticket-h">
+        <h3 class="ticket__h" id="ticket-h">Votre gâteau</h3>
+        <div class="cake" id="cake" aria-hidden="true"><div class="cake__top"></div><div class="cake__body"></div><div class="cake__plate"></div></div>
+        <dl id="summary" aria-live="polite">
+          <div><dt>Taille</dt><dd>6-inch · serves 6–8</dd></div>
+          <div><dt>Biscuit</dt><dd>Génoise vanille</dd></div>
+          <div><dt>Garniture</dt><dd>Framboise &amp; crème mousseline</dd></div>
+          <div><dt>Finition</dt><dd>Chantilly &amp; fresh fruit</dd></div>
+        </dl>
         <p class="ticket__price">Total <b id="price">$68</b></p>
-        <p class="ticket__date" id="earliest">Earliest pickup: —</p>
-        <p class="ticket__err" id="err" role="status"></p>
-        <button class="btn btn--full" type="submit">Envoyer la commande par e-mail</button>
-        <p class="ticket__fine">Opens your email with the order written out. We confirm within one business day and take a 50% deposit by phone.</p>
+        <a class="btn btn--full" id="send" href="mailto:commandes@maisonodile.com?subject=Commande%20g%C3%A2teau">Envoyer la commande par e-mail</a>
+        <p class="ticket__fine">Opens your email app with the order written out — add your name and send. We confirm within one business day and take a 50% deposit by phone. Rather talk? <a href="tel:+12125550123">(212) 555-0123</a>.</p>
       </aside>
-    </form>
-  </section>
-
-  <section class="glossary" aria-labelledby="gl-t">
-    <h2 id="gl-t">Les petits mots</h2>
-    <p class="glossary__lead">A pastry glossary — tap a word.</p>
-    <ul class="words">
-      <li><button aria-expanded="false" aria-controls="w1">Feuilletage</button><span id="w1" role="note" hidden>Puff pastry: butter and dough folded into hundreds of layers. Our croissants have 27.</span></li>
-      <li><button aria-expanded="false" aria-controls="w2">Entremets</button><span id="w2" role="note" hidden>A layered mousse cake, assembled in a ring and glazed. Literally “between courses.”</span></li>
-      <li><button aria-expanded="false" aria-controls="w3">Praliné</button><span id="w3" role="note" hidden>Nuts cooked in caramel, then ground into a paste. Hazelnut is classic.</span></li>
-      <li><button aria-expanded="false" aria-controls="w4">Crème mousseline</button><span id="w4" role="note" hidden>Pastry cream enriched with butter, whipped until light. The heart of a fraisier.</span></li>
-      <li><button aria-expanded="false" aria-controls="w5">Chantilly</button><span id="w5" role="note" hidden>Whipped cream, lightly sweetened with vanilla. Named for the château, not a person.</span></li>
-      <li><button aria-expanded="false" aria-controls="w6">Pâte sucrée</button><span id="w6" role="note" hidden>Sweet, crisp shortcrust for tarts — rolled thin, baked blind.</span></li>
-      <li><button aria-expanded="false" aria-controls="w7">Praluline</button><span id="w7" role="note" hidden>Brioche studded with pink-sugared almonds. A Lyonnais specialty and Odile’s childhood breakfast.</span></li>
-    </ul>
-  </section>
-
-  <section class="odile" id="odile" aria-labelledby="od-t">
-    <figure><img src="https://images.unsplash.com/photo-1568254183919-78a4f43a2877?auto=format&fit=crop&w=1100&q=80" alt="A pastry display case lined with pastries" loading="lazy" width="1100" height="900"></figure>
-    <div>
-      <p class="sec__no">IV.</p>
-      <h2 id="od-t">Odile Marchand</h2>
-      <p>Born above her grandmother’s bakery in Lyon’s Croix-Rousse. Trained at a pastry school in Yssingeaux, then nine years in the pastry kitchens of grand hotels in Paris and Geneva, where she ran the dessert service for 400 covers a night.</p>
-      <p>She came to New York for a year in 2015. Then she met the Upper West Side, and its very particular opinions about croissants.</p>
-      <p class="quote">« Une pâtisserie, c’est de la précision au service de la tendresse. »<span>Pastry is precision in the service of tenderness.</span></p>
     </div>
   </section>
 
-  <section class="strip" aria-label="Petits gâteaux">
-    <figure><img src="https://images.unsplash.com/photo-1530610476181-d83430b64dcd?auto=format&fit=crop&w=700&q=80" alt="A pile of golden croissants" loading="lazy" width="700" height="900"></figure>
-    <figure><img src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?auto=format&fit=crop&w=700&q=80" alt="Pastel mint cupcakes in a row" loading="lazy" width="700" height="900"></figure>
+  <!-- Glossary -->
+  <section class="glossary" aria-labelledby="gl-t">
+    <h2 id="gl-t">Les petits mots</h2>
+    <p class="glossary__lead">A pastry glossary — tap a word.</p>
+    <ul class="words" id="words">
+      <li><button type="button" aria-pressed="true" data-def="Puff pastry: butter and dough folded into hundreds of layers. Our croissants have 27.">Feuilletage</button></li>
+      <li><button type="button" aria-pressed="false" data-def="A layered mousse cake, assembled in a ring and glazed. Literally “between courses.”">Entremets</button></li>
+      <li><button type="button" aria-pressed="false" data-def="Nuts cooked in caramel, then ground into a paste. Hazelnut is classic.">Praliné</button></li>
+      <li><button type="button" aria-pressed="false" data-def="Pastry cream enriched with butter, whipped until light. The heart of a fraisier.">Crème mousseline</button></li>
+      <li><button type="button" aria-pressed="false" data-def="Whipped cream, lightly sweetened with vanilla. Named for the château, not a person.">Chantilly</button></li>
+      <li><button type="button" aria-pressed="false" data-def="Sweet, crisp shortcrust for tarts — rolled thin, baked blind.">Pâte sucrée</button></li>
+      <li><button type="button" aria-pressed="false" data-def="Brioche studded with pink-sugared almonds. A Lyonnais specialty and Odile’s childhood breakfast.">Praluline</button></li>
+    </ul>
+    <div class="def" aria-live="polite"><p class="def__w" id="defW">Feuilletage</p><p class="def__t" id="defT">Puff pastry: butter and dough folded into hundreds of layers. Our croissants have 27.</p></div>
   </section>
 
+  <!-- IV. Odile -->
+  <section class="odile" id="odile" aria-labelledby="od-t">
+    <figure><img src="https://images.unsplash.com/photo-1568254183919-78a4f43a2877?auto=format&amp;fit=crop&amp;w=1000&amp;h=800&amp;q=70"
+         srcset="https://images.unsplash.com/photo-1568254183919-78a4f43a2877?auto=format&amp;fit=crop&amp;w=600&amp;h=480&amp;q=70 600w, https://images.unsplash.com/photo-1568254183919-78a4f43a2877?auto=format&amp;fit=crop&amp;w=1000&amp;h=800&amp;q=70 1000w, https://images.unsplash.com/photo-1568254183919-78a4f43a2877?auto=format&amp;fit=crop&amp;w=1400&amp;h=1120&amp;q=60 1400w"
+         sizes="(min-width: 780px) 46vw, 100vw" width="1000" height="800" loading="lazy" decoding="async" alt="A pastry display case lined with pastries"></figure>
+    <div class="odile__txt">
+      <p class="sec__no" aria-hidden="true">IV.</p>
+      <h2 id="od-t">Odile Marchand</h2>
+      <p>Born above her grandmother’s bakery in Lyon’s Croix-Rousse. Trained at a pastry school in Yssingeaux, then nine years in the pastry kitchens of grand hotels in Paris and Geneva, where she ran the dessert service for 400 covers a night.</p>
+      <p>She came to New York for a year in 2015. Then she met the Upper West Side, and its very particular opinions about croissants.</p>
+      <blockquote class="quote"><p lang="fr">« Une pâtisserie, c’est de la précision au service de la tendresse. »</p><p class="quote__en">Pastry is precision in the service of tenderness.</p></blockquote>
+    </div>
+  </section>
+
+  <div class="strip">
+    <figure><img src="https://images.unsplash.com/photo-1530610476181-d83430b64dcd?auto=format&amp;fit=crop&amp;w=900&amp;h=700&amp;q=70"
+         srcset="https://images.unsplash.com/photo-1530610476181-d83430b64dcd?auto=format&amp;fit=crop&amp;w=500&amp;h=389&amp;q=70 500w, https://images.unsplash.com/photo-1530610476181-d83430b64dcd?auto=format&amp;fit=crop&amp;w=900&amp;h=700&amp;q=70 900w, https://images.unsplash.com/photo-1530610476181-d83430b64dcd?auto=format&amp;fit=crop&amp;w=1300&amp;h=1011&amp;q=60 1300w"
+         sizes="50vw" width="900" height="700" loading="lazy" decoding="async" alt="A pile of golden croissants"></figure>
+    <figure><img src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?auto=format&amp;fit=crop&amp;w=900&amp;h=700&amp;q=70"
+         srcset="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?auto=format&amp;fit=crop&amp;w=500&amp;h=389&amp;q=70 500w, https://images.unsplash.com/photo-1486427944299-d1955d23e34d?auto=format&amp;fit=crop&amp;w=900&amp;h=700&amp;q=70 900w, https://images.unsplash.com/photo-1486427944299-d1955d23e34d?auto=format&amp;fit=crop&amp;w=1300&amp;h=1011&amp;q=60 1300w"
+         sizes="50vw" width="900" height="700" loading="lazy" decoding="async" alt="Pastel mint cupcakes in a row"></figure>
+  </div>
+
+  <!-- Visit -->
   <section class="visit" id="visit" aria-labelledby="vs-t">
     <h2 id="vs-t">Visite</h2>
     <div class="visit__grid">
-      <div><h3>Adresse</h3><p>418 Amsterdam Avenue<br>at West 80th Street<br>New York, NY 10024</p><p class="small">1 to 79th St · B/C to 81st St–Museum of Natural History</p><a class="lnk" href="https://www.google.com/maps/search/?api=1&query=418+Amsterdam+Ave+New+York+NY+10024" target="_blank" rel="noopener">Itinéraire ↗</a></div>
-      <div><h3>Horaires</h3><ul class="hrs" id="hrs"><li data-d="tf"><span>Mardi – vendredi</span><span>7 – 18 h</span></li><li data-d="we"><span>Samedi – dimanche</span><span>8 – 18 h</span></li><li data-d="mo"><span>Lundi</span><span>Fermé</span></li></ul><p class="small" id="openNow"></p></div>
-      <div><h3>Contact</h3><p><a href="tel:+12125550123">(212) 555-0123</a><br><a href="mailto:commandes@maisonodile.com">commandes@maisonodile.com</a><br><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram ↗</a></p></div>
+      <div class="visit__col">
+        <h3>Adresse</h3>
+        <p class="visit__big">418 Amsterdam Avenue<br>at West 80th Street<br>New York, NY 10024</p>
+        <p class="small">1 to 79th St · B/C to 81st St–Museum of Natural History</p>
+        <a class="btn btn--ghost btn--sm" href="https://www.google.com/maps/search/?api=1&amp;query=418+Amsterdam+Ave+New+York+NY+10024" target="_blank" rel="noopener">Itinéraire<span class="sr"> — directions (opens Google Maps)</span></a>
+      </div>
+      <div class="visit__col">
+        <h3>Horaires</h3>
+        <p class="status status--c" data-status><span class="dot" aria-hidden="true"></span><span data-status-long>Tue–Fri 7 am – 6 pm · Sat–Sun 8 am – 6 pm</span></p>
+        <table class="hrs" id="hrs">
+          <caption class="sr">Opening hours</caption>
+          <tbody>
+            <tr data-d="2 3 4 5"><th scope="row">Mardi – vendredi</th><td>7 – 18 h</td></tr>
+            <tr data-d="6 0"><th scope="row">Samedi – dimanche</th><td>8 – 18 h</td></tr>
+            <tr data-d="1"><th scope="row">Lundi</th><td>Fermé</td></tr>
+          </tbody>
+        </table>
+        <p class="small">Tuesday–Friday 7 am – 6 pm · weekends 8 am – 6 pm · closed Mondays</p>
+      </div>
+      <div class="visit__col">
+        <h3>Contact</h3>
+        <p class="visit__big"><a href="tel:+12125550123">(212) 555-0123</a></p>
+        <p class="visit__mail"><a href="mailto:commandes@maisonodile.com">commandes@maisonodile.com</a></p>
+        <p class="small"><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram<span class="sr"> (opens in a new tab)</span> ↗</a></p>
+      </div>
     </div>
   </section>
 </main>
 
 <footer class="foot">
-  <p class="foot__logo"><small>Maison</small>Odile</p>
+  <p class="foot__logo" aria-hidden="true"><small>Maison</small>Odile</p>
   <p class="foot__fine">A design concept. Maison Odile is a fictional business. <a href="../index.html">← All concepts</a></p>
 </footer>
+
+<nav class="dock" id="dock" aria-label="Quick actions">
+  <div class="dock__base">
+    <p class="dock__s status" data-status><span class="dot" aria-hidden="true"></span><span data-status-short>Mar–dim</span></p>
+    <a class="dock__a" href="tel:+12125550123">Appeler<span class="sr"> (212) 555-0123</span></a>
+    <a class="dock__a dock__a--p" href="https://www.google.com/maps/search/?api=1&amp;query=418+Amsterdam+Ave+New+York+NY+10024" target="_blank" rel="noopener">Itinéraire<span class="sr"> (opens Google Maps)</span></a>
+  </div>
+  <div class="dock__cake" hidden>
+    <p class="dock__s"><span class="dock__lbl">Votre gâteau</span> <b id="dockPrice">$68</b></p>
+    <a class="dock__a dock__a--p" href="#ticket">Voir la commande</a>
+  </div>
+</nav>
+
+<script>
+/* Opening hours in New York time, minutes after midnight (0 = Sunday). Drives every open/closed label and the pickup dates. */
+window.SHOP = { hours: { 0: [480, 1080], 2: [420, 1080], 3: [420, 1080], 4: [420, 1080], 5: [420, 1080], 6: [480, 1080] } };
+window.SITEMENU = {"name": "Maison Odile", "sub": "Pâtisserie · Upper West Side", "bp": 1050, "links": [["#viennoiserie", "Viennoiserie du matin"], ["#collection", "Collection d’automne"], ["#gateau", "Gâteaux sur commande"], ["#odile", "La chef"], ["#visit", "Visite"]], "mount": ".head__menu", "mountMode": "append",
+  "actions": [{"label": "Commander", "href": "#gateau", "primary": true}, {"label": "Appeler", "href": "tel:+12125550123"}],
+  "info": ["418 Amsterdam Ave at W 80th St", "Tue–Fri 7 am – 6 pm · Sat–Sun 8 am – 6 pm"], "hours": window.SHOP.hours};
+</script>
 <script src="main.js"></script>
+<script src="sitemenu.js"></script>
 </body>
 </html>

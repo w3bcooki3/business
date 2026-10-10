@@ -11,6 +11,7 @@
   <meta property="og:description" content="Polish bakery in Greenpoint, Brooklyn, since 1991.">
   <meta property="og:image" content="og.jpg">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="../fonts/bricolage-grotesque-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="../fonts/bricolage.css">
   <link rel="stylesheet" href="../fonts/literata.css">
   <link rel="stylesheet" href="../shared/concept-bar.css">
@@ -89,7 +90,7 @@
         <svg class="hero__rosette js-spin"><use href="#rosette"/></svg>
       </div>
       <a class="sticker js-sticker" href="#chleb" aria-live="polite">
-        <span class="sticker__top">Z pieca · From the oven</span>
+        <span class="sticker__top"><span lang="pl">Z pieca</span><span class="sticker__en"> · From the oven</span></span>
         <span class="sticker__main js-sticker-main">Żytni</span>
         <span class="sticker__bot js-sticker-bot">out at 6:30</span>
       </a>
@@ -170,7 +171,7 @@
     <div class="foot__cols">
       <p><a data-href="maps" href="#gdzie"><span data-bind="street">118 Nassau Avenue</span>, Brooklyn NY 11222</a></p>
       <p><a data-href="tel" href="#gdzie" data-bind="phone">(718) 555-0147</a> · <a class="js-mailto" href="#gdzie" data-bind="email">orders@kowalanddaughter.example</a></p>
-      <p class="js-hours-summary"></p>
+      <p class="foot__hours js-hours-summary"></p>
     </div>
     <p class="foot__notice"><span data-bind="copyright"></span> · <span data-bind="notice"></span></p>
   </footer>

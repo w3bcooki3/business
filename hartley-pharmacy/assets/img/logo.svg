@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Hartley Pharmacy">
+<rect x="2" y="2" width="60" height="60" rx="14" fill="#1F5A45"/>
+<clipPath id="lc"><rect x="2" y="2" width="60" height="60" rx="14"/></clipPath>
+<g clip-path="url(#lc)"><path d="M2.0 2L9.5 2L9.5 16L2.0 16Z" fill="#1F5A45"/><path d="M9.5 2L17.0 2L17.0 16L9.5 16Z" fill="#FFFFFF"/><path d="M17.0 2L24.5 2L24.5 16L17.0 16Z" fill="#1F5A45"/><path d="M24.5 2L32.0 2L32.0 16L24.5 16Z" fill="#FFFFFF"/><path d="M32.0 2L39.5 2L39.5 16L32.0 16Z" fill="#1F5A45"/><path d="M39.5 2L47.0 2L47.0 16L39.5 16Z" fill="#FFFFFF"/><path d="M47.0 2L54.5 2L54.5 16L47.0 16Z" fill="#1F5A45"/><path d="M54.5 2L62.0 2L62.0 16L54.5 16Z" fill="#FFFFFF"/><rect x="2" y="16" width="60" height="3" fill="#153F31"/></g>
+<path d="M20 26h8v8h8v-8h8v26h-8v-10h-8v10h-8z" fill="#FFFFFF"/>
+<circle cx="49" cy="48" r="7" fill="#D9503A"/><path d="M49 44.5v7M45.5 48h7" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+</svg>

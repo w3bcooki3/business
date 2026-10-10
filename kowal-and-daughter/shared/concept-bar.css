@@ -1,20 +1,23 @@
-/* Demo chrome: lets the client flip between the three concepts. Remove for launch. */
+/* Demo chrome: lets the client flip between the two concepts. Remove for launch. */
 .concept-bar {
   position: relative;
-  z-index: 300;
+  z-index: 10;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 4px 18px;
-  padding: 7px max(16px, env(safe-area-inset-left));
+  gap: 0 18px;
+  padding: 0 max(12px, env(safe-area-inset-left));
   background: #e9e7e3;
   color: #2b2b2b;
-  font: 500 11px/1.4 ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
+  font: 500 12px/1.4 ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
   letter-spacing: 0.04em;
 }
 .concept-bar strong { font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
-.concept-bar span { color: #5d5d5d; }
-.concept-bar nav { display: flex; gap: 14px; margin-left: auto; }
-.concept-bar a { color: inherit; text-underline-offset: 3px; }
+.concept-bar__note { color: #5d5d5d; }
+.concept-bar nav { display: flex; margin-left: auto; }
+.concept-bar a { display: inline-flex; align-items: center; min-width: 44px; min-height: 40px; padding: 0 8px; justify-content: center; color: inherit; text-underline-offset: 3px; }
 .concept-bar a[aria-current] { font-weight: 700; text-decoration: none; }
-@media (max-width: 560px) { .concept-bar span { display: none; } .concept-bar nav { margin-left: 0; } }
+.concept-bar a:focus-visible { outline: 2px solid currentColor; outline-offset: -4px; }
+@media (max-width: 900px) { .concept-bar__note { display: none; } }
+@media (max-width: 480px) { .concept-bar { gap: 0; padding-inline: 8px; } .concept-bar__name { display: none; } .concept-bar a { min-width: 40px; padding: 0 6px; } }
+@media (max-width: 360px) { .concept-bar strong { letter-spacing: 0.02em; } }

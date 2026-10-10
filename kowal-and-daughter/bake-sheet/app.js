@@ -77,13 +77,22 @@
     $('.js-ticket-hours').textContent = short(h.open) + '–' + short(h.close);
     var nowLabel = L.formatTime(L.minutesToHHMM(now.minutes), { suffix: true });
     $('.js-ticket-now').textContent = s.isToday
-      ? 'It’s ' + nowLabel + ' in Greenpoint. ' + (s.freshest ? 'The ' + s.freshest.item.toLowerCase() + ' just came out.' : 'Here’s where the ovens are.')
+      ? 'It’s ' + nowLabel + ' in Greenpoint. ' + (s.freshest ? 'The ' + s.freshest.item.toLowerCase() + ' just came out.' : s.next ? 'Here’s where the ovens are.' : 'Today’s bake is done. What’s left is on the shelf.')
       : 'We’re closed right now. Here’s ' + (s.weekday === (now.weekday + 1) % 7 ? 'tomorrow' : L.DAYS[s.weekday]) + '’s bake.';
     $('.js-ticket-rows').innerHTML = s.rows.map(function (r) {
       return '<li class="ticket__row is-' + r.status + '"><time class="ticket__time" datetime="' + r.time + '">' + L.formatTime(r.time) + '</time>' +
         '<span class="ticket__item"><span class="ticket__name">' + esc(r.item) + '</span><span class="ticket__gloss">' + esc(r.gloss) + (r.note ? ' · ' + esc(r.note) : '') + '</span></span>' +
         '<span class="ticket__status">' + L.STATUS[r.status] + '</span></li>';
     }).join('');
+    // Phone hero: one line that answers "what's fresh?" before the ticket is in view.
+    var heroNow;
+    if (s.isToday && s.freshest) heroNow = 'Just out: ' + s.freshest.item + ' · ' + L.formatTime(s.freshest.time, { suffix: true });
+    else if (s.isToday && s.next) heroNow = (s.next.status === 'oven' ? 'In the oven: ' : 'Next out: ') + s.next.item + ' · ' + L.formatTime(s.next.time, { suffix: true });
+    else if (s.isToday) heroNow = 'Today’s bake is done. Rye again tomorrow at ' + L.formatTime(K.bakeSheet[0].time, { suffix: true });
+    else heroNow = (s.weekday === (now.weekday + 1) % 7 ? 'Tomorrow' : L.DAYS[s.weekday]) + ': ' + s.rows[0].item + ' out at ' + L.formatTime(s.rows[0].time, { suffix: true });
+    $('.js-hero-now').textContent = heroNow;
+    $('.hero__now').classList.toggle('is-live', s.isToday && !!(s.freshest || s.next));
+
     if (stampFor !== s.isToday) {
       stampFor = s.isToday;
       $('.js-ticket-stamp').innerHTML = s.isToday ? stamp('FRESH', 'DZIŚ') : stamp('K&D', '');

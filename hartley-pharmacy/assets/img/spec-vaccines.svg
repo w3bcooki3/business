@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 400" role="img" aria-labelledby="t3"><title id="t3">A sidewalk sandwich board reading "Flu and COVID shots today, walk right in", next to an "I got my flu shot" sticker and a bandage.</title>
+<rect x="0" y="330" width="560" height="70" fill="#D9CFBE"/><rect x="0" y="330" width="560" height="5" fill="#BFB39E"/>
+<path d="M110 340L150 60h150l40 280" fill="none" stroke="#8C6A44" stroke-width="14" stroke-linejoin="round"/>
+<path d="M150 70h150l34 250H116z" fill="#0F2E24"/><path d="M160 84h130l30 222H130z" fill="#1F5A45"/>
+<text x="225" y="128" text-anchor="middle" font-family="Young Serif,Georgia,serif" font-size="32" fill="#fff">Flu &amp;</text>
+<text x="225" y="166" text-anchor="middle" font-family="Young Serif,Georgia,serif" font-size="32" fill="#fff">COVID</text>
+<text x="225" y="202" text-anchor="middle" font-family="Young Serif,Georgia,serif" font-size="28" fill="#fff">shots today</text>
+<path d="M168 222q60 10 116 0" stroke="#E7B04B" stroke-width="4" fill="none" stroke-linecap="round"/>
+<text x="225" y="256" text-anchor="middle" font-family="Figtree,Arial,sans-serif" font-size="18" font-weight="700" fill="#fff">walk right in</text>
+<text x="225" y="282" text-anchor="middle" font-family="Figtree,Arial,sans-serif" font-size="16" font-weight="600" fill="#CFE3D7">no appointment</text>
+<path d="M140 300l12-6 12 6 12-6" stroke="#D9503A" stroke-width="4" fill="none" stroke-linecap="round"/>
+<g transform="rotate(10 455 190)"><circle cx="455" cy="190" r="78" fill="#D9503A"/><circle cx="455" cy="190" r="68" fill="none" stroke="#fff" stroke-width="2" stroke-dasharray="4 5"/>
+<text x="455" y="172" text-anchor="middle" font-family="Figtree,Arial,sans-serif" font-size="17" font-weight="800" fill="#fff">I got my</text>
+<text x="455" y="204" text-anchor="middle" font-family="Young Serif,Georgia,serif" font-size="30" fill="#fff">flu shot</text>
+<text x="455" y="228" text-anchor="middle" font-family="Figtree,Arial,sans-serif" font-size="13" font-weight="700" fill="#FBE3DC">at Hartley</text></g>
+<g transform="rotate(-28 450 316)"><rect x="396" y="300" width="108" height="34" rx="17" fill="#EBC79C" stroke="#CFA674" stroke-width="2"/><rect x="432" y="303" width="36" height="28" rx="4" fill="#F7E3C6"/><circle cx="404" cy="317" r="1.4" fill="#CFA674"/><circle cx="412" cy="317" r="1.4" fill="#CFA674"/><circle cx="420" cy="317" r="1.4" fill="#CFA674"/><circle cx="476" cy="317" r="1.4" fill="#CFA674"/><circle cx="484" cy="317" r="1.4" fill="#CFA674"/><circle cx="492" cy="317" r="1.4" fill="#CFA674"/></g>
+<circle cx="480" cy="110" r="0"/>
+</svg>

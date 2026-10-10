@@ -31,7 +31,7 @@ html.sm-lock,html.sm-lock body{overflow:hidden}
 @media (prefers-reduced-motion:reduce){.sm,.sm__list li{transition:none}}
 
 /* site theme */
-:root{--sm-bg:#ffc53d;--sm-fg:#2a1618;--sm-mut:#55383a;--sm-line:rgba(42,22,24,.22);--sm-line2:#2a1618;--sm-acc:#ff3d7f;--sm-accfg:#fff;
+:root{--sm-bg:#ffc53d;--sm-fg:#2a1618;--sm-mut:#55383a;--sm-line:rgba(42,22,24,.22);--sm-line2:#2a1618;--sm-acc:#c8195c;--sm-accfg:#fff;
 --sm-disp:"Lilita One",system-ui,sans-serif;--sm-body:"Nunito Sans",system-ui,sans-serif;--sm-r:14px;
 --sm-btn-bg:#ffc53d;--sm-btn-fg:#2a1618;--sm-btn-bd:#2a1618;--sm-btn-bw:2px;--sm-btn-font:800 15px/1 "Nunito Sans",system-ui,sans-serif;
 --sm-link-font:400 38px/1.05 "Lilita One",system-ui,sans-serif;--sm-name-font:400 26px/1 "Lilita One",system-ui,sans-serif;--sm-chip:#fff6e3;--sm-open:#0b6e74;}

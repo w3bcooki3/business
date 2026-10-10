@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La Cumbre Pharmacy · Farmacia La Cumbre | Dyckman St, Inwood</title>
+<meta name="description" content="Bilingual pharmacy at 141 Dyckman St, Inwood, Manhattan. Open 7 days, 8 am to 10 pm. Fast new prescriptions, free delivery, Medicaid, Child Health Plus and Essential Plan help. Hablamos español.">
+<meta name="theme-color" content="#1F45E6">
+<script>
+  /* Language before first paint: saved choice, else the browser's language. */
+  (function () {
+    var l = null;
+    try { l = localStorage.getItem('lacumbre-lang'); } catch (e) { l = null; }
+    if (l !== 'en' && l !== 'es') l = /^es\b/i.test(navigator.language || '') ? 'es' : 'en';
+    document.documentElement.lang = l;
+  })();
+</script>
+<link rel="preload" href="fonts/schibsted-grotesk-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' fill='%23fff'/%3E%3Cpath d='M14 3h12v11h11v12H26v11H14V26H3V14h11z' fill='%231F45E6'/%3E%3C/svg%3E">
+</head>
+<body>
+<svg class="sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="cross" viewBox="0 0 40 40"><path d="M14 2h12v12h12v12H26v12H14V26H2V14h12z"/></symbol>
+</svg>
+
+<a class="skip" href="#main"><span lang="en" data-t>Skip to content</span><span lang="es" data-t>Saltar al contenido</span></a>
+
+<!-- Fixed left column on desktop; compact top bar on phones and tablets -->
+<header class="rail" id="top">
+  <a class="brand" href="#top">
+    <svg class="brand__cross" aria-hidden="true" focusable="false"><use href="#cross"/></svg>
+    <span class="brand__name">La Cumbre<span class="brand__sub"><span lang="en" data-t>Pharmacy</span><span lang="es" data-t>Farmacia</span></span></span>
+  </a>
+
+  <nav class="rail__nav" aria-label="Main" data-i18n-aria-label="Main||Principal">
+    <ul>
+      <li><a href="#services"><span lang="en" data-t>Services</span><span lang="es" data-t>Servicios</span></a></li>
+      <li><a href="#family"><span lang="en" data-t>Kids &amp; family</span><span lang="es" data-t>Niños y familia</span></a></li>
+      <li><a href="#plans"><span lang="en" data-t>Medicaid &amp; plans</span><span lang="es" data-t>Medicaid y planes</span></a></li>
+      <li><a href="#insurance"><span lang="en" data-t>Insurance</span><span lang="es" data-t>Seguros</span></a></li>
+      <li><a href="#refills"><span lang="en" data-t>Refills</span><span lang="es" data-t>Refills</span></a></li>
+      <li><a href="#hours"><span lang="en" data-t>Hours</span><span lang="es" data-t>Horario</span></a></li>
+      <li><a href="#visit"><span lang="en" data-t>Find us</span><span lang="es" data-t>Cómo llegar</span></a></li>
+      <li><a href="#faq"><span lang="en" data-t>Questions</span><span lang="es" data-t>Preguntas</span></a></li>
+    </ul>
+  </nav>
+
+  <div class="lang" role="group" aria-label="Language / Idioma">
+    <button class="lang__btn" type="button" data-set-lang="en" aria-pressed="true" lang="en"><span class="lang__long">English</span><span class="lang__short">EN</span></button>
+    <button class="lang__btn" type="button" data-set-lang="es" aria-pressed="false" lang="es"><span class="lang__long">Español</span><span class="lang__short">ES</span></button>
+  </div>
+
+  <div class="rail__info">
+    <p class="status" data-status><span class="status__mark" aria-hidden="true"></span><span data-status-text><span lang="en" data-t>Open every day, 8 am–10 pm</span><span lang="es" data-t>Abierto todos los días, 8 am–10 pm</span></span></p>
+    <a class="rail__tel" href="tel:+12125550148">(212) 555-0148</a>
+    <p class="rail__addr">141 Dyckman St<br><span lang="en" data-t>at Sherman Ave, Inwood</span><span lang="es" data-t>esq. Sherman Ave, Inwood</span></p>
+  </div>
+
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu" data-menu-open><span lang="en" data-t>Menu</span><span lang="es" data-t>Menú</span></button>
+</header>
+
+<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Site menu" data-i18n-aria-label="Site menu||Menú del sitio" hidden>
+  <div class="menu__top">
+    <svg class="menu__cross" aria-hidden="true" focusable="false"><use href="#cross"/></svg>
+    <button class="menu__close" type="button" data-menu-close><span lang="en" data-t>Close</span><span lang="es" data-t>Cerrar</span></button>
+  </div>
+  <nav aria-label="Menu" data-i18n-aria-label="Menu||Menú">
+    <ul class="menu__list">
+      <li><a href="#services"><span lang="en" data-t>Services</span><span lang="es" data-t>Servicios</span></a></li>
+      <li><a href="#family"><span lang="en" data-t>Kids &amp; family</span><span lang="es" data-t>Niños y familia</span></a></li>
+      <li><a href="#plans"><span lang="en" data-t>Medicaid &amp; plans</span><span lang="es" data-t>Medicaid y planes</span></a></li>
+      <li><a href="#insurance"><span lang="en" data-t>Insurance</span><span lang="es" data-t>Seguros</span></a></li>
+      <li><a href="#refills"><span lang="en" data-t>Refills</span><span lang="es" data-t>Refills</span></a></li>
+      <li><a href="#hours"><span lang="en" data-t>Hours</span><span lang="es" data-t>Horario</span></a></li>
+      <li><a href="#visit"><span lang="en" data-t>Find us</span><span lang="es" data-t>Cómo llegar</span></a></li>
+      <li><a href="#faq"><span lang="en" data-t>Questions</span><span lang="es" data-t>Preguntas</span></a></li>
+    </ul>
+  </nav>
+  <div class="menu__foot">
+    <div class="lang lang--menu" role="group" aria-label="Language / Idioma">
+      <button class="lang__btn" type="button" data-set-lang="en" aria-pressed="true" lang="en">English</button>
+      <button class="lang__btn" type="button" data-set-lang="es" aria-pressed="false" lang="es">Español</button>
+    </div>
+    <p class="status" data-status><span class="status__mark" aria-hidden="true"></span><span data-status-text><span lang="en" data-t>Open every day, 8 am–10 pm</span><span lang="es" data-t>Abierto todos los días, 8 am–10 pm</span></span></p>
+    <a class="menu__tel" href="tel:+12125550148">(212) 555-0148</a>
+  </div>
+</div>
+
+<main id="main">
+
+  <!-- Hero -->
+  <section class="hero grid" id="start" aria-labelledby="hero-title">
+    <div class="hero__text">
+      <svg class="hero__cross" aria-hidden="true" focusable="false"><use href="#cross"/></svg>
+      <p class="status hero__status" data-status><span class="status__mark" aria-hidden="true"></span><span data-status-text><span lang="en" data-t>Open every day, 8 am–10 pm</span><span lang="es" data-t>Abierto todos los días, 8 am–10 pm</span></span></p>
+      <h1 id="hero-title" class="hero__title">
+        <span class="sr-only">La Cumbre. </span>
+        <span class="hero__es" lang="es">Farmacia en la&nbsp;Dyckman.</span>
+        <span class="hero__en" lang="en">Pharmacy on&nbsp;Dyckman.</span>
+      </h1>
+      <p class="hero__lead"><span lang="en" data-t>La Cumbre is the bilingual pharmacy at 141 Dyckman St in Inwood, open every day from 8 am to 10 pm. New prescriptions in about 15 minutes, free delivery, and real help with Medicaid, Child Health Plus and the Essential Plan.</span><span lang="es" data-t>La Cumbre es la farmacia bilingüe del 141 de la Dyckman, en Inwood, abierta todos los días de 8 am a 10 pm. Recetas nuevas en unos 15 minutos, delivery gratis y ayuda de verdad con Medicaid, Child Health Plus y el Essential Plan.</span></p>
+      <div class="acts">
+        <a class="btn" href="tel:+12125550148"><span lang="en" data-t>Call the pharmacy</span><span lang="es" data-t>Llamar a la farmacia</span></a>
+        <a class="btn btn--line" href="#refills"><span lang="en" data-t>Text a refill</span><span lang="es" data-t>Pedir un refill por texto</span></a>
+      </div>
+    </div>
+    <figure class="hero__photo">
+      <img src="https://images.unsplash.com/photo-1560707854-fb9a10eeaace?auto=format&amp;fit=crop&amp;crop=faces&amp;w=800&amp;h=1300&amp;q=70"
+           srcset="https://images.unsplash.com/photo-1560707854-fb9a10eeaace?auto=format&amp;fit=crop&amp;crop=faces&amp;w=480&amp;h=780&amp;q=70 480w, https://images.unsplash.com/photo-1560707854-fb9a10eeaace?auto=format&amp;fit=crop&amp;crop=faces&amp;w=800&amp;h=1300&amp;q=70 800w, https://images.unsplash.com/photo-1560707854-fb9a10eeaace?auto=format&amp;fit=crop&amp;crop=faces&amp;w=1200&amp;h=1950&amp;q=70 1200w"
+           sizes="(min-width: 1100px) 30vw, (min-width: 768px) 40vw, 100vw"
+           width="800" height="1300" fetchpriority="high"
+           alt="A mother lifts her laughing baby up to her face by a bright window." data-i18n-alt="A mother lifts her laughing baby up to her face by a bright window.||Una madre levanta a su bebé, que se ríe, junto a una ventana llena de luz.">
+    </figure>
+  </section>
+
+  <!-- Services index -->
+  <section class="services grid" id="services" aria-labelledby="services-title">
+    <header class="sec-head">
+      <h2 id="services-title" class="statement"><span lang="en" data-t>What we do.</span><span lang="es" data-t>Lo que hacemos.</span></h2>
+      <p class="sec-lead"><span lang="en" data-t>Tap any line for the details. Most of it needs no appointment — just come to the counter.</span><span lang="es" data-t>Toque cualquier línea para ver los detalles. Casi todo es sin cita: venga al mostrador.</span></p>
+    </header>
+
+    <ul class="index" data-index>
+      <li class="index__row" data-img="rx">
+        <details>
+          <summary><span class="index__name"><span lang="en" data-t>Prescriptions &amp; refills</span><span lang="es" data-t>Recetas y refills</span></span><span class="index__desc"><span lang="en" data-t>New prescriptions, refills and auto-refill.</span><span lang="es" data-t>Recetas nuevas, refills y refill automático.</span></span><span class="index__tag"><span lang="en" data-t>Walk-in</span><span lang="es" data-t>Sin cita</span></span></summary>
+          <p class="index__more"><span lang="en" data-t>Bring the paper prescription or have your doctor send it to us electronically. Ask for auto-refill and your monthly medicines are ready before you run out.</span><span lang="es" data-t>Traiga la receta en papel o pídale a su médico que nos la envíe electrónica. Pida el refill automático y sus medicinas del mes estarán listas antes de que se le acaben.</span></p>
+        </details>
+      </li>
+      <li class="index__row" data-img="rx">
+        <details>
+          <summary><span class="index__name"><span lang="en" data-t>Fast new prescriptions</span><span lang="es" data-t>Recetas nuevas, rápido</span></span><span class="index__desc"><span lang="en" data-t>Ready in about 15 minutes when in stock.</span><span lang="es" data-t>Listas en unos 15 minutos si la tenemos.</span></span><span class="index__tag"><span lang="en" data-t>Walk-in</span><span lang="es" data-t>Sin cita</span></span></summary>
+          <p class="index__more"><span lang="en" data-t>If we need to order the medicine or check with your plan, we tell you right away how long it will take — and we can deliver it when it’s ready.</span><span lang="es" data-t>Si hay que pedir la medicina o verificar con su seguro, le decimos enseguida cuánto va a tardar, y se la podemos llevar cuando esté lista.</span></p>
+        </details>
+      </li>
+      <li class="index__row" data-img="rx">
+        <details>
+          <summary><span class="index__name"><span lang="en" data-t>Prescription transfers</span><span lang="es" data-t>Transferir sus recetas</span></span><span class="index__desc"><span lang="en" data-t>Moving from another pharmacy? We do the calling.</span><span lang="es" data-t>¿Viene de otra farmacia? Nosotros hacemos las llamadas.</span></span><span class="index__tag"><span lang="en" data-t>Free</span><span lang="es" data-t>Gratis</span></span></summary>
+          <p class="index__more"><span lang="en" data-t>Give us your old pharmacy’s name and phone number. We contact them, and your doctor if needed. Most transfers don’t need a new prescription.</span><span lang="es" data-t>Denos el nombre y el teléfono de su farmacia anterior. Nosotros los llamamos, y a su médico si hace falta. La mayoría de las transferencias no necesitan receta nueva.</span></p>
+        </details>
+      </li>
+      <li class="index__row" data-img="rx">
+        <details>
+          <summary><span class="index__name"><span lang="en" data-t>Free delivery</span><span lang="es" data-t>Delivery gratis</span></span><span class="index__desc"><span lang="en" data-t>To your door in Inwood and Washington Heights.</span><span lang="es" data-t>A su puerta en Inwood y Washington Heights.</span></span><span class="index__tag"><span lang="en" data-t>Free</span><span lang="es" data-t>Gratis</span></span></summary>
+          <p class="index__more"><span lang="en" data-t>Ask about same-day delivery. Double-parked on Dyckman? Call us and we bring your bag out to the car.</span><span lang="es" data-t>Pregunte por la entrega el mismo día. ¿Está en doble fila en la Dyckman? Llámenos y le sacamos la funda al carro.</span></p>
+        </details>
+      </li>
+      <li class="index__row" data-img="kids">
+        <details>
+          <summary><span class="index__name"><span lang="en" data-t>Vaccines</span><span lang="es" data-t>Vacunas</span></span><span class="index__desc"><span lang="en" data-t>Flu, COVID-19, shingles, pneumonia, RSV, Tdap, HPV.</span><span lang="es" data-t>Flu, COVID-19, culebrilla, neumonía, RSV, Tdap, VPH.</span></span><span class="index__tag"><span lang="en" data-t>Walk-in</span><span lang="es" data-t>Sin cita</span></span></summary>
+          <p class="index__more"><span lang="en" data-t>Bring your insurance card. School-required vaccines too — for children, call first and ask which ages we can vaccinate.</span><span lang="es" data-t>Traiga su tarjeta del seguro. También vacunas que pide la escuela; para niños, llame antes y pregunte qué edades podemos vacunar.</span></p>
+        </details>
+      </li>
+      <li class="index__row" data-img="rx">
+        <details>
+          <summary><span class="index__name"><span lang="en" data-t>Help with your plan</span><span lang="es" data-t>Ayuda con su seguro</span></span><span class="index__desc"><span lang="en" data-t>Medicaid, Child Health Plus, Essential Plan, Medicare Part D.</span><span lang="es" data-t>Medicaid, Child Health Plus, Essential Plan, Medicare Parte D.</span></span><span class="index__tag"><span lang="en" data-t>Free</span><span lang="es" data-t>Gratis</span></span></summary>
+          <p class="index__more"><span lang="en" data-t>Ask at the counter, in Spanish or English, no appointment. <a href="#plans">See how we help with each plan</a>.</span><span lang="es" data-t>Pregunte en el mostrador, en español o en inglés, sin cita. <a href="#plans">Vea cómo le ayudamos con cada plan</a>.</span></p>
+        </details>
+      </li>
+      <li class="index__row" data-img="packs">
+        <details>
+          <summary><span class="index__name"><span lang="en" data-t>Pill packs</span><span lang="es" data-t>Pastillas en paquetes</span></span><span class="index__desc"><span lang="en" data-t>Your daily medicines sorted by day and time.</span><span lang="es" data-t>Sus medicinas organizadas por día y hora.</span></span><span class="index__tag"><span lang="en" data-t>Free</span><span lang="es" data-t>Gratis</span></span></summary>
+          <p class="index__more"><span lang="en" data-t>Easy-open packs, ready every month. Good for anyone taking several medicines, or helping a parent who does.</span><span lang="es" data-t>Paquetes fáciles de abrir, listos cada mes. Ideal si toma varias medicinas o si cuida a su mamá o su papá.</span></p>
+        </details>
+      </li>
+      <li class="index__row" data-img="packs">
+        <details>
+          <summary><span class="index__name"><span lang="en" data-t>Medication reviews</span><span lang="es" data-t>Revisión de medicinas</span></span><span class="index__desc"><span lang="en" data-t>Go over everything you take with a pharmacist.</span><span lang="es" data-t>Repase con un farmacéutico todo lo que toma.</span></span><span class="index__tag"><span lang="en" data-t>By appointment</span><span lang="es" data-t>Con cita</span></span></summary>
+          <p class="index__more"><span lang="en" data-t>Bring all your bottles in a bag, vitamins included. Call to pick a time that works for you.</span><span lang="es" data-t>Traiga todos sus frascos en una funda, vitaminas también. Llame para escoger una hora que le convenga.</span></p>
+        </details>
+      </li>
+      <li class="index__row" data-img="packs">
+        <details>
+          <summary><span class="index__name"><span lang="en" data-t>Blood-pressure checks</span><span lang="es" data-t>Chequeo de la presión</span></span><span class="index__desc"><span lang="en" data-t>A quick check at the counter.</span><span lang="es" data-t>Un chequeo rápido en el mostrador.</span></span><span class="index__tag"><span lang="en" data-t>Free</span><span lang="es" data-t>Gratis</span></span></summary>
+          <p class="index__more"><span lang="en" data-t>Any time we’re open, no appointment.</span><span lang="es" data-t>Cuando estemos abiertos, sin cita.</span></p>
+        </details>
+      </li>
+      <li class="index__row" data-img="packs">
+        <details>
+          <summary><span class="index__name"><span lang="en" data-t>Diabetes supplies</span><span lang="es" data-t>Diabetes y sus artículos</span></span><span class="index__desc"><span lang="en" data-t>Meters, test strips, lancets and pen needles.</span><span lang="es" data-t>Glucómetros, tiras, lancetas y agujas para plumas.</span></span><span class="index__tag"><span lang="en" data-t>With your plan</span><span lang="es" data-t>Con su seguro</span></span></summary>
+          <p class="index__more"><span lang="en" data-t>Billed to your plan when it’s covered. Ask our pharmacist to show you how to use a new meter.</span><span lang="es" data-t>Se lo cobramos a su seguro cuando lo cubre. Pídale al farmacéutico que le enseñe a usar un glucómetro nuevo.</span></p>
+        </details>
+      </li>
+      <li class="index__row" data-img="packs">
+        <details>
+          <summary><span class="index__name"><span lang="en" data-t>Naloxone (Narcan)</span><span lang="es" data-t>Naloxona (Narcan)</span></span><span class="index__desc"><span lang="en" data-t>Over the counter, ready to take home.</span><span lang="es" data-t>Sin receta, listo para llevar.</span></span><span class="index__tag"><span lang="en" data-t>No prescription</span><span lang="es" data-t>Sin receta</span></span></summary>
+          <p class="index__more"><span lang="en" data-t>Ask about no-cost options. We’ll show you how to use it in a minute.</span><span lang="es" data-t>Pregunte por opciones sin costo. Le enseñamos a usarlo en un minuto.</span></p>
+        </details>
+      </li>
+      <li class="index__row" data-img="packs">
+        <details>
+          <summary><span class="index__name"><span lang="en" data-t>Emergency contraception</span><span lang="es" data-t>Anticonceptivo de emergencia</span></span><span class="index__desc"><span lang="en" data-t>Over the counter, no questions about why.</span><span lang="es" data-t>Sin receta y sin preguntas.</span></span><span class="index__tag"><span lang="en" data-t>No prescription</span><span lang="es" data-t>Sin receta</span></span></summary>
+          <p class="index__more"><span lang="en" data-t>Ask quietly at the counter — we keep it private.</span><span lang="es" data-t>Pregunte en voz baja en el mostrador; lo mantenemos en privado.</span></p>
+        </details>
+      </li>
+      <li class="index__row" data-img="rx">
+        <details>
+          <summary><span class="index__name"><span lang="en" data-t>No insurance?</span><span lang="es" data-t>¿Sin seguro?</span></span><span class="index__desc"><span lang="en" data-t>Discount cash prices and savings cards.</span><span lang="es" data-t>Precios con descuento y tarjetas de ahorro.</span></span><span class="index__tag"><span lang="en" data-t>Ask us</span><span lang="es" data-t>Pregunte</span></span></summary>
+          <p class="index__more"><span lang="en" data-t>Tell us what your doctor prescribed and we look for the lowest price we can offer you.</span><span lang="es" data-t>Díganos qué le recetó el médico y buscamos el precio más bajo que le podamos ofrecer.</span></p>
+        </details>
+      </li>
+    </ul>
+
+    <figure class="preview" aria-hidden="true">
+      <img class="preview__img is-on" data-preview="rx" alt="" loading="lazy" width="600" height="800"
+           src="https://images.unsplash.com/photo-1562243061-204550d8a2c9?auto=format&amp;fit=crop&amp;w=600&amp;h=800&amp;q=70"
+           srcset="https://images.unsplash.com/photo-1562243061-204550d8a2c9?auto=format&amp;fit=crop&amp;w=400&amp;h=533&amp;q=70 400w, https://images.unsplash.com/photo-1562243061-204550d8a2c9?auto=format&amp;fit=crop&amp;w=600&amp;h=800&amp;q=70 600w, https://images.unsplash.com/photo-1562243061-204550d8a2c9?auto=format&amp;fit=crop&amp;w=900&amp;h=1200&amp;q=70 900w"
+           sizes="30vw">
+      <img class="preview__img" data-preview="packs" alt="" loading="lazy" width="600" height="800"
+           src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&amp;fit=crop&amp;w=600&amp;h=800&amp;q=70"
+           srcset="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&amp;fit=crop&amp;w=400&amp;h=533&amp;q=70 400w, https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&amp;fit=crop&amp;w=600&amp;h=800&amp;q=70 600w, https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&amp;fit=crop&amp;w=900&amp;h=1200&amp;q=70 900w"
+           sizes="30vw">
+      <img class="preview__img" data-preview="kids" alt="" loading="lazy" width="600" height="800"
+           src="https://images.unsplash.com/photo-1570657891791-e39a9d185540?auto=format&amp;fit=crop&amp;w=600&amp;h=800&amp;q=70"
+           srcset="https://images.unsplash.com/photo-1570657891791-e39a9d185540?auto=format&amp;fit=crop&amp;w=400&amp;h=533&amp;q=70 400w, https://images.unsplash.com/photo-1570657891791-e39a9d185540?auto=format&amp;fit=crop&amp;w=600&amp;h=800&amp;q=70 600w"
+           sizes="30vw">
+      <figcaption class="preview__cap" data-preview-cap><span lang="en" data-t>Prescriptions &amp; refills</span><span lang="es" data-t>Recetas y refills</span></figcaption>
+    </figure>
+  </section>
+
+  <!-- Fast new prescriptions -->
+  <section class="fast" aria-labelledby="fast-title">
+    <div class="grid">
+      <h2 id="fast-title" class="statement fast__title"><span lang="en" data-t>Your doctor sends it. In about 15 minutes, it’s ready.</span><span lang="es" data-t>Su médico la envía. En unos 15 minutos, está lista.</span></h2>
+      <div class="fast__body">
+        <p><span lang="en" data-t>Clinics and doctors nearby can e-prescribe straight to us. Pick it up on your way home from the train, or we deliver it free.</span><span lang="es" data-t>Las clínicas y los médicos del área nos pueden enviar la receta electrónica. Recójala de camino a casa, o se la llevamos gratis.</span></p>
+        <p class="fast__tell"><span lang="en" data-t>Tell your doctor:</span><span lang="es" data-t>Dígale a su médico:</span> <strong>La Cumbre Pharmacy, 141 Dyckman St, New York, NY 10040.</strong> <span lang="en" data-t>Fax</span><span lang="es" data-t>Fax</span> (212) 555-0149.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kids & family -->
+  <section class="family grid" id="family" aria-labelledby="family-title">
+    <figure class="family__photo">
+      <img loading="lazy" width="700" height="1000"
+           src="https://images.unsplash.com/photo-1570657891791-e39a9d185540?auto=format&amp;fit=crop&amp;w=700&amp;h=1000&amp;q=70"
+           srcset="https://images.unsplash.com/photo-1570657891791-e39a9d185540?auto=format&amp;fit=crop&amp;w=450&amp;h=643&amp;q=70 450w, https://images.unsplash.com/photo-1570657891791-e39a9d185540?auto=format&amp;fit=crop&amp;w=700&amp;h=1000&amp;q=70 700w, https://images.unsplash.com/photo-1570657891791-e39a9d185540?auto=format&amp;fit=crop&amp;w=1000&amp;h=1429&amp;q=70 1000w"
+           sizes="(min-width: 1100px) 34vw, (min-width: 768px) 42vw, 100vw"
+           alt="A smiling mother holds her laughing newborn against her neck." data-i18n-alt="A smiling mother holds her laughing newborn against her neck.||Una madre sonriente abraza a su recién nacido, que se ríe, contra su cuello.">
+    </figure>
+    <div class="family__text">
+      <h2 id="family-title" class="statement"><span lang="en" data-t>Fever at nine at night? We’re still open.</span><span lang="es" data-t>¿Fiebre a las nueve de la noche? Seguimos abiertos.</span></h2>
+      <p class="sec-lead"><span lang="en" data-t>Kids don’t get sick on a schedule. Until 10 pm, every day, there’s a pharmacist on Dyckman who can tell you which medicine and how much.</span><span lang="es" data-t>Los niños no se enferman con horario. Hasta las 10 pm, todos los días, hay un farmacéutico en la Dyckman que le dice qué medicina darle y cuánto.</span></p>
+      <ul class="list">
+        <li><span lang="en" data-t>Children’s medicines for fever, cough, colds and allergies</span><span lang="es" data-t>Medicinas para niños: fiebre, tos, catarro y alergias</span></li>
+        <li><span lang="en" data-t>Flavoring for many liquid medicines — ask which ones</span><span lang="es" data-t>Sabores para muchas medicinas líquidas; pregunte cuáles</span></li>
+        <li><span lang="en" data-t>Baby formula, diapers, wipes and bottles</span><span lang="es" data-t>Leche de fórmula, pañales, toallitas y biberones</span></li>
+        <li><span lang="en" data-t>School-required vaccines — ask which ages we can vaccinate</span><span lang="es" data-t>Vacunas que pide la escuela; pregunte qué edades podemos vacunar</span></li>
+        <li><span lang="en" data-t>Child Health Plus questions, answered at the counter</span><span lang="es" data-t>Preguntas sobre Child Health Plus, contestadas en el mostrador</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Medicaid / CHP / Essential Plan -->
+  <section class="plans grid" id="plans" aria-labelledby="plans-title">
+    <header class="sec-head">
+      <h2 id="plans-title" class="statement"><span lang="en" data-t>Your plan, explained in plain Spanish or English.</span><span lang="es" data-t>Su seguro, explicado en español claro.</span></h2>
+      <p class="sec-lead"><span lang="en" data-t>Three New York State programs most of our neighbors use. Ana Gómez, our technician, spends most of her day on them.</span><span lang="es" data-t>Tres programas del Estado de Nueva York que usan muchos de nuestros vecinos. Ana Gómez, nuestra técnica, pasa casi todo el día con ellos.</span></p>
+    </header>
+    <div class="compare">
+      <article class="plan">
+        <h3 class="plan__name">Medicaid</h3>
+        <h4 class="plan__label"><span lang="en" data-t>Who it’s for</span><span lang="es" data-t>Para quién es</span></h4>
+        <p><span lang="en" data-t>New Yorkers of any age with low income. Medicines usually cost little or nothing.</span><span lang="es" data-t>Neoyorquinos de cualquier edad con ingresos bajos. Las medicinas suelen costar poco o nada.</span></p>
+        <h4 class="plan__label"><span lang="en" data-t>What we do</span><span lang="es" data-t>Lo que hacemos</span></h4>
+        <ul class="plan__list">
+          <li><span lang="en" data-t>Bill NY Medicaid (NYRx) at the counter</span><span lang="es" data-t>Le cobramos a Medicaid (NYRx) en el mostrador</span></li>
+          <li><span lang="en" data-t>Call your doctor when a prior authorization is needed</span><span lang="es" data-t>Llamamos a su médico si hace falta una autorización previa</span></li>
+          <li><span lang="en" data-t>Tell you where to renew, and what to do if your card changes</span><span lang="es" data-t>Le decimos dónde renovar y qué hacer si le cambia la tarjeta</span></li>
+        </ul>
+      </article>
+      <article class="plan">
+        <h3 class="plan__name">Child Health Plus</h3>
+        <h4 class="plan__label"><span lang="en" data-t>Who it’s for</span><span lang="es" data-t>Para quién es</span></h4>
+        <p><span lang="en" data-t>Children and teens under 19 who don’t qualify for Medicaid. The cost depends on family income; many families pay nothing.</span><span lang="es" data-t>Niños y jóvenes menores de 19 años que no califican para Medicaid. El costo depende de los ingresos de la familia; muchas familias no pagan nada.</span></p>
+        <h4 class="plan__label"><span lang="en" data-t>What we do</span><span lang="es" data-t>Lo que hacemos</span></h4>
+        <ul class="plan__list">
+          <li><span lang="en" data-t>Fill your kids’ prescriptions under their plan</span><span lang="es" data-t>Despachamos las recetas de sus hijos con su plan</span></li>
+          <li><span lang="en" data-t>Explain which children’s medicines and vaccines it covers</span><span lang="es" data-t>Le explicamos qué medicinas y vacunas para niños cubre</span></li>
+          <li><span lang="en" data-t>Point you to where to apply</span><span lang="es" data-t>Le decimos dónde aplicar</span></li>
+        </ul>
+      </article>
+      <article class="plan">
+        <h3 class="plan__name">Essential Plan</h3>
+        <h4 class="plan__label"><span lang="en" data-t>Who it’s for</span><span lang="es" data-t>Para quién es</span></h4>
+        <p><span lang="en" data-t>Adults 19 to 64 who earn a little too much for Medicaid and don’t have coverage from work.</span><span lang="es" data-t>Adultos de 19 a 64 años que ganan un poco más de lo que permite Medicaid y no tienen seguro del trabajo.</span></p>
+        <h4 class="plan__label"><span lang="en" data-t>What we do</span><span lang="es" data-t>Lo que hacemos</span></h4>
+        <ul class="plan__list">
+          <li><span lang="en" data-t>Check your copay before we fill</span><span lang="es" data-t>Verificamos su copago antes de despachar</span></li>
+          <li><span lang="en" data-t>Sort it out when your plan or card changes</span><span lang="es" data-t>Lo resolvemos cuando le cambia el plan o la tarjeta</span></li>
+          <li><span lang="en" data-t>Find a covered alternative if a medicine isn’t covered</span><span lang="es" data-t>Buscamos otra opción cubierta si una medicina no lo está</span></li>
+        </ul>
+      </article>
+    </div>
+    <p class="plans__note"><span lang="en" data-t>We can’t promise coverage or approve applications — New York State and your plan decide. To apply, call NY State of Health at <a href="tel:+18553555777">1-855-355-5777</a>.</span><span lang="es" data-t>No podemos prometer cobertura ni aprobar solicitudes; eso lo deciden el Estado de Nueva York y su plan. Para aplicar, llame a NY State of Health al <a href="tel:+18553555777">1-855-355-5777</a>.</span></p>
+  </section>
+
+  <!-- Insurance -->
+  <section class="insurance grid" id="insurance" aria-labelledby="ins-title">
+    <header class="sec-head">
+      <h2 id="ins-title" class="statement"><span lang="en" data-t>Plans we accept.</span><span lang="es" data-t>Seguros que aceptamos.</span></h2>
+      <p class="sec-lead"><span lang="en" data-t>Most plans used in Upper Manhattan. Don’t see yours? <a href="tel:+12125550148">Call (212) 555-0148</a> with your card in hand — we may still take it. No insurance? Ask about our discount cash prices.</span><span lang="es" data-t>La mayoría de los planes del Alto Manhattan. ¿No ve el suyo? <a href="tel:+12125550148">Llame al (212) 555-0148</a> con su tarjeta en la mano; puede que sí lo aceptemos. ¿Sin seguro? Pregunte por nuestros precios con descuento.</span></p>
+    </header>
+    <div class="ins">
+      <div class="ins__group">
+        <h3 class="ins__h"><span lang="en" data-t>New York State</span><span lang="es" data-t>Estado de Nueva York</span></h3>
+        <ul class="ins__list"><li>NY Medicaid (NYRx)</li><li>Child Health Plus</li><li>Essential Plan</li><li>EPIC</li></ul>
+      </div>
+      <div class="ins__group">
+        <h3 class="ins__h">Medicare</h3>
+        <ul class="ins__list"><li><span lang="en" data-t>Part D plans</span><span lang="es" data-t>Planes Parte D</span></li><li>Medicare Advantage</li></ul>
+      </div>
+      <div class="ins__group ins__group--wide">
+        <h3 class="ins__h"><span lang="en" data-t>Health plans</span><span lang="es" data-t>Planes de salud</span></h3>
+        <ul class="ins__list ins__list--cols"><li>Fidelis Care</li><li>Healthfirst</li><li>MetroPlusHealth</li><li>EmblemHealth</li><li>UnitedHealthcare</li><li>Aetna</li><li>Cigna</li><li>Empire BlueCross BlueShield</li><li>Humana</li><li>Oscar</li><li>Wellcare</li></ul>
+      </div>
+      <div class="ins__group">
+        <h3 class="ins__h"><span lang="en" data-t>Pharmacy benefits</span><span lang="es" data-t>Beneficios de farmacia</span></h3>
+        <ul class="ins__list"><li>CVS Caremark</li><li>Express Scripts</li><li>OptumRx</li></ul>
+      </div>
+      <div class="ins__group">
+        <h3 class="ins__h"><span lang="en" data-t>Also</span><span lang="es" data-t>También</span></h3>
+        <ul class="ins__list"><li><span lang="en" data-t>Workers’ comp</span><span lang="es" data-t>Workers’ comp</span></li><li><span lang="en" data-t>No-fault</span><span lang="es" data-t>No-fault (accidentes)</span></li></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Refills -->
+  <section class="refills grid" id="refills" aria-labelledby="refills-title">
+    <header class="sec-head">
+      <h2 id="refills-title" class="statement"><span lang="en" data-t>Text us your refill.</span><span lang="es" data-t>Pida su refill por texto.</span></h2>
+    </header>
+    <div class="refills__how">
+      <h3 class="sub"><span lang="en" data-t>How it works</span><span lang="es" data-t>Cómo funciona</span></h3>
+      <ol class="steps">
+        <li><span lang="en" data-t>Text or call with your name, date of birth and the Rx number on your label.</span><span lang="es" data-t>Escríbanos o llámenos con su nombre, fecha de nacimiento y el número Rx de la etiqueta.</span></li>
+        <li><span lang="en" data-t>We get it ready and text you when it’s done.</span><span lang="es" data-t>La preparamos y le avisamos por texto cuando esté lista.</span></li>
+        <li><span lang="en" data-t>Pick it up, or we deliver it free in Inwood and Washington Heights.</span><span lang="es" data-t>Pase a recogerla, o se la llevamos gratis en Inwood y Washington Heights.</span></li>
+      </ol>
+      <h3 class="sub"><span lang="en" data-t>Switching to us?</span><span lang="es" data-t>¿Se cambia a La Cumbre?</span></h3>
+      <p><span lang="en" data-t>Call with your old pharmacy’s name and phone number. We contact them, and your doctor if needed.</span><span lang="es" data-t>Llame con el nombre y el teléfono de su farmacia anterior. Nosotros los llamamos, y a su médico si hace falta.</span></p>
+      <a class="btn btn--line" href="tel:+12125550148"><span lang="en" data-t>Call to transfer</span><span lang="es" data-t>Llamar para transferir</span></a>
+    </div>
+
+    <section class="sms" aria-labelledby="sms-title">
+      <h3 class="sub" id="sms-title"><span lang="en" data-t>Start the text here</span><span lang="es" data-t>Empiece el texto aquí</span></h3>
+      <p class="sms__intro"><span lang="en" data-t>Choose what you need. We open your phone’s Messages app with the text started; you add your details there — this page doesn’t collect them.</span><span lang="es" data-t>Escoja lo que necesita. Le abrimos el texto en su teléfono; usted pone sus datos allí. Esta página no los guarda.</span></p>
+      <p class="sms__label" id="need-l"><span lang="en" data-t>I need</span><span lang="es" data-t>Necesito</span></p>
+      <div class="opts" role="group" aria-labelledby="need-l" data-opts="need">
+        <button type="button" class="opt" data-v="refill" aria-pressed="true"><span lang="en" data-t>A refill</span><span lang="es" data-t>Un refill</span></button>
+        <button type="button" class="opt" data-v="transfer" aria-pressed="false"><span lang="en" data-t>A transfer</span><span lang="es" data-t>Una transferencia</span></button>
+        <button type="button" class="opt" data-v="plan" aria-pressed="false"><span lang="en" data-t>Help with my plan</span><span lang="es" data-t>Ayuda con mi seguro</span></button>
+        <button type="button" class="opt" data-v="question" aria-pressed="false"><span lang="en" data-t>A question</span><span lang="es" data-t>Una pregunta</span></button>
+      </div>
+      <div data-get-block>
+        <p class="sms__label" id="get-l"><span lang="en" data-t>And I’ll</span><span lang="es" data-t>Y prefiero</span></p>
+        <div class="opts" role="group" aria-labelledby="get-l" data-opts="get">
+          <button type="button" class="opt" data-v="pickup" aria-pressed="true"><span lang="en" data-t>Pick it up</span><span lang="es" data-t>Recogerla</span></button>
+          <button type="button" class="opt" data-v="delivery" aria-pressed="false"><span lang="en" data-t>Get free delivery</span><span lang="es" data-t>Delivery gratis</span></button>
+        </div>
+      </div>
+      <p class="sms__label"><span lang="en" data-t>Your message</span><span lang="es" data-t>Su mensaje</span></p>
+      <p class="sms__preview" data-sms-preview aria-live="polite"><span lang="en" data-t>Hi La Cumbre! I need a refill.</span><span lang="es" data-t>¡Hola, La Cumbre! Necesito un refill.</span></p>
+      <a class="btn btn--block" href="sms:+12125550148" data-sms-link><span lang="en" data-t>Open in Messages</span><span lang="es" data-t>Abrir en Mensajes</span></a>
+      <p class="fine"><span lang="en" data-t>Texts go to (212) 555-0148. Please don’t text emergencies.</span><span lang="es" data-t>Los textos llegan al (212) 555-0148. No escriba por emergencias.</span></p>
+    </section>
+  </section>
+
+  <!-- Team -->
+  <section class="team grid" id="team" aria-labelledby="team-title">
+    <header class="sec-head">
+      <h2 id="team-title" class="statement"><span lang="en" data-t>Who you’ll talk to.</span><span lang="es" data-t>Quién le atiende.</span></h2>
+    </header>
+    <ul class="people">
+      <li><p class="people__name">Yesenia Peralta, PharmD</p><p><span lang="en" data-t>Pharmacist in charge. Spanish and English.</span><span lang="es" data-t>Farmacéutica a cargo. Español e inglés.</span></p></li>
+      <li><p class="people__name">Marcos Tavárez, RPh</p><p><span lang="en" data-t>Pharmacist for vaccines and diabetes care. Spanish and English.</span><span lang="es" data-t>Farmacéutico de vacunas y diabetes. Español e inglés.</span></p></li>
+      <li><p class="people__name">Ana Gómez</p><p><span lang="en" data-t>Pharmacy technician who handles insurance questions. Spanish and English.</span><span lang="es" data-t>Técnica de farmacia; atiende las preguntas de seguros. Español e inglés.</span></p></li>
+    </ul>
+  </section>
+
+  <!-- Hours -->
+  <section class="hours grid" id="hours" aria-labelledby="hours-title">
+    <header class="sec-head">
+      <h2 id="hours-title" class="statement"><span lang="en" data-t>Every day, 8&nbsp;am to 10&nbsp;pm.</span><span lang="es" data-t>Todos los días, de 8&nbsp;am a 10&nbsp;pm.</span></h2>
+      <p class="status hours__status" data-status><span class="status__mark" aria-hidden="true"></span><span data-status-text><span lang="en" data-t>Open every day, 8 am–10 pm</span><span lang="es" data-t>Abierto todos los días, 8 am–10 pm</span></span></p>
+    </header>
+    <table class="timetable">
+      <caption class="sr-only"><span lang="en" data-t>Opening hours</span><span lang="es" data-t>Horario</span></caption>
+      <thead class="sr-only"><tr><th scope="col"><span lang="en" data-t>Day</span><span lang="es" data-t>Día</span></th><th scope="col"><span lang="en" data-t>Hours</span><span lang="es" data-t>Horario</span></th></tr></thead>
+      <tbody>
+        <tr data-d="1"><th scope="row"><span lang="en" data-t>Monday</span><span lang="es" data-t>Lunes</span></th><td><span class="tt__time">8 am – 10 pm</span><span class="tt__bar" aria-hidden="true"><span class="tt__now"></span></span></td></tr>
+        <tr data-d="2"><th scope="row"><span lang="en" data-t>Tuesday</span><span lang="es" data-t>Martes</span></th><td><span class="tt__time">8 am – 10 pm</span><span class="tt__bar" aria-hidden="true"><span class="tt__now"></span></span></td></tr>
+        <tr data-d="3"><th scope="row"><span lang="en" data-t>Wednesday</span><span lang="es" data-t>Miércoles</span></th><td><span class="tt__time">8 am – 10 pm</span><span class="tt__bar" aria-hidden="true"><span class="tt__now"></span></span></td></tr>
+        <tr data-d="4"><th scope="row"><span lang="en" data-t>Thursday</span><span lang="es" data-t>Jueves</span></th><td><span class="tt__time">8 am – 10 pm</span><span class="tt__bar" aria-hidden="true"><span class="tt__now"></span></span></td></tr>
+        <tr data-d="5"><th scope="row"><span lang="en" data-t>Friday</span><span lang="es" data-t>Viernes</span></th><td><span class="tt__time">8 am – 10 pm</span><span class="tt__bar" aria-hidden="true"><span class="tt__now"></span></span></td></tr>
+        <tr data-d="6"><th scope="row"><span lang="en" data-t>Saturday</span><span lang="es" data-t>Sábado</span></th><td><span class="tt__time">8 am – 10 pm</span><span class="tt__bar" aria-hidden="true"><span class="tt__now"></span></span></td></tr>
+        <tr data-d="0"><th scope="row"><span lang="en" data-t>Sunday</span><span lang="es" data-t>Domingo</span></th><td><span class="tt__time">8 am – 10 pm</span><span class="tt__bar" aria-hidden="true"><span class="tt__now"></span></span></td></tr>
+      </tbody>
+    </table>
+    <p class="hours__note"><span lang="en" data-t>Holiday hours can change — please call ahead on Thanksgiving, Christmas and New Year’s Day.</span><span lang="es" data-t>En días feriados el horario puede cambiar; llame antes en Thanksgiving, Navidad y Año Nuevo.</span></p>
+  </section>
+
+  <!-- Visit -->
+  <section class="visit grid" id="visit" aria-labelledby="visit-title">
+    <figure class="visit__photo">
+      <img loading="lazy" width="1600" height="800"
+           src="https://images.unsplash.com/photo-1667628062458-2fb34c8a42e4?auto=format&amp;fit=crop&amp;w=1600&amp;h=800&amp;q=70"
+           srcset="https://images.unsplash.com/photo-1667628062458-2fb34c8a42e4?auto=format&amp;fit=crop&amp;w=800&amp;h=400&amp;q=70 800w, https://images.unsplash.com/photo-1667628062458-2fb34c8a42e4?auto=format&amp;fit=crop&amp;w=1600&amp;h=800&amp;q=70 1600w, https://images.unsplash.com/photo-1667628062458-2fb34c8a42e4?auto=format&amp;fit=crop&amp;w=2200&amp;h=1100&amp;q=70 2200w"
+           sizes="(min-width: 1100px) calc(100vw - 352px), 100vw"
+           alt="A leafy New York street of brick row houses in summer, with people cycling past parked cars." data-i18n-alt="A leafy New York street of brick row houses in summer, with people cycling past parked cars.||Una calle arbolada de Nueva York con casas de ladrillo en verano, y gente en bicicleta junto a carros estacionados.">
+    </figure>
+    <div class="visit__addr">
+      <h2 id="visit-title" class="statement">141&nbsp;Dyckman St</h2>
+      <p class="visit__sub"><span lang="en" data-t>At Sherman Ave, Inwood. New York, NY 10040.</span><span lang="es" data-t>Esquina Sherman Ave, Inwood. New York, NY 10040.</span></p>
+      <div class="acts">
+        <a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=141+Dyckman+St+New+York+NY+10040"><span lang="en" data-t>Get directions</span><span lang="es" data-t>Cómo llegar</span></a>
+        <a class="btn btn--line" href="tel:+12125550148"><span lang="en" data-t>Call (212) 555-0148</span><span lang="es" data-t>Llamar al (212) 555-0148</span></a>
+      </div>
+    </div>
+    <dl class="getting">
+      <div><dt><span lang="en" data-t>Subway</span><span lang="es" data-t>Tren</span></dt><dd><span lang="en" data-t><span class="line">1</span> to Dyckman St at Nagle Ave, or <span class="line">A</span> to Dyckman St at Broadway. Both are a short walk.</span><span lang="es" data-t><span class="line">1</span> hasta Dyckman St en Nagle Ave, o <span class="line">A</span> hasta Dyckman St en Broadway. Los dos quedan cerca.</span></dd></div>
+      <div><dt><span lang="en" data-t>Bus</span><span lang="es" data-t>Guagua</span></dt><dd><span lang="en" data-t>Bx7 and M100, with stops on Broadway at Dyckman St.</span><span lang="es" data-t>Bx7 y M100, con paradas en Broadway y Dyckman St.</span></dd></div>
+      <div><dt><span lang="en" data-t>Access</span><span lang="es" data-t>Acceso</span></dt><dd><span lang="en" data-t>Step-free entrance, wide aisles and a seat while you wait.</span><span lang="es" data-t>Entrada sin escalones, pasillos amplios y asientos mientras espera.</span></dd></div>
+      <div><dt><span lang="en" data-t>Parking</span><span lang="es" data-t>Parqueo</span></dt><dd><span lang="en" data-t>Metered street parking on Dyckman. Double-parked? Call and we bring it out.</span><span lang="es" data-t>Parquímetros en la Dyckman. ¿En doble fila? Llame y se lo sacamos.</span></dd></div>
+    </dl>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq grid" id="faq" aria-labelledby="faq-title">
+    <header class="sec-head">
+      <h2 id="faq-title" class="statement"><span lang="en" data-t>Questions.</span><span lang="es" data-t>Preguntas.</span></h2>
+    </header>
+    <div class="faq__list">
+      <details>
+        <summary><span lang="en" data-t>Do you deliver?</span><span lang="es" data-t>¿Hacen delivery?</span></summary>
+        <p><span lang="en" data-t>Yes — free, anywhere in Inwood and Washington Heights. Call or text us to set it up, and ask about same-day delivery.</span><span lang="es" data-t>Sí, gratis, en todo Inwood y Washington Heights. Llámenos o escríbanos para coordinarlo, y pregunte por la entrega el mismo día.</span></p>
+      </details>
+      <details>
+        <summary><span lang="en" data-t>How long does a new prescription take?</span><span lang="es" data-t>¿Cuánto tarda una receta nueva?</span></summary>
+        <p><span lang="en" data-t>About 15 minutes when the medicine is in stock. If we need to order it or check with your insurance, we tell you right away how long it will take.</span><span lang="es" data-t>Unos 15 minutos si tenemos la medicina. Si hay que pedirla o verificar con su seguro, le decimos enseguida cuánto va a tardar.</span></p>
+      </details>
+      <details>
+        <summary><span lang="en" data-t>Can I transfer my prescriptions to you?</span><span lang="es" data-t>¿Puedo pasar mis recetas para acá?</span></summary>
+        <p><span lang="en" data-t>Yes. Call with your old pharmacy’s name and phone number and we do the rest. Most transfers don’t need a new prescription.</span><span lang="es" data-t>Sí. Llámenos con el nombre y el teléfono de su farmacia anterior y nosotros hacemos el resto. La mayoría no necesita receta nueva.</span></p>
+      </details>
+      <details>
+        <summary><span lang="en" data-t>Can you sign me up for Medicaid, Child Health Plus or the Essential Plan?</span><span lang="es" data-t>¿Me pueden inscribir en Medicaid, Child Health Plus o el Essential Plan?</span></summary>
+        <p><span lang="en" data-t>We answer your questions, explain what each plan covers and tell you where to apply or renew. New York State and your plan make the final decision. Official help: NY State of Health, <a href="tel:+18553555777">1-855-355-5777</a>.</span><span lang="es" data-t>Le contestamos sus preguntas, le explicamos qué cubre cada plan y le decimos dónde aplicar o renovar. La decisión final es del Estado de Nueva York y de su plan. Ayuda oficial: NY State of Health, <a href="tel:+18553555777">1-855-355-5777</a>.</span></p>
+      </details>
+      <details>
+        <summary><span lang="en" data-t>Do I need an appointment for a flu shot?</span><span lang="es" data-t>¿Necesito cita para la vacuna del flu?</span></summary>
+        <p><span lang="en" data-t>No — walk in any time we’re open, with your insurance card. For children, call first and ask which ages we can vaccinate.</span><span lang="es" data-t>No. Venga cuando estemos abiertos, con su tarjeta del seguro. Para niños, llame antes y pregunte qué edades podemos vacunar.</span></p>
+      </details>
+      <details>
+        <summary><span lang="en" data-t>Do you have lower prices if I don’t have insurance?</span><span lang="es" data-t>¿Tienen precios más bajos si no tengo seguro?</span></summary>
+        <p><span lang="en" data-t>Yes. Ask about our discount cash prices and savings cards — we look for the lowest price we can offer you.</span><span lang="es" data-t>Sí. Pregunte por nuestros precios con descuento y tarjetas de ahorro; buscamos el precio más bajo que le podamos ofrecer.</span></p>
+      </details>
+    </div>
+  </section>
+
+  <!-- Emergency -->
+  <section class="emergency grid" aria-labelledby="em-title">
+    <h2 id="em-title" class="emergency__title"><span lang="en" data-t>In an emergency, don’t wait for us.</span><span lang="es" data-t>En una emergencia, no espere por nosotros.</span></h2>
+    <ul class="emergency__list">
+      <li><a href="tel:911"><span class="emergency__num">911</span><span><span lang="en" data-t>Emergencies</span><span lang="es" data-t>Emergencias</span></span></a></li>
+      <li><a href="tel:+18002221222"><span class="emergency__num">1-800-222-1222</span><span><span lang="en" data-t>Poison Control</span><span lang="es" data-t>Control de Envenenamientos</span></span></a></li>
+      <li><a href="tel:988"><span class="emergency__num">988</span><span><span lang="en" data-t>Suicide &amp; Crisis Lifeline</span><span lang="es" data-t>Línea de Crisis y Suicidio (oprima 2 para español)</span></span></a></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="footer grid">
+  <div class="footer__brand">
+    <svg class="footer__cross" aria-hidden="true" focusable="false"><use href="#cross"/></svg>
+    <p class="footer__name">La Cumbre Pharmacy<br>Farmacia La Cumbre</p>
+  </div>
+  <div class="footer__col">
+    <p>141 Dyckman Street<br>New York, NY 10040</p>
+    <p><span lang="en" data-t>Every day, 8 am – 10 pm</span><span lang="es" data-t>Todos los días, 8 am – 10 pm</span></p>
+  </div>
+  <div class="footer__col">
+    <p><a href="tel:+12125550148">(212) 555-0148</a><br><span lang="en" data-t>Fax</span><span lang="es" data-t>Fax</span> (212) 555-0149<br><a href="mailto:hola@lacumbrepharmacy.nyc">hola@lacumbrepharmacy.nyc</a></p>
+    <p class="footer__reg"><span lang="en" data-t>NYS pharmacy registration #000000 (placeholder)</span><span lang="es" data-t>Registro de farmacia del Estado de NY #000000 (ejemplo)</span></p>
+  </div>
+  <div class="footer__base">
+    <p><span lang="en" data-t>A design concept. La Cumbre Pharmacy is a fictional business.</span><span lang="es" data-t>Un concepto de diseño. Farmacia La Cumbre es un negocio ficticio.</span></p>
+    <p class="footer__links"><a href="../index.html#pharmacy"><span lang="en" data-t>All pharmacy concepts</span><span lang="es" data-t>Todas las farmacias</span></a><a href="../index.html"><span lang="en" data-t>Full portfolio</span><span lang="es" data-t>Portafolio completo</span></a></p>
+  </div>
+</footer>
+
+<nav class="dock" aria-label="Quick actions" data-i18n-aria-label="Quick actions||Acciones rápidas">
+  <a href="tel:+12125550148"><span lang="en" data-t>Call</span><span lang="es" data-t>Llamar</span></a>
+  <a href="#refills" class="dock__main"><span lang="en" data-t>Text a refill</span><span lang="es" data-t>Refill por texto</span></a>
+  <a href="https://www.google.com/maps/dir/?api=1&amp;destination=141+Dyckman+St+New+York+NY+10040"><span lang="en" data-t>Directions</span><span lang="es" data-t>Cómo llegar</span></a>
+</nav>
+
+<script src="main.js" defer></script>
+</body>
+</html>

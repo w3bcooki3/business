@@ -1,101 +1,135 @@
+/* Hōsen — page behaviour. Vanilla JS, no dependencies.
+   Service days live in OPEN_DAYS (0 = Sunday) and in the JSON-LD, footer copy and SITEMENU.hours in index.html. */
 (function () {
   'use strict';
-  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var OPEN_DAYS = [0, 3, 4, 5, 6];
+  var PRICE = 245, MAX_PARTY = 4, BOOK_AHEAD = 14;
+  var EMAIL = 'seats@hosen.nyc', SMS = '+12125550177';
+  var DAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+  var DAYS_L = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  var MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
   requestAnimationFrame(function () { document.body.classList.add('is-loaded'); });
 
+  /* ---- New York clock ---- */
   function ny() {
     var o = {};
     new Intl.DateTimeFormat('en-US', { timeZone: 'America/New_York', year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', hour12: false, weekday: 'short' })
       .formatToParts(new Date()).forEach(function (p) { o[p.type] = p.value; });
-    return { y: +o.year, mo: +o.month, d: +o.day, h: (+o.hour) % 24, m: +o.minute, dow: { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 }[o.weekday] };
+    return { y: +o.year, mo: +o.month, d: +o.day, h: (+o.hour) % 24, m: +o.minute, dow: DAYS.indexOf(o.weekday) };
   }
   var now = ny();
-  var DAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-  var DAYS_L = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-  var MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-  var open = [0, 3, 4, 5, 6];
 
-  /* ---- Mobile index sheet ---- */
-  var sb = document.querySelector('.mbar__btn');
-  var sheet = document.getElementById('sheet');
-  function setSheet(o) { sheet.hidden = !o; sb.setAttribute('aria-expanded', String(o)); sb.textContent = o ? 'Close' : 'Index'; }
-  if (sb) {
-    sb.addEventListener('click', function () { setSheet(sheet.hidden); });
-    sheet.addEventListener('click', function (e) { if (e.target.closest('a')) setSheet(false); });
-    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !sheet.hidden) { setSheet(false); sb.focus(); } });
-  }
+  /* ---- Tonight line (side index, mobile bar, footer) ---- */
+  (function () {
+    var t = now.h * 60 + now.m, serviceDay = OPEN_DAYS.indexOf(now.dow) > -1, long, short, live = false;
+    if (serviceDay && t < 18 * 60) { long = 'Tonight · seatings 6:00 & 8:45'; short = 'Tonight 6:00 · 8:45'; }
+    else if (serviceDay && t < 20 * 60 + 45) { long = 'Service in progress · next seating 8:45'; short = 'In service · 8:45 next'; live = true; }
+    else if (serviceDay && t < 23 * 60) { long = 'Second seating in progress'; short = 'In service'; live = true; }
+    else {
+      var k = 1; while (OPEN_DAYS.indexOf((now.dow + k) % 7) === -1) k++;
+      var next = k === 1 ? 'tomorrow' : DAYS_L[(now.dow + k) % 7];
+      long = (serviceDay ? 'Closed for tonight' : 'Dark tonight') + ' · next service ' + next;
+      short = 'Next: ' + (k === 1 ? 'tomorrow' : DAYS[(now.dow + k) % 7]) + ' 6:00';
+    }
+    document.querySelectorAll('[data-tonight]').forEach(function (el) {
+      el.textContent = el.hasAttribute('data-short') ? short : long;
+      el.classList.toggle('is-open', live);
+    });
+  })();
 
-  /* ---- Active index link ---- */
+  /* ---- Active link in the side index ---- */
   var links = document.querySelectorAll('.index a');
   if ('IntersectionObserver' in window) {
     var secIO = new IntersectionObserver(function (es) {
       es.forEach(function (e) {
-        if (e.isIntersecting) links.forEach(function (a) { a.classList.toggle('is-active', a.getAttribute('href') === '#' + e.target.id); });
+        if (!e.isIntersecting) return;
+        links.forEach(function (a) {
+          var on = a.getAttribute('href') === '#' + e.target.id;
+          a.classList.toggle('is-active', on);
+          if (on) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current');
+        });
       });
     }, { rootMargin: '-45% 0px -50% 0px' });
     document.querySelectorAll('main section[id]').forEach(function (s) { secIO.observe(s); });
   }
 
-  /* ---- Course procession ---- */
-  var items = document.querySelectorAll('#seq li');
-  var counter = document.getElementById('seqNow');
+  /* ---- Course procession: pieces "arrive" as you scroll ---- */
   if ('IntersectionObserver' in window && !reduce) {
+    var items = document.querySelectorAll('#seq li');
     items.forEach(function (li) { li.classList.add('dim'); });
-    var shown = 0;
     var io = new IntersectionObserver(function (es) {
-      es.forEach(function (e) {
-        if (e.isIntersecting && !e.target.classList.contains('on')) {
-          e.target.classList.add('on'); shown++; counter.textContent = shown; io.unobserve(e.target);
-        }
-      });
-    }, { rootMargin: '0px 0px -35% 0px' });
+      es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } });
+    }, { rootMargin: '0px 0px -30% 0px' });
     items.forEach(function (li) { io.observe(li); });
-  } else if (counter) { counter.textContent = items.length; }
+  }
 
   /* ---- Reveal ---- */
   if ('IntersectionObserver' in window && !reduce) {
-    var r = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); r.unobserve(e.target); } }); }, { rootMargin: '0px 0px -10% 0px' });
-    document.querySelectorAll('.counter > div, .facts, .chef__text, .sake__list, .rules li, .reserve__intro, .night__text').forEach(function (el) { el.classList.add('reveal'); r.observe(el); });
+    var r = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); r.unobserve(e.target); } });
+    }, { rootMargin: '0px 0px -10% 0px' });
+    document.querySelectorAll('.counter__text, .facts, .chef__text, .sake__list, .rules li, .reserve__intro, .night__text').forEach(function (el) {
+      el.classList.add('reveal'); r.observe(el);
+    });
   }
 
-  /* ---- Reservation request ---- */
+  /* ---- Seat request builder: buttons compose a mailto / sms link (no form, no personal data collected) ---- */
   var datesEl = document.getElementById('dates');
-  var base = new Date(Date.UTC(now.y, now.mo - 1, now.d));
-  var count = 0;
-  for (var i = 0; i <= 14; i++) {
-    var dt = new Date(base.getTime() + i * 864e5);
-    var dow = dt.getUTCDay();
-    if (open.indexOf(dow) === -1) continue;
-    if (i === 0 && now.h >= 20) continue;
-    var label = DAYS_L[dow] + ', ' + MON[dt.getUTCMonth()] + ' ' + dt.getUTCDate();
-    var lab = document.createElement('label');
-    lab.innerHTML = '<input type="radio" name="date" value="' + label + '"' + (count === 0 ? ' checked' : '') + '><span>' + DAYS[dow] + '<b>' + dt.getUTCDate() + '</b>' + MON[dt.getUTCMonth()] + '</span>';
-    datesEl.appendChild(lab);
-    count++;
+  if (!datesEl) return;
+  var state = { date: null, time: '6:00 pm', party: 2 };
+  var base = Date.UTC(now.y, now.mo - 1, now.d);
+  for (var i = 0; i <= BOOK_AHEAD; i++) {
+    var dt = new Date(base + i * 864e5), dow = dt.getUTCDay();
+    if (OPEN_DAYS.indexOf(dow) === -1) continue;
+    if (i === 0 && now.h >= 20) continue; // too late to ask for tonight
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.dataset.date = DAYS_L[dow] + ', ' + MON[dt.getUTCMonth()] + ' ' + dt.getUTCDate();
+    b.setAttribute('aria-pressed', 'false');
+    b.innerHTML = '<span>' + (i === 0 ? 'Tonight' : DAYS[dow]) + '</span> <b>' + dt.getUTCDate() + '</b> <span>' + MON[dt.getUTCMonth()] + '</span>';
+    datesEl.appendChild(b);
   }
 
-  var form = document.getElementById('req');
-  var sum = document.getElementById('summary');
-  function val(n) { var el = form.querySelector('[name="' + n + '"]:checked') || form.querySelector('[name="' + n + '"]'); return el ? el.value.trim() : ''; }
-  function update() {
-    var p = val('party');
-    sum.classList.remove('err');
-    sum.textContent = val('date') + ' · ' + val('time') + ' · ' + p + (p === '1' ? ' guest' : ' guests') + ' · $' + (245 * +p).toLocaleString() + ' before beverage & gratuity';
+  function press(group, btn) {
+    group.querySelectorAll('button').forEach(function (x) { x.setAttribute('aria-pressed', String(x === btn)); });
   }
-  form.addEventListener('change', update);
-  update();
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    var name = val('name');
-    if (!name) { sum.classList.add('err'); sum.textContent = 'Please add the name the seats should be held under.'; form.querySelector('[name="name"]').focus(); return; }
-    var body = 'Hello Hōsen,\n\nI would like to request seats:\n\nEvening: ' + val('date') + '\nSeating: ' + val('time') + '\nGuests: ' + val('party') + '\nName: ' + name + '\nNotes: ' + (val('notes') || '—') + '\n\nThank you.';
-    location.href = 'mailto:seats@hosen.nyc?subject=' + encodeURIComponent('Seat request — ' + val('date') + ', ' + val('time')) + '&body=' + encodeURIComponent(body);
+  datesEl.addEventListener('click', function (e) {
+    var b = e.target.closest('button'); if (!b) return;
+    press(datesEl, b); state.date = b.dataset.date; update();
   });
-
-  /* ---- Tonight note ---- */
-  var on = document.getElementById('openNote');
-  if (on) {
-    if (open.indexOf(now.dow) > -1 && now.h < 23) on.textContent = now.h < 18 ? 'Tonight: first seating at 6:00' : 'Service in progress';
-    else on.textContent = 'Dark tonight · next service ' + (now.dow === 1 || now.dow === 2 ? 'Wednesday' : 'tomorrow');
+  var seg = document.querySelector('.seg');
+  seg.addEventListener('click', function (e) {
+    var b = e.target.closest('button'); if (!b) return;
+    press(seg, b); state.time = b.dataset.time; update();
+  });
+  var minus = document.querySelector('[data-step="-1"]'), plus = document.querySelector('[data-step="1"]');
+  var partyEl = document.getElementById('party');
+  function step(d) {
+    state.party = Math.min(MAX_PARTY, Math.max(1, state.party + d)); update();
+    if (document.activeElement && document.activeElement.disabled) (d > 0 ? minus : plus).focus(); // keep keyboard focus
   }
+  minus.addEventListener('click', function () { step(-1); });
+  plus.addEventListener('click', function () { step(1); });
+
+  var first = datesEl.querySelector('button');
+  if (first) { press(datesEl, first); state.date = first.dataset.date; }
+
+  var line = document.getElementById('sumLine'), price = document.getElementById('sumPrice');
+  var mail = document.getElementById('sendMail'), sms = document.getElementById('sendSms');
+  function update() {
+    var guests = state.party + (state.party === 1 ? '\u00a0guest' : '\u00a0guests');
+    partyEl.innerHTML = '<b>' + state.party + '</b>' + (state.party === 1 ? ' guest' : ' guests');
+    minus.disabled = state.party <= 1;
+    plus.disabled = state.party >= MAX_PARTY;
+    line.textContent = (state.date || 'Choose an evening') + ' · ' + state.time + ' · ' + guests;
+    price.textContent = '$' + (PRICE * state.party).toLocaleString('en-US') + ' omakase for ' + guests + ', before beverage & gratuity';
+    var req = 'Evening: ' + state.date + '\nSeating: ' + state.time + '\nGuests: ' + state.party;
+    var body = 'Hello Hōsen,\n\nI would like to request seats at the counter.\n\n' + req +
+      '\n\nName for the booking: \nPhone: \nAllergies or occasion: \n\nThank you.';
+    mail.href = 'mailto:' + EMAIL + '?subject=' + encodeURIComponent('Seat request — ' + state.date + ', ' + state.time) + '&body=' + encodeURIComponent(body);
+    sms.href = 'sms:' + SMS + '?&body=' + encodeURIComponent('Seat request for Hōsen — ' + state.date + ', ' + state.time + ', ' + guests + '. Name: ');
+  }
+  update();
 })();

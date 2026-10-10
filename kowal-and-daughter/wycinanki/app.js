@@ -23,7 +23,7 @@
   $('.js-story').innerHTML = B.story.map(function (p) { return '<p>' + esc(p) + '</p>'; }).join('');
   $('.js-standing').innerHTML = K.standingOrders.map(function (s) { return '<li><h3>' + esc(s.title) + '</h3><p>' + esc(s.text) + '</p></li>'; }).join('');
   $('.js-transit').innerHTML = B.transit.map(function (t) { return '<li><b>' + esc(t.line) + '</b>' + esc(t.text) + '</li>'; }).join('');
-  $('.js-hours-summary').textContent = L.hoursSummary().join(' · ');
+  $('.js-hours-summary').innerHTML = L.hoursSummary().map(function (l) { return '<span>' + esc(l) + '</span>'; }).join(' · ');
 
   var lastDate = null;
   L.onTick(function (now) {
@@ -33,11 +33,12 @@
 
     // Sticker: what just came out, or what's next.
     var s = L.buildSheet(now), main, bot;
-    if (s.isToday && s.freshest) { main = s.freshest.item; bot = 'just came out'; }
-    else if (s.isToday && s.next) { main = s.next.item; bot = 'out at ' + L.formatTime(s.next.time); }
-    else { main = s.rows[0].item; bot = (s.weekday === (now.weekday + 1) % 7 ? 'tomorrow ' : L.DAYS[s.weekday] + ' ') + L.formatTime(s.rows[0].time); }
-    $('.js-sticker-main').textContent = main;
-    $('.js-sticker-bot').textContent = bot;
+    if (s.isToday && s.freshest) { main = s.freshest.item; bot = 'just out'; }
+    else if (s.isToday && s.next) { main = s.next.item; bot = 'out ' + L.formatTime(s.next.time, { suffix: true, compact: true }); }
+    else if (s.isToday) { main = s.rows[0].item; bot = 'tomorrow ' + L.formatTime(s.rows[0].time, { suffix: true }); }
+    else { main = s.rows[0].item; bot = (s.weekday === (now.weekday + 1) % 7 ? 'tomorrow ' : L.DAYS[s.weekday].slice(0, 3) + ' ') + L.formatTime(s.rows[0].time, { suffix: true }); }
+    if ($('.js-sticker-main').textContent !== main) $('.js-sticker-main').textContent = main;
+    if ($('.js-sticker-bot').textContent !== bot) $('.js-sticker-bot').textContent = bot;
 
     if (now.isoDate === lastDate) return;
     var first = lastDate === null;
@@ -69,6 +70,17 @@
   });
 
   L.menu($('.menu-btn'), $('#menu'), $('.menu__close'));
+
+  // Phone thumb bar stays tucked away while the hero's own Call / Directions buttons are on screen.
+  var bar = $('.thumbbar'), heroActions = $('.hero__actions');
+  if (bar && heroActions && 'IntersectionObserver' in window) {
+    new IntersectionObserver(function (entries) {
+      var visible = entries[0].isIntersecting;
+      bar.classList.toggle('is-tucked', visible);
+      if (visible) bar.setAttribute('aria-hidden', 'true'); else bar.removeAttribute('aria-hidden');
+      bar.querySelectorAll('a').forEach(function (a) { if (visible) a.setAttribute('tabindex', '-1'); else a.removeAttribute('tabindex'); });
+    }).observe(heroActions);
+  }
 
   // The hero rosette turns slowly as you scroll, like a paper cut on a string.
   var spin = $('.js-spin');

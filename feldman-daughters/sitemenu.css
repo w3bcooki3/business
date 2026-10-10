@@ -31,10 +31,9 @@ html.sm-lock,html.sm-lock body{overflow:hidden}
 @media (prefers-reduced-motion:reduce){.sm,.sm__list li{transition:none}}
 
 /* site theme */
-:root{--sm-bg:#161412;--sm-fg:#f6efdf;--sm-mut:#b3a796;--sm-line:rgba(246,239,223,.14);--sm-line2:rgba(246,239,223,.35);--sm-acc:#e3a72f;--sm-accfg:#161412;
---sm-disp:"Bowlby One SC",Impact,sans-serif;--sm-body:"Libre Franklin",system-ui,sans-serif;--sm-r:0px;
+:root{--sm-bg:#161412;--sm-fg:#f6efdf;--sm-mut:#cfc4b2;--sm-line:rgba(246,239,223,.14);--sm-line2:rgba(246,239,223,.35);--sm-acc:#e3a72f;--sm-accfg:#161412;
+--sm-disp:"Bowlby One SC","Arial Black",Impact,sans-serif;--sm-body:"Libre Franklin",system-ui,sans-serif;--sm-r:0px;
 --sm-btn-bg:#161412;--sm-btn-fg:#f6efdf;--sm-btn-bd:#161412;--sm-btn-font:800 13px/1 "Libre Franklin",system-ui,sans-serif;--sm-btn-tt:uppercase;--sm-btn-ls:.08em;
---sm-link-font:400 30px/1.1 "Bowlby One SC",Impact,sans-serif;--sm-name-font:400 20px/1.1 "Bowlby One SC",Impact,sans-serif;--sm-chip:#26221e;--sm-open:#e3a72f;}
-@media (max-width:1100px){.sm-btn{display:inline-flex}.burger{display:none!important}}
-@media (max-width:360px){.sm-btn__l{display:none}.sm-btn{padding:0;width:46px;justify-content:center}}
-@media (max-width:560px){.top .sm-btn{margin-left:auto}}
+--sm-link-font:400 28px/1.1 "Bowlby One SC","Arial Black",Impact,sans-serif;--sm-name-font:400 20px/1.1 "Bowlby One SC","Arial Black",Impact,sans-serif;--sm-chip:#26221e;--sm-open:#e3a72f;}
+@media (max-width:1099px){.sm-btn{display:inline-flex}}
+@media (max-width:359px){.sm-btn__l{display:none}.sm-btn{padding:0;width:46px;justify-content:center}}

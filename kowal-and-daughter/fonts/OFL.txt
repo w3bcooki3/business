@@ -1,0 +1,15 @@
+Font licences
+=============
+
+All fonts in this folder are self-hosted copies of open-source typefaces,
+distributed via the Fontsource project (npm @fontsource / @fontsource-variable).
+Each is licensed under the SIL Open Font License, Version 1.1:
+https://openfontlicense.org/open-font-license-official-text/
+
+- Fraunces            (c) The Fraunces Project Authors (Undercase Type)
+- IBM Plex Mono       (c) IBM Corp.
+- Bricolage Grotesque (c) The Bricolage Grotesque Project Authors
+- Literata            (c) The Literata Project Authors (TypeTogether)
+- Inter Tight         (c) The Inter Project Authors (Rasmus Andersson)
+
+Only the latin and latin-ext .woff2 subsets used by these pages are included.

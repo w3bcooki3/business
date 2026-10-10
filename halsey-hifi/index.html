@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Halsey Hi-Fi — Coffee, records &amp; natural wine on Halsey Street, Bed-Stuy</title>
+<meta name="description" content="A coffee bar and listening room at 412 Halsey Street in Bed-Stuy, Brooklyn. Espresso and pastries from 7 am, records on a proper hi-fi all day, natural wine and beer after 5, and Album Night every Wednesday.">
+<meta name="theme-color" content="#1a110b">
+<link rel="preload" href="fonts/fraunces-roman.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%231a110b'/%3E%3Ccircle cx='32' cy='32' r='11' fill='%23ff5a36'/%3E%3Ccircle cx='32' cy='32' r='2.5' fill='%231a110b'/%3E%3C/svg%3E">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- Shared VU meter scale, drawn once and reused by both meters -->
+<svg class="defs" aria-hidden="true" focusable="false">
+  <symbol id="vu-scale" viewBox="0 0 220 130">
+    <path class="vu__arc" d="M37.2 84.4A98 98 0 0 1 143.5 57.9"/>
+    <path class="vu__arc vu__arc--hot" d="M143.5 57.9A98 98 0 0 1 182.8 84.4"/>
+    <line class="vu__tick" x1="37.2" y1="84.4" x2="29.7" y2="77.7"/>
+    <text class="vu__num" x="22.3" y="71.0">20</text>
+    <line class="vu__tick" x1="56.6" y1="67.8" x2="51.2" y2="59.4"/>
+    <text class="vu__num" x="45.7" y="51.0">10</text>
+    <line class="vu__tick" x1="71.7" y1="59.8" x2="67.8" y2="50.6"/>
+    <text class="vu__num" x="63.9" y="41.4">7</text>
+    <line class="vu__tick" x1="86.3" y1="54.9" x2="83.9" y2="45.2"/>
+    <text class="vu__num" x="81.5" y="35.5">5</text>
+    <line class="vu__tick" x1="103.2" y1="52.2" x2="102.5" y2="42.3"/>
+    <text class="vu__num" x="101.8" y="32.3">3</text>
+    <line class="vu__tick" x1="115.1" y1="52.1" x2="115.7" y2="42.1"/>
+    <line class="vu__tick" x1="128.7" y1="53.8" x2="130.6" y2="44.0"/>
+    <line class="vu__tick" x1="143.5" y1="57.9" x2="146.9" y2="48.5"/>
+    <text class="vu__num" x="150.4" y="39.1">0</text>
+    <line class="vu__tick vu__tick--hot" x1="157.5" y1="64.3" x2="162.4" y2="55.5"/>
+    <line class="vu__tick vu__tick--hot" x1="170.3" y1="72.8" x2="176.5" y2="64.9"/>
+    <line class="vu__tick vu__tick--hot" x1="182.8" y1="84.4" x2="190.3" y2="77.7"/>
+    <text class="vu__num vu__num--hot" x="197.7" y="71.0">3</text>
+    <line class="vu__tick vu__tick--minor" x1="40.7" y1="80.7" x2="37.2" y2="77.2"/>
+    <line class="vu__tick vu__tick--minor" x1="47.0" y1="74.9" x2="43.8" y2="71.1"/>
+    <line class="vu__tick vu__tick--minor" x1="61.0" y1="65.1" x2="58.5" y2="60.8"/>
+    <line class="vu__tick vu__tick--minor" x1="76.5" y1="57.9" x2="74.8" y2="53.2"/>
+    <line class="vu__tick vu__tick--minor" x1="93.0" y1="53.5" x2="92.1" y2="48.6"/>
+    <line class="vu__tick vu__tick--minor" x1="110.0" y1="52.0" x2="110.0" y2="47.0"/>
+    <line class="vu__tick vu__tick--minor" x1="135.4" y1="55.3" x2="136.7" y2="50.5"/>
+    <line class="vu__tick vu__tick--minor vu__tick--hot" x1="151.4" y1="61.2" x2="153.5" y2="56.7"/>
+    <line class="vu__tick vu__tick--minor vu__tick--hot" x1="166.2" y1="69.7" x2="169.1" y2="65.6"/>
+    <line class="vu__tick vu__tick--minor vu__tick--hot" x1="179.3" y1="80.7" x2="182.8" y2="77.2"/>
+    <text class="vu__label" x="110" y="96">VU</text>
+  </symbol>
+</svg>
+
+<header class="masthead">
+  <div class="masthead__inner">
+    <a class="brand" href="#top" aria-label="Halsey Hi-Fi, back to top">
+      <svg class="brand__mark" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><circle class="brand__disc" cx="20" cy="20" r="19"/><circle class="brand__groove" cx="20" cy="20" r="14"/><circle class="brand__groove" cx="20" cy="20" r="10.5"/><circle class="brand__label" cx="20" cy="20" r="6.5"/><circle class="brand__hole" cx="20" cy="20" r="1.4"/></svg>
+      <span class="brand__name">Halsey Hi‑Fi</span>
+    </a>
+    <nav class="topnav" aria-label="Primary">
+      <ul>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#nights">Listening nights</a></li>
+        <li><a href="#system">The system</a></li>
+        <li><a href="#visit">Visit</a></li>
+      </ul>
+    </nav>
+    <p class="masthead__status" data-status-short><span class="led" aria-hidden="true"></span><span data-status-text>Open daily from 7 am</span></p>
+    <button class="navbtn" type="button" aria-haspopup="dialog" aria-controls="navdialog" aria-expanded="false" data-nav-open>
+      <span class="navbtn__bars" aria-hidden="true"></span>Index
+    </button>
+  </div>
+</header>
+
+<dialog class="navdialog" id="navdialog" aria-labelledby="navdialog-title">
+  <div class="navdialog__panel">
+    <div class="navdialog__head">
+      <p class="navdialog__title" id="navdialog-title">Input select</p>
+      <button class="navdialog__close" type="button" data-nav-close>Close</button>
+    </div>
+    <ol class="navdialog__list">
+      <li><a href="#menu"><span class="navdialog__src">Phono</span><span class="navdialog__dest">The menu</span></a></li>
+      <li><a href="#nights"><span class="navdialog__src">Tuner</span><span class="navdialog__dest">Listening nights</span></a></li>
+      <li><a href="#system"><span class="navdialog__src">Aux</span><span class="navdialog__dest">The system</span></a></li>
+      <li><a href="#visit"><span class="navdialog__src">Tape</span><span class="navdialog__dest">Hours &amp; visit</span></a></li>
+    </ol>
+    <div class="navdialog__foot">
+      <p class="navdialog__status" data-status-short><span class="led" aria-hidden="true"></span><span data-status-text>Open daily from 7 am</span></p>
+      <a class="btn btn--signal" href="tel:+17185550147">Call</a>
+      <a class="btn btn--ghost" href="https://www.google.com/maps/search/?api=1&amp;query=412+Halsey+St+Brooklyn+NY+11233" rel="noopener" target="_blank">Directions</a>
+      <p class="navdialog__addr">412 Halsey St at Stuyvesant Ave · Bed‑Stuy · (718) 555‑0147</p>
+    </div>
+  </div>
+</dialog>
+
+<main id="main">
+
+  <!-- HERO: the receiver -->
+  <section class="hero" id="top" aria-labelledby="hero-title">
+    <div class="hero__copy">
+      <p class="eyebrow">Coffee · Records · Natural wine <span class="eyebrow__sep" aria-hidden="true">/</span> <span class="eyebrow__place">Halsey St, Bed‑Stuy</span></p>
+      <h1 class="hero__title" id="hero-title"><span>Coffee by day.</span> <span>Records <em>all</em> day.</span> <span>Wine after five.</span></h1>
+      <p class="hero__lede">A neighborhood coffee bar built around a proper stereo. Espresso and pastries from 7, a turntable that never stops, natural wine and beer after 5 — and every Wednesday, one album played start to finish.</p>
+      <div class="hero__actions">
+        <a class="btn btn--signal" href="#menu">See the menu</a>
+        <a class="btn btn--ghost" href="#nights">Album Night · Wed 8 pm</a>
+      </div>
+      <dl class="hero__facts">
+        <div><dt>Today</dt><dd data-today-hours>7 am – 10 pm</dd></div>
+        <div><dt>Find us</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=412+Halsey+St+Brooklyn+NY+11233" rel="noopener" target="_blank">412 Halsey St</a></dd></div>
+        <div><dt>Call</dt><dd><a href="tel:+17185550147">(718) 555‑0147</a></dd></div>
+      </dl>
+    </div>
+
+    <div class="rx" data-rx>
+      <div class="rx__case">
+        <div class="rx__face">
+          <div class="rx__top">
+            <p class="rx__model" aria-hidden="true"><span class="rx__brand">Halsey Hi‑Fi</span> <span class="rx__no">HS‑418</span><span class="rx__type"> · Stereo receiver</span></p>
+            <p class="rx__power" data-status-short><span class="led" aria-hidden="true"></span><span data-status-text>Open daily from 7 am</span></p>
+          </div>
+
+          <!-- Tuning dial: the scale is the shop's day; the pointer is the time in Brooklyn right now -->
+          <div class="dial" aria-hidden="true">
+            <div class="dial__glass">
+              <div class="dial__ticks"></div>
+              <div class="dial__nums">
+                <span>7</span><span>9</span><span>11</span><span>1</span><span>3</span><span>5</span><span>7</span><span>9</span><span>12</span>
+              </div>
+              <div class="dial__bands">
+                <span class="dial__band dial__band--day">Coffee<span class="dial__long">&nbsp;&amp; pastry</span></span>
+                <span class="dial__band dial__band--night">Wine<span class="dial__long">&nbsp;&amp; beer</span></span>
+              </div>
+              <span class="dial__pointer" data-dial-pointer></span>
+            </div>
+          </div>
+
+          <div class="rx__mid">
+            <div class="vu" aria-hidden="true">
+              <svg viewBox="0 0 220 130" focusable="false"><use href="#vu-scale"/><g class="vu__needle" data-vu><line x1="110" y1="150" x2="110" y2="36"/></g><rect class="vu__shade" x="0" y="104" width="220" height="26"/></svg>
+              <span class="vu__ch">L</span>
+            </div>
+
+            <div class="display" role="group" aria-label="Receiver display">
+              <p class="display__mode" data-disp-mode>Phono · Now spinning</p>
+              <p class="display__artist" data-disp-a>Marvin Gaye</p>
+              <p class="display__title" data-disp-b>What’s Going On</p>
+              <p class="display__meta" data-disp-c>Side A · 33⅓ rpm</p>
+              <p class="visually-hidden" aria-live="polite" data-disp-live></p>
+            </div>
+
+            <div class="vu" aria-hidden="true">
+              <svg viewBox="0 0 220 130" focusable="false"><use href="#vu-scale"/><g class="vu__needle" data-vu><line x1="110" y1="150" x2="110" y2="36"/></g><rect class="vu__shade" x="0" y="104" width="220" height="26"/></svg>
+              <span class="vu__ch">R</span>
+            </div>
+          </div>
+
+          <div class="rx__controls">
+            <span class="knob" aria-hidden="true"><span class="knob__cap"></span><span class="knob__label">Volume</span></span>
+            <div class="selector" role="group" aria-label="Receiver input">
+              <button type="button" class="selector__btn" aria-pressed="true" data-mode="phono"><span class="selector__lamp" aria-hidden="true"></span>Phono</button>
+              <button type="button" class="selector__btn" aria-pressed="false" data-mode="brew"><span class="selector__lamp" aria-hidden="true"></span>On the bar</button>
+              <button type="button" class="selector__btn" aria-pressed="false" data-mode="night"><span class="selector__lamp" aria-hidden="true"></span>Next night</button>
+            </div>
+            <span class="knob knob--small" aria-hidden="true"><span class="knob__cap"></span><span class="knob__label">Balance</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="rx__shelf" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <!-- CRATE -->
+  <section class="crate" aria-labelledby="crate-title">
+    <div class="crate__head">
+      <h2 class="kicker" id="crate-title">In the crate this week</h2>
+      <p class="crate__note">The day has an arc: quiet in the morning, warmer by afternoon, a little louder after five. Requests on paper at the counter.</p>
+    </div>
+    <ol class="crate__row">
+      <li class="sleeve sleeve--sun"><p class="sleeve__when">Morning</p><p class="sleeve__artist">Alice Coltrane</p><p class="sleeve__title">Journey in Satchidananda</p></li>
+      <li class="sleeve sleeve--grid"><p class="sleeve__when">Morning</p><p class="sleeve__artist">Bill Evans Trio</p><p class="sleeve__title">Sunday at the Village Vanguard</p></li>
+      <li class="sleeve sleeve--rings"><p class="sleeve__when">Midday</p><p class="sleeve__artist">Minnie Riperton</p><p class="sleeve__title">Come to My Garden</p></li>
+      <li class="sleeve sleeve--stripes"><p class="sleeve__when">Afternoon</p><p class="sleeve__artist">Steely Dan</p><p class="sleeve__title">Aja</p></li>
+      <li class="sleeve sleeve--split"><p class="sleeve__when">Afternoon</p><p class="sleeve__artist">Roy Ayers Ubiquity</p><p class="sleeve__title">Everybody Loves the Sunshine</p></li>
+      <li class="sleeve sleeve--arc"><p class="sleeve__when">After 5</p><p class="sleeve__artist">Sade</p><p class="sleeve__title">Diamond Life</p></li>
+      <li class="sleeve sleeve--bars"><p class="sleeve__when">After 5</p><p class="sleeve__artist">Curtis Mayfield</p><p class="sleeve__title">Curtis</p></li>
+      <li class="sleeve sleeve--dot"><p class="sleeve__when">Late</p><p class="sleeve__artist">A Tribe Called Quest</p><p class="sleeve__title">The Low End Theory</p></li>
+    </ol>
+  </section>
+
+  <!-- MENU: the back of the sleeve -->
+  <section class="menu" id="menu" aria-labelledby="menu-title">
+    <div class="menu__intro">
+      <p class="kicker kicker--ink">The menu</p>
+      <h2 class="menu__title" id="menu-title">Two sides, <em>one</em> long play.</h2>
+      <p class="menu__lede">Side A runs from opening. Side B drops the needle at 5 pm. Coffee is poured until close, so you can flip back any time.</p>
+      <p class="menu__jump"><a href="#side-b">Skip to Side B — after 5 <span aria-hidden="true">↓</span></a></p>
+    </div>
+
+    <article class="lp" aria-label="Menu, printed like the back of a record sleeve">
+      <header class="lp__head">
+        <p class="lp__cat">HHF‑418 · Stereo</p>
+        <p class="lp__name">Halsey Hi‑Fi <span>Live at the counter</span></p>
+      </header>
+
+      <div class="lp__sides">
+        <section class="side" id="side-a" aria-labelledby="side-a-title">
+          <h3 class="side__title" id="side-a-title"><span class="side__letter">A</span><span>Side A <small>Coffee &amp; pastry · from opening</small></span></h3>
+          <ol class="tracks">
+            <li><span class="tracks__no">A1</span><span class="tracks__name">House drip <small>refills $1.50</small></span><span class="tracks__price">3.75</span></li>
+            <li><span class="tracks__no">A2</span><span class="tracks__name">Espresso</span><span class="tracks__price">3.75</span></li>
+            <li><span class="tracks__no">A3</span><span class="tracks__name">Cortado</span><span class="tracks__price">4.75</span></li>
+            <li><span class="tracks__no">A4</span><span class="tracks__name">Cappuccino</span><span class="tracks__price">5.25</span></li>
+            <li><span class="tracks__no">A5</span><span class="tracks__name">Latte <small>hot or iced</small></span><span class="tracks__price">5.75</span></li>
+            <li><span class="tracks__no">A6</span><span class="tracks__name">Pour‑over <small>single origin, ask what’s on</small></span><span class="tracks__price">6.50</span></li>
+            <li><span class="tracks__no">A7</span><span class="tracks__name">Cold brew</span><span class="tracks__price">5.50</span></li>
+            <li class="tracks__hit"><span class="tracks__no">A8</span><span class="tracks__name">Hi‑Fi tonic <small>espresso, tonic, orange peel</small></span><span class="tracks__price">6.50</span></li>
+            <li><span class="tracks__no">A9</span><span class="tracks__name">Chai or matcha latte</span><span class="tracks__price">6.00</span></li>
+            <li><span class="tracks__no">A10</span><span class="tracks__name">Butter croissant</span><span class="tracks__price">4.50</span></li>
+            <li><span class="tracks__no">A11</span><span class="tracks__name">Cardamom bun</span><span class="tracks__price">5.25</span></li>
+            <li><span class="tracks__no">A12</span><span class="tracks__name">Ricotta toast <small>hot honey, black pepper</small></span><span class="tracks__price">11.00</span></li>
+          </ol>
+        </section>
+
+        <section class="side side--b" id="side-b" aria-labelledby="side-b-title">
+          <h3 class="side__title" id="side-b-title"><span class="side__letter">B</span><span>Side B <small>Wine, beer &amp; snacks · after 5 pm</small></span></h3>
+          <ol class="tracks">
+            <li><span class="tracks__no">B1</span><span class="tracks__name">Natural wine by the glass <small>red, white, orange — six open</small></span><span class="tracks__price">14–17</span></li>
+            <li><span class="tracks__no">B2</span><span class="tracks__name">Pét‑nat <small>by the glass</small></span><span class="tracks__price">15.00</span></li>
+            <li><span class="tracks__no">B3</span><span class="tracks__name">Bottles to share</span><span class="tracks__price">from 52</span></li>
+            <li><span class="tracks__no">B4</span><span class="tracks__name">Draft beer <small>two taps, rotating local</small></span><span class="tracks__price">9.00</span></li>
+            <li><span class="tracks__no">B5</span><span class="tracks__name">Pilsner, can</span><span class="tracks__price">7.00</span></li>
+            <li class="tracks__hit"><span class="tracks__no">B6</span><span class="tracks__name">Low‑end spritz <small>zero‑proof, bitter orange</small></span><span class="tracks__price">10.00</span></li>
+            <li><span class="tracks__no">B7</span><span class="tracks__name">Warm olives &amp; almonds</span><span class="tracks__price">8.00</span></li>
+            <li><span class="tracks__no">B8</span><span class="tracks__name">Tinned fish, crackers, butter</span><span class="tracks__price">16.00</span></li>
+            <li><span class="tracks__no">B9</span><span class="tracks__name">Cheese &amp; bread board</span><span class="tracks__price">19.00</span></li>
+          </ol>
+        </section>
+      </div>
+
+      <footer class="lp__credits">
+        <p><strong>Milk</strong> whole, oat or almond (+.75). <strong>Extra shot</strong> +1.50. <strong>Decaf</strong> any drink, no charge.</p>
+        <p><strong>Laptops</strong> welcome until 5 pm. After that, the room is for listening. 21+ to order from Side B.</p>
+        <p class="lp__fine">Prices in US dollars, tax not included. Menu rotates with the seasons.</p>
+      </footer>
+      <span class="lp__ring" aria-hidden="true"></span>
+    </article>
+  </section>
+
+  <!-- LISTENING NIGHTS -->
+  <section class="nights" id="nights" aria-labelledby="nights-title">
+    <div class="nights__intro">
+      <p class="kicker">Listening nights</p>
+      <h2 class="nights__title" id="nights-title">Album Night. <em>Every Wednesday,</em> 8 pm.</h2>
+      <p class="nights__lede">One record, both sides, start to finish. Lights down, phones face‑down, no talking until the run‑out groove. Free to attend — 28 seats, then standing room by the bar.</p>
+      <ul class="nights__rules">
+        <li><span>7:30</span> Doors, drinks from Side B</li>
+        <li><span>8:00</span> Needle drops on Side A</li>
+        <li><span>8:22</span> The flip — two minutes to refill</li>
+        <li><span>9:00</span> Lights up, talk it over</li>
+      </ul>
+    </div>
+
+    <div class="nights__board">
+      <h3 class="nights__subhead" id="schedule-title">Coming up</h3>
+      <ol class="schedule" aria-labelledby="schedule-title" data-schedule>
+        <li class="schedule__row">
+          <p class="schedule__date"><span>Wed</span> Oct 14</p>
+          <p class="schedule__album"><span class="schedule__artist">Marvin Gaye</span> <span class="schedule__title">What’s Going On</span></p>
+          <button class="schedule__pick" type="button" aria-pressed="true" data-night="0">Hold seats</button>
+        </li>
+        <li class="schedule__row">
+          <p class="schedule__date"><span>Wed</span> Oct 21</p>
+          <p class="schedule__album"><span class="schedule__artist">Joni Mitchell</span> <span class="schedule__title">Blue</span></p>
+          <button class="schedule__pick" type="button" aria-pressed="false" data-night="1">Hold seats</button>
+        </li>
+        <li class="schedule__row">
+          <p class="schedule__date"><span>Wed</span> Oct 28</p>
+          <p class="schedule__album"><span class="schedule__artist">Stevie Wonder</span> <span class="schedule__title">Innervisions</span></p>
+          <button class="schedule__pick" type="button" aria-pressed="false" data-night="2">Hold seats</button>
+        </li>
+        <li class="schedule__row">
+          <p class="schedule__date"><span>Wed</span> Nov 4</p>
+          <p class="schedule__album"><span class="schedule__artist">The Notorious B.I.G.</span> <span class="schedule__title">Ready to Die</span></p>
+          <button class="schedule__pick" type="button" aria-pressed="false" data-night="3">Hold seats</button>
+        </li>
+      </ol>
+
+      <div class="stub" aria-labelledby="stub-title">
+        <div class="stub__main">
+          <h3 class="stub__title" id="stub-title">Hold seats by text</h3>
+          <p class="stub__night" data-stub-night>Wed Oct 14 · Marvin Gaye — What’s Going On</p>
+          <div class="stepper">
+            <span class="stepper__label" id="party-label">Seats</span>
+            <button class="stepper__btn" type="button" data-step="-1" aria-label="One fewer seat">−</button>
+            <output class="stepper__value" aria-labelledby="party-label" aria-live="polite" data-party>2</output>
+            <button class="stepper__btn" type="button" data-step="1" aria-label="One more seat">+</button>
+          </div>
+        </div>
+        <div class="stub__tear">
+          <a class="btn btn--signal stub__send" href="sms:+17185550147?&amp;body=Hi%20Halsey%20Hi-Fi%20%E2%80%94%20please%20hold%202%20seats%20for%20Album%20Night%2C%20Wed%20Oct%2014%20(Marvin%20Gaye%2C%20What%E2%80%99s%20Going%20On)." data-stub-link>Text to hold seats</a>
+          <p class="stub__fine">Opens your messages app with the night and seat count filled in. Seats are held until 8 pm. Prefer to call? <a href="tel:+17185550147">(718) 555‑0147</a></p>
+        </div>
+      </div>
+
+      <div class="also">
+        <h3 class="also__title">Also on the dial</h3>
+        <p><strong>Crate Saturday</strong>, 2–5 pm — bring one record from home and we’ll play a side of it on the big system.</p>
+        <p><strong>Sunday Slow Hour</strong>, 6–7 pm — ambient and spiritual jazz before close, coffee half‑lit, voices low.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE SYSTEM -->
+  <section class="system" id="system" aria-labelledby="system-title">
+    <div class="system__intro">
+      <p class="kicker kicker--ink">The system</p>
+      <h2 class="system__title" id="system-title">Turned up just enough to <em>feel it</em> in the floorboards.</h2>
+      <p class="system__lede">Everything plays from vinyl, through a signal path we can name at the counter. No playlists, no shuffle, no ads between tracks.</p>
+    </div>
+    <ol class="path">
+      <li class="path__node"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><circle cx="24" cy="24" r="20"/><circle cx="24" cy="24" r="14" class="path__thin"/><circle cx="24" cy="24" r="6" class="path__fill"/></svg><span class="path__step">01</span><span class="path__name">The record</span><span class="path__desc">Our own crate plus whatever you brought on Saturday</span></li>
+      <li class="path__node"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><rect x="4" y="10" width="40" height="28" rx="3"/><circle cx="20" cy="24" r="10" class="path__thin"/><path d="M38 14 L32 30" class="path__thin"/></svg><span class="path__step">02</span><span class="path__name">Turntable</span><span class="path__desc">Belt‑drive deck on an isolation shelf</span></li>
+      <li class="path__node"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><rect x="8" y="16" width="32" height="20" rx="2"/><path d="M16 16 V8 M24 16 V6 M32 16 V8" class="path__thin"/></svg><span class="path__step">03</span><span class="path__name">Tube phono stage</span><span class="path__desc">Warm, quiet, a little glow behind the bar</span></li>
+      <li class="path__node"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><rect x="3" y="14" width="42" height="20" rx="2"/><path d="M8 22 H28" class="path__thin"/><circle cx="37" cy="24" r="4" class="path__fill"/></svg><span class="path__step">04</span><span class="path__name">Receiver</span><span class="path__desc">A restored 1970s silver‑face, about 60 watts a side</span></li>
+      <li class="path__node"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><rect x="10" y="4" width="28" height="40" rx="2"/><path d="M16 12 h16 l-4 8 h-8 z" class="path__thin"/><circle cx="24" cy="32" r="7" class="path__thin"/></svg><span class="path__step">05</span><span class="path__name">Horn speakers</span><span class="path__desc">A pair of big walnut cabinets, aimed at the couch</span></li>
+      <li class="path__node path__node--you"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path d="M10 30 a14 14 0 0 1 28 0" /><rect x="6" y="28" width="8" height="12" rx="3" class="path__fill"/><rect x="34" y="28" width="8" height="12" rx="3" class="path__fill"/></svg><span class="path__step">06</span><span class="path__name">You</span><span class="path__desc">Window seat, couch, or the bar — the sweet spot moves</span></li>
+    </ol>
+    <ul class="rules">
+      <li><span class="rules__no">i.</span> Requests go on paper, at the counter. We play them in the next set.</li>
+      <li><span class="rules__no">ii.</span> The volume rises after 5 pm. Mornings stay quiet enough to read.</li>
+      <li><span class="rules__no">iii.</span> Every record we play is in the bin by the door — ask, and we’ll show you the sleeve.</li>
+    </ul>
+  </section>
+
+  <!-- VISIT -->
+  <section class="visit" id="visit" aria-labelledby="visit-title">
+    <div class="visit__main">
+      <p class="kicker">Visit</p>
+      <h2 class="visit__title" id="visit-title">412 Halsey Street</h2>
+      <p class="visit__sub">At Stuyvesant Ave, Bedford‑Stuyvesant, Brooklyn, NY 11233</p>
+      <p class="visit__status" data-status-long><span class="led" aria-hidden="true"></span><span data-status-text>Open daily from 7 am</span></p>
+      <div class="visit__actions">
+        <a class="btn btn--signal" href="https://www.google.com/maps/search/?api=1&amp;query=412+Halsey+St+Brooklyn+NY+11233" rel="noopener" target="_blank">Get directions</a>
+        <a class="btn btn--ghost" href="tel:+17185550147">Call (718) 555‑0147</a>
+      </div>
+      <ul class="visit__contact">
+        <li><span>Email</span> <a href="mailto:hello@halseyhifi.nyc">hello@halseyhifi.nyc</a></li>
+        <li><span>Train</span> A or C to Utica Av, then a 7‑minute walk north on Stuyvesant</li>
+        <li><span>Bus</span> B26 on Halsey St, stop at Stuyvesant Ave</li>
+      </ul>
+    </div>
+
+    <div class="hours">
+      <h3 class="hours__title">Hours</h3>
+      <table class="hours__table" data-hours>
+        <caption class="visually-hidden">Opening hours. Wine and beer are served from 5 pm.</caption>
+        <tbody>
+          <tr data-d="1"><th scope="row">Monday</th><td>7 am – 10 pm</td></tr>
+          <tr data-d="2"><th scope="row">Tuesday</th><td>7 am – 10 pm</td></tr>
+          <tr data-d="3"><th scope="row">Wednesday</th><td>7 am – 10 pm <span class="hours__tag">Album Night</span></td></tr>
+          <tr data-d="4"><th scope="row">Thursday</th><td>7 am – 10 pm</td></tr>
+          <tr data-d="5"><th scope="row">Friday</th><td>7 am – midnight</td></tr>
+          <tr data-d="6"><th scope="row">Saturday</th><td>8 am – midnight</td></tr>
+          <tr data-d="0"><th scope="row">Sunday</th><td>8 am – 8 pm</td></tr>
+        </tbody>
+      </table>
+      <p class="hours__note">Side B — wine &amp; beer — pours from 5 pm every day.</p>
+    </div>
+
+    <figure class="map">
+      <svg viewBox="0 0 400 300" role="img" aria-labelledby="map-title" focusable="false">
+        <title id="map-title">Street map: Halsey Hi-Fi is on Halsey Street at the corner of Stuyvesant Avenue, one block east of Lewis Avenue. Hancock Street is one block north, Macon Street one block south.</title>
+        <rect class="map__bg" width="400" height="300"/>
+        <g class="map__blocks">
+          <rect x="0" y="0" width="118" height="62"/><rect x="146" y="0" width="118" height="62"/><rect x="292" y="0" width="108" height="62"/>
+          <rect x="0" y="90" width="118" height="80"/><rect x="146" y="90" width="118" height="80"/><rect x="292" y="90" width="108" height="80"/>
+          <rect x="0" y="198" width="118" height="102"/><rect x="146" y="198" width="118" height="102"/><rect x="292" y="198" width="108" height="102"/>
+        </g>
+        <rect class="map__halsey" x="0" y="170" width="400" height="28"/>
+        <g class="map__labels">
+          <text x="20" y="81">Hancock St</text>
+          <text class="map__strong" x="20" y="189">Halsey St</text>
+          <text x="20" y="289">Macon St</text>
+          <text transform="translate(127 12) rotate(90)">Lewis Ave</text>
+          <text transform="translate(273 12) rotate(90)">Stuyvesant Ave</text>
+        </g>
+        <g class="map__pin" transform="translate(278 168)">
+          <circle r="22" class="map__pulse"/>
+          <circle r="13"/>
+          <circle r="4" class="map__pin-hole"/>
+        </g>
+        <text class="map__you" x="256" y="224">Halsey Hi‑Fi</text>
+        <text class="map__north" x="386" y="24">N ↑</text>
+      </svg>
+      <figcaption>Not to scale. Corner of Halsey &amp; Stuyvesant.</figcaption>
+    </figure>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer__inner">
+    <p class="footer__signoff">Thanks for <em>listening.</em></p>
+    <p class="footer__brand">Halsey Hi‑Fi</p>
+    <p class="footer__credits">Coffee, records &amp; natural wine. 412 Halsey St, Brooklyn, NY 11233 · <a href="tel:+17185550147">(718) 555‑0147</a> · <a href="mailto:hello@halseyhifi.nyc">hello@halseyhifi.nyc</a></p>
+    <p class="footer__concept">A design concept. Halsey Hi‑Fi is a fictional business.</p>
+    <p class="footer__links"><a href="../index.html#work">← All flagship concepts</a> <a href="../index.html">Full portfolio</a></p>
+  </div>
+</footer>
+
+<nav class="dock" aria-label="Quick actions">
+  <a class="dock__item" href="tel:+17185550147"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.6 3.5 9 3l1.6 4.2-2 1.4a12 12 0 0 0 6.8 6.8l1.4-2L21 15l-.5 2.4A2.5 2.5 0 0 1 18 19.5 15.5 15.5 0 0 1 4.5 6 2.5 2.5 0 0 1 6.6 3.5Z"/></svg>Call</a>
+  <a class="dock__item" href="https://www.google.com/maps/search/?api=1&amp;query=412+Halsey+St+Brooklyn+NY+11233" rel="noopener" target="_blank"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21s-6.5-6-6.5-11a6.5 6.5 0 0 1 13 0c0 5-6.5 11-6.5 11Z"/><circle cx="12" cy="10" r="2.3"/></svg>Directions</a>
+  <a class="dock__item dock__item--main" href="#menu"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></svg>Menu</a>
+</nav>
+
+<script src="main.js" defer></script>
+</body>
+</html>

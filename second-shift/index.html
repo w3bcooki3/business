@@ -2,17 +2,26 @@
 <html lang="en" data-shift="day">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Second Shift — Coffee by Day, Amaro by Night · Long Island City</title>
 <meta name="description" content="A café and amaro bar in a former printing plant two blocks from Court Square. First shift 7–5: coffee and laptops. Second shift 5–midnight: spritzes, natural wine, vinyl Thursdays.">
 <meta name="theme-color" content="#f3efe6">
+<meta property="og:type" content="website">
 <meta property="og:title" content="Second Shift — Long Island City, Queens">
 <meta property="og:description" content="Coffee by day. Amaro by night. 7am to midnight, every day.">
-<meta property="og:image" content="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1600&q=80">
+<meta property="og:image" content="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&amp;fit=crop&amp;w=1200&amp;h=630&amp;q=75">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23ff5a1f'/%3E%3Ctext x='32' y='44' font-size='30' font-weight='800' text-anchor='middle' fill='%23161210' font-family='Arial'%3E2%2F%3C/text%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+<script>
+/* Pick day or night before first paint, from New York time (night = 5 pm – 7 am). */
+(function () {
+  try {
+    var h = +new Intl.DateTimeFormat('en-US', { timeZone: 'America/New_York', hour: 'numeric', hour12: false }).format(new Date()) % 24;
+    document.documentElement.setAttribute('data-shift', (h >= 17 || h < 7) ? 'night' : 'day');
+  } catch (e) {}
+})();
+</script>
+<link rel="preload" href="fonts/bricolage-grotesque-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="sitemenu.css">
 <script type="application/ld+json">
@@ -21,10 +30,18 @@
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<div class="grain" aria-hidden="true"></div>
+
+<svg class="sprite" aria-hidden="true" focusable="false">
+  <symbol id="i-arrow" viewBox="0 0 48 32"><path d="M0 16h42M28 2l14 14-14 14" fill="none" stroke="currentColor" stroke-width="6"/></symbol>
+  <symbol id="i-out" viewBox="0 0 16 16"><path d="M5 3h8v8M13 3 3 13" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><path d="M12 1.5v3M12 19.5v3M1.5 12h3M19.5 12h3M4.6 4.6l2.1 2.1M17.3 17.3l2.1 2.1M4.6 19.4l2.1-2.1M17.3 6.7l2.1-2.1" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z" fill="currentColor"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 22s7-6.5 7-12.2A7 7 0 0 0 5 9.8C5 15.5 12 22 12 22Z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="2.6" fill="currentColor"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.6 2.8 9.4 6c.5.6.5 1.4 0 2L8 9.6a12 12 0 0 0 6.4 6.4l1.6-1.4c.6-.5 1.4-.5 2 0l3.2 2.8c.6.5.6 1.4.1 2l-1.6 1.9c-.6.7-1.6 1-2.5.7A19 19 0 0 1 2 5.8c-.3-.9 0-1.9.7-2.5L4.6 1.7c.6-.5 1.5-.5 2 .1Z" fill="currentColor"/></symbol>
+</svg>
 
 <header class="head">
-  <a class="mark" href="#top" aria-label="Second Shift home"><b>Second</b><b>Shift</b><span aria-hidden="true">®</span></a>
+  <a class="mark" href="#top"><b>Second</b> <b>Shift</b></a>
   <nav class="nav" aria-label="Main">
     <a href="#menu">Menu</a>
     <a href="#shifts">Two shifts</a>
@@ -32,45 +49,57 @@
     <a href="#space">The space</a>
     <a href="#find">Find us</a>
   </nav>
-  <button class="pill" id="toggle" aria-pressed="false"><span class="pill__dot"></span><span id="pillTxt">First shift</span><span class="pill__sw">Switch</span></button>
+  <div class="switch" role="group" aria-label="Show the site as">
+    <button type="button" data-set="day" aria-pressed="true"><svg class="i" aria-hidden="true"><use href="#i-sun"/></svg>Day</button>
+    <button type="button" data-set="night" aria-pressed="false"><svg class="i" aria-hidden="true"><use href="#i-moon"/></svg>Night</button>
+  </div>
 </header>
 
 <main id="main">
   <section class="hero" id="top" aria-labelledby="h1">
-    <div class="reg reg--tl" aria-hidden="true"></div><div class="reg reg--br" aria-hidden="true"></div>
-    <p class="hero__k"><span class="dayonly">Now running — First shift</span><span class="nightonly">Now running — Second shift</span></p>
+    <span class="reg reg--tl" aria-hidden="true"></span><span class="reg reg--br" aria-hidden="true"></span>
+    <p class="hero__k"><span class="dayonly">Now running — first shift</span><span class="nightonly">Now running — second shift</span></p>
     <h1 id="h1">
       <span class="dayonly">Coffee<br>until five.</span>
       <span class="nightonly">Amaro<br>until twelve.</span>
     </h1>
+    <p class="hero__meta"><span class="status" data-status>Open every day, 7 am – midnight</span><span class="hero__addr">45-12 Davis St · Long Island City</span></p>
     <div class="hero__row">
-      <p class="hero__lede dayonly">Espresso, pastries from a Sunnyside bakery, and long tables built from the plant’s old type cabinets. Laptops welcome until 5&nbsp;pm — then we flip the lights.</p>
-      <p class="hero__lede nightonly">Laptops away. Lights down. Forty bottles of amaro, spritzes on tap, natural wine and small plates until midnight. The press room never really stopped working late.</p>
+      <div class="hero__copy">
+        <p class="hero__lede dayonly">Espresso, pastries from a Sunnyside bakery, and long tables built from the plant’s old type cabinets. Laptops welcome until 5&nbsp;pm — then we flip the lights.</p>
+        <p class="hero__lede nightonly">Laptops away. Lights down. Forty bottles of amaro, spritzes on tap, natural wine and small plates until midnight. The press room never really stopped working late.</p>
+        <p class="hero__cta"><a class="btn" href="#menu"><span class="dayonly">See the day menu</span><span class="nightonly">See the night menu</span></a><a class="btn btn--line" href="#find">Find us</a></p>
+      </div>
       <figure class="hero__img">
-        <img class="dayonly" src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1100&q=80" alt="Two people clinking latte cups over a wooden table" width="1100" height="800">
-        <img class="nightonly" src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1100&q=80" alt="A dim bar with stools and warm low lights" width="1100" height="800">
+        <img class="dayonly" src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&amp;fit=crop&amp;w=1000&amp;h=625&amp;q=72"
+          srcset="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&amp;fit=crop&amp;w=600&amp;h=375&amp;q=72 600w, https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&amp;fit=crop&amp;w=1000&amp;h=625&amp;q=72 1000w, https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&amp;fit=crop&amp;w=1400&amp;h=875&amp;q=72 1400w"
+          sizes="(max-width: 899px) 100vw, 52vw" alt="Two people clinking latte cups over a wooden table" width="1000" height="625" loading="lazy">
+        <img class="nightonly" src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&amp;fit=crop&amp;w=1000&amp;h=625&amp;q=72"
+          srcset="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&amp;fit=crop&amp;w=600&amp;h=375&amp;q=72 600w, https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&amp;fit=crop&amp;w=1000&amp;h=625&amp;q=72 1000w, https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&amp;fit=crop&amp;w=1400&amp;h=875&amp;q=72 1400w"
+          sizes="(max-width: 899px) 100vw, 52vw" alt="A dim bar with stools and warm low lights" width="1000" height="625" loading="lazy">
       </figure>
     </div>
   </section>
 
-  <section class="clock" aria-label="Today's timeline">
-    <div class="clock__labels" aria-hidden="true"><span>07</span><span>10</span><span>13</span><span>17</span><span>20</span><span>24</span></div>
-    <div class="clock__bar" role="img" id="clockBar" aria-label="Open 7 am to midnight">
-      <div class="clock__day"><span>First shift · 7–5</span></div>
-      <div class="clock__night"><span>Second shift · 5–12</span></div>
-      <div class="clock__now" id="clockNow"><b id="clockTime">—</b></div>
+  <section class="clock" aria-labelledby="clock-t">
+    <h2 class="sr" id="clock-t">Today’s two shifts</h2>
+    <div class="clock__bar" id="clockBar" role="img" aria-label="Open 7 am to midnight: first shift 7 am to 5 pm, second shift 5 pm to midnight.">
+      <div class="clock__day"><b>First shift</b><span>7 am – 5 pm</span></div>
+      <div class="clock__night"><b>Second shift</b><span>5 pm – 12</span></div>
+      <div class="clock__now" id="clockNow" hidden><b id="clockTime"></b></div>
     </div>
+    <div class="clock__labels" aria-hidden="true"><span>7a</span><span>10a</span><span>1p</span><span>5p</span><span>8p</span><span>12</span></div>
   </section>
 
   <section class="menu" id="menu" aria-labelledby="menu-t">
     <header class="menu__head">
       <h2 id="menu-t">On the board</h2>
       <div class="seg" role="tablist" aria-label="Choose menu">
-        <button role="tab" id="t-day" aria-controls="m-day" aria-selected="true">Day menu</button>
-        <button role="tab" id="t-night" aria-controls="m-night" aria-selected="false">Night menu</button>
+        <button type="button" role="tab" id="t-day" aria-controls="m-day" aria-selected="true">Day menu <small>7–5</small></button>
+        <button type="button" role="tab" id="t-night" aria-controls="m-night" aria-selected="false" tabindex="-1">Night menu <small>5–12</small></button>
       </div>
     </header>
-    <div class="board" role="tabpanel" id="m-day" aria-labelledby="t-day">
+    <div class="board" role="tabpanel" id="m-day" aria-labelledby="t-day" tabindex="0">
       <div class="board__col">
         <h3>Espresso bar</h3>
         <ul class="list">
@@ -101,7 +130,7 @@
       </div>
       <p class="board__note">Beans from a roaster in Ridgewood, rotated monthly. Oat, almond and whole milk at no extra cost — we don’t charge rent on milk.</p>
     </div>
-    <div class="board" role="tabpanel" id="m-night" aria-labelledby="t-night" hidden>
+    <div class="board" role="tabpanel" id="m-night" aria-labelledby="t-night" tabindex="0" hidden>
       <div class="board__col">
         <h3>Amaro, poured neat</h3>
         <ul class="list">
@@ -138,19 +167,17 @@
 
   <section class="shifts" id="shifts" aria-labelledby="sh-t">
     <h2 id="sh-t" class="sr">Two shifts</h2>
-    <article class="shift shift--day">
-      <p class="num">01</p>
-      <h3>First shift</h3>
-      <p class="hrs">7:00 am – 5:00 pm</p>
+    <article class="shift shift--day" aria-labelledby="sh-day">
+      <p class="num">01 <span>/ 7:00 am – 5:00 pm</span></p>
+      <h3 id="sh-day">First shift</h3>
       <p>Bright, a bit loud, smells like toast. Wi-Fi is fast and the outlets run along every table. Stay as long as you like; we just ask for a new order every couple of hours.</p>
-      <ul><li>Laptops welcome</li><li>Calls in the phone booth, please</li><li>Dogs on the patio</li></ul>
+      <ul class="rules"><li>Laptops welcome</li><li>Calls in the phone booth, please</li><li>Dogs on the patio</li></ul>
     </article>
-    <article class="shift shift--night">
-      <p class="num">02</p>
-      <h3>Second shift</h3>
-      <p class="hrs">5:00 pm – midnight</p>
+    <article class="shift shift--night" aria-labelledby="sh-night">
+      <p class="num">02 <span>/ 5:00 pm – midnight</span></p>
+      <h3 id="sh-night">Second shift</h3>
       <p>At five the overheads go off, the amber sconces come on, and the laptops go into a cubby by the door (we’ll mind it). It’s a bar now. Conversation is the only screen.</p>
-      <ul><li>Laptops away</li><li>Walk-ins only</li><li>21+ after 8 pm</li></ul>
+      <ul class="rules"><li>Laptops away</li><li>Walk-ins only</li><li>21+ after 8 pm</li></ul>
     </article>
   </section>
 
@@ -169,11 +196,18 @@
 
   <section class="space" id="space" aria-labelledby="sp-t">
     <div class="space__imgs">
-      <figure class="a"><img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=900&q=80" alt="A moody café interior with a lit sign" loading="lazy" width="900" height="1100"></figure>
-      <figure class="b"><img src="https://images.unsplash.com/photo-1453614512568-c4024d13c247?auto=format&fit=crop&w=800&q=80" alt="An espresso bar with hanging bulbs and shelves" loading="lazy" width="800" height="600"></figure>
-      <figure class="c"><img src="https://images.unsplash.com/photo-1525610553991-2bede1a236e2?auto=format&fit=crop&w=800&q=80" alt="People talking at tables in a café in the evening" loading="lazy" width="800" height="600"></figure>
+      <figure class="a"><img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&amp;fit=crop&amp;w=800&amp;h=1000&amp;q=70"
+        srcset="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&amp;fit=crop&amp;w=480&amp;h=600&amp;q=70 480w, https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&amp;fit=crop&amp;w=800&amp;h=1000&amp;q=70 800w"
+        sizes="(max-width: 899px) 56vw, 30vw" alt="A moody café interior with a lit sign" loading="lazy" width="800" height="1000"></figure>
+      <figure class="b"><img src="https://images.unsplash.com/photo-1453614512568-c4024d13c247?auto=format&amp;fit=crop&amp;w=640&amp;h=480&amp;q=70"
+        srcset="https://images.unsplash.com/photo-1453614512568-c4024d13c247?auto=format&amp;fit=crop&amp;w=400&amp;h=300&amp;q=70 400w, https://images.unsplash.com/photo-1453614512568-c4024d13c247?auto=format&amp;fit=crop&amp;w=640&amp;h=480&amp;q=70 640w"
+        sizes="(max-width: 899px) 44vw, 24vw" alt="An espresso bar with hanging bulbs and shelves" loading="lazy" width="640" height="480"></figure>
+      <figure class="c"><img src="https://images.unsplash.com/photo-1525610553991-2bede1a236e2?auto=format&amp;fit=crop&amp;w=640&amp;h=480&amp;q=70"
+        srcset="https://images.unsplash.com/photo-1525610553991-2bede1a236e2?auto=format&amp;fit=crop&amp;w=400&amp;h=300&amp;q=70 400w, https://images.unsplash.com/photo-1525610553991-2bede1a236e2?auto=format&amp;fit=crop&amp;w=640&amp;h=480&amp;q=70 640w"
+        sizes="(max-width: 899px) 44vw, 24vw" alt="People talking at tables in a café in the evening" loading="lazy" width="640" height="480"></figure>
     </div>
     <div class="space__text">
+      <p class="eyebrow">Shoots · parties · offsites</p>
       <h2 id="sp-t">Book the press room.</h2>
       <p>Built in 1931 for a company that printed subway maps and racing forms. Sixteen-foot ceilings, the original steel trusses, and windows facing the Citi tower.</p>
       <dl>
@@ -181,28 +215,57 @@
         <div><dt>Private parties</dt><dd>Up to 80 standing, Sun–Wed nights</dd></div>
         <div><dt>Team offsites</dt><dd>Daytime buyout with unlimited coffee</dd></div>
       </dl>
-      <a class="btn" href="mailto:hi@secondshift.cafe?subject=Booking%20the%20press%20room&body=Date%3A%0AType%20of%20event%3A%0AHeadcount%3A">Email about the space</a>
+      <a class="btn" href="mailto:hi@secondshift.cafe?subject=Booking%20the%20press%20room&amp;body=Date%3A%0AType%20of%20event%3A%0AHeadcount%3A">Email about the space</a>
+      <p class="space__fine">Opens your email app with a short note to fill in: date, type of event, headcount.</p>
     </div>
   </section>
 
   <section class="find" id="find" aria-labelledby="fd-t">
-    <figure class="find__img"><img src="https://images.unsplash.com/photo-1546436836-07a91091f160?auto=format&fit=crop&w=1800&q=70" alt="The Manhattan skyline at golden hour" loading="lazy" width="1800" height="900"></figure>
+    <figure class="find__img"><img src="https://images.unsplash.com/photo-1546436836-07a91091f160?auto=format&amp;fit=crop&amp;w=1400&amp;h=700&amp;q=70"
+      srcset="https://images.unsplash.com/photo-1546436836-07a91091f160?auto=format&amp;fit=crop&amp;w=700&amp;h=440&amp;q=70 700w, https://images.unsplash.com/photo-1546436836-07a91091f160?auto=format&amp;fit=crop&amp;w=1400&amp;h=700&amp;q=70 1400w, https://images.unsplash.com/photo-1546436836-07a91091f160?auto=format&amp;fit=crop&amp;w=2000&amp;h=1000&amp;q=65 2000w"
+      sizes="100vw" alt="The Manhattan skyline at golden hour" loading="lazy" width="1400" height="700"></figure>
     <div class="find__card">
+      <p class="eyebrow">Find us</p>
       <h2 id="fd-t">45-12 Davis Street</h2>
-      <p>Long Island City, Queens 11101<br>Two blocks from Court Sq — <b>7</b> <b>E</b> <b>M</b> <b>G</b></p>
+      <p>Long Island City, Queens 11101</p>
+      <p class="trains">Two blocks from Court Sq <span class="sr">— 7, E, M and G trains</span><span aria-hidden="true"><b>7</b><b>E</b><b>M</b><b>G</b></span></p>
       <p class="big">Open every day<br>7 am – midnight</p>
-      <p class="status" id="status" aria-live="polite"></p>
-      <p class="links"><a href="tel:+17185550128">(718) 555-0128</a><a href="mailto:hi@secondshift.cafe">hi@secondshift.cafe</a><a href="https://www.google.com/maps/search/?api=1&query=45-12+Davis+St+Long+Island+City+NY+11101" target="_blank" rel="noopener">Map ↗</a></p>
+      <p class="status" data-status>Open every day, 7 am – midnight</p>
+      <div class="find__acts">
+        <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=45-12+Davis+St+Long+Island+City+NY+11101" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg>Directions<span class="sr"> (opens Google Maps)</span></a>
+        <a class="btn btn--line" href="tel:+17185550128"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg>(718) 555-0128</a>
+      </div>
+      <p class="find__mail"><a href="mailto:hi@secondshift.cafe">hi@secondshift.cafe</a></p>
     </div>
   </section>
 </main>
 
 <footer class="foot">
-  <p class="foot__big"><span>7→5</span><span>5→12</span></p>
-  <p class="foot__fine"><span>A design concept. Second Shift is a fictional business.</span><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram ↗</a><a href="../index.html">← All concepts</a></p>
+  <p class="foot__big" aria-hidden="true"><span>7<svg class="i"><use href="#i-arrow"/></svg>5</span><span>5<svg class="i"><use href="#i-arrow"/></svg>12</span></p>
+  <div class="foot__info">
+    <p><b>Second Shift</b><br>45-12 Davis St, Long Island City</p>
+    <p><a href="tel:+17185550128">(718) 555-0128</a><br><a href="mailto:hi@secondshift.cafe">hi@secondshift.cafe</a></p>
+  </div>
+  <p class="foot__fine"><span>A design concept. Second Shift is a fictional business.</span><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram<svg class="i" aria-hidden="true"><use href="#i-out"/></svg></a><a href="../index.html">← All concepts</a></p>
 </footer>
+
+<nav class="dock" aria-label="Quick actions">
+  <a class="dock__a dock__a--p" href="https://www.google.com/maps/search/?api=1&amp;query=45-12+Davis+St+Long+Island+City+NY+11101" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg>Directions</a>
+  <a class="dock__a" href="tel:+17185550128"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg>Call</a>
+  <a class="dock__a" href="#menu">Menu</a>
+</nav>
+
+<script>
+/* Edit hours here: minutes after midnight, New York time (1440 = midnight). Drives "open now", the clock and the mobile menu. */
+window.SITEMENU = {
+  name: "Second Shift", sub: "Coffee by day · amaro by night", bp: 979, nav: ".head .nav", mount: ".switch", mountMode: "after",
+  links: [["#menu", "Food & drink menu"], ["#shifts", "Two shifts"], ["#weekly", "Weekly"], ["#space", "Book the space"], ["#find", "Find us"]],
+  actions: [{ label: "Directions", href: "https://www.google.com/maps/search/?api=1&query=45-12+Davis+St+Long+Island+City+NY+11101", primary: true }, { label: "Call", href: "tel:+17185550128" }],
+  info: ["45-12 Davis St, Long Island City", "Coffee from 7 am · amaro until midnight"],
+  hours: { 0: [420, 1440], 1: [420, 1440], 2: [420, 1440], 3: [420, 1440], 4: [420, 1440], 5: [420, 1440], 6: [420, 1440] }
+};
+</script>
 <script src="main.js"></script>
-<script>window.SITEMENU={"name": "Second Shift", "sub": "Coffee by day · amaro by night", "bp": 980, "nav": ".head .nav", "mount": "#toggle", "mountMode": "after", "links": [["#menu", "The food & drink menu"], ["#shifts", "Two shifts"], ["#weekly", "Weekly"], ["#space", "The space"], ["#find", "Find us"]], "actions": [{"label": "Directions", "href": "https://www.google.com/maps/search/?api=1&query=45-12+Davis+St+Long+Island+City+NY+11101", "primary": true}, {"label": "Call", "href": "tel:+17185550128"}], "info": ["45-12 Davis St, Long Island City", "Coffee from 7 am · amaro until midnight"], "hours": {"0": [420, 1440], "1": [420, 1440], "2": [420, 1440], "3": [420, 1440], "4": [420, 1440], "5": [420, 1440], "6": [420, 1440]}};</script>
 <script src="sitemenu.js"></script>
 </body>
 </html>

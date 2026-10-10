@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 400" role="img" aria-labelledby="t4"><title id="t4">A stack of insurance forms stamped "Approved" next to a phone handset, for prior-authorization help.</title>
+<g transform="rotate(-7 230 220)"><rect x="110" y="70" width="230" height="290" rx="6" fill="#fff" stroke="#CFC6B4" stroke-width="2"/></g>
+<g transform="rotate(3 240 220)"><rect x="120" y="60" width="230" height="290" rx="6" fill="#fff" stroke="#CFC6B4" stroke-width="2"/>
+<rect x="142" y="84" width="120" height="14" rx="3" fill="#1F5A45"/>
+<rect x="142" y="118" width="186" height="8" rx="4" fill="#E2DACB"/><rect x="142" y="136" width="160" height="8" rx="4" fill="#E2DACB"/><rect x="142" y="154" width="176" height="8" rx="4" fill="#E2DACB"/><rect x="142" y="172" width="120" height="8" rx="4" fill="#E2DACB"/><rect x="142" y="204" width="186" height="8" rx="4" fill="#E2DACB"/><rect x="142" y="222" width="150" height="8" rx="4" fill="#E2DACB"/><rect x="142" y="240" width="170" height="8" rx="4" fill="#E2DACB"/>
+<rect x="142" y="272" width="16" height="16" rx="3" fill="none" stroke="#1F5A45" stroke-width="2.5"/><path d="M145 280l4 4 7-8" stroke="#1F5A45" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+<rect x="166" y="276" width="110" height="8" rx="4" fill="#E2DACB"/>
+<path d="M142 318q20-16 30 0t30-4 24 4" stroke="#0F2E24" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+</g>
+<g transform="rotate(-12 250 200)"><rect x="170" y="164" width="170" height="64" rx="10" fill="none" stroke="#B73C27" stroke-width="6"/>
+<text x="255" y="208" text-anchor="middle" font-family="Figtree,Arial,sans-serif" font-size="30" font-weight="900" fill="#B73C27" letter-spacing="2">APPROVED</text></g>
+<g transform="translate(372 120) rotate(18)">
+<path d="M10 0h30q10 0 10 10v28q0 8-8 10l-6 2v120l6 2q8 2 8 10v28q0 10-10 10H10Q0 220 0 200V20Q0 0 10 0z" fill="#1F5A45"/>
+</g>
+<path d="M420 96q30-30 70 0M432 112q18-18 42 0" stroke="#D9503A" stroke-width="5" fill="none" stroke-linecap="round"/>
+</svg>

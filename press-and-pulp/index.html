@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Press &amp; Pulp · Cold-Pressed Juice on Bedford Avenue, Williamsburg</title>
 <meta name="description" content="Cold-pressed juice, pressed every morning at 5:30 on Bedford Avenue. Eight juices, four smoothies, glass bottles you can bring back. No cleanses, no claims.">
 <meta name="theme-color" content="#151412">
@@ -10,9 +10,8 @@
 <meta property="og:description" content="Pressed this morning. Eight juices in glass bottles on Bedford Avenue.">
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23151412'/%3E%3Ccircle cx='32' cy='34' r='16' fill='%23f77f00'/%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
+<link rel="preload" href="fonts/unbounded-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/dm-sans-var.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="sitemenu.css">
 <script type="application/ld+json">
@@ -24,7 +23,7 @@
 
 <header class="hdr" id="top">
   <div class="wrap hdr__in">
-    <a class="logo" href="#top" aria-label="Press and Pulp, home"><span class="logo__dot" aria-hidden="true"></span>Press<i>&amp;</i>Pulp</a>
+    <a class="logo" href="#top"><span class="logo__dot" aria-hidden="true"></span>Press<i>&amp;</i>Pulp</a>
     <nav class="nav" id="nav" aria-label="Main">
       <a href="#wall">The juice wall</a>
       <a href="#smoothies">Smoothies</a>
@@ -39,11 +38,13 @@
 <main id="main">
   <section class="hero">
     <div class="wrap hero__g">
-      <div class="hero__copy">
-        <p class="eyebrow">Cold-pressed juice · Bedford Ave, Williamsburg</p>
+      <div class="hero__head">
+        <p class="eyebrow">Cold-pressed juice · Williamsburg</p>
         <h1>Pressed <span class="hl">this morning.</span> Gone by tonight.</h1>
+      </div>
+      <div class="hero__copy">
         <p class="lede">Every bottle on our wall was pressed at 5:30 am, a few feet from where you’re standing. Eight juices, four smoothies, and no promises that juice will fix your life. It’s just very good juice.</p>
-        <div class="clock" aria-live="polite">
+        <div class="clock">
           <span class="clock__k">Today’s batch</span>
           <b class="clock__v" id="ago">—</b>
           <span class="clock__s" id="agoSub">pressed at 5:30 am</span>
@@ -52,6 +53,10 @@
           <a class="btn btn--ink" href="#wall">See today’s wall</a>
           <a class="btn btn--line" href="#visit">Find us</a>
         </div>
+        <ul class="hero__info">
+          <li><span class="pulse" aria-hidden="true"></span><span data-status>Mon–Fri 7–7 · Sat–Sun 8–6</span></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&amp;query=171+Bedford+Ave+Brooklyn+NY+11211" target="_blank" rel="noopener">171 Bedford Ave<span class="sr"> (opens map in a new tab)</span></a>, by the Bedford Av L stop</li>
+        </ul>
       </div>
       <div class="hero__shelf" aria-hidden="true">
         <div class="shelf" id="heroShelf"></div>
@@ -126,8 +131,8 @@
         <h2 id="bt-t">Bring back five bottles, get a juice.</h2>
         <p class="sub">Rinse them, bring them in, and we’ll stamp your card. Five returns and the next juice is on us. The bottles get sanitized and go back on the wall.</p>
       </div>
-      <div class="card" aria-label="Bottle-return card">
-        <p class="card__t">Bottle-return card</p>
+      <div class="card" role="group" aria-labelledby="card-t">
+        <p class="card__t" id="card-t">Bottle-return card</p>
         <div class="card__dots" id="dots">
           <button type="button" aria-pressed="false" aria-label="Stamp 1"></button>
           <button type="button" aria-pressed="false" aria-label="Stamp 2"></button>
@@ -135,7 +140,8 @@
           <button type="button" aria-pressed="false" aria-label="Stamp 4"></button>
           <button type="button" aria-pressed="false" aria-label="Stamp 5"></button>
         </div>
-        <p class="card__m" id="dotsMsg" aria-live="polite">Tap to try it: 0 of 5</p>
+        <p class="card__m" id="dotsMsg" aria-live="polite">Try it — tap a circle: 0 of 5</p>
+        <p class="card__fine">A demo of the paper card we stamp at the counter.</p>
       </div>
     </div>
   </section>
@@ -146,8 +152,9 @@
         <p class="num">05</p>
         <h2 id="vi-t">171 Bedford Avenue</h2>
         <p class="sub">Between North 7th and North 8th, two minutes from the Bedford Av L stop.</p>
+        <p class="vi__status"><span class="pulse" aria-hidden="true"></span><span data-status>Mon–Fri 7–7 · Sat–Sun 8–6</span></p>
         <div class="hero__btns">
-          <a class="btn btn--ink" href="https://www.google.com/maps/search/?api=1&query=171+Bedford+Ave+Brooklyn+NY+11211">Directions</a>
+          <a class="btn btn--ink" href="https://www.google.com/maps/search/?api=1&amp;query=171+Bedford+Ave+Brooklyn+NY+11211" target="_blank" rel="noopener">Directions<span class="sr"> (opens in a new tab)</span></a>
           <a class="btn btn--line" href="tel:+17185550134">(718) 555-0134</a>
         </div>
       </div>
@@ -169,11 +176,34 @@
 
 <footer class="ft">
   <div class="wrap ft__in">
-    <p class="ft__logo">Press<i>&amp;</i>Pulp</p>
-    <p>171 Bedford Ave, Brooklyn, NY 11211 · <a href="tel:+17185550134">(718) 555-0134</a> · <a href="mailto:hello@pressandpulp.nyc">hello@pressandpulp.nyc</a></p>
+    <div class="ft__brand">
+      <p class="ft__logo">Press<i>&amp;</i>Pulp</p>
+      <p>Cold-pressed every morning at 5:30 on Bedford Avenue.</p>
+    </div>
+    <div>
+      <p class="ft__h">Find us</p>
+      <p>171 Bedford Ave<br>Brooklyn, NY 11211</p>
+    </div>
+    <div>
+      <p class="ft__h">Hours</p>
+      <p>Mon–Fri 7 am – 7 pm<br>Sat–Sun 8 am – 6 pm</p>
+    </div>
+    <div>
+      <p class="ft__h">Talk to us</p>
+      <ul class="ft__links">
+        <li><a href="tel:+17185550134">(718) 555-0134</a></li>
+        <li><a href="mailto:hello@pressandpulp.nyc">hello@pressandpulp.nyc</a></li>
+      </ul>
+    </div>
     <p class="ft__fine">A design concept. Press &amp; Pulp is a fictional business; prices are placeholders. <a href="../index.html">← All concepts</a></p>
   </div>
 </footer>
+
+<nav class="dock" aria-label="Quick actions">
+  <p class="dock__s"><span class="pulse" aria-hidden="true"></span><span data-status>Hours</span></p>
+  <a class="dock__a" href="tel:+17185550134">Call</a>
+  <a class="dock__a dock__a--p" href="https://www.google.com/maps/search/?api=1&amp;query=171+Bedford+Ave+Brooklyn+NY+11211" target="_blank" rel="noopener">Directions<span class="sr"> (opens in a new tab)</span></a>
+</nav>
 
 <script src="main.js"></script>
 <script>window.SITEMENU={"name": "Press & Pulp", "sub": "Cold-pressed juice · Williamsburg", "bp": 1060, "nav": "#nav", "mount": ".hdr__in", "mountMode": "append", "actions": [{"label": "Directions", "href": "https://www.google.com/maps/search/?api=1&query=171+Bedford+Ave+Brooklyn+NY+11211", "primary": true}, {"label": "Call", "href": "tel:+17185550134"}], "info": ["171 Bedford Ave, Williamsburg", "Mon–Fri 7 am–7 pm · Sat–Sun 8 am–6 pm"], "hours": {"0": [480, 1080], "1": [420, 1140], "2": [420, 1140], "3": [420, 1140], "4": [420, 1140], "5": [420, 1140], "6": [480, 1080]}};</script>

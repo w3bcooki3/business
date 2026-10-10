@@ -10,8 +10,8 @@
   var me = list.find(function (c) { return c.id === current; });
   el.className = 'concept-bar';
   el.setAttribute('aria-label', 'Concept switcher');
-  el.innerHTML = '<strong>Concept ' + me.no + ' / 02 · ' + me.name + '</strong><span>Kowal &amp; Daughter website proposal · fictional demo data</span>' +
+  el.innerHTML = '<strong>Concept ' + me.no + ' / 02<span class="concept-bar__name"> · ' + me.name + '</span></strong><span class="concept-bar__note">Kowal &amp; Daughter website proposal · fictional demo data</span>' +
     '<nav aria-label="Concepts">' + list.map(function (c) {
-      return '<a href="../' + c.id + '/index.html"' + (c.id === current ? ' aria-current="page"' : '') + '>' + c.no + '</a>';
+      return '<a href="../' + c.id + '/index.html"' + (c.id === current ? ' aria-current="page"' : '') + ' aria-label="Concept ' + c.no + ', ' + c.name + '">' + c.no + '</a>';
     }).join('') + '<a href="../../index.html#kowal-and-daughter">All concepts</a></nav>';
 })();

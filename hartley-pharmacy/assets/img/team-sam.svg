@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="p"><title id="p">Illustrated portrait of Sam Weintraub</title>
+<rect width="240" height="240" fill="#E4EFE8"/>
+<circle cx="120" cy="250" r="120" fill="#fff" opacity=".45"/>
+
+<path d="M40 240q0-70 80-72q80 2 80 72z" fill="#fff"/>
+<path d="M40 240q0-70 80-72q80 2 80 72z" fill="#fff"/><path d="M104 172l16 40 16-40q-16 8-32 0z" fill="#8FB7A3"/><path d="M120 212v28" stroke="#DDD5C6" stroke-width="2"/><path d="M84 182l26 58M156 182l-26 58" stroke="#E6DED0" stroke-width="3"/><rect x="146" y="206" width="26" height="6" rx="2" fill="#1F5A45"/>
+<path d="M104 150h32v26q-16 12-32 0z" fill="#F1C9A5"/>
+<ellipse cx="120" cy="112" rx="40" ry="46" fill="#F1C9A5"/>
+<ellipse cx="80" cy="116" rx="7" ry="10" fill="#F1C9A5"/><ellipse cx="160" cy="116" rx="7" ry="10" fill="#F1C9A5"/>
+<path d="M82 118q4 52 38 52t38-52q-6 22-38 22t-38-22z" fill="#B5ADA2"/>
+<circle cx="105" cy="112" r="4" fill="#1E2A25"/><circle cx="135" cy="112" r="4" fill="#1E2A25"/>
+<path d="M98 100q7-5 14 0M128 100q7-5 14 0" stroke="#1E2A25" stroke-width="3" fill="none" stroke-linecap="round" opacity=".7"/>
+<path d="M108 134q12 10 24 0" stroke="#1E2A25" stroke-width="3.2" fill="none" stroke-linecap="round"/>
+<circle cx="96" cy="126" r="6" fill="#D9503A" opacity=".18"/><circle cx="144" cy="126" r="6" fill="#D9503A" opacity=".18"/>
+<path d="M80 100q2-24 14-32M160 100q-2-24-14-32" stroke="#9C948A" stroke-width="10" fill="none" stroke-linecap="round"/>
+<g fill="none" stroke="#1E2A25" stroke-width="3"><rect x="91" y="102" width="26" height="20" rx="8"/><rect x="123" y="102" width="26" height="20" rx="8"/><path d="M117 110h6M91 108l-10-4M149 108l10-4"/></g>
+</svg>

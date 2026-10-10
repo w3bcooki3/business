@@ -30,11 +30,12 @@
 html.sm-lock,html.sm-lock body{overflow:hidden}
 @media (prefers-reduced-motion:reduce){.sm,.sm__list li{transition:none}}
 
-/* site theme */
+/* site theme: Orchard Street */
 :root{--sm-bg:#e8dcc4;--sm-fg:#1d1a16;--sm-mut:#5f5546;--sm-line:rgba(29,26,22,.18);--sm-line2:rgba(29,26,22,.4);--sm-acc:#1f3a5f;--sm-accfg:#e8dcc4;
 --sm-disp:"Libre Caslon Display",Georgia,serif;--sm-body:"Courier Prime","Courier New",monospace;--sm-r:0px;
---sm-btn-bg:#1f3a5f;--sm-btn-fg:#e8dcc4;--sm-btn-bd:#1f3a5f;--sm-btn-font:700 13px/1 "Courier Prime","Courier New",monospace;--sm-btn-tt:uppercase;--sm-btn-ls:.04em;
---sm-link-font:400 38px/1.05 "Libre Caslon Display",Georgia,serif;--sm-name-font:400 26px/1 "Libre Caslon Display",Georgia,serif;--sm-chip:#d9c7a5;--sm-open:#1f3a5f;}
-@media (max-width:1000px){.sm-btn{display:inline-flex}.navbtn{display:none!important}}
-@media (max-width:360px){.sm-btn__l{display:none}.sm-btn{padding:0;width:46px;justify-content:center}}
-.head__main .sm-btn{align-self:center}
+--sm-btn-bg:#1f3a5f;--sm-btn-fg:#e8dcc4;--sm-btn-bd:#1f3a5f;--sm-btn-font:700 14px/1 "Courier Prime","Courier New",monospace;--sm-btn-tt:uppercase;--sm-btn-ls:.06em;
+--sm-link-font:400 36px/1.05 "Libre Caslon Display",Georgia,serif;--sm-name-font:400 24px/1 "Libre Caslon Display",Georgia,serif;--sm-chip:#d9c7a5;--sm-open:#1f3a5f;}
+.sm__a{text-transform:uppercase;letter-spacing:.06em;font-size:14px}
+.sm__info{font-family:"Libre Caslon Text",Georgia,serif;font-size:15.5px}
+@media (max-width:1099px){.sm-btn{display:inline-flex}}
+@media (max-width:359px){.sm-btn__l{display:none}.sm-btn{padding:0;width:46px;justify-content:center}}

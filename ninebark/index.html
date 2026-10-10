@@ -2,17 +2,18 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Ninebark Bakehouse — Naturally Leavened Bread, Prospect Heights</title>
 <meta name="description" content="Thirty-six-hour sourdough from New York State grain, some of it milled in the back room. Open Wednesday to Sunday from 7 am until the shelves are empty. 642 Vanderbilt Avenue.">
 <meta name="theme-color" content="#efe9df">
+<meta property="og:type" content="website">
 <meta property="og:title" content="Ninebark Bakehouse — Prospect Heights">
 <meta property="og:description" content="Naturally leavened bread from New York grain. Wed–Sun, 7 am until sold out.">
-<meta property="og:image" content="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1600&q=80">
+<meta property="og:image" content="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&amp;fit=crop&amp;w=1200&amp;h=630&amp;q=75">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23efe9df'/%3E%3Cellipse cx='32' cy='36' rx='22' ry='16' fill='%23312a24'/%3E%3Cpath d='M18 32q14-8 28 0' stroke='%23efe9df' stroke-width='2.5' fill='none'/%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..700,0..100,0..1;1,9..144,300..700,0..100,0..1&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="preload" href="fonts/fraunces-soft.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/karla.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="sitemenu.css">
 <script type="application/ld+json">
@@ -23,8 +24,8 @@
 <a class="skip" href="#main">Skip to content</a>
 
 <header class="head">
-  <a class="logo" href="#top" aria-label="Ninebark Bakehouse home">
-    <svg viewBox="0 0 48 48" aria-hidden="true"><ellipse cx="24" cy="27" rx="19" ry="13" fill="currentColor"/><path d="M12 23q12-7 24 0M15 29q9-5 18 0" stroke="var(--flour)" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+  <a class="logo" href="#top">
+    <svg viewBox="0 0 48 48" aria-hidden="true"><ellipse cx="24" cy="27" rx="19" ry="13" fill="currentColor"/><path d="M12 23q12-7 24 0M15 29q9-5 18 0" stroke="#efe9df" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
     <span>Ninebark<small>Bakehouse</small></span>
   </a>
   <nav class="nav" id="nav" aria-label="Main">
@@ -34,136 +35,238 @@
     <a href="#share">Bread share</a>
     <a href="#visit">Visit</a>
   </nav>
-  <p class="head__status" id="headStatus">—</p>
-  <button class="nav-btn" aria-expanded="false" aria-controls="nav"><span class="sr">Menu</span><i></i><i></i></button>
+  <p class="head__status status" data-status><span class="dot" aria-hidden="true"></span><span data-status-txt>Wed–Sun · 7 am till sold out</span></p>
+  <div class="head__menu"></div>
 </header>
 
 <main id="main">
+  <!-- Hero -->
   <section class="hero" id="top" aria-labelledby="h1">
-    <h1 id="h1"><span>Bread takes</span> <span><em>time.</em></span> <span>We give it</span> <span>thirty-six hours.</span></h1>
+    <h1 id="h1"><span class="l">Bread takes <em>time.</em></span> <span class="l">We give it thirty-six hours.</span></h1>
     <div class="hero__grid">
-      <figure class="hero__img"><img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1600&q=80" alt="Dark-crusted rustic loaves beside stalks of wheat" width="1600" height="1100"></figure>
+      <figure class="hero__img">
+        <picture>
+          <source media="(max-width: 599px)" srcset="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&amp;fit=crop&amp;w=700&amp;h=525&amp;q=70 700w, https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&amp;fit=crop&amp;w=1100&amp;h=825&amp;q=60 1100w" sizes="100vw" width="700" height="525">
+          <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&amp;fit=crop&amp;w=1400&amp;h=875&amp;q=70"
+               srcset="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&amp;fit=crop&amp;w=900&amp;h=563&amp;q=70 900w, https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&amp;fit=crop&amp;w=1400&amp;h=875&amp;q=70 1400w, https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&amp;fit=crop&amp;w=2000&amp;h=1250&amp;q=60 2000w"
+               sizes="(min-width: 900px) 64vw, 100vw" width="1400" height="875" fetchpriority="high"
+               alt="Dark-crusted rustic loaves beside stalks of wheat">
+        </picture>
+      </figure>
       <div class="hero__side">
-        <p>Naturally leavened loaves from New York State rye, Red Fife and spelt — some of it milled in our back room on a stone mill the size of a washing machine.</p>
-        <p class="hero__meta">Wednesday – Sunday<br>7 am until it’s gone<br><span>(usually around two)</span></p>
-        <a class="btn" href="#oven">What’s out right now</a>
+        <p class="hero__meta">Wednesday – Sunday<br>7 am until it’s gone <span>(usually around two)</span></p>
+        <p class="hero__lede">Naturally leavened loaves from New York State rye, Red Fife and spelt — some of it milled in our back room on a stone mill the size of a washing machine.</p>
+        <div class="hero__acts">
+          <a class="btn" href="#share">Reserve loaves</a>
+          <a class="btn btn--line" href="#oven">What’s out now</a>
+        </div>
+        <p class="hero__addr">642 Vanderbilt Ave, Prospect Heights · <a href="https://www.google.com/maps/search/?api=1&amp;query=642+Vanderbilt+Ave+Brooklyn+NY+11238" target="_blank" rel="noopener">Directions<span class="sr"> (opens Google Maps)</span></a></p>
       </div>
     </div>
   </section>
 
+  <!-- Oven schedule -->
   <section class="oven" id="oven" aria-labelledby="ov-t">
     <header class="oven__head">
+      <p class="kick">The day’s bake schedule</p>
       <h2 id="ov-t">Out of the oven</h2>
-      <p class="oven__live" id="ovenLive" aria-live="polite">—</p>
+      <p class="oven__live" id="ovenLive" aria-live="polite">First loaves at 7:00, Wednesday to Sunday.</p>
     </header>
-    <div class="track" id="track">
-      <div class="track__line"><span class="track__now" id="trackNow" hidden></span></div>
+    <div class="track">
+      <div class="track__line" aria-hidden="true"><span class="track__now" id="trackNow" hidden></span></div>
       <ol class="bakes" id="bakes">
-        <li data-t="7"><time>7:00</time><b>Country loaf</b><span>First out, still crackling</span></li>
-        <li data-t="7.75"><time>7:45</time><b>Cardamom buns</b><span>Swedish-style, knotted by hand</span></li>
-        <li data-t="8.5"><time>8:30</time><b>Seeded rye</b><span>Danish rugbrød, sliced to order</span></li>
-        <li data-t="9.5"><time>9:30</time><b>Red Fife pan loaf</b><span>Soft enough for kids’ sandwiches</span></li>
-        <li data-t="10.5"><time>10:30</time><b>Focaccia</b><span>Changes with the farmers’ market</span></li>
-        <li data-t="11.5"><time>11:30</time><b>Spelt &amp; honey</b><span>Saturdays and Sundays only</span></li>
-        <li data-t="12.5"><time>12:30</time><b>Last country loaves</b><span>The second bake, if there’s flour left</span></li>
+        <li data-t="7"><time datetime="07:00">7:00</time><div><b>Country loaf</b><span>First out, still crackling</span></div></li>
+        <li data-t="7.75"><time datetime="07:45">7:45</time><div><b>Cardamom buns</b><span>Swedish-style, knotted by hand</span></div></li>
+        <li data-t="8.5"><time datetime="08:30">8:30</time><div><b>Seeded rye</b><span>Danish rugbrød, sliced to order</span></div></li>
+        <li data-t="9.5"><time datetime="09:30">9:30</time><div><b>Red Fife pan loaf</b><span>Soft enough for kids’ sandwiches</span></div></li>
+        <li data-t="10.5"><time datetime="10:30">10:30</time><div><b>Focaccia</b><span>Changes with the farmers’ market</span></div></li>
+        <li data-t="11.5" data-weekend><time datetime="11:30">11:30</time><div><b>Spelt &amp; honey</b><span>Saturdays and Sundays only</span></div></li>
+        <li data-t="12.5"><time datetime="12:30">12:30</time><div><b>Last country loaves</b><span>The second bake, if there’s flour left</span></div></li>
       </ol>
     </div>
   </section>
 
+  <!-- Breads -->
   <section class="breads" id="breads" aria-labelledby="br-t">
     <div class="breads__intro">
+      <p class="kick">Six things, one dough family</p>
       <h2 id="br-t">The breads</h2>
-      <p>Six things from one dough family, every day we’re open (spelt on weekends). Each made with a levain called Gunnar that Hannah carried back from Stockholm in 2015, wrapped in a sweater.</p>
-      <figure><img src="https://images.unsplash.com/photo-1549931319-a545dcf3bc73?auto=format&fit=crop&w=900&q=80" alt="A sourdough loaf cut into slices showing an open crumb" loading="lazy" width="900" height="700"></figure>
+      <p>Every day we’re open (spelt on weekends). Each made with a levain called Gunnar that Hannah carried back from Stockholm in 2015, wrapped in a sweater.</p>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1549931319-a545dcf3bc73?auto=format&amp;fit=crop&amp;w=900&amp;h=675&amp;q=70"
+             srcset="https://images.unsplash.com/photo-1549931319-a545dcf3bc73?auto=format&amp;fit=crop&amp;w=600&amp;h=450&amp;q=70 600w, https://images.unsplash.com/photo-1549931319-a545dcf3bc73?auto=format&amp;fit=crop&amp;w=900&amp;h=675&amp;q=70 900w, https://images.unsplash.com/photo-1549931319-a545dcf3bc73?auto=format&amp;fit=crop&amp;w=1300&amp;h=975&amp;q=60 1300w"
+             sizes="(min-width: 900px) 34vw, 100vw" width="900" height="675" loading="lazy" decoding="async"
+             alt="A sourdough loaf cut into slices showing an open crumb">
+      </figure>
     </div>
     <table class="loaves">
       <caption class="sr">Breads with grain, hydration and price</caption>
       <thead><tr><th scope="col">Loaf</th><th scope="col">Grain &amp; origin</th><th scope="col">Hydration</th><th scope="col">Price</th></tr></thead>
       <tbody>
-        <tr><th scope="row">Country loaf<small>The everyday one</small></th><td>Bread flour, 15% whole wheat — a family stone mill in the Finger Lakes</td><td>78%</td><td>$11</td></tr>
-        <tr><th scope="row">Seeded rye<small>Dense, keeps a week</small></th><td>Whole rye, milled here, sunflower, flax, pumpkin</td><td>90%</td><td>$13</td></tr>
-        <tr><th scope="row">Red Fife pan loaf<small>Toasting bread</small></th><td>Heritage Red Fife, Hudson Valley</td><td>72%</td><td>$10</td></tr>
-        <tr><th scope="row">Spelt &amp; honey<small>Sat &amp; Sun</small></th><td>Whole spelt, Finger Lakes; Catskills honey</td><td>80%</td><td>$12</td></tr>
-        <tr><th scope="row">Focaccia<small>By the slab</small></th><td>Country dough, olive oil, seasonal topping</td><td>85%</td><td>$6</td></tr>
-        <tr><th scope="row">Cardamom bun<small>Kardemummabulle</small></th><td>Enriched dough, cardamom ground each morning</td><td>—</td><td>$5</td></tr>
+        <tr><th scope="row">Country loaf<small>The everyday one</small></th><td>Bread flour, 15% whole wheat — a family stone mill in the Finger Lakes</td><td><span class="lbl">Hydration </span>78%</td><td>$11</td></tr>
+        <tr><th scope="row">Seeded rye<small>Dense, keeps a week</small></th><td>Whole rye, milled here, sunflower, flax, pumpkin</td><td><span class="lbl">Hydration </span>90%</td><td>$13</td></tr>
+        <tr><th scope="row">Red Fife pan loaf<small>Toasting bread</small></th><td>Heritage Red Fife, Hudson Valley</td><td><span class="lbl">Hydration </span>72%</td><td>$10</td></tr>
+        <tr><th scope="row">Spelt &amp; honey<small>Sat &amp; Sun</small></th><td>Whole spelt, Finger Lakes; Catskills honey</td><td><span class="lbl">Hydration </span>80%</td><td>$12</td></tr>
+        <tr><th scope="row">Focaccia<small>By the slab</small></th><td>Country dough, olive oil, seasonal topping</td><td><span class="lbl">Hydration </span>85%</td><td>$6</td></tr>
+        <tr><th scope="row">Cardamom bun<small>Kardemummabulle</small></th><td>Enriched dough, cardamom ground each morning</td><td><span class="lbl">Hydration </span>—</td><td>$5</td></tr>
       </tbody>
     </table>
   </section>
 
+  <!-- Process -->
   <section class="slow" id="slow" aria-labelledby="sl-t">
-    <h2 id="sl-t">Why it takes thirty-six hours</h2>
-    <div class="stepper">
-      <div class="stepper__nav" role="tablist" aria-label="Steps">
-        <button role="tab" aria-selected="true" aria-controls="s1" id="st1"><span>Hour 0</span>Feed</button>
-        <button role="tab" aria-selected="false" aria-controls="s2" id="st2" tabindex="-1"><span>Hour 8</span>Mix</button>
-        <button role="tab" aria-selected="false" aria-controls="s3" id="st3" tabindex="-1"><span>Hour 12</span>Fold</button>
-        <button role="tab" aria-selected="false" aria-controls="s4" id="st4" tabindex="-1"><span>Hour 16</span>Shape</button>
-        <button role="tab" aria-selected="false" aria-controls="s5" id="st5" tabindex="-1"><span>Hour 34</span>Bake</button>
-      </div>
-      <div class="stepper__panels">
-        <div role="tabpanel" id="s1" aria-labelledby="st1"><p class="big">Gunnar gets breakfast.</p><p>At 7 pm the night before the night before, we feed the levain fresh rye flour and water. By morning it has doubled and smells like green apples and yogurt.</p></div>
-        <div role="tabpanel" id="s2" aria-labelledby="st2" hidden><p class="big">Flour, water, patience.</p><p>We mix the flour and water alone and let it rest an hour (bakers call it autolyse) before adding levain and salt. The gluten starts organizing itself without being bullied.</p></div>
-        <div role="tabpanel" id="s3" aria-labelledby="st3" hidden><p class="big">Four folds, by hand.</p><p>Every 45 minutes the dough is stretched and folded over itself in the tub. It goes from shaggy to silky. No mixer arms, no shortcuts.</p></div>
-        <div role="tabpanel" id="s4" aria-labelledby="st4" hidden><p class="big">Shaped, then cold.</p><p>Each loaf is shaped, set in a linen-lined basket and slid into the walk-in at 4 °C for eighteen hours. The cold slows the yeast and lets the bacteria build flavor — the tang, the depth, the long finish.</p></div>
-        <div role="tabpanel" id="s5" aria-labelledby="st5" hidden><p class="big">Into the deck oven.</p><p>Straight from cold to a 260 °C stone deck with steam. Forty-five minutes, until the crust is properly dark. We bake it darker than you think. You’ll thank us.</p></div>
+    <div class="slow__main">
+      <p class="kick">From levain to loaf</p>
+      <h2 id="sl-t">Why it takes thirty-six hours</h2>
+      <div class="stepper">
+        <div class="stepper__nav" role="tablist" aria-label="Steps of the bake">
+          <button type="button" role="tab" aria-selected="true" aria-controls="s1" id="st1"><span><span class="w">Hour </span>0<span class="h" aria-hidden="true">h</span></span>Feed</button>
+          <button type="button" role="tab" aria-selected="false" aria-controls="s2" id="st2" tabindex="-1"><span><span class="w">Hour </span>8<span class="h" aria-hidden="true">h</span></span>Mix</button>
+          <button type="button" role="tab" aria-selected="false" aria-controls="s3" id="st3" tabindex="-1"><span><span class="w">Hour </span>12<span class="h" aria-hidden="true">h</span></span>Fold</button>
+          <button type="button" role="tab" aria-selected="false" aria-controls="s4" id="st4" tabindex="-1"><span><span class="w">Hour </span>16<span class="h" aria-hidden="true">h</span></span>Shape</button>
+          <button type="button" role="tab" aria-selected="false" aria-controls="s5" id="st5" tabindex="-1"><span><span class="w">Hour </span>34<span class="h" aria-hidden="true">h</span></span>Bake</button>
+        </div>
+        <div class="stepper__panels">
+          <div role="tabpanel" id="s1" aria-labelledby="st1" tabindex="0"><p class="big">Gunnar gets breakfast.</p><p>At 7 pm the night before the night before, we feed the levain fresh rye flour and water. By morning it has doubled and smells like green apples and yogurt.</p></div>
+          <div role="tabpanel" id="s2" aria-labelledby="st2" tabindex="0" hidden><p class="big">Flour, water, patience.</p><p>We mix the flour and water alone and let it rest an hour (bakers call it autolyse) before adding levain and salt. The gluten starts organizing itself without being bullied.</p></div>
+          <div role="tabpanel" id="s3" aria-labelledby="st3" tabindex="0" hidden><p class="big">Four folds, by hand.</p><p>Every 45 minutes the dough is stretched and folded over itself in the tub. It goes from shaggy to silky. No mixer arms, no shortcuts.</p></div>
+          <div role="tabpanel" id="s4" aria-labelledby="st4" tabindex="0" hidden><p class="big">Shaped, then cold.</p><p>Each loaf is shaped, set in a linen-lined basket and slid into the walk-in at 4 °C for eighteen hours. The cold slows the yeast and lets the bacteria build flavor — the tang, the depth, the long finish.</p></div>
+          <div role="tabpanel" id="s5" aria-labelledby="st5" tabindex="0" hidden><p class="big">Into the deck oven.</p><p>Straight from cold to a 260 °C stone deck with steam. Forty-five minutes, until the crust is properly dark. We bake it darker than you think. You’ll thank us.</p></div>
+        </div>
       </div>
     </div>
-    <figure class="slow__img"><img src="https://images.unsplash.com/photo-1517686469429-8bdb88b9f907?auto=format&fit=crop&w=1300&q=80" alt="Hands kneading a round of dough on a floured surface" loading="lazy" width="1300" height="900"></figure>
+    <figure class="slow__img">
+      <img src="https://images.unsplash.com/photo-1517686469429-8bdb88b9f907?auto=format&amp;fit=crop&amp;w=800&amp;h=1000&amp;q=70"
+           srcset="https://images.unsplash.com/photo-1517686469429-8bdb88b9f907?auto=format&amp;fit=crop&amp;w=560&amp;h=700&amp;q=70 560w, https://images.unsplash.com/photo-1517686469429-8bdb88b9f907?auto=format&amp;fit=crop&amp;w=800&amp;h=1000&amp;q=70 800w, https://images.unsplash.com/photo-1517686469429-8bdb88b9f907?auto=format&amp;fit=crop&amp;w=1200&amp;h=1500&amp;q=60 1200w"
+           sizes="(min-width: 900px) 34vw, 70vw" width="800" height="1000" loading="lazy" decoding="async"
+           alt="Hands kneading a round of dough on a floured surface">
+    </figure>
   </section>
 
+  <!-- Baker -->
   <section class="hannah" aria-labelledby="hn-t">
-    <figure><img src="https://images.unsplash.com/photo-1587241321921-91a834d6d191?auto=format&fit=crop&w=1000&q=80" alt="A baker behind a warmly lit counter of breads" loading="lazy" width="1000" height="1200"></figure>
-    <div>
+    <figure>
+      <img src="https://images.unsplash.com/photo-1587241321921-91a834d6d191?auto=format&amp;fit=crop&amp;w=900&amp;h=1080&amp;q=70"
+           srcset="https://images.unsplash.com/photo-1587241321921-91a834d6d191?auto=format&amp;fit=crop&amp;w=600&amp;h=720&amp;q=70 600w, https://images.unsplash.com/photo-1587241321921-91a834d6d191?auto=format&amp;fit=crop&amp;w=900&amp;h=1080&amp;q=70 900w, https://images.unsplash.com/photo-1587241321921-91a834d6d191?auto=format&amp;fit=crop&amp;w=1300&amp;h=1560&amp;q=60 1300w"
+           sizes="(min-width: 900px) 38vw, 100vw" width="900" height="1080" loading="lazy" decoding="async"
+           alt="A baker behind a warmly lit counter of breads">
+    </figure>
+    <div class="hannah__txt">
+      <p class="kick">The baker</p>
       <h2 id="hn-t">Hannah Lindqvist</h2>
       <p>Grew up between Gothenburg and Ithaca, apprenticed at a bakery in Stockholm’s Södermalm, then spent two years at a stone mill in Vermont learning what happens to grain before it becomes flour.</p>
       <p>She opened Ninebark — named for the native shrub growing by the door — in 2019, in a former laundromat on Vanderbilt. The washing machines are gone; the terrazzo floor stayed.</p>
-      <p class="sig">“If it’s not sold out by two, I made too much.”</p>
+      <blockquote class="sig"><p>“If it’s not sold out by two, I made too much.”</p></blockquote>
     </div>
   </section>
 
+  <!-- Bread share builder (no form: steppers + day chips compose an email) -->
   <section class="share" id="share" aria-labelledby="sh-t">
     <div class="share__intro">
+      <p class="kick">Skip the line</p>
       <h2 id="sh-t">The weekly bread share</h2>
-      <p>Reserve your loaves for the week and skip the line. Pay at pickup. Pause anytime — just tell us by Monday.</p>
+      <p>Reserve your loaves for the week and they’ll be bagged and waiting. Pay at pickup. Pause anytime — just tell us by Monday.</p>
+      <ol class="share__how">
+        <li>Choose loaves and a pickup day.</li>
+        <li>Tap the button — your email app opens with the order written out.</li>
+        <li>Add the name for the bag and send. We reply to confirm.</li>
+      </ol>
     </div>
-    <form class="share__form" id="shareForm" novalidate>
-      <fieldset class="picks">
-        <legend>Choose your loaves</legend>
-        <div class="pick"><span>Country loaf <small>$11</small></span><div class="qty"><button type="button" data-d="-1" aria-label="Fewer country loaves">−</button><output data-name="Country loaf" data-price="11">0</output><button type="button" data-d="1" aria-label="More country loaves">+</button></div></div>
-        <div class="pick"><span>Seeded rye <small>$13</small></span><div class="qty"><button type="button" data-d="-1" aria-label="Fewer seeded rye">−</button><output data-name="Seeded rye" data-price="13">0</output><button type="button" data-d="1" aria-label="More seeded rye">+</button></div></div>
-        <div class="pick"><span>Red Fife pan loaf <small>$10</small></span><div class="qty"><button type="button" data-d="-1" aria-label="Fewer Red Fife loaves">−</button><output data-name="Red Fife pan loaf" data-price="10">0</output><button type="button" data-d="1" aria-label="More Red Fife loaves">+</button></div></div>
-        <div class="pick"><span>Cardamom buns, 4-pack <small>$18</small></span><div class="qty"><button type="button" data-d="-1" aria-label="Fewer bun packs">−</button><output data-name="Cardamom buns (4)" data-price="18">0</output><button type="button" data-d="1" aria-label="More bun packs">+</button></div></div>
-      </fieldset>
+    <div class="share__tool">
+      <div class="picks" role="group" aria-labelledby="picks-l">
+        <p class="lbl-cap" id="picks-l">1 · Your loaves</p>
+        <div class="pick" data-name="Country loaf" data-price="11"><p><span id="pk1">Country loaf</span> <small>$11</small></p><div class="qty"><button type="button" data-d="-1" aria-label="One fewer country loaf">−</button><span class="qty__n">0</span><button type="button" data-d="1" aria-label="One more country loaf">+</button></div></div>
+        <div class="pick" data-name="Seeded rye" data-price="13"><p><span id="pk2">Seeded rye</span> <small>$13</small></p><div class="qty"><button type="button" data-d="-1" aria-label="One fewer seeded rye">−</button><span class="qty__n">0</span><button type="button" data-d="1" aria-label="One more seeded rye">+</button></div></div>
+        <div class="pick" data-name="Red Fife pan loaf" data-price="10"><p><span id="pk3">Red Fife pan loaf</span> <small>$10</small></p><div class="qty"><button type="button" data-d="-1" aria-label="One fewer Red Fife pan loaf">−</button><span class="qty__n">0</span><button type="button" data-d="1" aria-label="One more Red Fife pan loaf">+</button></div></div>
+        <div class="pick" data-name="Cardamom buns, 4-pack" data-price="18"><p><span id="pk4">Cardamom buns</span> <small>4-pack · $18</small></p><div class="qty"><button type="button" data-d="-1" aria-label="One fewer pack of cardamom buns">−</button><span class="qty__n">0</span><button type="button" data-d="1" aria-label="One more pack of cardamom buns">+</button></div></div>
+      </div>
       <fieldset class="days">
-        <legend>Pickup day</legend>
-        <label><input type="radio" name="day" value="Wednesday"><span>Wed</span></label>
-        <label><input type="radio" name="day" value="Thursday"><span>Thu</span></label>
-        <label><input type="radio" name="day" value="Friday"><span>Fri</span></label>
-        <label><input type="radio" name="day" value="Saturday" checked><span>Sat</span></label>
-        <label><input type="radio" name="day" value="Sunday"><span>Sun</span></label>
+        <legend class="lbl-cap">2 · Pickup day, every week</legend>
+        <div class="days__row">
+          <label><input type="radio" name="day" value="Wednesday"><span>Wed</span></label>
+          <label><input type="radio" name="day" value="Thursday"><span>Thu</span></label>
+          <label><input type="radio" name="day" value="Friday"><span>Fri</span></label>
+          <label><input type="radio" name="day" value="Saturday" checked><span>Sat</span></label>
+          <label><input type="radio" name="day" value="Sunday"><span>Sun</span></label>
+        </div>
+        <p class="days__note" id="dayNote">Ready from 7 am. We hold reserved bags until 1 pm.</p>
       </fieldset>
-      <label class="nm"><span>Your name</span><input name="name" autocomplete="name"></label>
-      <div class="share__total"><p>Weekly total <b id="total">$0</b></p><p class="msg" id="shareMsg" role="status"></p><button type="submit" class="btn">Reserve by email</button></div>
-    </form>
+      <div class="tally">
+        <p class="tally__sum" aria-live="polite"><span id="tallyItems">No loaves yet</span><b id="total">$0</b><small>a week, paid at pickup</small></p>
+        <a class="btn btn--light tally__go" id="shareGo" href="mailto:bread@ninebark.bakery?subject=Weekly%20bread%20share">Email my reservation</a>
+        <p class="tally__msg" id="shareMsg" role="status"></p>
+        <p class="tally__alt">Rather call? <a href="tel:+17185550107">(718) 555-0107</a>, Wed–Sun mornings.</p>
+      </div>
+    </div>
   </section>
 
+  <!-- Visit -->
   <section class="visit" id="visit" aria-labelledby="vs-t">
-    <figure class="visit__img"><img src="https://images.unsplash.com/photo-1517433670267-08bbd4be890f?auto=format&fit=crop&w=1600&q=70" alt="Bakery shelves stacked with baguettes and rolls" loading="lazy" width="1600" height="900"></figure>
+    <figure class="visit__img">
+      <img src="https://images.unsplash.com/photo-1517433670267-08bbd4be890f?auto=format&amp;fit=crop&amp;w=1600&amp;h=610&amp;q=65"
+           srcset="https://images.unsplash.com/photo-1517433670267-08bbd4be890f?auto=format&amp;fit=crop&amp;w=800&amp;h=450&amp;q=65 800w, https://images.unsplash.com/photo-1517433670267-08bbd4be890f?auto=format&amp;fit=crop&amp;w=1600&amp;h=610&amp;q=65 1600w, https://images.unsplash.com/photo-1517433670267-08bbd4be890f?auto=format&amp;fit=crop&amp;w=2400&amp;h=914&amp;q=55 2400w"
+           sizes="100vw" width="1600" height="610" loading="lazy" decoding="async"
+           alt="Bakery shelves stacked with baguettes and rolls">
+    </figure>
     <div class="visit__grid">
-      <h2 id="vs-t">642 Vanderbilt Avenue</h2>
-      <p>At Prospect Place, Prospect Heights<br>2/3 to Grand Army Plaza · B/Q to 7th Ave · B69</p>
-      <p>Wednesday – Sunday · 7 am until sold out<br>Closed Monday &amp; Tuesday (we mill and rest)</p>
-      <p><a href="tel:+17185550107">(718) 555-0107</a> · <a href="mailto:bread@ninebark.bakery">bread@ninebark.bakery</a> · <a href="https://www.google.com/maps/search/?api=1&query=642+Vanderbilt+Ave+Brooklyn+NY+11238" target="_blank" rel="noopener">Map ↗</a></p>
+      <div class="visit__where">
+        <p class="kick">Visit</p>
+        <h2 id="vs-t">642 Vanderbilt Avenue</h2>
+        <p>At Prospect Place, Prospect Heights, Brooklyn 11238</p>
+        <ul class="transit" aria-label="Nearby transit">
+          <li><span class="tr tr--r" aria-hidden="true">2</span><span class="tr tr--r" aria-hidden="true">3</span> Grand Army Plaza</li>
+          <li><span class="tr tr--y" aria-hidden="true">B</span><span class="tr tr--y" aria-hidden="true">Q</span> 7th Ave</li>
+          <li><span class="tr tr--bus" aria-hidden="true">B69</span> bus on Vanderbilt</li>
+        </ul>
+        <div class="visit__acts">
+          <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=642+Vanderbilt+Ave+Brooklyn+NY+11238" target="_blank" rel="noopener">Directions<span class="sr"> (opens Google Maps)</span></a>
+          <a class="btn btn--line" href="tel:+17185550107">Call (718) 555-0107</a>
+        </div>
+        <p class="visit__mail">Questions, wholesale, large orders: <a href="mailto:bread@ninebark.bakery">bread@ninebark.bakery</a></p>
+      </div>
+      <div class="visit__when">
+        <h3>Hours</h3>
+        <p class="status status--block" data-status><span class="dot" aria-hidden="true"></span><span data-status-txt>Wed–Sun · 7 am till sold out</span></p>
+        <table class="hours" id="hours">
+          <caption class="sr">Opening hours</caption>
+          <tbody>
+            <tr data-d="3"><th scope="row">Wednesday</th><td>7 am – sold out</td></tr>
+            <tr data-d="4"><th scope="row">Thursday</th><td>7 am – sold out</td></tr>
+            <tr data-d="5"><th scope="row">Friday</th><td>7 am – sold out</td></tr>
+            <tr data-d="6"><th scope="row">Saturday</th><td>7 am – sold out</td></tr>
+            <tr data-d="0"><th scope="row">Sunday</th><td>7 am – sold out</td></tr>
+            <tr data-d="1" class="is-closed"><th scope="row">Monday</th><td>Closed — we mill</td></tr>
+            <tr data-d="2" class="is-closed"><th scope="row">Tuesday</th><td>Closed — we rest</td></tr>
+          </tbody>
+        </table>
+        <p class="hours__note">Usually sold out around 2 pm. Come early on weekends.</p>
+      </div>
     </div>
   </section>
 </main>
 
 <footer class="foot">
-  <p class="foot__w">Ninebark</p>
-  <p class="foot__fine"><span>A design concept. Ninebark Bakehouse is a fictional business.</span><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram ↗</a><a href="../index.html">← All concepts</a></p>
+  <svg class="foot__w" viewBox="0 0 1000 190" aria-hidden="true" focusable="false"><text x="-8" y="160" textLength="1010" lengthAdjust="spacingAndGlyphs">Ninebark</text></svg>
+  <div class="foot__fine">
+    <p>A design concept. Ninebark Bakehouse is a fictional business.</p>
+    <p class="foot__links"><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram<span class="sr"> (opens in a new tab)</span></a><a href="../index.html">← All concepts</a></p>
+  </div>
 </footer>
+
+<nav class="dock" id="dock" aria-label="Quick actions">
+  <p class="dock__s status" data-status><span class="dot" aria-hidden="true"></span><span data-status-txt>Wed–Sun · 7 am</span></p>
+  <a class="dock__a" href="tel:+17185550107">Call</a>
+  <a class="dock__a dock__a--p" href="https://www.google.com/maps/search/?api=1&amp;query=642+Vanderbilt+Ave+Brooklyn+NY+11238" target="_blank" rel="noopener">Directions<span class="sr"> (opens Google Maps)</span></a>
+</nav>
+
+<script>
+/* Opening hours in New York time, minutes after midnight (0 = Sunday). Drives the open status everywhere. */
+window.SHOP = { hours: { 0: [420, 840], 3: [420, 840], 4: [420, 840], 5: [420, 840], 6: [420, 840] } };
+window.SITEMENU = {"name": "Ninebark", "sub": "Bakehouse · Prospect Heights", "bp": 1100, "nav": "#nav", "mount": ".head__menu", "mountMode": "append",
+  "actions": [{"label": "Reserve loaves", "href": "#share", "primary": true}, {"label": "Directions", "href": "https://www.google.com/maps/search/?api=1&query=642+Vanderbilt+Ave+Brooklyn+NY+11238"}],
+  "info": ["642 Vanderbilt Ave, Prospect Heights", "Wednesday to Sunday · 7 am until it’s gone"], "hours": window.SHOP.hours};
+</script>
 <script src="main.js"></script>
-<script>window.SITEMENU={"name": "Ninebark", "sub": "Bakehouse · Prospect Heights", "bp": 1100, "nav": "#nav", "mount": ".nav-btn", "actions": [{"label": "Reserve loaves", "href": "#share", "primary": true}, {"label": "Directions", "href": "https://www.google.com/maps/search/?api=1&query=642+Vanderbilt+Ave+Brooklyn+NY+11238"}], "info": ["642 Vanderbilt Ave, Prospect Heights", "Wednesday to Sunday · 7 am until it’s gone"], "hours": {"0": [420, 840], "3": [420, 840], "4": [420, 840], "5": [420, 840], "6": [420, 840]}};</script>
 <script src="sitemenu.js"></script>
 </body>
 </html>

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 560" role="img" aria-labelledby="dm-t dm-d"><title id="dm-t">Free delivery zone map</title><desc id="dm-d">Simplified map of lower Manhattan west side. The shaded free-delivery zone runs from the Hudson River east to Broadway and Lafayette Street, and from West 23rd Street south to Canal Street, covering Chelsea below 23rd, the West Village, Greenwich Village and SoHo. Hartley Pharmacy is marked at Bleecker and Grove.</desc>
+<rect width="600" height="560" fill="#F6F1E6"/>
+<path d="M0 0h70q-12 140-6 280t-14 280H0z" fill="#CFE3E6"/>
+<text x="30" y="300" font-family="Figtree,Arial,sans-serif" font-size="14" font-weight="700" fill="#3E6B73" transform="rotate(-90 30 300)" text-anchor="middle" letter-spacing="3">HUDSON RIVER</text>
+<path d="M72 46H560V96L540 150L530 260L548 480H60Q72 280 66 120z" fill="#DCEBE3" stroke="#1F5A45" stroke-width="3" stroke-dasharray="10 6"/>
+<g stroke="#fff" stroke-width="7" stroke-linecap="round" fill="none">
+<path d="M70 46H590"/><path d="M68 150H590"/><path d="M64 360H590"/><path d="M60 480H590"/>
+<path d="M150 0V150"/><path d="M240 0V150L262 220"/><path d="M330 0V150L300 300L300 480"/><path d="M410 0V560"/><path d="M490 0V250"/>
+<path d="M560 0L540 150L530 260L548 560"/><path d="M240 150L200 360L190 560"/>
+<path d="M210 230L440 320"/><path d="M262 220L330 150"/><path d="M180 260H410"/>
+</g>
+<g stroke="#E6DED0" stroke-width="3" fill="none"><path d="M70 98H560M66 205H410M66 300H300M300 420H560M410 205H540"/></g>
+<rect x="430" y="232" width="62" height="40" rx="4" fill="#B7D6C3"/>
+<text x="461" y="290" text-anchor="middle" font-family="Figtree,Arial,sans-serif" font-size="11" font-weight="700" fill="#3C7A61">Washington Sq</text>
+<g font-family="Figtree,Arial,sans-serif" font-size="12.5" font-weight="700" fill="#5D6A64">
+<text x="540" y="40" text-anchor="end">W 23rd St</text><text x="520" y="142" text-anchor="end">W 14th St</text><text x="522" y="354" text-anchor="end">Houston St</text><text x="536" y="474" text-anchor="end">Canal St</text>
+<text x="246" y="20">8th Ave</text><text x="336" y="20">7th Ave</text><text x="416" y="20">6th Ave</text><text x="496" y="20">5th Ave</text>
+<text x="306" y="440" transform="rotate(-90 306 440)">Varick St</text><text x="534" y="536" text-anchor="end">Broadway</text>
+<text x="350" y="300" transform="rotate(21 350 300)" fill="#1F5A45">Bleecker St</text>
+</g>
+<g font-family="Young Serif,Georgia,serif" fill="#0F2E24" text-anchor="middle">
+<text x="300" y="112" font-size="22">Chelsea</text>
+<text x="150" y="190" font-size="22">West Village</text>
+<text x="470" y="196" font-size="20">Greenwich</text><text x="470" y="218" font-size="20">Village</text>
+<text x="470" y="420" font-size="22">SoHo</text>
+<text x="190" y="430" font-size="16" fill="#5D6A64">Hudson Sq</text>
+</g>
+<g><circle cx="318" cy="240" r="13" fill="#D82233"/><text x="318" y="245" text-anchor="middle" font-family="Figtree,Arial,sans-serif" font-size="14" font-weight="800" fill="#fff">1</text></g>
+<g><circle cx="388" cy="272" r="13" fill="#0039A6"/><text x="388" y="277" text-anchor="middle" font-family="Figtree,Arial,sans-serif" font-size="11" font-weight="800" fill="#fff">ACE</text></g>
+<g transform="translate(272 236)">
+<circle r="34" fill="#D9503A" opacity=".18"/>
+<path d="M0 6c-14-16-20-24-20-34a20 20 0 0 1 40 0c0 10-6 18-20 34z" fill="#B73C27" stroke="#fff" stroke-width="3"/>
+<text y="-22" text-anchor="middle" font-family="Young Serif,Georgia,serif" font-size="15" fill="#fff">Rx</text>
+</g>
+<rect x="84" y="500" width="300" height="44" rx="10" fill="#fff" stroke="#DCD3C1"/>
+<rect x="98" y="512" width="30" height="20" rx="4" fill="#DCEBE3" stroke="#1F5A45" stroke-width="2" stroke-dasharray="5 3"/>
+<text x="140" y="527" font-family="Figtree,Arial,sans-serif" font-size="14" font-weight="700" fill="#1E2A25">Free same-day delivery zone</text>
+</svg>

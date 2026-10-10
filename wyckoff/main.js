@@ -7,9 +7,9 @@
       skip: 'Saltar al contenido', emerg: '¿Emergencia?', call: 'Llame al', sub: 'Farmacia Comunitaria',
       n1: 'Resurtidos', n2: 'Transferir', n3: 'Vacunas', n4: 'Servicios', n5: 'Seguros', n6: 'Horario y mapa',
       cta: 'Resurtido por texto', menu: 'Menú', callq: 'Llamar', text: 'Texto', dir: 'Cómo llegar',
-      d1: 'Un texto con su número Rx', d2: 'Llamamos a su farmacia anterior', d3: 'Sin cita', d4: 'Entrega, Narcan, pastilleros',
+      d1: 'Un texto o una llamada', d2: 'Llamamos a su farmacia anterior', d3: 'Sin cita', d4: 'Entrega, Narcan, pastilleros',
       d5: 'Medicaid, Medicare, EPIC', d6: 'Myrtle Ave y Wyckoff',
-      emerg2: 'En una emergencia, llame al 911.', poison: 'Control de Envenenamiento: 1-800-222-1222.', crisis: 'Línea de crisis: llame o envíe un texto al 988.',
+      emerg2: 'En una emergencia, llame al 911.', poison: 'Control de Envenenamiento: <a href="tel:18002221222">1-800-222-1222</a>.', crisis: 'Línea de crisis: llame o envíe un texto al <a href="tel:988">988</a>.', pcs: 'Control de Envenenamiento',
       eyebrow: 'Myrtle–Wyckoff · Bushwick y Ridgewood',
       h1: 'Su farmacia en la esquina de Myrtle y Wyckoff.',
       lede: 'Recetas, vacunas y consejos de verdad de un farmacéutico que sabe su nombre. En inglés, español y polaco, los siete días de la semana.',
@@ -17,15 +17,18 @@
       a3: 'Vacunas sin cita', a3s: 'No necesita cita',
       corner: 'En Wyckoff Ave · Brooklyn 11237',
       p1: 'Entrega gratis en bicicleta', p2: 'Narcan gratis, sin preguntas', p3: 'Presión arterial gratis', p4: 'Precio antes de surtir', p5: 'Abierto 7 días',
-      rh: 'Resurta con un solo texto.', rs: 'Llene esto y su teléfono escribe el mensaje por usted. Le avisamos cuando esté listo, normalmente en unos veinte minutos.',
-      f_rx: 'Número Rx', f_rxh: 'Arriba a la izquierda de la etiqueta. ¿Sin etiqueta? Escriba el nombre del medicamento.',
-      f_nm: 'Nombre en la receta', f_how: '¿Cómo lo quiere?', f_pick: 'Lo recojo yo', f_del: 'Entrega (gratis)',
-      f_send: 'Abrir mis mensajes', f_fine: 'Este sitio no envía nada. No incluya diagnósticos; el número Rx es suficiente.',
+      rh: 'Resurta con un solo texto.', rs: 'Toque algunas opciones y su teléfono escribe el texto por usted. Agregue su número Rx y su nombre, envíelo y le avisamos cuando esté listo, normalmente en unos veinte minutos.',
+      b_n: '¿Cuántas recetas?', f_how: '¿Cómo lo quiere?', f_pick: 'Lo recojo yo', f_del: 'Entrega (gratis)',
+      b_w: '¿Cuándo?', w_asap: 'Lo antes posible', w_late: 'Después de las 5 pm', w_tom: 'Mañana',
+      b_pre: 'Su texto dirá', b_fill: 'Complete las partes <mark>resaltadas</mark> en su teléfono. ¿Sin etiqueta? Escriba el nombre del medicamento.',
+      f_send: 'Abrir mis mensajes', b_call: 'O llame al (718) 555-0163', f_fine: 'Este sitio no recibe ni envía nada. No incluya diagnósticos; el número Rx es suficiente.',
       reply: '¡Recibido! Listo en unos 20 min. Le avisamos por texto. – Luis',
       th: 'Cámbiese a Wyckoff en tres pasos.', ts: 'Llamamos a su farmacia anterior y pasamos todos sus resurtidos. Usted no tiene que hablar con ellos.',
       s1: 'Díganos quién es', s1p: 'Su nombre y fecha de nacimiento.', s2: 'Díganos dónde surte ahora', s2p: 'El nombre de la farmacia y la calle.',
       s3: 'Nosotros hacemos el resto', s3p: 'Le escribimos el mismo día con precios y hora de recogida.',
-      t_nm: 'Su nombre', t_dob: 'Fecha de nacimiento', t_old: 'Farmacia actual', t_go: 'Enviar solicitud',
+      tb_f: '¿Dónde surte ahora?', tf_chain: 'Una farmacia de cadena', tf_local: 'Otra farmacia local', tf_mail: 'Por correo',
+      tb_n: '¿Cuántos medicamentos?', tn_4: '4 o más', tb_r: '¿Cómo lo contactamos?', tr_text: 'Escríbanme', tr_call: 'Llámenme',
+      t_go: 'Enviar texto para transferir', t_call: '¿Prefiere hablar? Llame al (718) 555-0163',
       vh: 'Vacunas. Solo entre.', vs: 'Sin cita, siempre que la farmacia esté abierta. La mayoría cuestan $0 con seguro. Traiga su tarjeta e identificación.',
       v_flu: 'Gripe', v_flu_a: '2 años o más', v_flu_p: 'Cada otoño. Tarda cinco minutos.', v_cov_a: '3 años o más', v_cov_p: 'La fórmula de esta temporada. Revisamos si le corresponde.',
       v_shg: 'Culebrilla', v_shg_a: '50 años o más', v_shg_p: 'Dos dosis, con dos a seis meses de diferencia.',
@@ -54,9 +57,9 @@
       skip: 'Przejdź do treści', emerg: 'Nagły wypadek?', call: 'Dzwoń', sub: 'Apteka Sąsiedzka',
       n1: 'Realizacja recept', n2: 'Przeniesienie', n3: 'Szczepienia', n4: 'Usługi', n5: 'Ubezpieczenia', n6: 'Godziny i mapa',
       cta: 'Recepta SMS-em', menu: 'Menu', callq: 'Zadzwoń', text: 'SMS', dir: 'Dojazd',
-      d1: 'Jeden SMS z numerem Rx', d2: 'Dzwonimy do Twojej apteki', d3: 'Bez umawiania', d4: 'Dostawa, Narcan, organizery leków',
+      d1: 'Jeden SMS lub telefon', d2: 'Dzwonimy do Twojej apteki', d3: 'Bez umawiania', d4: 'Dostawa, Narcan, organizery leków',
       d5: 'Medicaid, Medicare, EPIC', d6: 'Myrtle Ave róg Wyckoff',
-      emerg2: 'W nagłym wypadku dzwoń pod 911.', poison: 'Ośrodek Zatruć: 1-800-222-1222.', crisis: 'Telefon kryzysowy: zadzwoń lub napisz SMS na 988.',
+      emerg2: 'W nagłym wypadku dzwoń pod 911.', poison: 'Ośrodek Zatruć: <a href="tel:18002221222">1-800-222-1222</a>.', crisis: 'Telefon kryzysowy: zadzwoń lub napisz SMS na <a href="tel:988">988</a>.', pcs: 'Ośrodek Zatruć',
       eyebrow: 'Myrtle–Wyckoff · Bushwick i Ridgewood',
       h1: 'Twoja apteka na rogu Myrtle i Wyckoff.',
       lede: 'Recepty, szczepienia i prawdziwa porada od farmaceuty, który zna Cię z imienia. Po angielsku, hiszpańsku i polsku, siedem dni w tygodniu.',
@@ -64,15 +67,18 @@
       a3: 'Szczepienia bez wizyty', a3s: 'Nie trzeba się umawiać',
       corner: 'Róg Wyckoff Ave · Brooklyn 11237',
       p1: 'Darmowa dostawa rowerem', p2: 'Darmowy Narcan, bez pytań', p3: 'Darmowy pomiar ciśnienia', p4: 'Cena przed realizacją', p5: 'Otwarte 7 dni',
-      rh: 'Realizacja recepty jednym SMS-em.', rs: 'Wypełnij to, a telefon sam napisze wiadomość. Damy znać, gdy będzie gotowe, zwykle po około dwudziestu minutach.',
-      f_rx: 'Numer Rx', f_rxh: 'W lewym górnym rogu etykiety. Brak etykiety? Wpisz nazwę leku.',
-      f_nm: 'Imię i nazwisko na recepcie', f_how: 'Jak chcesz odebrać?', f_pick: 'Odbiorę osobiście', f_del: 'Dostawa (gratis)',
-      f_send: 'Otwórz moje wiadomości', f_fine: 'Ta strona niczego nie wysyła. Nie podawaj diagnoz; wystarczy numer Rx.',
+      rh: 'Realizacja recepty jednym SMS-em.', rs: 'Wybierz kilka opcji, a telefon sam napisze SMS. Dopisz numer Rx i imię, wyślij, a damy znać, gdy będzie gotowe, zwykle po około dwudziestu minutach.',
+      b_n: 'Ile recept?', f_how: 'Jak chcesz odebrać?', f_pick: 'Odbiorę osobiście', f_del: 'Dostawa (gratis)',
+      b_w: 'Kiedy?', w_asap: 'Jak najszybciej', w_late: 'Po 17:00', w_tom: 'Jutro',
+      b_pre: 'Twój SMS będzie brzmiał', b_fill: 'Uzupełnij <mark>zaznaczone</mark> miejsca w telefonie. Brak etykiety? Wpisz nazwę leku.',
+      f_send: 'Otwórz moje wiadomości', b_call: 'Albo zadzwoń: (718) 555-0163', f_fine: 'Ta strona niczego nie zbiera ani nie wysyła. Nie podawaj diagnoz; wystarczy numer Rx.',
       reply: 'Mamy! Gotowe za ok. 20 min. Napiszemy SMS. – Luis',
       th: 'Przejdź do Wyckoff w trzech krokach.', ts: 'Dzwonimy do Twojej dotychczasowej apteki i przenosimy wszystkie recepty. Nie musisz z nimi rozmawiać.',
       s1: 'Powiedz nam, kim jesteś', s1p: 'Imię, nazwisko i data urodzenia.', s2: 'Powiedz, gdzie realizujesz recepty', s2p: 'Nazwa apteki i ulica.',
       s3: 'Resztą zajmiemy się my', s3p: 'Tego samego dnia piszemy z cenami i godziną odbioru.',
-      t_nm: 'Imię i nazwisko', t_dob: 'Data urodzenia', t_old: 'Obecna apteka', t_go: 'Wyślij prośbę',
+      tb_f: 'Gdzie realizujesz recepty teraz?', tf_chain: 'Apteka sieciowa', tf_local: 'Inna lokalna apteka', tf_mail: 'Apteka wysyłkowa',
+      tb_n: 'Ile leków?', tn_4: '4 lub więcej', tb_r: 'Jak się z Tobą skontaktować?', tr_text: 'SMS zwrotny', tr_call: 'Zadzwońcie',
+      t_go: 'Wyślij SMS w sprawie przeniesienia', t_call: 'Wolisz porozmawiać? Zadzwoń: (718) 555-0163',
       vh: 'Szczepienia. Po prostu wejdź.', vs: 'Bez umawiania, zawsze gdy apteka jest otwarta. Większość kosztuje $0 z ubezpieczeniem. Weź kartę i dokument.',
       v_flu: 'Grypa', v_flu_a: 'Od 2 lat', v_flu_p: 'Co jesień. Trwa pięć minut.', v_cov_a: 'Od 3 lat', v_cov_p: 'Szczepionka na ten sezon. Sprawdzimy, czy Ci przysługuje.',
       v_shg: 'Półpasiec', v_shg_a: 'Od 50 lat', v_shg_p: 'Dwie dawki w odstępie od dwóch do sześciu miesięcy.',
@@ -98,10 +104,43 @@
       tr: 'Metro:', bus: 'Autobus:'
     }
   };
+  /* message templates; B marks a blank the customer fills in on their own phone */
+  var B = '\u0000';
+  function rxList(n) { var a = []; for (var i = 0; i < n; i++) a.push(B); return a.join(', '); }
   var STATUS = {
-    en: { open: 'Open now · until ', shut: 'Closed · opens ', today: 'today at ', tom: 'tomorrow at ', sign: ['OPEN', 'CLOSED'], am: ' am', pm: ' pm', msg: function (rx, nm, del) { return 'Hi, refill please. Rx #' + (rx || '…') + '. Name: ' + (nm || '…') + '. ' + (del ? 'Please deliver it.' : 'I’ll pick it up.'); }, tr: function (a, b, c) { return 'Hi, I’d like to transfer my prescriptions to Wyckoff. Name: ' + a + '. DOB: ' + b + '. Current pharmacy: ' + c + '.'; } },
-    es: { open: 'Abierto · hasta las ', shut: 'Cerrado · abre ', today: 'hoy a las ', tom: 'mañana a las ', sign: ['ABIERTO', 'CERRADO'], am: ' am', pm: ' pm', msg: function (rx, nm, del) { return 'Hola, resurtido por favor. Rx #' + (rx || '…') + '. Nombre: ' + (nm || '…') + '. ' + (del ? 'Por favor, entréguenlo.' : 'Lo recojo yo.'); }, tr: function (a, b, c) { return 'Hola, quiero transferir mis recetas a Wyckoff. Nombre: ' + a + '. Fecha de nacimiento: ' + b + '. Farmacia actual: ' + c + '.'; } },
-    pl: { open: 'Otwarte · do ', shut: 'Zamknięte · otwieramy ', today: 'dziś o ', tom: 'jutro o ', sign: ['OTWARTE', 'ZAMKNIĘTE'], h24: true, msg: function (rx, nm, del) { return 'Dzień dobry, proszę o realizację. Rx #' + (rx || '…') + '. Imię i nazwisko: ' + (nm || '…') + '. ' + (del ? 'Proszę o dostawę.' : 'Odbiorę osobiście.'); }, tr: function (a, b, c) { return 'Dzień dobry, chcę przenieść recepty do Wyckoff. Imię i nazwisko: ' + a + '. Data urodzenia: ' + b + '. Obecna apteka: ' + c + '.'; } }
+    en: {
+      open: 'Open now · until ', shut: 'Closed · opens ', today: 'today at ', tom: 'tomorrow at ', sign: ['OPEN', 'CLOSED'], am: ' am', pm: ' pm', less: 'One fewer prescription', more: 'One more prescription',
+      msg: function (n, how, when) {
+        var t = { asap: how === 'del' ? ' as soon as you can.' : ' as soon as it’s ready.', late: ' after 5 pm.', tom: ' tomorrow.' }[when];
+        return 'Hi, refill please. Rx #: ' + rxList(n) + '. Name: ' + B + '. ' + (how === 'del' ? 'Please deliver it' + t + ' Address: ' + B + '.' : 'I’ll pick it up' + t);
+      },
+      tr: function (from, n, reply) {
+        return 'Hi, I’d like to transfer my prescriptions to Wyckoff. I fill at ' + { chain: 'a chain drugstore', local: 'another local pharmacy', mail: 'a mail-order pharmacy' }[from] + ' now: ' + B + '. ' +
+          { 1: 'It’s 1 medicine.', 2: 'It’s 2–3 medicines.', 4: 'It’s 4 or more medicines.' }[n] + ' Name: ' + B + '. Date of birth: ' + B + '. ' + (reply === 'call' ? 'Please call me.' : 'Please text me back.');
+      }
+    },
+    es: {
+      open: 'Abierto · hasta las ', shut: 'Cerrado · abre ', today: 'hoy a las ', tom: 'mañana a las ', sign: ['ABIERTO', 'CERRADO'], am: ' am', pm: ' pm', less: 'Una receta menos', more: 'Una receta más',
+      msg: function (n, how, when) {
+        var t = { asap: how === 'del' ? ' lo antes posible.' : ' en cuanto esté listo.', late: ' después de las 5 pm.', tom: ' mañana.' }[when];
+        return 'Hola, resurtido por favor. Rx #: ' + rxList(n) + '. Nombre: ' + B + '. ' + (how === 'del' ? 'Por favor, entréguenlo' + t + ' Dirección: ' + B + '.' : 'Lo recojo' + t);
+      },
+      tr: function (from, n, reply) {
+        return 'Hola, quiero transferir mis recetas a Wyckoff. Ahora surto en ' + { chain: 'una farmacia de cadena', local: 'otra farmacia local', mail: 'una farmacia por correo' }[from] + ': ' + B + '. ' +
+          { 1: 'Es 1 medicamento.', 2: 'Son 2–3 medicamentos.', 4: 'Son 4 o más medicamentos.' }[n] + ' Nombre: ' + B + '. Fecha de nacimiento: ' + B + '. ' + (reply === 'call' ? 'Por favor, llámenme.' : 'Por favor, respóndanme por texto.');
+      }
+    },
+    pl: {
+      open: 'Otwarte · do ', shut: 'Zamknięte · otwieramy ', today: 'dziś o ', tom: 'jutro o ', sign: ['OTWARTE', 'ZAMKNIĘTE'], h24: true, less: 'O jedną receptę mniej', more: 'O jedną receptę więcej',
+      msg: function (n, how, when) {
+        var t = { asap: how === 'del' ? ' jak najszybciej.' : ', jak tylko będzie gotowe.', late: ' po 17:00.', tom: ' jutro.' }[when];
+        return 'Dzień dobry, proszę o realizację ' + (n > 1 ? 'recept' : 'recepty') + '. Rx #: ' + rxList(n) + '. Imię i nazwisko: ' + B + '. ' + (how === 'del' ? 'Proszę o dostawę' + t + ' Adres: ' + B + '.' : 'Odbiorę osobiście' + t);
+      },
+      tr: function (from, n, reply) {
+        return 'Dzień dobry, chcę przenieść recepty do Wyckoff. Obecnie realizuję je w ' + { chain: 'aptece sieciowej', local: 'innej lokalnej aptece', mail: 'aptece wysyłkowej' }[from] + ': ' + B + '. ' +
+          { 1: 'To 1 lek.', 2: 'To 2–3 leki.', 4: 'To 4 lub więcej leków.' }[n] + ' Imię i nazwisko: ' + B + '. Data urodzenia: ' + B + '. ' + (reply === 'call' ? 'Proszę o telefon.' : 'Proszę o SMS zwrotny.');
+      }
+    }
   };
 
   var lang = 'en';
@@ -152,25 +191,41 @@
   }
   cross.innerHTML = html;
 
-  /* ---------- refill by text ---------- */
-  var f = document.getElementById('refillForm'), go = document.getElementById('refillGo'), bub = document.getElementById('bubble');
-  function buildRefill() {
-    var del = f.querySelector('input[name=how]:checked').value === 'deliver';
-    var m = STATUS[lang].msg(f.rx.value.trim(), f.nm.value.trim(), del);
-    bub.textContent = m;
-    go.href = 'sms:+17185550163?&body=' + encodeURIComponent(m);
+  /* ---------- builders: buttons only, no personal data on this site ---------- */
+  function esc(t) { return t.replace(/&/g, '&amp;').replace(/</g, '&lt;'); }
+  function preview(t) { return esc(t).split(B).join('<mark>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</mark>'); }
+  function smsHref(t) { return 'sms:+17185550163?&body=' + encodeURIComponent(t.split(B).join('___')); }
+  function picked(root, key) { var b = root.querySelector('[data-key="' + key + '"] [aria-pressed="true"]'); return b ? b.dataset.v : ''; }
+  function chips(root, cb) {
+    [].forEach.call(root.querySelectorAll('.chips'), function (g) {
+      g.addEventListener('click', function (e) {
+        var b = e.target.closest('button'); if (!b) return;
+        [].forEach.call(g.querySelectorAll('button'), function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+        cb();
+      });
+    });
   }
-  f.addEventListener('input', buildRefill); f.addEventListener('change', buildRefill);
-  f.addEventListener('submit', function (e) { e.preventDefault(); go.click(); });
 
-  /* ---------- transfer ---------- */
-  var tf = document.getElementById('trForm'), tg = document.getElementById('trGo');
-  function buildTransfer() {
-    var v = function (id) { return document.getElementById(id).value.trim() || '…'; };
-    tg.href = 'sms:+17185550163?&body=' + encodeURIComponent(STATUS[lang].tr(v('t1'), v('t2'), v('t3')));
+  var rb = document.getElementById('rb'), go = document.getElementById('refillGo'), bub = document.getElementById('bubble'), rbMsg = document.getElementById('rbMsg'), rbN = document.getElementById('rbN'), n = 1;
+  var less = rb.querySelector('[data-step="-1"]'), more = rb.querySelector('[data-step="1"]');
+  function buildRefill() {
+    var m = STATUS[lang].msg(n, picked(rb, 'how'), picked(rb, 'when'));
+    bub.innerHTML = rbMsg.innerHTML = preview(m);
+    go.href = smsHref(m);
+    rbN.textContent = n;
+    less.disabled = n <= 1; more.disabled = n >= 5;
+    less.setAttribute('aria-label', STATUS[lang].less); more.setAttribute('aria-label', STATUS[lang].more);
   }
-  tf.addEventListener('input', buildTransfer);
-  tf.addEventListener('submit', function (e) { e.preventDefault(); tg.click(); });
+  chips(rb, buildRefill);
+  [less, more].forEach(function (b) { b.addEventListener('click', function () { n = Math.min(5, Math.max(1, n + +b.dataset.step)); buildRefill(); }); });
+
+  var tb = document.getElementById('tb'), tg = document.getElementById('trGo'), tbMsg = document.getElementById('tbMsg');
+  function buildTransfer() {
+    var m = STATUS[lang].tr(picked(tb, 'from'), picked(tb, 'n'), picked(tb, 'reply'));
+    tbMsg.innerHTML = preview(m);
+    tg.href = smsHref(m);
+  }
+  chips(tb, buildTransfer);
 
   /* ---------- header: shadow, scroll-spy, drawer ---------- */
   var hdr = document.querySelector('.hdr');

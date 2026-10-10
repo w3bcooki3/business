@@ -2,17 +2,18 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Ferro &amp; Sons Barbers — 18th Avenue, Bensonhurst, Since 1964</title>
 <meta name="description" content="Four chairs, three generations, hot-towel straight-razor shaves and a $35 haircut. Walk-ins only, Tuesday to Saturday, at 6812 18th Avenue, Brooklyn.">
 <meta name="theme-color" content="#1d2a44">
+<meta property="og:type" content="website">
 <meta property="og:title" content="Ferro &amp; Sons Barbers — Bensonhurst, Brooklyn">
 <meta property="og:description" content="Walk-ins only. $35 haircuts. Hot towel shaves. Since 1964.">
-<meta property="og:image" content="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=1600&q=80">
+<meta property="og:image" content="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&amp;fit=crop&amp;w=1200&amp;h=630&amp;q=75">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23f4ecd8'/%3E%3Crect x='24' y='6' width='16' height='52' rx='8' fill='%23fff' stroke='%231d2a44' stroke-width='3'/%3E%3Cpath d='M24 18l16-8M24 30l16-8M24 42l16-8M24 54l16-8' stroke='%23b3262d' stroke-width='4'/%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Ultra&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="preload" href="fonts/ultra-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/barlow-condensed-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="sitemenu.css">
 <script type="application/ld+json">
@@ -22,149 +23,303 @@
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
-<header class="head">
-  <div class="stripe" aria-hidden="true"></div>
-  <div class="head__in">
-    <p class="head__est">Est. 1964</p>
-    <a class="window" href="#top" aria-label="Ferro and Sons home"><span class="window__a">Ferro</span><span class="window__amp">&amp; Sons</span><span class="window__b">Barbers</span></a>
-    <p class="head__walk">Walk-ins only</p>
+<header class="top">
+  <div class="pole" aria-hidden="true"></div>
+  <div class="top__in wrap">
+    <a class="mark" href="#top">
+      <span class="mark__name">Ferro <i>&amp;</i> Sons</span>
+      <span class="mark__sub">Barbers · Est. 1964</span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="#prices">Prices</a>
+      <a href="#wait">How busy?</a>
+      <a href="#chairs">The barbers</a>
+      <a href="#shave">Shave</a>
+      <a href="#family">Since 1964</a>
+      <a href="#first">First haircut</a>
+      <a href="#visit">Find us</a>
+    </nav>
+    <a class="top__call" href="tel:+17185550171"><span class="vh">Call </span>(718) 555-0171</a>
+    <div class="top__menu"></div>
   </div>
-  <nav class="nav" id="nav" aria-label="Main">
-    <a href="#prices">Prices</a>
-    <a href="#wait">How busy?</a>
-    <a href="#chairs">The chairs</a>
-    <a href="#family">Family</a>
-    <a href="#first">First haircut</a>
-    <a href="#visit">Find us</a>
-  </nav>
-  <button class="navbtn" aria-expanded="false" aria-controls="nav">Menu ▾</button>
 </header>
 
 <main id="main">
+
+  <!-- 1 · HERO: the shop window -->
   <section class="hero" id="top" aria-labelledby="h1">
-    <div class="hero__img"><img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=1800&q=80" alt="A vintage barbershop with brick walls, mirrors and warm lamps" width="1800" height="1100"></div>
-    <div class="hero__plate">
-      <p class="hero__k">Four chairs · Three generations · One price</p>
-      <h1 id="h1">A good haircut,<br>the way your<br>grandfather got&nbsp;one.</h1>
-      <p class="hero__sub">Since 1964 on 18th Avenue. No appointments, no apps, no nonsense. Sit down, tell Sal what you want, and he’ll tell you what you need.</p>
-      <div class="hero__cta"><a class="btn" href="#wait">See how busy it is</a><a class="btn btn--ghost" href="tel:+17185550171">(718) 555-0171</a></div>
+    <picture class="hero__media">
+      <source media="(max-width: 599px)" srcset="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&amp;fit=crop&amp;w=800&amp;h=900&amp;q=70 800w, https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&amp;fit=crop&amp;w=1200&amp;h=1350&amp;q=60 1200w" sizes="100vw">
+      <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&amp;fit=crop&amp;w=1600&amp;q=70"
+           srcset="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&amp;fit=crop&amp;w=1200&amp;q=70 1200w, https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&amp;fit=crop&amp;w=1600&amp;q=70 1600w, https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&amp;fit=crop&amp;w=2200&amp;q=65 2200w"
+           sizes="100vw" width="1600" height="1067" fetchpriority="high"
+           alt="Inside the shop: three black barber chairs in front of mirrors, brick walls and hanging lamps over a patterned tile floor">
+    </picture>
+    <p class="hero__status" id="heroS"><span class="dot" aria-hidden="true"></span><span id="heroTxt">Walk-ins Tue–Sat</span></p>
+    <div class="hero__in wrap">
+      <p class="hero__k">Bensonhurst · Since 1964</p>
+      <h1 id="h1" class="gilt"><span>A good haircut, the way your grandfather got&nbsp;one.</span></h1>
+      <p class="hero__sub">No appointments, no apps, no nonsense. Sit down, tell Sal what you want, and he’ll tell you what you&nbsp;need.</p>
+      <div class="hero__cta" id="heroCta">
+        <a class="btn btn--red" href="tel:+17185550171">Call the shop</a>
+        <a class="btn btn--line" href="https://www.google.com/maps/search/?api=1&amp;query=6812+18th+Ave+Brooklyn+NY+11204" target="_blank" rel="noopener">Directions<span class="vh"> (opens Google Maps)</span></a>
+      </div>
     </div>
   </section>
 
-  <section class="prices" id="prices" aria-labelledby="pr-t">
+  <!-- today ticket -->
+  <aside class="ticket" aria-labelledby="ticket-h">
+    <div class="ticket__card">
+      <h2 class="ticket__h" id="ticket-h">Today at the shop</h2>
+      <p class="ticket__status" id="status"><span class="dot" aria-hidden="true"></span><span><b id="statusTxt">Walk-ins Tue–Sat</b> <small id="statusSub">Tue–Fri 9 am–7 pm · Sat 8 am–5 pm</small></span></p>
+      <dl class="ticket__facts">
+        <div><dt>Usual wait</dt><dd id="waitTxt">Ask Vinny</dd></div>
+        <div><dt>Haircut</dt><dd>$35</dd></div>
+        <div><dt>Booking</dt><dd>Walk-ins only</dd></div>
+      </dl>
+      <a class="ticket__more" href="#wait">See the busy times for the week <span aria-hidden="true">→</span></a>
+    </div>
+  </aside>
+
+  <!-- 2 · PRICES: the felt letter board -->
+  <section class="prices" id="prices" aria-labelledby="pr-h">
+    <div class="prices__intro">
+      <p class="kicker">The price board</p>
+      <h2 id="pr-h" class="h2">One price. No&nbsp;surprises.</h2>
+      <p class="lede">What’s on the wall is what you pay. Cash or card. Tips appreciated, never expected.</p>
+    </div>
     <div class="board">
-      <h2 id="pr-t"><span>Price</span> <span>List</span></h2>
-      <ul class="pl">
-        <li><span>Haircut</span><i></i><b>$35</b></li>
-        <li><span>Haircut &amp; beard trim</span><i></i><b>$45</b></li>
-        <li><span>Hot towel straight-razor shave</span><i></i><b>$40</b></li>
-        <li><span>The Works — cut, shave, hot towel</span><i></i><b>$70</b></li>
-        <li><span>Boys under 12</span><i></i><b>$25</b></li>
-        <li><span>Seniors, Tues &amp; Wed</span><i></i><b>$28</b></li>
-        <li><span>Neck clean-up between cuts</span><i></i><b>$12</b></li>
-        <li><span>Hair &amp; ear, the delicate areas</span><i></i><b>Free</b></li>
-      </ul>
-      <p class="board__fine">Cash or card · Tips appreciated, never expected · Lollipops for the kids, and for Mr. DiNapoli</p>
+      <div class="board__felt">
+        <p class="board__title">Ferro &amp; Sons · Prices</p>
+        <ul class="board__list">
+          <li><span>Haircut</span><b>$35</b></li>
+          <li><span>Haircut &amp; beard trim</span><b>$45</b></li>
+          <li><span>Hot towel straight-razor shave</span><b>$40</b></li>
+          <li><span>The Works <em>cut · shave · hot towel</em></span><b>$70</b></li>
+          <li><span>Boys under 12</span><b>$25</b></li>
+          <li><span>Seniors <em>Tues &amp; Wed</em></span><b>$28</b></li>
+          <li><span>Neck clean-up between cuts</span><b>$12</b></li>
+          <li><span>Hair &amp; ear, the delicate areas</span><b>Free</b></li>
+        </ul>
+        <p class="board__fine">Lollipops for the kids — and for Mr.&nbsp;DiNapoli</p>
+      </div>
     </div>
-    <figure class="prices__img"><img src="https://images.unsplash.com/photo-1596728325488-58c87691e9af?auto=format&fit=crop&w=900&q=80" alt="A man reclined in a barber chair during a hot towel shave" loading="lazy" width="900" height="1100"></figure>
+    <figure class="prices__img">
+      <picture>
+      <source media="(max-width: 899px)" srcset="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&amp;fit=crop&amp;w=700&amp;h=467&amp;q=70 700w, https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&amp;fit=crop&amp;w=1200&amp;h=800&amp;q=60 1200w" sizes="100vw">
+      <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&amp;fit=crop&amp;w=800&amp;h=1000&amp;q=70"
+           srcset="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&amp;fit=crop&amp;w=600&amp;h=750&amp;q=70 600w, https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&amp;fit=crop&amp;w=1000&amp;h=1250&amp;q=65 1000w"
+           sizes="(min-width: 900px) 34vw, 100vw" width="800" height="1000" loading="lazy" decoding="async"
+           alt="A barber shaping a customer’s grey beard with scissors as he leans back in the chair">
+      </picture>
+    </figure>
   </section>
 
-  <section class="wait" id="wait" aria-labelledby="wt-t">
-    <header>
-      <h2 id="wt-t">How busy is it?</h2>
-      <p>No appointments means the line is the line. Here’s how it usually goes, by our own count, so you can time it right.</p>
-    </header>
-    <div class="wait__days" role="tablist" aria-label="Day of week" id="days"></div>
-    <div class="chart" id="chart" role="img" aria-label="Typical wait by hour"></div>
-    <p class="wait__now" id="waitNow" aria-live="polite"></p>
-    <p class="wait__fine">Typical waits based on our own estimates — not live. Saturday mornings, bring a newspaper. Or call and ask Vinny; he’ll tell you straight.</p>
-  </section>
-
-  <section class="chairs" id="chairs" aria-labelledby="ch-t">
-    <h2 id="ch-t">The chairs</h2>
-    <div class="chairs__grid">
-      <article class="chair"><p class="chair__no">No. 1</p><h3>Sal Ferro Jr.</h3><p class="chair__yrs">Behind the chair since 1974</p><p>Scissor-over-comb, the classic side part, and the hot-towel shave his father taught him. Knows everybody’s father.</p><p class="chair__days">Tue – Sat, mornings</p></article>
-      <article class="chair"><p class="chair__no">No. 2</p><h3>Vinny Ferro</h3><p class="chair__yrs">Since 2011</p><p>Sal’s grandson. Skin fades, crops, and a beard line so straight you could hang a picture with it.</p><p class="chair__days">Tue – Sat, all day</p></article>
-      <article class="chair"><p class="chair__no">No. 3</p><h3>Carmine Russo</h3><p class="chair__yrs">Since 1989</p><p>Came in for a trim in ’88 and never left. Flat-tops, pompadours, anything that needs a tin of pomade.</p><p class="chair__days">Wed – Sat</p></article>
-      <article class="chair"><p class="chair__no">No. 4</p><h3>Danny Huang</h3><p class="chair__yrs">Since 2019</p><p>Trained at a barber school on Kings Highway, apprenticed with Sal. Kids’ cuts, textured tops, the patient one.</p><p class="chair__days">Tue – Fri, afternoons · Sat</p></article>
+  <!-- 3 · WAIT: timetable -->
+  <section class="wait" id="wait" aria-labelledby="wt-h">
+    <div class="wrap wait__in">
+      <div class="wait__intro">
+        <p class="kicker kicker--gold">No appointments</p>
+        <h2 id="wt-h" class="h2">How busy is it?</h2>
+        <p class="lede">The line is the line. Here’s how it usually goes, by our own count, so you can time it right.</p>
+        <p class="wait__now" id="waitNow" aria-live="polite"></p>
+      </div>
+      <div class="wait__panel">
+        <div class="days" id="days" role="group" aria-label="Choose a day"></div>
+        <ol class="tt" id="tt" aria-describedby="tt-note"></ol>
+        <noscript><p class="tt-fallback">Quietest: weekday mornings around 9 am. Busiest: Saturday 10 am to noon, and weekdays after 5 pm.</p></noscript>
+        <p class="fine" id="tt-note">Typical waits, not live. Saturday mornings, bring a newspaper. Or call and ask Vinny; he’ll tell you straight.</p>
+      </div>
     </div>
   </section>
 
-  <section class="tile" aria-hidden="true"></section>
+  <!-- 4 · CHAIRS -->
+  <section class="chairs" id="chairs" aria-labelledby="ch-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="kicker">Four chairs</p>
+        <h2 id="ch-h" class="h2">Pick a chair, or take the next one&nbsp;free.</h2>
+      </div>
+    </div>
+    <ol class="chairs__row">
+      <li class="chair" data-days="2,3,4,5,6" data-when="mornings">
+        <p class="chair__no" aria-hidden="true">1</p>
+        <h3 class="chair__name">Sal Ferro Jr.</h3>
+        <p class="chair__since">Behind the chair since 1974</p>
+        <p>Scissor-over-comb, the classic side part, and the hot-towel shave his father taught him. Knows everybody’s father.</p>
+        <p class="chair__days"><span>Tue – Sat, mornings</span><span class="chair__in" hidden></span></p>
+      </li>
+      <li class="chair" data-days="2,3,4,5,6" data-when="all day">
+        <p class="chair__no" aria-hidden="true">2</p>
+        <h3 class="chair__name">Vinny Ferro</h3>
+        <p class="chair__since">Since 2011</p>
+        <p>Sal’s grandson. Skin fades, crops, and a beard line so straight you could hang a picture with it.</p>
+        <p class="chair__days"><span>Tue – Sat, all day</span><span class="chair__in" hidden></span></p>
+      </li>
+      <li class="chair" data-days="3,4,5,6" data-when="all day">
+        <p class="chair__no" aria-hidden="true">3</p>
+        <h3 class="chair__name">Carmine Russo</h3>
+        <p class="chair__since">Since 1989</p>
+        <p>Came in for a trim in ’88 and never left. Flat-tops, pompadours, anything that needs a tin of pomade.</p>
+        <p class="chair__days"><span>Wed – Sat</span><span class="chair__in" hidden></span></p>
+      </li>
+      <li class="chair" data-days="2,3,4,5,6" data-when="afternoons" data-sat="all day">
+        <p class="chair__no" aria-hidden="true">4</p>
+        <h3 class="chair__name">Danny Huang</h3>
+        <p class="chair__since">Since 2019</p>
+        <p>Trained at a barber school on Kings Highway, apprenticed with Sal. Kids’ cuts, textured tops, the patient one.</p>
+        <p class="chair__days"><span>Tue – Fri afternoons · Sat</span><span class="chair__in" hidden></span></p>
+      </li>
+    </ol>
+  </section>
 
-  <section class="family" id="family" aria-labelledby="fm-t">
-    <figure class="family__img"><img src="https://images.unsplash.com/photo-1512690459411-b9245aed614b?auto=format&fit=crop&w=1000&q=80" alt="A vintage leather barber chair" loading="lazy" width="1000" height="1200"></figure>
-    <div class="family__text">
-      <h2 id="fm-t">Sixty-two years on 18th Avenue</h2>
-      <ol class="tl">
-        <li><b>1964</b><p>Salvatore Ferro, a barber from Bari, opens two chairs next to a pork store. Haircuts are $1.25. The Italian radio station plays all day.</p></li>
-        <li><b>1974</b><p>Sal Jr. starts sweeping up at fourteen. He gets his first customer at sixteen — his uncle, who doesn’t complain, which is how he knows it went well.</p></li>
-        <li><b>1989</b><p>The shop expands to four chairs. The marble counter and the hex tile floor go in. They’re still here; so is the radio.</p></li>
-        <li><b>2011</b><p>Grandson Vinny joins, brings clippers, fades and the first credit card machine. Sal still keeps a cash box “just in case.”</p></li>
-        <li><b>Today</b><p>Second, third and fourth generations of the same families sit in the same chairs. Sal still asks about your mother.</p></li>
+  <!-- 5 · SHAVE -->
+  <section class="shave" id="shave" aria-labelledby="sv-h">
+    <div class="wrap shave__in">
+      <div class="shave__head">
+        <p class="kicker kicker--gold">Twenty minutes, five steps</p>
+        <h2 id="sv-h" class="h2">The hot towel shave</h2>
+        <p class="shave__price"><span>$40</span> on its own · <span>$70</span> as The Works, with a cut</p>
+      </div>
+      <ol class="steps">
+        <li><b>Hot towel</b><span>Two minutes, to open everything up.</span></li>
+        <li><b>Lather</b><span>Pre-shave oil, then lather whipped by hand with a badger brush.</span></li>
+        <li><b>First pass</b><span>With the grain, straight razor, fresh blade.</span></li>
+        <li><b>Second pass</b><span>Second lather, against the grain where you can take it.</span></li>
+        <li><b>Cold towel</b><span>Witch hazel, and a little bay rum if you want to smell like 1964.</span></li>
       </ol>
     </div>
   </section>
 
-  <section class="first" id="first" aria-labelledby="fh-t">
-    <div class="cert">
-      <p class="cert__top">Ferro &amp; Sons Barbers · Brooklyn, N.Y.</p>
-      <h2 id="fh-t">Certificate of<br><i>First Haircut</i></h2>
-      <p class="cert__body">This certifies that a very brave young customer sat (mostly) still for their very first haircut at Ferro &amp; Sons, and received one lollipop and a lock of hair to take home.</p>
-      <div class="cert__sig"><span>Barber</span><span>Date</span></div>
-      <div class="cert__seal" aria-hidden="true">Since<br>1964</div>
-    </div>
-    <div class="first__text">
-      <h3>The first haircut is on us.</h3>
-      <p>Bring your little one in for their first cut and we’ll do it free, take a photo for the wall, and send you home with a signed certificate and a lock of hair in an envelope. Danny is very good with criers; Sal is very good with parents who cry.</p>
-      <figure><img src="https://images.unsplash.com/photo-1521490683712-35a1cb235d1c?auto=format&fit=crop&w=900&q=80" alt="A young boy getting a haircut, in black and white" loading="lazy" width="900" height="700"></figure>
-    </div>
-  </section>
-
-  <section class="shave" aria-labelledby="sv-t">
-    <div class="shave__img"><img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1300&q=80" alt="A barber giving a straight-razor shave" loading="lazy" width="1300" height="900"></div>
-    <div class="shave__text">
-      <h2 id="sv-t">The hot towel shave</h2>
-      <ol>
-        <li>Hot towel, two minutes, to open everything up.</li>
-        <li>Pre-shave oil, then lather whipped by hand with a badger brush.</li>
-        <li>First pass with the grain, straight razor, fresh blade.</li>
-        <li>Second lather, second pass, against the grain where you can take it.</li>
-        <li>Cold towel, witch hazel, and a little bay rum if you want to smell like 1964.</li>
-      </ol>
+  <!-- 6 · FAMILY -->
+  <section class="family" id="family" aria-labelledby="fm-h">
+    <div class="wrap family__in">
+      <figure class="family__img">
+        <img src="https://images.unsplash.com/photo-1512690459411-b9245aed614b?auto=format&amp;fit=crop&amp;w=900&amp;h=1100&amp;q=70"
+             srcset="https://images.unsplash.com/photo-1512690459411-b9245aed614b?auto=format&amp;fit=crop&amp;w=600&amp;h=600&amp;q=70 600w, https://images.unsplash.com/photo-1512690459411-b9245aed614b?auto=format&amp;fit=crop&amp;w=900&amp;h=1100&amp;q=70 900w"
+             sizes="(min-width: 900px) 38vw, 100vw" width="900" height="1100" loading="lazy" decoding="async"
+             alt="A vintage tufted brown leather barber chair on a chrome base, seen from below">
+      </figure>
+      <div class="family__text">
+        <p class="kicker">Three generations</p>
+        <h2 id="fm-h" class="h2">Sixty-two years on 18th&nbsp;Avenue</h2>
+        <ol class="tl">
+          <li><b>1964</b><p>Salvatore Ferro, a barber from Bari, opens two chairs next to a pork store. Haircuts are $1.25. The Italian radio station plays all day.</p></li>
+          <li><b>1974</b><p>Sal Jr. starts sweeping up at fourteen. He gets his first customer at sixteen — his uncle, who doesn’t complain, which is how he knows it went well.</p></li>
+          <li><b>1989</b><p>The shop expands to four chairs. The marble counter and the hex tile floor go in. They’re still here; so is the radio.</p></li>
+          <li><b>2011</b><p>Grandson Vinny joins, brings clippers, fades and the first credit card machine. Sal still keeps a cash box “just in case.”</p></li>
+          <li><b>Today</b><p>Second, third and fourth generations of the same families sit in the same chairs. Sal still asks about your mother.</p></li>
+        </ol>
+      </div>
     </div>
   </section>
 
-  <section class="visit" id="visit" aria-labelledby="vs-t">
-    <h2 id="vs-t">6812 18th Avenue</h2>
-    <p class="visit__sub">Between 68th &amp; 69th Streets · Bensonhurst, Brooklyn · D train to 18th Ave · B8 bus</p>
-    <div class="visit__grid">
-      <table class="hours"><caption>Hours</caption><tbody id="hrs">
-        <tr data-d="0"><th scope="row">Sunday</th><td>Closed</td></tr>
-        <tr data-d="1"><th scope="row">Monday</th><td>Closed</td></tr>
-        <tr data-d="2"><th scope="row">Tuesday</th><td>9 – 7</td></tr>
-        <tr data-d="3"><th scope="row">Wednesday</th><td>9 – 7</td></tr>
-        <tr data-d="4"><th scope="row">Thursday</th><td>9 – 7</td></tr>
-        <tr data-d="5"><th scope="row">Friday</th><td>9 – 7</td></tr>
-        <tr data-d="6"><th scope="row">Saturday</th><td>8 – 5</td></tr>
-      </tbody></table>
-      <div class="visit__c">
-        <p class="open" id="open"></p>
-        <p><a class="btn" href="tel:+17185550171">Call (718) 555-0171</a></p>
-        <p><a href="https://www.google.com/maps/search/?api=1&query=6812+18th+Ave+Brooklyn+NY+11204" target="_blank" rel="noopener">Directions ↗</a> · <a href="mailto:info@ferroandsons.com">info@ferroandsons.com</a></p>
-        <p class="small">Last haircut starts 30 minutes before close. Shaves, an hour before.</p>
+  <!-- 7 · FIRST HAIRCUT -->
+  <section class="first" id="first" aria-labelledby="fh-h">
+    <div class="wrap first__in">
+      <div class="first__text">
+        <p class="kicker">For the little ones</p>
+        <h2 id="fh-h" class="h2">The first haircut is on&nbsp;us.</h2>
+        <p class="lede">Bring your little one in for their first cut and we’ll do it free, take a photo for the wall, and send you home with a signed certificate and a lock of hair in an envelope.</p>
+        <p>Danny is very good with criers; Sal is very good with parents who cry.</p>
+      </div>
+      <div class="first__art">
+        <figure class="first__photo">
+          <img src="https://images.unsplash.com/photo-1521490683712-35a1cb235d1c?auto=format&amp;fit=crop&amp;w=900&amp;h=720&amp;q=70"
+               srcset="https://images.unsplash.com/photo-1521490683712-35a1cb235d1c?auto=format&amp;fit=crop&amp;w=600&amp;h=480&amp;q=70 600w, https://images.unsplash.com/photo-1521490683712-35a1cb235d1c?auto=format&amp;fit=crop&amp;w=900&amp;h=720&amp;q=70 900w"
+               sizes="(min-width: 900px) 40vw, 92vw" width="900" height="720" loading="lazy" decoding="async"
+               alt="Black and white photo of a young boy sitting still while a barber combs and cuts his hair">
+        </figure>
+        <div class="cert" role="img" aria-label="Sample certificate of first haircut, signed by the barber, with a red Since 1964 seal">
+          <p class="cert__top">Ferro &amp; Sons · Brooklyn, N.Y.</p>
+          <p class="cert__t">Certificate of<br><i>First Haircut</i></p>
+          <p class="cert__body">This certifies that a very brave young customer sat (mostly) still for their very first haircut, and received one lollipop and a lock of hair to take home.</p>
+          <div class="cert__sig"><span>Barber</span><span>Date</span></div>
+          <div class="cert__seal" aria-hidden="true">Since<br>1964</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8 · VISIT -->
+  <section class="visit" id="visit" aria-labelledby="vs-h">
+    <div class="wrap visit__in">
+      <div class="visit__where">
+        <p class="kicker">Find us</p>
+        <h2 id="vs-h" class="visit__addr">6812 18th Avenue</h2>
+        <p class="visit__x">Between 68th &amp; 69th Streets<br>Bensonhurst, Brooklyn 11204</p>
+        <ul class="transit">
+          <li><span class="bullet bullet--d" aria-hidden="true">D</span>D train to 18th Ave</li>
+          <li><span class="bullet bullet--bus" aria-hidden="true">B8</span>B8 bus</li>
+        </ul>
+        <div class="visit__cta">
+          <a class="btn btn--red" href="tel:+17185550171">Call (718) 555-0171</a>
+          <a class="btn btn--navy" href="https://www.google.com/maps/search/?api=1&amp;query=6812+18th+Ave+Brooklyn+NY+11204" target="_blank" rel="noopener">Directions<span class="vh"> (opens Google Maps)</span></a>
+        </div>
+      </div>
+      <div class="visit__hours">
+        <table class="hours">
+          <caption>Hours</caption>
+          <tbody id="hrs">
+            <tr data-d="2"><th scope="row">Tuesday</th><td>9 am – 7 pm</td></tr>
+            <tr data-d="3"><th scope="row">Wednesday</th><td>9 am – 7 pm</td></tr>
+            <tr data-d="4"><th scope="row">Thursday</th><td>9 am – 7 pm</td></tr>
+            <tr data-d="5"><th scope="row">Friday</th><td>9 am – 7 pm</td></tr>
+            <tr data-d="6"><th scope="row">Saturday</th><td>8 am – 5 pm</td></tr>
+            <tr data-d="0"><th scope="row">Sunday</th><td>Closed</td></tr>
+            <tr data-d="1"><th scope="row">Monday</th><td>Closed</td></tr>
+          </tbody>
+        </table>
+        <p class="visit__open" id="open"></p>
+      </div>
+      <div class="visit__notes">
+        <h3>Good to know</h3>
+        <ul>
+          <li>Walk-ins only. No appointments, ever.</li>
+          <li>Last haircut starts 30 minutes before close. Shaves, an hour before.</li>
+          <li>Cash or card.</li>
+          <li>Questions: <a href="mailto:info@ferroandsons.com">info@ferroandsons.com</a></li>
+        </ul>
       </div>
     </div>
   </section>
 </main>
 
 <footer class="foot">
-  <div class="stripe" aria-hidden="true"></div>
-  <p class="foot__w">Ferro &amp; Sons</p>
-  <p class="foot__fine">A design concept. Ferro &amp; Sons is a fictional business. · <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram ↗</a> · <a href="../index.html">← All concepts</a></p>
+  <div class="pole" aria-hidden="true"></div>
+  <div class="wrap foot__in">
+    <p class="foot__w gilt"><span>Ferro</span> <span>&amp; Sons</span></p>
+    <p class="foot__sub">Barbers · 6812 18th Avenue, Brooklyn · Since 1964</p>
+    <p class="foot__fine">A design concept. Ferro &amp; Sons is a fictional business. · <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram ↗</a> · <a href="../index.html">← All concepts</a></p>
+  </div>
 </footer>
+
+<nav class="dock" id="dock" aria-label="Quick actions">
+  <p class="dock__s" id="dockS"><span class="dot" aria-hidden="true"></span><span id="dockTxt">Walk-ins Tue–Sat</span></p>
+  <a class="dock__a dock__a--p" href="tel:+17185550171">Call</a>
+  <a class="dock__a" href="https://www.google.com/maps/search/?api=1&amp;query=6812+18th+Ave+Brooklyn+NY+11204" target="_blank" rel="noopener">Directions<span class="vh"> (opens Google Maps)</span></a>
+</nav>
+
+<script>
+/* One source of truth for hours (minutes after midnight, New York time) and the shop's own typical waits (minutes, by hour). */
+window.SHOP = {
+  hours: { 2: [540, 1140], 3: [540, 1140], 4: [540, 1140], 5: [540, 1140], 6: [480, 1020] },
+  waits: {
+    2: { 9: 5, 10: 10, 11: 10, 12: 20, 13: 15, 14: 10, 15: 10, 16: 20, 17: 30, 18: 20 },
+    3: { 9: 5, 10: 10, 11: 15, 12: 20, 13: 15, 14: 10, 15: 15, 16: 25, 17: 35, 18: 20 },
+    4: { 9: 10, 10: 10, 11: 15, 12: 25, 13: 20, 14: 15, 15: 15, 16: 25, 17: 40, 18: 25 },
+    5: { 9: 15, 10: 20, 11: 25, 12: 30, 13: 25, 14: 25, 15: 30, 16: 40, 17: 45, 18: 30 },
+    6: { 8: 20, 9: 40, 10: 55, 11: 60, 12: 45, 13: 35, 14: 30, 15: 25, 16: 15 }
+  }
+};
+window.SITEMENU = {
+  name: "Ferro & Sons", sub: "Barbers · Bensonhurst since 1964", bp: 1099, nav: "#nav", mount: ".top__menu", mountMode: "append",
+  actions: [{ label: "Call the shop", href: "tel:+17185550171", primary: true }, { label: "Directions", href: "https://www.google.com/maps/search/?api=1&query=6812+18th+Ave+Brooklyn+NY+11204" }],
+  info: ["6812 18th Ave, Bensonhurst", "Tue–Fri 9 am–7 pm · Sat 8 am–5 pm · walk-ins only"],
+  hours: window.SHOP.hours
+};
+</script>
 <script src="main.js"></script>
-<script>window.SITEMENU={"name": "Ferro & Sons", "sub": "Barbers · Bensonhurst since 1964", "bp": 980, "nav": "#nav", "mount": ".navbtn", "actions": [{"label": "Call the shop", "href": "tel:+17185550171", "primary": true}, {"label": "Directions", "href": "https://www.google.com/maps/search/?api=1&query=6812+18th+Ave+Brooklyn+NY"}], "info": ["6812 18th Ave, Bensonhurst", "Tue–Fri 9 am–7 pm · Sat 8 am–5 pm · walk-ins welcome"], "hours": {"2": [540, 1140], "3": [540, 1140], "4": [540, 1140], "5": [540, 1140], "6": [480, 1020]}};</script>
 <script src="sitemenu.js"></script>
 </body>
 </html>

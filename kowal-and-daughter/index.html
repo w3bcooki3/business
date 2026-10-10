@@ -7,6 +7,7 @@
   <meta name="description" content="Two creative directions for the Kowal &amp; Daughter bakery website, each built as a working concept site. Fictional demo business.">
   <meta name="robots" content="noindex">
   <link rel="icon" href="bake-sheet/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="fonts/inter-tight-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="fonts/inter.css">
   <link rel="stylesheet" href="fonts/plex.css">
   <style>
@@ -36,6 +37,12 @@
     .cover__meta { display: flex; flex-wrap: wrap; gap: 8px 28px; color: var(--muted); }
     .cover h1 { max-width: 15ch; margin-top: 28px; font-size: clamp(2.8rem, 1.4rem + 5vw, 6rem); line-height: 0.95; font-weight: 700; letter-spacing: -0.04em; text-wrap: balance; }
     .cover__lede { max-width: 60ch; margin-top: 24px; font-size: clamp(1.1rem, 1rem + 0.4vw, 1.3rem); color: #3a3835; }
+    .cover__jump { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; max-width: 860px; margin-top: 32px; }
+    .cover__jump a { display: flex; align-items: center; gap: 14px; min-height: 60px; padding: 0 20px; border: 1px solid var(--ink); text-decoration: none; transition: background-color 0.2s, color 0.2s; }
+    .cover__jump a:hover { background: var(--ink); color: #fff; }
+    .cover__jump-name { font-weight: 700; font-size: 1.1rem; letter-spacing: -0.01em; }
+    .cover__jump-tag { padding: 2px 6px; background: var(--accent); color: #fff; font-size: 0.75rem; }
+    .cover__jump a > span:last-child { margin-left: auto; }
     .cover__facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px var(--gutter); margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--rule); }
     .cover__facts dt { color: var(--muted); }
     .cover__facts dd { margin-top: 6px; font-size: 0.98rem; }
@@ -61,10 +68,14 @@
     .shots:hover .shots__phone { transform: translateY(-10px); }
 
     .rec { padding-block: clamp(56px, 7vw, 112px); }
+    .rec__kicker { color: var(--muted); }
     .rec h2 { font-size: clamp(2rem, 1.3rem + 2.4vw, 3.4rem); line-height: 1; letter-spacing: -0.035em; font-weight: 700; }
     .rec__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 28px var(--gutter); margin-top: 36px; }
     .rec__grid h3 { font-size: 1.05rem; font-weight: 700; }
     .rec__grid p { margin-top: 6px; font-size: 0.98rem; color: #3a3835; }
+    .note__inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 32px; }
+    .note__inner p { max-width: 80ch; }
+    .note__back { display: inline-flex; align-items: center; min-height: 44px; color: var(--ink); font-weight: 600; }
     .note { padding-block: 32px 48px; border-top: 1px solid var(--rule); color: var(--muted); font-size: 0.9rem; }
 
     @media (max-width: 900px) {
@@ -85,6 +96,10 @@
       <p class="cover__meta mono"><span>Website proposal</span><span>Kowal &amp; Daughter · Greenpoint, Brooklyn</span><span>2 directions · 2 working concepts</span></p>
       <h1>Two ways to tell people the rye is out.</h1>
       <p class="cover__lede">Each direction below is a complete, working one-page site with the same content: what’s fresh today, the full counter, the family story, holiday orders and how to get there. They differ in everything else: identity, type, colour, layout, tone and motion. Open each one on your phone as well as your laptop.</p>
+      <nav class="cover__jump" aria-label="The two concepts">
+        <a href="bake-sheet/index.html"><span class="mono">01</span><span class="cover__jump-name">Bake Sheet</span><span class="mono cover__jump-tag">Recommended</span><span aria-hidden="true">→</span></a>
+        <a href="wycinanki/index.html"><span class="mono">02</span><span class="cover__jump-name">Wycinanki Poster</span><span aria-hidden="true">→</span></a>
+      </nav>
       <dl class="cover__facts">
         <div><dt class="mono">The business</dt><dd>Polish rye bakery on Nassau Avenue. Bread comes out in waves through the morning and the good loaves sell out.</dd></div>
         <div><dt class="mono">The customer question</dt><dd>“Is it open, what’s fresh right now, and can I hold a loaf?”</dd></div>
@@ -103,7 +118,7 @@
           <dl>
             <dt class="mono">Personality</dt><dd>Punctual, warm, unfussy, exact</dd>
             <dt class="mono">Type</dt><dd>Fraunces (soft, slightly wonky serif) + IBM Plex Mono</dd>
-            <dt class="mono">Colour</dt><dd><span class="swatches" aria-label="Rye brown, crust, stamp red, flour, paper"><span style="background:#3B2417"></span><span style="background:#9A4A24"></span><span style="background:#C3361F"></span><span style="background:#F3ECDF"></span><span style="background:#FBF7EF"></span></span></dd>
+            <dt class="mono">Colour</dt><dd><span class="swatches" role="img" aria-label="Rye brown, crust, stamp red, flour, paper"><span style="background:#3B2417"></span><span style="background:#9A4A24"></span><span style="background:#C3361F"></span><span style="background:#F3ECDF"></span><span style="background:#FBF7EF"></span></span></dd>
             <dt class="mono">Photography</dt><dd>Documentary, early morning, tungsten and window light</dd>
             <dt class="mono">Signature</dt><dd>Tilted ticket with a red rubber stamp; three-cut score mark</dd>
           </dl>
@@ -111,8 +126,8 @@
           <p class="concept__why">Strongest mix of usefulness and distinctiveness. It looks finished before a photo shoot, and the owner maintains it by editing a list of times.</p>
         </div>
         <a class="shots concept__media" href="bake-sheet/index.html" aria-label="Open concept 01, Bake Sheet">
-          <img class="shots__desk" src="previews/bake-sheet-desktop.jpg" width="1440" height="900" alt="Bake Sheet concept on desktop: the headline Rye’s out at 6:30 beside a tilted paper bake ticket.">
-          <img class="shots__phone" src="previews/bake-sheet-phone.jpg" width="780" height="1688" alt="">
+          <img class="shots__desk" src="previews/bake-sheet-desktop.jpg" width="1200" height="750" alt="Bake Sheet concept on desktop: the headline Rye’s out at 6:30 beside a tilted paper bake ticket.">
+          <img class="shots__phone" src="previews/bake-sheet-phone.jpg" width="390" height="844" alt="">
         </a>
       </div>
     </section>
@@ -126,7 +141,7 @@
           <dl>
             <dt class="mono">Personality</dt><dd>Joyful, proud, graphic, loud</dd>
             <dt class="mono">Type</dt><dd>Bricolage Grotesque + Literata</dd>
-            <dt class="mono">Colour</dt><dd><span class="swatches" aria-label="Cobalt, poppy red, yolk yellow, cream, ink"><span style="background:#1D3FBF"></span><span style="background:#E0322B"></span><span style="background:#F5B800"></span><span style="background:#FFF6E4"></span><span style="background:#14110F"></span></span></dd>
+            <dt class="mono">Colour</dt><dd><span class="swatches" role="img" aria-label="Cobalt, poppy red, yolk yellow, cream, ink"><span style="background:#1D3FBF"></span><span style="background:#E0322B"></span><span style="background:#F5B800"></span><span style="background:#FFF6E4"></span><span style="background:#14110F"></span></span></dd>
             <dt class="mono">Photography</dt><dd>Hard-flash studio cut-outs on flat colour (or none at all)</dd>
             <dt class="mono">Signature</dt><dd>Rosette, scalloped edges, holiday posters pasted on a wall</dd>
           </dl>
@@ -134,8 +149,8 @@
           <p class="concept__why">The most celebratory and the best for holiday campaigns. The risk is leaning on heritage motifs. It works without photography.</p>
         </div>
         <a class="shots concept__media" href="wycinanki/index.html" aria-label="Open concept 02, Wycinanki Poster">
-          <img class="shots__desk" src="previews/wycinanki-desktop.jpg" width="1440" height="900" alt="Wycinanki Poster concept on desktop: Rye every morning in giant type on cobalt beside a red and yellow paper-cut rosette.">
-          <img class="shots__phone" src="previews/wycinanki-phone.jpg" width="780" height="1688" alt="">
+          <img class="shots__desk" src="previews/wycinanki-desktop.jpg" loading="lazy" decoding="async" width="1200" height="750" alt="Wycinanki Poster concept on desktop: Rye every morning in giant type on cobalt beside a red and yellow paper-cut rosette.">
+          <img class="shots__phone" src="previews/wycinanki-phone.jpg" loading="lazy" decoding="async" width="390" height="844" alt="">
         </a>
       </div>
     </section>
@@ -143,7 +158,7 @@
 
     <section class="rec" aria-labelledby="rec">
       <div class="wrap">
-        <p class="mono" style="color:var(--muted)">Our recommendation</p>
+        <p class="mono rec__kicker">Our recommendation</p>
         <h2 id="rec">Go with Bake Sheet.</h2>
         <div class="rec__grid">
           <div><h3>Brand fit</h3><p>It’s how the bakery actually works: bread comes out in waves and sells out.</p></div>
@@ -156,7 +171,7 @@
   </main>
 
   <footer class="note">
-    <div class="wrap">Concept work. Kowal &amp; Daughter is a fictional bakery; every name, price, hour, address, phone number and story in these concepts is placeholder data. Photo slots carry the shot list for a real shoot. <a href="../index.html#kowal-and-daughter">← All concepts</a></div>
+    <div class="wrap note__inner"><p>Concept work. Kowal &amp; Daughter is a fictional bakery; every name, price, hour, address, phone number and story in these concepts is placeholder data. Photo slots carry the shot list for a real shoot.</p><a class="note__back" href="../index.html#kowal-and-daughter">← All concepts</a></div>
   </footer>
 </body>
 </html>

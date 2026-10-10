@@ -1,0 +1,8 @@
+Fonts in this folder are licensed under the SIL Open Font License, Version 1.1 (https://openfontlicense.org).
+
+- Newsreader — Copyright 2020 The Newsreader Project Authors (via @fontsource-variable/newsreader)
+- Atkinson Hyperlegible Next — Copyright 2020 Braille Institute of America, Inc. (via @fontsource/atkinson-hyperlegible-next)
+- noto-serif-tc-600-*.woff2 — subset of Noto Serif CJK TC SemiBold, Copyright 2017 Adobe (http://www.adobe.com/), with Reserved Font Name 'Source'
+- noto-sans-tc-400/700-*.woff2 — subsets of Noto Sans CJK TC Regular/Bold, Copyright 2014-2021 Adobe (http://www.adobe.com/), with Reserved Font Name 'Source'
+
+The CJK files are subsets containing only the characters used on this page ("core" = visible in English mode, "more" = the rest of the Chinese copy).

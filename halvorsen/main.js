@@ -59,29 +59,61 @@
   [].forEach.call(document.querySelectorAll('.tsz'), function (g) { g.addEventListener('click', function (e) { var b = e.target.closest('button'); if (b) setSize(b.dataset.size); }); });
   try { if (localStorage.getItem('halvorsen-size') === '2') setSize('2'); } catch (e) {}
 
-  /* refill email */
-  var rf = document.getElementById('rfForm'), go = document.getElementById('rfGo');
-  function v(id) { return document.getElementById(id).value.trim(); }
-  function build() {
-    var del = rf.querySelector('input[name=how]:checked').value === 'deliver';
-    var body = 'Refill request\n\nRx number: ' + (v('f-rx') || '') + '\nName: ' + v('f-nm') + '\nDate of birth: ' + v('f-dob') + '\nPhone: ' + v('f-ph') + '\nPickup or delivery: ' + (del ? 'Same-day delivery' : 'Pick up at the counter') + '\n';
-    go.href = 'mailto:rx@halvorsenapothecary.com?subject=' + encodeURIComponent('Refill ' + (v('f-rx') || 'request')) + '&body=' + encodeURIComponent(body);
+  /* chip groups: one choice per group */
+  function chips(el, cb) {
+    el.addEventListener('click', function (e) {
+      var b = e.target.closest('button'); if (!b) return;
+      [].forEach.call(el.querySelectorAll('button'), function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+      cb();
+    });
   }
-  rf.addEventListener('input', build); rf.addEventListener('change', build); build();
-  rf.addEventListener('submit', function (e) { e.preventDefault(); go.click(); });
+  function picked(root, key) { var b = root.querySelector('[data-key="' + key + '"] [aria-pressed="true"]'); return b ? b.dataset.v : ''; }
 
-  /* delivery zone */
-  var zone = document.getElementById('zone'), out = document.getElementById('zoneR'), pin = document.getElementById('zpin');
-  zone.addEventListener('submit', function (e) {
-    e.preventDefault();
-    var st = parseInt(v('z-st'), 10), side = document.getElementById('z-av').value;
-    out.className = 'zone__r';
-    if (!st) { out.textContent = 'Enter the cross street number, for example 86.'; return; }
-    var y = 102 - (Math.min(Math.max(st, 50), 118) - 59) / 51 * 84;
-    pin.setAttribute('transform', 'translate(' + (side === 'e' ? 215 : 85) + ' ' + Math.max(10, Math.min(112, y)).toFixed(0) + ')');
-    if (st >= 59 && st <= 110) { out.classList.add('ok'); out.textContent = '✓ You’re in the free zone. Delivery is on us.'; }
-    else { out.classList.add('no'); out.textContent = 'That’s outside the free zone. Call ' + PHONE + ' and we’ll work something out.'; }
-  });
+  /* refill email builder: no personal data typed on this site */
+  var rb = document.getElementById('rb');
+  if (rb) {
+    var n = 1, nOut = document.getElementById('rbN'), pre = document.getElementById('rbPre'), go = document.getElementById('rbGo');
+    var BLANK = '[ ]';
+    var buildRefill = function () {
+      var when = picked(rb, 'when'), del = picked(rb, 'how') === 'delivery', lines = ['Hello Halvorsen,', '', 'Please refill ' + (n === 1 ? 'this prescription' : 'these ' + n + ' prescriptions') + ':'];
+      for (var i = 1; i <= n; i++) lines.push('Rx number' + (n > 1 ? ' ' + i : '') + ': H-' + BLANK);
+      lines.push('', del ? 'Please deliver ' + (n === 1 ? 'it' : 'them') + ' ' + when + '.' : 'I’ll pick ' + (n === 1 ? 'it' : 'them') + ' up at the counter ' + when + '.');
+      if (del) lines.push('Delivery address: ' + BLANK);
+      lines.push('Name on the label: ' + BLANK, 'Best number to call me: ' + BLANK, '', 'Thank you.');
+      var body = lines.join('\n');
+      pre.innerHTML = body.replace(/&/g, '&amp;').replace(/</g, '&lt;').split(BLANK).join('<mark>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</mark>');
+      nOut.textContent = n;
+      rb.querySelector('[data-step="-1"]').disabled = n <= 1;
+      rb.querySelector('[data-step="1"]').disabled = n >= 6;
+      go.href = 'mailto:rx@halvorsenapothecary.com?subject=' + encodeURIComponent('Refill request (' + n + ')') + '&body=' + encodeURIComponent(body.split(BLANK).join(''));
+    };
+    [].forEach.call(rb.querySelectorAll('.chips'), function (g) { chips(g, buildRefill); });
+    [].forEach.call(rb.querySelectorAll('[data-step]'), function (b) {
+      b.addEventListener('click', function () { n = Math.min(6, Math.max(1, n + +b.dataset.step)); buildRefill(); });
+    });
+    buildRefill();
+  }
+
+  /* delivery zone: side + cross street, on-page only */
+  var zone = document.getElementById('zone');
+  if (zone) {
+    var out = document.getElementById('zoneR'), pin = document.getElementById('zpin'), sel = document.getElementById('z-st');
+    var ord = function (k) { var t = k % 100; return k + ((t > 10 && t < 14) ? 'th' : ({ 1: 'st', 2: 'nd', 3: 'rd' })[k % 10] || 'th'); };
+    var opts = '<option value="49">Below 50th St</option>';
+    for (var k = 50; k <= 125; k++) opts += '<option value="' + k + '"' + (k === 81 ? ' selected' : '') + '>' + ord(k) + ' St</option>';
+    sel.innerHTML = opts + '<option value="126">Above 125th St</option>';
+    var check = function () {
+      var st = +sel.value, side = picked(zone, 'side');
+      var y = 186 - (Math.min(Math.max(st, 52), 117) - 59) / 51 * 172;
+      pin.setAttribute('transform', 'translate(' + (side === 'e' ? 122 : 38) + ' ' + Math.max(12, Math.min(188, y)).toFixed(0) + ')');
+      out.className = 'zone__r';
+      if (st >= 59 && st <= 110) { out.classList.add('ok'); out.innerHTML = '<b>You’re in the free zone.</b> Order by 3 pm on weekdays (noon Saturday) and it arrives the same day.'; }
+      else { out.classList.add('no'); out.innerHTML = '<b>Just outside the free zone.</b> Call <a href="tel:+12125550136">' + PHONE + '</a> and we’ll work something out.'; }
+    };
+    chips(zone.querySelector('.chips'), check);
+    sel.addEventListener('change', check);
+    check();
+  }
 
   /* header: shadow + scroll-spy + drawer */
   var hdr = document.querySelector('.hdr');

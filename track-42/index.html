@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Track 42 · Smoothies by Grand Central · Order Ahead by Text</title>
 <meta name="description" content="Smoothies and protein shakes two minutes from Grand Central. Text your order from the train and pick it up from a numbered shelf on the way to your platform.">
 <meta name="theme-color" content="#101213">
@@ -10,9 +10,8 @@
 <meta property="og:description" content="Text your order from the train. Grab it off the shelf. Make your 5:42.">
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23101213'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Arial' font-weight='700' font-size='30' fill='%23ffb400'%3E42%3C/text%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="preload" href="fonts/barlow-condensed-800.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/barlow-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="sitemenu.css">
 <script type="application/ld+json">
@@ -24,7 +23,7 @@
 
 <header class="hdr" id="top">
   <div class="wrap hdr__in">
-    <a class="logo" href="#top" aria-label="Track 42, home"><span class="logo__n">42</span><span class="logo__t">Track<small>Smoothies · Grand Central</small></span></a>
+    <a class="logo" href="#top"><span class="logo__n" aria-hidden="true">42</span><span class="logo__t">Track<span class="sr"> 42</span> <small>Smoothies · Grand Central</small></span></a>
     <nav class="nav" id="nav" aria-label="Main">
       <a href="#order">Order ahead</a>
       <a href="#train">Catch your train</a>
@@ -32,23 +31,28 @@
       <a href="#shelf">The pickup shelf</a>
       <a href="#visit">Find us</a>
     </nav>
-    <p class="hdr__clock"><span data-clock>--:--</span><b data-status>…</b></p>
+    <p class="hdr__clock"><span class="sr">New York time </span><span data-clock>--:--</span><b data-status data-open>&nbsp;</b></p>
   </div>
 </header>
 
 <main id="main">
-  <section class="hero">
+  <section class="hero" aria-labelledby="hero-t">
     <div class="wrap hero__g">
-      <div>
+      <div class="hero__copy">
         <p class="eyebrow"><span class="dotg" aria-hidden="true"></span>2 minutes from the 42nd St doors</p>
-        <h1>Order on the train. <span>Grab it on the way.</span></h1>
+        <h1 id="hero-t">Order on the train. <span>Grab it on the way.</span></h1>
         <p class="lede">Smoothies and protein shakes blended in about four minutes. Text your order from the platform, walk in, take the cup with your name from the numbered shelf, and make your train.</p>
-        <div class="hero__btns">
+        <div class="btns">
           <a class="btn btn--amber" href="#order">Build a text order</a>
           <a class="btn btn--ghost" href="#train">Plan around my train</a>
         </div>
+        <ul class="meta" aria-label="Today at Track 42">
+          <li data-open><span class="led" aria-hidden="true"></span><span data-status-long>Mon–Fri 6:00–20:00 · Sat 8:00–16:00</span></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&amp;query=120+E+41st+St+New+York+NY+10017">120 E 41st St</a></li>
+          <li><a href="tel:+12125550186">(212) 555-0186</a></li>
+        </ul>
       </div>
-      <div class="board" role="img" aria-label="Departure-board style list of smoothies on today’s board">
+      <div class="board" role="img" aria-label="Departure-board style list of smoothies being blended now">
         <div class="board__head"><span>Now blending</span><span data-clock>--:--</span></div>
         <div class="board__cols" aria-hidden="true"><span>Time</span><span>Smoothie</span><span>Shelf</span><span>Status</span></div>
         <ol class="board__rows" id="rows" aria-hidden="true"></ol>
@@ -64,27 +68,32 @@
           <h2 id="or-t">Pick your line.</h2>
           <p class="sub">All 16 oz. Tap <b>Add</b> and we’ll write the text for you. Swap to oat or almond milk for free.</p>
         </div>
-        <div class="lines" role="tablist" aria-label="Menu lines">
-          <button role="tab" aria-selected="true" aria-controls="list" data-l="express" style="--lc:#ffb400">Express <small>protein</small></button>
-          <button role="tab" aria-selected="false" aria-controls="list" data-l="local" style="--lc:#ff5e5b">Local <small>fruit</small></button>
-          <button role="tab" aria-selected="false" aria-controls="list" data-l="peak" style="--lc:#16c47f">Peak <small>greens</small></button>
+        <div class="lines" role="group" aria-label="Menu lines">
+          <button type="button" aria-pressed="true" data-l="express" style="--lc:#ffb400">Express <small>protein</small></button>
+          <button type="button" aria-pressed="false" data-l="local" style="--lc:#ff5e5b">Local <small>fruit</small></button>
+          <button type="button" aria-pressed="false" data-l="peak" style="--lc:#16c47f">Peak <small>greens</small></button>
         </div>
-        <ul class="items" id="list" role="tabpanel"></ul>
+        <ul class="items" id="list" aria-live="polite"></ul>
       </div>
 
       <aside class="ticket" id="ticketBox" aria-labelledby="tk-t">
         <div class="ticket__top">
-          <h3 id="tk-t">Your text order</h3>
+          <h3 id="tk-t" tabindex="-1">Your text order</h3>
           <span class="ticket__n" id="count">0 items</span>
         </div>
         <ul class="ticket__l" id="ticket"><li class="ticket__empty">Nothing yet. Add a smoothie.</li></ul>
-        <div class="field"><label for="nm">Name for the cup</label><input id="nm" autocomplete="given-name" placeholder="e.g. Dana"></div>
-        <div class="field"><label for="eta">I’ll walk in</label>
-          <select id="eta"><option value="in 5 minutes">in 5 minutes</option><option value="in 10 minutes" selected>in 10 minutes</option><option value="in 15 minutes">in 15 minutes</option><option value="in 20 minutes">in 20 minutes</option></select>
+        <div class="eta" role="group" aria-labelledby="eta-l">
+          <p class="eta__l" id="eta-l">I’ll walk in</p>
+          <div class="eta__b" id="eta">
+            <button type="button" aria-pressed="false" data-v="5">5 min</button>
+            <button type="button" aria-pressed="true" data-v="10">10 min</button>
+            <button type="button" aria-pressed="false" data-v="15">15 min</button>
+            <button type="button" aria-pressed="false" data-v="20">20 min</button>
+          </div>
         </div>
         <p class="ticket__total"><span>Total</span><b id="total">$0</b></p>
-        <a class="btn btn--amber btn--w" id="send" href="sms:+12125550186" aria-disabled="true">Text this order</a>
-        <p class="fine">Opens your messages. Pay by card or phone when you pick up.</p>
+        <a class="btn btn--amber btn--w" id="send" aria-disabled="true">Text this order</a>
+        <p class="fine">Opens your messages with the order written. Add your name for the cup before you hit send. Pay by card or phone at pickup.</p>
       </aside>
     </div>
   </section>
@@ -95,7 +104,14 @@
         <p class="kick">Catch your train</p>
         <h2 id="tr-t">When should I text?</h2>
         <p class="sub">Tell us when your train leaves Grand Central. We’ll work backwards: four minutes to blend, two minutes to walk to the doors, a few minutes to find your track.</p>
-        <div class="field field--dark"><label for="dep">My train leaves at</label><input id="dep" type="time" value="17:42"></div>
+        <div class="dep">
+          <label for="dep">My train leaves at</label>
+          <div class="dep__row">
+            <button type="button" class="dep__s" data-step="-5">−5<span class="sr"> minutes earlier</span></button>
+            <input id="dep" type="time" value="17:42" step="60">
+            <button type="button" class="dep__s" data-step="5">+5<span class="sr"> minutes later</span></button>
+          </div>
+        </div>
       </div>
       <ol class="plan" id="plan" aria-live="polite"></ol>
     </div>
@@ -124,36 +140,48 @@
         <p class="kick kick--d">Find us</p>
         <h2 id="vi-t">120 E 41st Street</h2>
         <p class="sub">Between Park and Lexington. Out the 42nd Street doors of Grand Central, turn left, then right on Lex.</p>
-        <ul class="trains"><li><span class="tl g">4</span><span class="tl g">5</span><span class="tl g">6</span><span class="tl p">7</span><span class="tl s">S</span> Grand Central–42 St</li><li><span class="mn">MNR</span> Metro-North</li></ul>
-        <div class="hero__btns">
-          <a class="btn btn--dark" href="https://www.google.com/maps/search/?api=1&query=120+E+41st+St+New+York+NY+10017">Directions</a>
+        <ul class="trains">
+          <li><span class="tl g" aria-hidden="true">4</span><span class="tl g" aria-hidden="true">5</span><span class="tl g" aria-hidden="true">6</span><span class="tl p" aria-hidden="true">7</span><span class="tl s" aria-hidden="true">S</span><span class="sr">4, 5, 6, 7 and S trains to</span> Grand Central–42 St</li>
+          <li><span class="mn" aria-hidden="true">MNR</span> Metro-North</li>
+        </ul>
+        <div class="btns">
+          <a class="btn btn--dark" href="https://www.google.com/maps/search/?api=1&amp;query=120+E+41st+St+New+York+NY+10017">Directions</a>
           <a class="btn btn--line" href="tel:+12125550186">(212) 555-0186</a>
         </div>
       </div>
-      <table class="hrs" id="hrs">
-        <caption class="sr">Opening hours</caption>
-        <tbody>
-          <tr data-d="1"><th>Monday</th><td>6:00 – 20:00</td></tr>
-          <tr data-d="2"><th>Tuesday</th><td>6:00 – 20:00</td></tr>
-          <tr data-d="3"><th>Wednesday</th><td>6:00 – 20:00</td></tr>
-          <tr data-d="4"><th>Thursday</th><td>6:00 – 20:00</td></tr>
-          <tr data-d="5"><th>Friday</th><td>6:00 – 20:00</td></tr>
-          <tr data-d="6"><th>Saturday</th><td>8:00 – 16:00</td></tr>
-          <tr data-d="0"><th>Sunday</th><td>Closed</td></tr>
-        </tbody>
-      </table>
+      <div class="hrs-card">
+        <p class="hrs-card__st" data-open><span class="led" aria-hidden="true"></span><span data-status-long>Mon–Fri 6:00–20:00 · Sat 8:00–16:00</span></p>
+        <table class="hrs" id="hrs">
+          <caption class="sr">Opening hours</caption>
+          <tbody>
+            <tr data-d="1"><th scope="row">Monday</th><td>6:00 – 20:00</td></tr>
+            <tr data-d="2"><th scope="row">Tuesday</th><td>6:00 – 20:00</td></tr>
+            <tr data-d="3"><th scope="row">Wednesday</th><td>6:00 – 20:00</td></tr>
+            <tr data-d="4"><th scope="row">Thursday</th><td>6:00 – 20:00</td></tr>
+            <tr data-d="5"><th scope="row">Friday</th><td>6:00 – 20:00</td></tr>
+            <tr data-d="6"><th scope="row">Saturday</th><td>8:00 – 16:00</td></tr>
+            <tr data-d="0"><th scope="row">Sunday</th><td>Closed</td></tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </section>
 </main>
-<a class="cartbar" id="cartbar" href="#ticketBox" hidden><span id="cartN">1 item</span><b>View text order →</b></a>
 
 <footer class="ft">
   <div class="wrap ft__in">
-    <p class="ft__logo"><span>42</span>Track</p>
+    <p class="ft__logo"><span aria-hidden="true">42</span>Track<span class="sr"> 42</span></p>
     <p>120 E 41st St, New York, NY 10017 · <a href="tel:+12125550186">(212) 555-0186</a></p>
     <p class="ft__fine">A design concept. Track 42 is a fictional business and is not affiliated with Grand Central or the MTA; prices are placeholders. <a href="../index.html">← All concepts</a></p>
   </div>
 </footer>
+
+<nav class="dock" id="dock" aria-label="Quick actions">
+  <p class="dock__s" data-open><span class="led" aria-hidden="true"></span><span data-status-short>Track 42</span></p>
+  <a class="dock__a" href="https://www.google.com/maps/search/?api=1&amp;query=120+E+41st+St+New+York+NY+10017">Directions</a>
+  <a class="dock__a dock__a--p" href="#order">Order ahead</a>
+  <a class="dock__cart" id="cartbar" href="#ticketBox" hidden><span id="cartN">1 item</span><b>View text order</b></a>
+</nav>
 
 <script src="main.js"></script>
 <script>window.SITEMENU={"name": "Track 42", "sub": "Smoothies · Grand Central", "bp": 1140, "nav": "#nav", "mount": ".hdr__in", "mountMode": "append", "actions": [{"label": "Text an order", "href": "#order", "primary": true}, {"label": "Directions", "href": "https://www.google.com/maps/search/?api=1&query=120+E+41st+St+New+York+NY+10017"}], "info": ["120 E 41st St, between Park & Lex", "Mon–Fri 6 am–8 pm · Sat 8 am–4 pm · Sun closed"], "hours": {"1": [360, 1200], "2": [360, 1200], "3": [360, 1200], "4": [360, 1200], "5": [360, 1200], "6": [480, 960]}};</script>

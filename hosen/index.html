@@ -2,17 +2,18 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Hōsen 方線 — Ten-Seat Omakase Counter, East Village, New York</title>
-<meta name="description" content="Chef Daisuke Arai's ten-seat hinoki counter beneath East 7th Street. Seventeen courses, two seatings, Wednesday through Sunday.">
+<meta name="description" content="Chef Daisuke Arai’s ten-seat hinoki counter beneath East 7th Street. Seventeen courses, two seatings, Wednesday through Sunday. $245 per guest.">
 <meta name="theme-color" content="#0d0d0c">
+<meta property="og:type" content="website">
 <meta property="og:title" content="Hōsen 方線 — Omakase, East Village">
 <meta property="og:description" content="Ten seats. One counter. Seventeen courses.">
-<meta property="og:image" content="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=1600&q=80">
+<meta property="og:image" content="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&amp;fit=crop&amp;w=1200&amp;h=630&amp;q=75">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230d0d0c'/%3E%3Crect x='18' y='18' width='28' height='28' fill='%23b2341f'/%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600&family=Inter+Tight:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="preload" href="fonts/hosen-mincho-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/inter-tight-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="sitemenu.css">
 <script type="application/ld+json">
@@ -23,7 +24,7 @@
 <a class="skip" href="#main">Skip to content</a>
 
 <header class="side">
-  <a class="seal" href="#top" aria-label="Hōsen, home"><span>方線</span></a>
+  <a class="seal" href="#top" aria-label="Hōsen, back to top"><span aria-hidden="true">方線</span></a>
   <nav aria-label="Index" class="index" id="index">
     <ol>
       <li><a href="#counter">The counter</a></li>
@@ -34,42 +35,48 @@
       <li><a href="#reserve">Reserve</a></li>
     </ol>
   </nav>
-  <p class="side__foot">98 E 7th St<br>Lower level</p>
+  <div class="side__foot">
+    <p class="tonight" data-tonight>Wed–Sun · 6:00 &amp; 8:45</p>
+    <p>98 E 7th St<br>Lower level</p>
+    <a class="side__call" href="tel:+12125550177">(212) 555-0177</a>
+  </div>
 </header>
 
-<div class="mbar" aria-label="Quick navigation">
-  <button class="mbar__btn" aria-expanded="false" aria-controls="sheet">Index</button>
-  <a class="seal seal--sm" href="#top" aria-label="Hōsen, home"><span>方線</span></a>
-  <a class="mbar__btn mbar__btn--red" href="#reserve">Reserve</a>
-</div>
-<div class="sheet" id="sheet" hidden>
-  <ol>
-    <li><a href="#counter">The counter</a></li>
-    <li><a href="#courses">Autumn courses</a></li>
-    <li><a href="#chef">Chef Arai</a></li>
-    <li><a href="#sake">Sake</a></li>
-    <li><a href="#manners">Etiquette</a></li>
-    <li><a href="#reserve">Reserve</a></li>
-  </ol>
+<div class="mbar">
+  <div class="mbar__menu"></div>
+  <p class="mbar__now" data-tonight data-short>Wed–Sun</p>
+  <a class="mbar__res" href="#reserve">Reserve</a>
 </div>
 
 <main id="main">
   <section class="hero" id="top" aria-labelledby="h1">
-    <p class="vert vert--big" aria-hidden="true">方線</p>
+    <picture class="hero__img">
+      <source media="(max-width: 859px)" srcset="https://images.unsplash.com/photo-1553621042-f6e147245754?auto=format&amp;fit=crop&amp;w=700&amp;h=1000&amp;q=70 700w, https://images.unsplash.com/photo-1553621042-f6e147245754?auto=format&amp;fit=crop&amp;w=1000&amp;h=1430&amp;q=60 1000w" sizes="100vw">
+      <img src="https://images.unsplash.com/photo-1553621042-f6e147245754?auto=format&amp;fit=crop&amp;w=900&amp;h=1200&amp;q=70"
+           srcset="https://images.unsplash.com/photo-1553621042-f6e147245754?auto=format&amp;fit=crop&amp;w=700&amp;h=933&amp;q=70 700w, https://images.unsplash.com/photo-1553621042-f6e147245754?auto=format&amp;fit=crop&amp;w=900&amp;h=1200&amp;q=70 900w, https://images.unsplash.com/photo-1553621042-f6e147245754?auto=format&amp;fit=crop&amp;w=1300&amp;h=1733&amp;q=65 1300w"
+           sizes="(min-width: 860px) 38vw, 100vw" width="900" height="1200" fetchpriority="high"
+           alt="Pieces of sushi set in a single line on a dark counter">
+    </picture>
+    <p class="hero__vert" aria-hidden="true">方線</p>
     <div class="hero__text">
+      <p class="hero__kicker">Omakase counter · East Village</p>
       <h1 id="h1">Hōsen</h1>
-      <p class="hero__sub">Ten seats. One hinoki counter.<br>Seventeen courses, in the order the sea allows.</p>
-      <p class="hero__meta"><span>East Village</span><span>Wed — Sun</span><span>6:00 &amp; 8:45</span></p>
+      <p class="hero__sub">Ten seats. One hinoki counter. Seventeen courses, in the order the sea allows.</p>
+      <dl class="hero__facts">
+        <div><dt>Evenings</dt><dd>Wed – Sun</dd></div>
+        <div><dt>Seatings</dt><dd>6:00 · 8:45</dd></div>
+        <div><dt>Omakase</dt><dd>$245</dd></div>
+      </dl>
+      <div class="hero__acts">
+        <a class="btn btn--red" href="#reserve">Request a seat</a>
+        <a class="btn btn--line" href="tel:+12125550177">Call</a>
+      </div>
     </div>
-    <figure class="hero__img">
-      <img src="https://images.unsplash.com/photo-1553621042-f6e147245754?auto=format&fit=crop&w=1400&q=80" alt="Pieces of sushi set in a single line on a dark counter" width="1400" height="1800">
-    </figure>
-    <a class="hero__down" href="#counter" aria-label="Scroll to the counter">↓</a>
   </section>
 
   <section class="counter" id="counter" aria-labelledby="counter-t">
-    <p class="num">一</p>
-    <div>
+    <p class="num"><span>一</span>The counter</p>
+    <div class="counter__text">
       <h2 id="counter-t">Below East 7th Street, a room that holds its breath.</h2>
       <p>Eleven steps down from the sidewalk. A single slab of Kiso hinoki, sanded each morning, oiled each night. Ten seats facing the chef, nothing behind you but a paper screen and the hum of the city above.</p>
       <p>There is no menu to read. You will be told what each piece is, where it came from, and how long it rested. Then it is yours, for about eight seconds, before the rice cools.</p>
@@ -84,53 +91,56 @@
 
   <section class="courses" id="courses" aria-labelledby="courses-t">
     <header class="courses__head">
-      <p class="num">二</p>
+      <p class="num"><span>二</span>Autumn courses</p>
       <h2 id="courses-t">Autumn, October</h2>
       <p>The sequence below is this month’s intention. The ocean edits it nightly.</p>
     </header>
     <ol class="seq" id="seq">
-      <li><span class="jp">先付</span><h3>Sakizuke</h3><p>Chrysanthemum greens, sesame, a single ginkgo nut.</p></li>
-      <li><span class="jp">椀</span><h3>Owan</h3><p>Matsutake dashi, yuzu peel.</p></li>
-      <li><span class="jp">鰹</span><h3>Katsuo tataki</h3><p>Bonito seared over straw, aged ponzu.</p></li>
-      <li><span class="jp">鯛</span><h3>Madai</h3><p>Sea bream from Ehime, kelp-cured eighteen hours.</p></li>
-      <li><span class="jp">金目鯛</span><h3>Kinmedai</h3><p>Golden-eye snapper, skin kissed with binchotan.</p></li>
-      <li><span class="jp">鰆</span><h3>Sawara</h3><p>Spanish mackerel, lightly smoked over cherry wood.</p></li>
-      <li><span class="jp">秋刀魚</span><h3>Sanma</h3><p>Pacific saury, the fish that means autumn. Ginger, scallion.</p></li>
-      <li><span class="jp">赤身</span><h3>Akami</h3><p>Lean bluefin, marinated in soy for forty seconds.</p></li>
-      <li><span class="jp">中トロ</span><h3>Chu-toro</h3><p>Medium-fat tuna, rested five days.</p></li>
-      <li><span class="jp">大トロ</span><h3>O-toro</h3><p>Belly. No commentary required.</p></li>
-      <li><span class="jp">車海老</span><h3>Kuruma ebi</h3><p>Tiger prawn, cooked to order, still warm.</p></li>
-      <li><span class="jp">帆立</span><h3>Hotate</h3><p>Hokkaido scallop, sudachi, sea salt.</p></li>
-      <li><span class="jp">いくら</span><h3>Ikura</h3><p>Salmon roe cured in house, dashi soy.</p></li>
-      <li><span class="jp">雲丹</span><h3>Uni</h3><p>Two grades of Hokkaido sea urchin, side by side.</p></li>
-      <li><span class="jp">穴子</span><h3>Anago</h3><p>Sea eel, simmered, brushed with a tare kept since 2014.</p></li>
-      <li><span class="jp">玉子</span><h3>Tamago</h3><p>Castella-style omelette with shrimp. Served last of the savory, as it should be.</p></li>
-      <li><span class="jp">甘味</span><h3>Kanmi</h3><p>Roasted chestnut, kuromitsu, a cup of hojicha.</p></li>
+      <li><span class="jp" lang="ja">先付</span><h3>Sakizuke</h3><p>Chrysanthemum greens, sesame, a single ginkgo nut.</p></li>
+      <li><span class="jp" lang="ja">椀</span><h3>Owan</h3><p>Matsutake dashi, yuzu peel.</p></li>
+      <li><span class="jp" lang="ja">鰹</span><h3>Katsuo tataki</h3><p>Bonito seared over straw, aged ponzu.</p></li>
+      <li><span class="jp" lang="ja">鯛</span><h3>Madai</h3><p>Sea bream from Ehime, kelp-cured eighteen hours.</p></li>
+      <li><span class="jp" lang="ja">金目鯛</span><h3>Kinmedai</h3><p>Golden-eye snapper, skin kissed with binchotan.</p></li>
+      <li><span class="jp" lang="ja">鰆</span><h3>Sawara</h3><p>Spanish mackerel, lightly smoked over cherry wood.</p></li>
+      <li><span class="jp" lang="ja">秋刀魚</span><h3>Sanma</h3><p>Pacific saury, the fish that means autumn. Ginger, scallion.</p></li>
+      <li><span class="jp" lang="ja">赤身</span><h3>Akami</h3><p>Lean bluefin, marinated in soy for forty seconds.</p></li>
+      <li><span class="jp" lang="ja">中トロ</span><h3>Chu-toro</h3><p>Medium-fat tuna, rested five days.</p></li>
+      <li><span class="jp" lang="ja">大トロ</span><h3>O-toro</h3><p>Belly. No commentary required.</p></li>
+      <li><span class="jp" lang="ja">車海老</span><h3>Kuruma ebi</h3><p>Tiger prawn, cooked to order, still warm.</p></li>
+      <li><span class="jp" lang="ja">帆立</span><h3>Hotate</h3><p>Hokkaido scallop, sudachi, sea salt.</p></li>
+      <li><span class="jp" lang="ja">いくら</span><h3>Ikura</h3><p>Salmon roe cured in house, dashi soy.</p></li>
+      <li><span class="jp" lang="ja">雲丹</span><h3>Uni</h3><p>Two grades of Hokkaido sea urchin, side by side.</p></li>
+      <li><span class="jp" lang="ja">穴子</span><h3>Anago</h3><p>Sea eel, simmered, brushed with a tare kept since 2014.</p></li>
+      <li><span class="jp" lang="ja">玉子</span><h3>Tamago</h3><p>Castella-style omelette with shrimp. Served last of the savory, as it should be.</p></li>
+      <li><span class="jp" lang="ja">甘味</span><h3>Kanmi</h3><p>Roasted chestnut, kuromitsu, a cup of hojicha.</p></li>
     </ol>
-    <p class="seq__count" aria-live="polite"><span id="seqNow">0</span> / 17</p>
+    <p class="seq__note">Seventeen courses · $245 per guest, before beverage &amp; gratuity. We cannot accommodate shellfish allergies or a menu without raw fish.</p>
   </section>
 
   <section class="chef" id="chef" aria-labelledby="chef-t">
     <figure class="chef__img">
-      <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=1100&q=80" alt="A chef carefully plating under warm copper lamps" loading="lazy" width="1100" height="1400">
+      <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&amp;fit=crop&amp;w=1000&amp;h=1250&amp;q=70"
+           srcset="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&amp;fit=crop&amp;w=640&amp;h=800&amp;q=70 640w, https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&amp;fit=crop&amp;w=1000&amp;h=1250&amp;q=70 1000w"
+           sizes="(min-width: 860px) 40vw, 100vw" alt="A chef carefully plating under warm copper lamps" loading="lazy" width="1000" height="1250">
     </figure>
     <div class="chef__text">
-      <p class="num">三</p>
-      <h2 id="chef-t">Daisuke Arai</h2>
-      <p class="vert vert--sm" aria-hidden="true">新井 大輔</p>
+      <p class="num"><span>三</span>The chef</p>
+      <h2 id="chef-t">Daisuke Arai <span class="chef__jp" lang="ja">新井 大輔</span></h2>
       <p>Twenty-two years behind a counter, beginning at sixteen as the boy who washed rice at a six-seat shop in Fukuoka’s Nakasu district. Seven years before he was allowed to touch fish.</p>
       <p>He came to New York in 2011 to cook for others. Hōsen, which roughly means “the line drawn with a square,” is the first room that is his: a place where the only straight lines are the counter and the knife.</p>
-      <p class="sig">“The rice is the host. The fish is the guest.”</p>
+      <blockquote class="sig"><p>“The rice is the host. The fish is the guest.”</p></blockquote>
     </div>
   </section>
 
   <section class="sake" id="sake" aria-labelledby="sake-t">
-    <div class="sake__img"><img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=900&q=80" alt="An amber drink in a heavy glass, lit from the side" loading="lazy" width="900" height="1100"></div>
+    <div class="sake__img"><img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&amp;fit=crop&amp;w=900&amp;h=1100&amp;q=70"
+      srcset="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&amp;fit=crop&amp;w=600&amp;h=733&amp;q=70 600w, https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&amp;fit=crop&amp;w=900&amp;h=1100&amp;q=70 900w"
+      sizes="(min-width: 860px) 28vw, 100vw" alt="An amber drink in a heavy glass, lit from the side" loading="lazy" width="900" height="1100"></div>
     <div class="sake__list">
-      <p class="num">四</p>
+      <p class="num"><span>四</span>Sake</p>
       <h2 id="sake-t">Sake, by the go</h2>
       <table>
-        <caption class="sr">Sake list with prices per 180ml</caption>
+        <caption class="sr">Sake list with prices per go (180 ml)</caption>
         <thead><tr><th scope="col">Name</th><th scope="col">Prefecture</th><th scope="col">Go</th></tr></thead>
         <tbody>
           <tr><th scope="row">Juyondai Honmaru<small>Tokubetsu honjozo</small></th><td>Yamagata</td><td>42</td></tr>
@@ -146,7 +156,7 @@
   </section>
 
   <section class="manners" id="manners" aria-labelledby="manners-t">
-    <p class="num">五</p>
+    <p class="num"><span>五</span>Etiquette</p>
     <h2 id="manners-t">A few quiet requests</h2>
     <ol class="rules">
       <li><b>Arrive on time.</b> All ten guests begin together. We hold seats fifteen minutes, then the first course is served without you.</li>
@@ -160,63 +170,80 @@
 
   <section class="reserve" id="reserve" aria-labelledby="reserve-t">
     <div class="reserve__intro">
-      <p class="num">六</p>
+      <p class="num"><span>六</span>Reserve</p>
       <h2 id="reserve-t">Request a seat</h2>
-      <p>Seats open fourteen days ahead. Choose an evening and we will reply by email within 24 hours to confirm or offer the nearest alternative.</p>
-      <p class="small">Or call <a href="tel:+12125550177">(212) 555-0177</a>, Wed–Sun, 2–5&nbsp;pm.</p>
+      <p>Seats open fourteen days ahead. Choose an evening, a seating and how many of you — we write the request, you send it from your own email or messages app. We reply within 24 hours to confirm, or offer the nearest alternative.</p>
+      <p class="small">Prefer to talk? Call <a href="tel:+12125550177">(212)&nbsp;555-0177</a>, Wednesday to Sunday, 2–5&nbsp;pm.</p>
     </div>
-    <form class="req" id="req" novalidate>
-      <fieldset>
-        <legend>Evening</legend>
-        <div class="dates" id="dates" role="radiogroup" aria-label="Available evenings"></div>
-      </fieldset>
-      <fieldset>
-        <legend>Seating</legend>
-        <div class="seg" role="radiogroup">
-          <label><input type="radio" name="time" value="6:00 pm" checked><span>6:00</span></label>
-          <label><input type="radio" name="time" value="8:45 pm"><span>8:45</span></label>
+
+    <div class="req" id="req">
+      <div class="req__step">
+        <h3 class="req__label" id="lab-date"><span>1</span>Evening</h3>
+        <div class="dates" id="dates" role="group" aria-labelledby="lab-date"></div>
+        <noscript><p class="small">Email <a href="mailto:seats@hosen.nyc">seats@hosen.nyc</a> with the evening, seating and number of guests you’d like.</p></noscript>
+      </div>
+      <div class="req__step">
+        <h3 class="req__label" id="lab-time"><span>2</span>Seating</h3>
+        <div class="seg" role="group" aria-labelledby="lab-time">
+          <button type="button" aria-pressed="true" data-time="6:00 pm">6:00<small>First seating</small></button>
+          <button type="button" aria-pressed="false" data-time="8:45 pm">8:45<small>Second seating</small></button>
         </div>
-      </fieldset>
-      <fieldset>
-        <legend>Guests</legend>
-        <div class="seg" role="radiogroup">
-          <label><input type="radio" name="party" value="1"><span>1</span></label>
-          <label><input type="radio" name="party" value="2" checked><span>2</span></label>
-          <label><input type="radio" name="party" value="3"><span>3</span></label>
-          <label><input type="radio" name="party" value="4"><span>4</span></label>
+      </div>
+      <div class="req__step">
+        <h3 class="req__label" id="lab-party"><span>3</span>Guests</h3>
+        <div class="stepper" role="group" aria-labelledby="lab-party">
+          <button type="button" data-step="-1" aria-label="One fewer guest">−</button>
+          <p class="stepper__n" id="party" aria-live="polite"><b>2</b> guests</p>
+          <button type="button" data-step="1" aria-label="One more guest">+</button>
         </div>
-      </fieldset>
-      <label class="field"><span>Name</span><input type="text" name="name" autocomplete="name" required></label>
-      <label class="field"><span>Allergies or occasion</span><input type="text" name="notes" placeholder="Optional"></label>
-      <p class="summary" id="summary" aria-live="polite"></p>
-      <button type="submit" class="send">Request by email</button>
-      <p class="small">Opens your email app with the request written. Nothing is booked until we reply.</p>
-    </form>
+        <p class="req__hint">Up to four per request. For five or more, please call.</p>
+      </div>
+
+      <div class="ticket" aria-live="polite">
+        <p class="ticket__k">Your request</p>
+        <p class="ticket__line" id="sumLine">Choose an evening</p>
+        <p class="ticket__price" id="sumPrice">$245 per guest, before beverage &amp; gratuity</p>
+      </div>
+
+      <div class="req__acts">
+        <a class="btn btn--red" id="sendMail" href="mailto:seats@hosen.nyc?subject=Seat%20request">Email this request</a>
+        <a class="btn btn--dark" id="sendSms" href="sms:+12125550177">Text it</a>
+      </div>
+      <p class="small">Opens your email or messages app with the request written out. Add the name for the booking and any allergies before you send. Nothing is booked until we reply.</p>
+    </div>
   </section>
 
-  <section class="night" aria-label="Location">
-    <img src="https://images.unsplash.com/photo-1518391846015-55a9cc003b25?auto=format&fit=crop&w=1800&q=70" alt="The Williamsburg Bridge lit at night" loading="lazy" width="1800" height="1000">
+  <section class="night" aria-labelledby="night-t">
+    <img src="https://images.unsplash.com/photo-1518391846015-55a9cc003b25?auto=format&amp;fit=crop&amp;w=1600&amp;h=900&amp;q=65"
+         srcset="https://images.unsplash.com/photo-1518391846015-55a9cc003b25?auto=format&amp;fit=crop&amp;w=800&amp;h=1000&amp;q=65 800w, https://images.unsplash.com/photo-1518391846015-55a9cc003b25?auto=format&amp;fit=crop&amp;w=1600&amp;h=900&amp;q=65 1600w"
+         sizes="100vw" alt="The Williamsburg Bridge lit at night" loading="lazy" width="1600" height="900">
     <div class="night__text">
-      <p>98 East 7th Street, lower level<br>Between First Avenue &amp; Avenue A</p>
-      <p>F to Second Ave · L to First Ave · 6 to Astor Pl</p>
-      <a href="https://www.google.com/maps/search/?api=1&query=98+E+7th+St+New+York+NY+10009" target="_blank" rel="noopener">Directions ↗</a>
+      <h2 id="night-t" class="night__h">Finding the door</h2>
+      <address>98 East 7th Street, lower level<br>Between First Avenue &amp; Avenue A</address>
+      <p class="night__transit">F to Second&nbsp;Ave · L to First&nbsp;Ave · 6 to Astor&nbsp;Pl</p>
+      <div class="night__acts">
+        <a class="btn btn--light" href="https://www.google.com/maps/search/?api=1&amp;query=98+E+7th+St+New+York+NY+10009" target="_blank" rel="noopener">Directions <span aria-hidden="true">↗</span></a>
+        <a class="btn btn--line" href="tel:+12125550177">(212) 555-0177</a>
+      </div>
     </div>
   </section>
 </main>
 
 <footer class="foot">
-  <p class="foot__seal"><span>方線</span></p>
+  <p class="foot__seal" aria-hidden="true"><span>方線</span></p>
   <div>
     <p>Wednesday — Sunday<br>Seatings 6:00 &amp; 8:45 pm</p>
-    <p id="openNote" class="open-note"></p>
+    <p class="open-note" data-tonight>Two seatings nightly</p>
   </div>
-  <div>
-    <p><a href="tel:+12125550177">(212) 555-0177</a><br><a href="mailto:seats@hosen.nyc">seats@hosen.nyc</a><br><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram ↗</a></p>
-  </div>
-  <p class="foot__fine">A design concept. Hōsen is a fictional business. <a href="../index.html">← All concepts</a></p>
+  <ul class="foot__links">
+    <li><a href="tel:+12125550177">(212) 555-0177</a></li>
+    <li><a href="mailto:seats@hosen.nyc">seats@hosen.nyc</a></li>
+    <li><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram <span aria-hidden="true">↗</span></a></li>
+  </ul>
+  <p class="foot__fine"><span>A design concept. Hōsen is a fictional business.</span> <a href="../index.html">← All concepts</a></p>
 </footer>
 <script src="main.js"></script>
-<script>window.SITEMENU={"name": "Hōsen", "sub": "方線 · Omakase, East Village", "bp": 860, "nav": "#index", "mount": ".mbar__btn[aria-controls=\"sheet\"]", "label": "Menu", "actions": [{"label": "Reserve a seat", "href": "#reserve", "primary": true}, {"label": "Call", "href": "tel:+12125550177"}], "info": ["98 E 7th St, lower level", "Wednesday to Sunday · two seatings nightly"], "hours": {"0": [1080, 1380], "3": [1080, 1380], "4": [1080, 1380], "5": [1080, 1380], "6": [1080, 1380]}};</script>
+<script>window.SITEMENU={"name":"Hōsen","sub":"方線 · Omakase, East Village","bp":859,"nav":"#index","mount":".mbar__menu","mountMode":"append","label":"Menu","actions":[{"label":"Request a seat","href":"#reserve","primary":true},{"label":"Call","href":"tel:+12125550177"}],"info":["98 E 7th St, lower level","Wednesday to Sunday · seatings 6:00 & 8:45"],"hours":{"0":[1080,1380],"3":[1080,1380],"4":[1080,1380],"5":[1080,1380],"6":[1080,1380]}};</script>
 <script src="sitemenu.js"></script>
 </body>
 </html>

@@ -30,11 +30,12 @@
 html.sm-lock,html.sm-lock body{overflow:hidden}
 @media (prefers-reduced-motion:reduce){.sm,.sm__list li{transition:none}}
 
-/* site theme */
-:root{--sm-bg:#0d0d0c;--sm-fg:#ece6da;--sm-mut:#8d877c;--sm-line:rgba(236,230,218,.12);--sm-line2:rgba(236,230,218,.3);--sm-acc:#b2341f;--sm-accfg:#fff;
---sm-disp:"Shippori Mincho","Yu Mincho",serif;--sm-body:"Inter Tight",system-ui,sans-serif;--sm-r:0px;
---sm-btn-bg:transparent;--sm-btn-fg:#ece6da;--sm-btn-bd:rgba(236,230,218,.3);--sm-btn-bw:1px;--sm-btn-font:500 11px/1 "Inter Tight",system-ui,sans-serif;--sm-btn-ls:.22em;--sm-btn-tt:uppercase;
---sm-link-font:400 30px/1.15 "Shippori Mincho","Yu Mincho",serif;--sm-link-ls:.02em;--sm-name-font:600 22px/1 "Shippori Mincho",serif;--sm-name-ls:.08em;--sm-chip:#161614;--sm-open:#b2341f;--sm-pad:17px;}
-@media (max-width:860px){.sm-btn{display:inline-flex}.mbar__btn[aria-controls="sheet"], .sheet{display:none!important}}
-@media (max-width:360px){.sm-btn__l{display:none}.sm-btn{padding:0;width:46px;justify-content:center}}
-.mbar .sm-btn{min-height:40px;padding:0 14px}
+/* site theme: Hōsen */
+:root{--sm-bg:#0d0d0c;--sm-fg:#ece6da;--sm-mut:#999284;--sm-line:rgba(236,230,218,.12);--sm-line2:rgba(236,230,218,.3);--sm-acc:#b2341f;--sm-accfg:#fff;
+--sm-disp:"Hosen Mincho","Yu Mincho",serif;--sm-body:"Inter Tight",system-ui,sans-serif;--sm-r:0px;--sm-pad:16px;
+--sm-btn-bg:transparent;--sm-btn-fg:#ece6da;--sm-btn-bd:rgba(236,230,218,.32);--sm-btn-bw:1px;--sm-btn-font:500 12px/1 "Inter Tight",system-ui,sans-serif;--sm-btn-ls:.2em;--sm-btn-tt:uppercase;
+--sm-link-font:400 28px/1.15 "Hosen Mincho","Yu Mincho",serif;--sm-link-ls:.02em;--sm-name-font:400 24px/1 "Hosen Mincho",serif;--sm-name-ls:.08em;--sm-chip:#161614;--sm-open:#3fae6c;}
+.sm__n{color:#e47a63}
+.sm__a{font-size:12px;font-weight:500;letter-spacing:.2em;text-transform:uppercase}
+@media (max-width:859px){.sm-btn{display:inline-flex;min-height:46px;padding:0 14px}}
+@media (max-width:359px){.sm-btn__l{display:none}.sm-btn{padding:0;width:46px;justify-content:center}}

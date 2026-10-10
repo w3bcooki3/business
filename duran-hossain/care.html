@@ -4,860 +4,41 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex">
-<title>Durán & Hossain Pharmacy — Care</title>
-<meta name="description" content="Clean modern healthcare. Teal and soft sky blue on white with a coral accent, generous white space and rounded cards. The most immediately legible as a med">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-*,*::before,*::after{box-sizing:border-box}
-html{scroll-padding-top:96px;-webkit-text-size-adjust:100%}
-body{margin:0}
-img,svg{max-width:100%}
-h1,h2,h3,h4,h5,p{margin:0}
-ul,ol{margin:0;padding:0;list-style:none}
-a{color:inherit}
-:focus-visible{outline:3px solid currentColor;outline-offset:3px;border-radius:3px}
-[hidden]{display:none!important}
-@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
-.skip{position:absolute;left:-9999px;top:0;z-index:999;padding:13px 20px;font-weight:700}
-.skip:focus{left:8px;top:8px}
-.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-
-:root{
-  --bg:#F2F8FA; --paper:#FFFFFF; --panel:#E6F2F5; --panel2:#D6E9EE;
-  --ink:#102A33; --ink2:#3D5A64; --faint:#4F6B75;
-  --line:#D2E6EC; --line2:#B9D7E0;
-  --brand:#0D7085; --brand2:#09605D;
-  --accent:#E2663C; --accentink:#9C3A17;
-  --good:#0E7A5F; --goodsoft:#DFF2EB;
-  --warn:#A85B14; --warnsoft:#FCEEDF;
-  --alert:#B3261E; --alertsoft:#FBE9E7;
-  --r:18px; --rs:12px; --rl:26px;
-  color-scheme:light;
-}
-body{background:var(--bg);color:var(--ink);
-  font:400 16.5px/1.65 "Manrope",system-ui,sans-serif}
-h1,h2,h3,h4,h5{font-family:"Outfit",system-ui,sans-serif;font-weight:700;
-  letter-spacing:-.022em;line-height:1.14;text-wrap:balance;color:var(--ink)}
-.wrap{max-width:1180px;margin:0 auto;padding-inline:clamp(16px,4vw,40px)}
-.wrap--n{max-width:820px}
-
-/* ══ emergency strip — top of every page ════════════════════════════════ */
-.ice{background:var(--alert);color:#fff}
-.ice__in{max-width:1180px;margin:0 auto;padding:9px clamp(16px,4vw,40px);
-  display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-size:14.5px;
-  font-weight:600;line-height:1.45}
-.ice__t{flex:1 1 auto;min-width:0}
-.ice svg{flex:none}
-.ice b{font-weight:800}
-.ice a{color:#fff;font-weight:800;text-decoration:underline;text-underline-offset:3px;
-  white-space:nowrap;display:inline-flex;align-items:center;min-height:40px;padding-inline:4px}
-
-/* ══ direction switcher (concept only) ═══════════════════════════════════ */
-.sw{background:var(--ink);color:#fff;display:flex;align-items:center;gap:13px;
-  flex-wrap:wrap;padding:9px clamp(16px,4vw,40px);font-size:13.5px}
-.sw__l{font-weight:700;letter-spacing:.13em;text-transform:uppercase;font-size:10px;
-  opacity:.62}
-.sw nav{display:flex;gap:3px;flex-wrap:wrap}
-.sw nav a{padding:7px 13px;border-radius:99px;text-decoration:none;opacity:.8;
-  font-weight:600}
-.sw nav a:hover{opacity:1;background:rgba(255,255,255,.16)}
-.sw nav a[aria-current]{background:#fff;color:var(--ink);opacity:1}
-.sw__b{margin-left:auto;text-decoration:underline;opacity:.78;font-weight:600}
-.demo{background:var(--warnsoft);color:var(--ink2);font-size:13px;line-height:1.55;
-  padding:11px clamp(16px,4vw,40px);border-bottom:1px solid var(--line)}
-.demo b{color:var(--ink)}
-
-/* ══ header ══════════════════════════════════════════════════════════════ */
-.hdr{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--paper);
-  border-bottom:1px solid var(--line);box-shadow:0 1px 16px rgba(0,0,0,.05)}
-.hdr__in{max-width:1180px;margin:0 auto;padding:12px clamp(16px,4vw,40px);
-  display:flex;align-items:center;gap:18px;flex-wrap:wrap}
-@media (min-width:1080px){.hdr__in{flex-wrap:nowrap}}
-.logo{display:flex;align-items:center;gap:11px;min-height:48px;text-decoration:none;flex:none}
-.logo__m{width:46px;height:46px;border-radius:var(--rs);background:var(--brand);
-  display:grid;place-items:center;flex:none}
-.logo__t{font:700 19px/1.05 "Outfit",system-ui,sans-serif;letter-spacing:-.028em}
-.logo__t span{display:block;font:600 10px/1.4 "Manrope",system-ui,sans-serif;letter-spacing:.13em;
-  text-transform:uppercase;color:var(--faint);margin-top:5px}
-.hnav{display:none;gap:1px;margin-left:8px}
-@media (min-width:1080px){.hnav{display:flex}}
-.hnav a{padding:11px 12px;border-radius:var(--rs);text-decoration:none;font-weight:600;
-  font-size:14.5px;color:var(--ink2);white-space:nowrap}
-.hnav a:hover{background:var(--panel);color:var(--brand)}
-.hcall{margin-left:auto;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
-.hcall__n{text-align:right;line-height:1.3}
-.hcall__n small{display:block;font-size:11.5px;color:var(--faint);font-weight:600}
-.hcall__n b{display:block;font:700 17.5px/1.2 "Outfit",system-ui,sans-serif;color:var(--brand);
-  font-variant-numeric:tabular-nums;letter-spacing:-.02em}
-
-/* live open/closed pill, written by hours.js */
-.status{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:99px;
-  font-weight:700;font-size:13px;background:var(--panel);color:var(--ink2);white-space:nowrap}
-.status::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--faint);
-  flex:none}
-.status.is-open{background:var(--goodsoft);color:var(--good)}
-.status.is-open::before{background:var(--good)}
-.status.is-shut{background:var(--warnsoft);color:var(--warn)}
-.status.is-shut::before{background:var(--warn)}
-
-/* ══ buttons ═════════════════════════════════════════════════════════════ */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;
-  padding:0 26px;border-radius:99px;
-  text-decoration:none;font-weight:700;font-size:16.5px;background:var(--brand);color:#fff;
-  border:2px solid var(--brand);line-height:1.2;text-align:center}
-.btn:hover{background:var(--ink);border-color:var(--ink)}
-.btn--o{background:transparent;color:var(--brand);border-color:var(--line2)}
-.btn--o:hover{background:var(--panel);color:var(--brand);border-color:var(--brand)}
-.btn--a{background:var(--accent);border-color:var(--accent);color:#9C3A17}
-.btn--a:hover{background:var(--ink);border-color:var(--ink);color:#fff}
-.btn--sm{min-height:48px;font-size:14.5px;padding:0 18px}
-.btn--w{width:100%}
-.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
-.cta--c{justify-content:center}
-
-/* ══ sections ════════════════════════════════════════════════════════════ */
-.sec{padding-block:clamp(50px,6.4vw,92px)}
-.sec--p{background:var(--panel)}
-.sec--w{background:var(--paper)}
-.sec--b{background:var(--brand);color:#fff}
-.sec--b h2,.sec--b h3{color:#fff}
-.hd{max-width:62ch;margin:0 auto;margin-bottom:clamp(30px,3.8vw,50px);
-  text-align:center}
-.hd--l{text-align:left;margin-inline:0}
-.eb{font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;
-  color:var(--brand2);margin-bottom:13px}
-.sec--b .eb{color:#E2663C}
-.hd h2{font-size:clamp(27px,3.7vw,43px)}
-.hd p:not(.eb){font-size:clamp(16.5px,1.8vw,19px);color:var(--ink2);margin-top:15px}
-.sec--b .hd p:not(.eb){color:rgba(255,255,255,.92)}
-
-/* ══ hero ════════════════════════════════════════════════════════════════ */
-.hero{position:relative;overflow:hidden;background:var(--paper);
-  padding-block:clamp(32px,4.6vw,62px) clamp(28px,3.6vw,48px)}
-.hero__bg{position:absolute;inset:0;pointer-events:none;opacity:.55}
-.hero__in{position:relative}
-.hero__g{display:grid;gap:clamp(26px,3.6vw,48px);grid-template-columns:1fr;
-  align-items:center}
-@media (min-width:960px){.hero__g{grid-template-columns:1.04fr .96fr}}
-.hero--center .hero__g{grid-template-columns:1fr;text-align:center;justify-items:center}
-.hero--center .hero__l{margin-inline:auto}
-.hero--offset .hero__g{align-items:end}
-.kick{display:inline-flex;align-items:center;gap:9px;padding:9px 17px;border-radius:99px;
-  background:var(--goodsoft);color:var(--good);font-weight:700;font-size:13.5px;
-  margin-bottom:20px;line-height:1.35}
-.hero h1{font-size:clamp(33px,5.2vw,58px)}
-.hero h1 em{font-style:normal;color:var(--brand)}
-.hero__l{font-size:clamp(17px,1.9vw,20.5px);color:var(--ink2);margin-top:19px;max-width:48ch}
-.hero__art{border-radius:var(--r);overflow:hidden;background:#FFFFFF;border-radius:var(--r);box-shadow:0 4px 18px rgba(0,0,0,.06)}
-.trust{display:flex;gap:16px;flex-wrap:wrap;margin-top:26px;padding-top:22px;
-  border-top:1px solid var(--line);justify-content:center}
-.trust div{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--ink2);
-  font-weight:600}
-
-/* ══ quick actions ═══════════════════════════════════════════════════════ */
-.qa{display:grid;gap:12px;grid-template-columns:repeat(2,1fr);
-  margin-top:clamp(26px,3.2vw,40px)}
-@media (min-width:860px){.qa{grid-template-columns:repeat(4,1fr)}}
-.qa a{background:#FFFFFF;border-radius:var(--r);box-shadow:0 4px 18px rgba(0,0,0,.06);padding:20px 18px;text-decoration:none;display:flex;flex-direction:column;
-  gap:9px;min-height:116px}
-.qa a:hover{box-shadow:0 14px 34px rgba(0,0,0,.11)}
-.qa b{font:700 17px/1.2 "Outfit",system-ui,sans-serif;display:block}
-.qa span{font-size:13.5px;color:var(--ink2);line-height:1.45}
-
-/* ══ cards & grids ═══════════════════════════════════════════════════════ */
-.g{display:grid;gap:clamp(14px,1.9vw,22px);grid-template-columns:1fr}
-@media (min-width:640px){.g--2,.g--3,.g--4{grid-template-columns:repeat(2,1fr)}}
-@media (min-width:960px){.g--3{grid-template-columns:repeat(3,1fr)}
-  .g--4{grid-template-columns:repeat(4,1fr)}}
-.g>*{min-width:0}
-.card{background:#FFFFFF;border-radius:var(--r);box-shadow:0 4px 18px rgba(0,0,0,.06);padding:clamp(20px,2.4vw,28px);display:flex;flex-direction:column;gap:11px}
-.card:hover{box-shadow:0 14px 34px rgba(0,0,0,.11)}
-.card h3{font-size:19.5px}
-.card p{color:var(--ink2);font-size:15.5px}
-.badge{width:52px;height:52px;border-radius:50%;
-  background:var(--goodsoft);display:grid;place-items:center;flex:none}
-.lnk{display:inline-flex;align-items:center;gap:7px;min-height:44px;text-decoration:none;
-  font-weight:700;font-size:14.5px;color:var(--brand)}
-.lnk:hover{gap:11px;color:var(--ink)}
-
-/* ══ rating ══════════════════════════════════════════════════════════════ */
-.rate{display:grid;gap:clamp(22px,3vw,40px);grid-template-columns:1fr;align-items:center}
-@media (min-width:880px){.rate{grid-template-columns:.78fr 1.22fr}}
-.rate__s{background:#FFFFFF;border-radius:var(--r);box-shadow:0 4px 18px rgba(0,0,0,.06);padding:clamp(22px,2.6vw,32px);text-align:center}
-.rate__n{font:700 clamp(46px,6vw,66px)/1 "Outfit",system-ui,sans-serif;color:var(--brand);
-  letter-spacing:-.045em}
-.stars{display:flex;gap:4px;justify-content:center;margin:12px 0 10px}
-.rate__c{font-size:14.5px;color:var(--ink2)}
-.revs{display:grid;gap:12px}
-.rev{background:#FFFFFF;border-radius:var(--r);box-shadow:0 4px 18px rgba(0,0,0,.06);padding:20px 22px}
-.rev p{font-size:15.5px;color:var(--ink);line-height:1.6}
-.rev footer{display:flex;align-items:center;gap:10px;margin-top:13px;font-size:13.5px;
-  color:var(--faint);font-weight:600}
-.rev__av{width:32px;height:32px;border-radius:50%;background:var(--panel2);
-  display:grid;place-items:center;font-weight:800;font-size:13px;color:var(--ink2);flex:none}
-.rate__note{font-size:12.5px;color:var(--faint);margin-top:14px;line-height:1.5}
-
-/* ══ services list ═══════════════════════════════════════════════════════ */
-.svc{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);
-  border-radius:var(--r);overflow:hidden;grid-template-columns:1fr}
-@media (min-width:700px){.svc{grid-template-columns:repeat(2,1fr)}}
-@media (min-width:1020px){.svc{grid-template-columns:repeat(3,1fr)}}
-.svc>div{background:var(--paper);padding:22px 20px;display:flex;gap:14px;min-width:0}
-.svc>div:hover{background:var(--panel)}
-.svc h3{font-size:17px;margin-bottom:6px}
-.svc p{font-size:14.5px;color:var(--ink2);line-height:1.55}
-.svc svg{flex:none;margin-top:2px}
-
-/* ══ specialty ═══════════════════════════════════════════════════════════ */
-.spec{display:grid;gap:clamp(16px,2vw,24px);grid-template-columns:1fr}
-@media (min-width:820px){.spec{grid-template-columns:repeat(2,1fr)}}
-.spec>article{background:#FFFFFF;border-radius:var(--r);box-shadow:0 4px 18px rgba(0,0,0,.06);padding:clamp(22px,2.6vw,32px);display:flex;flex-direction:column;gap:13px}
-.spec h3{font-size:21px}
-.spec__s{font-size:14px;font-weight:700;color:var(--brand2);letter-spacing:.01em}
-.spec p{font-size:15.5px;color:var(--ink2)}
-.spec ul{display:grid;gap:9px;margin-top:4px;padding-top:15px;border-top:1px solid var(--line)}
-.spec li{display:flex;gap:10px;font-size:14.5px;color:var(--ink2);line-height:1.5}
-.spec li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent);
-  flex:none;margin-top:8px}
-
-/* ══ products ════════════════════════════════════════════════════════════ */
-.prods{display:grid;gap:clamp(13px,1.6vw,18px);grid-template-columns:repeat(2,1fr)}
-@media (min-width:900px){.prods{grid-template-columns:repeat(4,1fr)}}
-.prod{background:#FFFFFF;border-radius:var(--r);box-shadow:0 4px 18px rgba(0,0,0,.06);padding:18px 17px;display:flex;flex-direction:column;gap:9px;min-width:0}
-.prod:hover{box-shadow:0 14px 34px rgba(0,0,0,.11)}
-.prod__t{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
-  color:var(--brand2)}
-.prod h3{font-size:16.5px;line-height:1.25}
-.prod__p{font-weight:800;font-size:15.5px;color:var(--brand);font-variant-numeric:tabular-nums;
-  font-family:"Outfit",system-ui,sans-serif}
-.prod p{font-size:13.5px;color:var(--ink2);line-height:1.5}
-.aisles{display:grid;gap:12px;grid-template-columns:1fr;margin-top:clamp(22px,2.6vw,32px)}
-@media (min-width:720px){.aisles{grid-template-columns:repeat(2,1fr)}}
-@media (min-width:1020px){.aisles{grid-template-columns:repeat(3,1fr)}}
-.aisle{background:#FFFFFF;border-radius:var(--r);box-shadow:0 4px 18px rgba(0,0,0,.06);padding:20px;display:flex;flex-direction:column;gap:10px}
-.aisle__h{display:flex;align-items:center;gap:11px}
-.aisle h3{font-size:17px}
-.aisle__c{margin-left:auto;font-size:12px;font-weight:700;color:var(--faint);white-space:nowrap}
-.aisle ul{display:grid;gap:6px}
-.aisle li{font-size:13.5px;color:var(--ink2);line-height:1.45;padding-left:13px;position:relative}
-.aisle li::before{content:"";position:absolute;left:0;top:9px;width:5px;height:1.5px;
-  background:var(--accent)}
-
-/* ══ hours ═══════════════════════════════════════════════════════════════ */
-.hours{display:grid;gap:clamp(20px,2.6vw,34px);grid-template-columns:1fr}
-@media (min-width:880px){.hours{grid-template-columns:1fr 1fr}}
-.hcard{background:#FFFFFF;border-radius:var(--r);box-shadow:0 4px 18px rgba(0,0,0,.06);padding:clamp(22px,2.6vw,30px)}
-.hcard h3{font-size:20px;margin-bottom:4px}
-.htoday{font-size:14.5px;color:var(--ink2);margin-bottom:18px;font-weight:600}
-.hrow{display:flex;justify-content:space-between;gap:16px;padding:11px 12px;
-  border-radius:var(--rs);font-size:15.5px;color:var(--ink2)}
-.hrow b{color:var(--ink);font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
-.hrow.is-today{background:var(--goodsoft);color:var(--good)}
-.hrow.is-today b{color:var(--good)}
-.hol{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;padding:12px 0;
-  border-bottom:1px dotted var(--line2)}
-.hol:last-child{border-bottom:0}
-.hol__d{font-size:13.5px;color:var(--faint);font-weight:600;min-width:150px}
-.hol__n{font-weight:700;font-size:15.5px;flex:1;min-width:120px}
-.hol__s{font-size:13px;font-weight:700;padding:5px 11px;border-radius:99px;white-space:nowrap}
-.hol__s.is-shut{background:var(--alertsoft);color:var(--alert)}
-.hol__s.is-short{background:var(--warnsoft);color:var(--warn)}
-.hol__none{font-size:15px;color:var(--ink2)}
-.hbanner{display:block;background:var(--warnsoft);border:1px solid var(--warn);
-  border-radius:var(--rs);padding:15px 18px;font-size:15px;color:var(--ink);
-  line-height:1.55;margin-bottom:18px}
-.hbanner b{color:var(--warn);display:block;margin-bottom:3px;font-size:15.5px}
-
-/* ══ languages ═══════════════════════════════════════════════════════════ */
-.langs{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
-.lang{background:#FFFFFF;border-radius:var(--r);box-shadow:0 4px 18px rgba(0,0,0,.06);padding:13px 19px;display:flex;align-items:baseline;gap:9px}
-.lang b{font-size:19px;font-family:system-ui,"Segoe UI","Noto Sans",sans-serif;font-weight:600}
-.lang span{font-size:11px;color:var(--faint);font-weight:700;letter-spacing:.08em;
-  text-transform:uppercase}
-
-/* ══ split rows ══════════════════════════════════════════════════════════ */
-.split{display:grid;gap:clamp(26px,3.6vw,52px);grid-template-columns:1fr;align-items:center}
-@media (min-width:900px){.split{grid-template-columns:1fr 1fr}
-  .split--r>*:first-child{order:2}}
-.split>*{min-width:0}
-.art{border-radius:var(--r);overflow:hidden;background:#FFFFFF;border-radius:var(--r);box-shadow:0 4px 18px rgba(0,0,0,.06)}
-.ticks{display:grid;gap:13px;margin-top:22px}
-.ticks li{display:flex;gap:12px;font-size:16px;color:var(--ink2);line-height:1.55}
-.ticks li b{color:var(--ink);font-weight:700}
-.ticks svg{flex:none;margin-top:2px}
-.sec--b .ticks li{color:rgba(255,255,255,.92)}
-.sec--b .ticks li b{color:#fff}
-
-/* ══ notice ══════════════════════════════════════════════════════════════ */
-.note{background:var(--paper);border:1px solid var(--accent);border-left-width:6px;
-  border-radius:var(--rs);padding:clamp(22px,2.8vw,36px)}
-.note h2,.note h3{color:var(--accentink)}
-.note>p{margin-top:14px;font-size:16.5px;color:var(--ink2)}
-.note ul{margin-top:18px;display:grid;gap:11px}
-.note li{display:flex;gap:11px;font-size:15.5px;color:var(--ink2)}
-.note li::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--accent);
-  flex:none;margin-top:9px}
-
-/* ══ table ═══════════════════════════════════════════════════════════════ */
-.tbl{background:#FFFFFF;border-radius:var(--r);box-shadow:0 4px 18px rgba(0,0,0,.06);overflow:hidden}
-.tscroll{overflow-x:auto}
-table{border-collapse:collapse;width:100%;min-width:540px}
-th,td{text-align:left;padding:14px 18px;border-bottom:1px solid var(--line);font-size:15.5px}
-th{background:var(--panel);font-weight:700;font-size:11px;letter-spacing:.13em;
-  text-transform:uppercase;color:var(--ink2);white-space:nowrap}
-tr:last-child td{border-bottom:0}
-td:first-child{font-weight:700}
-td.age{color:var(--good);font-weight:700;white-space:nowrap}
-td.n{color:var(--ink2);font-size:14.5px}
-
-/* ══ plan chips ══════════════════════════════════════════════════════════ */
-.chips{display:flex;flex-wrap:wrap;gap:8px}
-.chip{font-size:14px;font-weight:600;padding:9px 15px;border-radius:99px;
-  background:var(--paper);border:1px solid var(--line2);color:var(--ink2)}
-
-/* ══ contact ═════════════════════════════════════════════════════════════ */
-.lines{display:grid;gap:12px;grid-template-columns:1fr}
-@media (min-width:700px){.lines{grid-template-columns:repeat(2,1fr)}}
-.line{background:#FFFFFF;border-radius:var(--r);box-shadow:0 4px 18px rgba(0,0,0,.06);padding:20px 22px;display:flex;flex-direction:column;gap:5px}
-.line__l{font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
-  color:var(--brand2)}
-.line__v{display:inline-flex;align-items:center;min-height:48px;text-decoration:none;
-  font:700 clamp(21px,2.3vw,27px)/1.15 "Outfit",system-ui,sans-serif;color:var(--brand);
-  letter-spacing:-.03em;font-variant-numeric:tabular-nums;word-break:break-word}
-.line__v:hover{color:var(--ink);text-decoration:underline;text-underline-offset:4px}
-.line__v--sm{font-size:clamp(16px,1.7vw,19px);letter-spacing:-.01em}
-.line p{font-size:13.5px;color:var(--ink2);line-height:1.5}
-.when{display:grid;gap:12px;grid-template-columns:1fr}
-@media (min-width:860px){.when{grid-template-columns:repeat(3,1fr)}}
-.when>div{background:#FFFFFF;border-radius:var(--r);box-shadow:0 4px 18px rgba(0,0,0,.06);padding:20px 22px}
-.when h3{font-size:17px;margin-bottom:12px}
-.when li{display:flex;gap:10px;font-size:14.5px;color:var(--ink2);line-height:1.5;
-  padding:6px 0}
-.when li::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--accent);
-  flex:none;margin-top:8px}
-
-/* ══ quote & about ═══════════════════════════════════════════════════════ */
-.quote{background:var(--brand);color:#fff;border-radius:var(--r);
-  padding:clamp(26px,3.4vw,46px)}
-.quote p{font:700 clamp(20px,2.5vw,29px)/1.35 "Outfit",system-ui,sans-serif;letter-spacing:-.022em}
-.quote cite{display:block;margin-top:18px;font-style:normal;font-size:14px;opacity:.86;
-  font-weight:600}
-
-/* ══ emergency callout ═══════════════════════════════════════════════════ */
-.ec{background:var(--alertsoft);border:2px solid var(--alert);border-radius:var(--r);
-  padding:clamp(22px,2.8vw,34px);display:grid;gap:16px;grid-template-columns:1fr;
-  align-items:center}
-@media (min-width:760px){.ec{grid-template-columns:auto 1fr auto}}
-.ec__i{width:54px;height:54px;border-radius:50%;background:var(--alert);display:grid;
-  place-items:center;flex:none}
-.ec h3{font-size:20px;color:var(--alert)}
-.ec p{font-size:15.5px;color:var(--ink2);margin-top:7px}
-.ec .btn{background:var(--alert);border-color:var(--alert)}
-.ec .btn:hover{background:var(--ink);border-color:var(--ink)}
-
-/* ══ footer ══════════════════════════════════════════════════════════════ */
-.ft{background:var(--ink);color:#fff;padding-block:clamp(42px,5vw,66px) 28px}
-.ft__g{display:grid;gap:clamp(24px,3vw,42px);grid-template-columns:1fr}
-@media (min-width:760px){.ft__g{grid-template-columns:1.4fr 1fr 1fr}}
-.ft h4{font-size:11px;letter-spacing:.14em;text-transform:uppercase;opacity:.58;
-  margin-bottom:15px;color:#fff}
-.ft ul{display:grid;gap:10px}
-.ft a{text-decoration:none;opacity:.84;font-size:15px}
-.ft a:hover{opacity:1;text-decoration:underline}
-.ft__tel{font:700 23px/1 "Outfit",system-ui,sans-serif;color:#fff;text-decoration:none;
-  display:inline-flex;min-height:48px;align-items:center;margin-top:10px;letter-spacing:-.025em}
-.ft__b{margin-top:32px;padding-top:22px;border-top:1px solid rgba(255,255,255,.17);
-  font-size:12.5px;opacity:.66;line-height:1.7;display:grid;gap:8px}
-.fine{font-size:13.5px;color:var(--faint);line-height:1.6}
-.sec--b .fine{color:rgba(255,255,255,.8)}
-</style>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&display=swap" rel="stylesheet">
-<style>
-/* ══════════════════════════════════════════════════════════════════════
-   CARE — below the hero. A pharmacy that behaves like a good product.
-   ══════════════════════════════════════════════════════════════════════ */
-:root{--hf:"Outfit",system-ui,sans-serif;--bf:"Manrope",system-ui,sans-serif;--deep:#0B2530;--deep2:#12333F}
-.c-tag{display:inline-flex;align-items:center;gap:10px;font:700 12px/1 var(--bf);letter-spacing:.16em;text-transform:uppercase;color:var(--brand);margin:0 0 20px}
-.c-tag span{display:inline-grid;place-items:center;min-width:30px;height:24px;padding:0 7px;border-radius:99px;background:var(--brand);color:#fff;letter-spacing:.04em;font-size:11px}
-.c-tag--dark{color:#9FD3DE}.c-tag--dark span{background:var(--accent);color:#fff}
-.c-sec{padding-block:clamp(80px,10vw,150px);background:var(--paper)}
-.c-sec--tint{background:var(--bg)}
-.c-sec h2,.c-con h2,.c-deliv h2,.c-story__head h2{font:700 clamp(34px,4.6vw,64px)/1.02 var(--hf);letter-spacing:-.04em;color:var(--ink)}
-h2 em,.c-hello em{font-style:normal;color:var(--brand)}
-.c-fine{font-size:13.5px;color:var(--faint);margin-top:14px}
-.c-link{display:inline-flex;align-items:center;min-height:44px;font-weight:700;color:var(--brand);text-decoration:underline;text-underline-offset:5px}
-.c-h3{font:700 19px var(--hf);margin:34px 0 10px;letter-spacing:-.01em}
-
-/* ── 01 concierge ─────────────────────────────────────────────────────── */
-.c-con{background:var(--deep);color:#fff;padding-block:clamp(80px,9vw,130px);position:relative;overflow:hidden}
-.c-con::before{content:"";position:absolute;width:760px;height:760px;right:-260px;top:-300px;border-radius:50%;
-  background:radial-gradient(closest-side,rgba(13,112,133,.55),transparent)}
-.c-con .wrap{position:relative}
-.c-con h2{color:#fff;max-width:14ch}
-.c-con h2 em{color:#7CD3E3}
-.c-con__sub{color:rgba(255,255,255,.72);font-size:clamp(17px,1.6vw,20px);max-width:52ch;margin-top:18px}
-.c-con__g{display:grid;gap:clamp(24px,3vw,44px);grid-template-columns:minmax(0,1fr);margin-top:clamp(40px,5vw,64px)}
-@media (min-width:980px){.c-con__g{grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);align-items:stretch}}
-.c-intents{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
-@media (min-width:640px){.c-intents{grid-template-columns:repeat(3,minmax(0,1fr))}}
-.c-intents button{position:relative;display:flex;flex-direction:column;align-items:flex-start;gap:8px;text-align:left;min-height:132px;
-  padding:20px 18px;border-radius:18px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);color:#fff;cursor:pointer;
-  font:inherit;transition:background .25s,border-color .25s,transform .25s}
-.c-intents button:hover{background:rgba(255,255,255,.08);transform:translateY(-2px)}
-.c-intents svg{width:34px;height:34px;fill:none;stroke:#7CD3E3;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;margin-bottom:auto}
-.c-intents b{font:700 17px/1.2 var(--hf);letter-spacing:-.01em}
-.c-intents small{font-size:12.5px;color:rgba(255,255,255,.55);font-weight:600}
-.c-intents button[aria-selected="true"]{background:#fff;color:var(--ink);border-color:#fff}
-.c-intents button[aria-selected="true"] svg{stroke:var(--brand)}
-.c-intents button[aria-selected="true"] small{color:var(--brand)}
-.c-intents button[aria-selected="true"]::after{content:"";position:absolute;right:16px;top:16px;width:10px;height:10px;border-radius:50%;background:var(--accent)}
-.c-path{background:linear-gradient(160deg,#0F3E4B,#0B2E38);border:1px solid rgba(124,211,227,.25);border-radius:24px;padding:clamp(26px,3.4vw,44px);display:flex;flex-direction:column}
-.c-path__time span{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:#7CD3E3;letter-spacing:.04em}
-.c-path__time span::before{content:"";width:8px;height:8px;border-radius:50%;background:#7CD3E3;box-shadow:0 0 0 4px rgba(124,211,227,.18)}
-.c-path h3{font:700 clamp(24px,2.6vw,34px)/1.1 var(--hf);color:#fff;letter-spacing:-.03em;margin:14px 0 22px}
-.c-path__steps{counter-reset:s;display:grid;gap:0;margin-bottom:auto}
-.c-path__steps li{counter-increment:s;display:grid;grid-template-columns:40px 1fr;gap:14px;padding:14px 0;border-top:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.86);font-size:15.5px;line-height:1.55}
-.c-path__steps li::before{content:counter(s);display:grid;place-items:center;width:30px;height:30px;border-radius:50%;border:1.5px solid rgba(124,211,227,.6);color:#7CD3E3;font:700 13px var(--hf)}
-.c-path__acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
-.c-path__acts a{display:inline-flex;align-items:center;min-height:52px;padding:0 22px;border-radius:99px;font-weight:700;text-decoration:none;font-size:15.5px}
-.c-path__acts a:first-child{background:var(--accent);color:#fff}
-.c-path__acts a:first-child:hover{background:#fff;color:var(--ink)}
-.c-path__acts a+a{border:1.5px solid rgba(255,255,255,.35);color:#fff}
-.c-path__acts a+a:hover{background:rgba(255,255,255,.1)}
-.c-path.is-swap{animation:c-swap .4s ease}
-@keyframes c-swap{from{opacity:.2;transform:translateY(8px)}to{opacity:1;transform:none}}
-
-/* ── 02 right-now board ───────────────────────────────────────────────── */
-.c-now{background:var(--deep2);color:#fff;padding-block:0 clamp(70px,8vw,110px)}
-.c-now__head{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.1);padding-top:32px;margin-bottom:24px}
-.c-now__head .c-tag{margin:0}
-.c-now__clock{font:600 15px var(--hf);color:rgba(255,255,255,.65);font-variant-numeric:tabular-nums}
-.c-board{display:grid;gap:12px;grid-template-columns:minmax(0,1fr)}
-@media (min-width:700px){.c-board{grid-template-columns:repeat(2,1fr)}}
-@media (min-width:1080px){.c-board{grid-template-columns:1.25fr 1fr 1fr 1fr}}
-.c-tile{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:18px;padding:22px;display:flex;flex-direction:column;gap:10px;min-height:170px}
-.c-tile__k{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.55)}
-.c-tile__v{font:700 clamp(22px,2vw,28px)/1.15 var(--hf);letter-spacing:-.02em;color:#fff}
-.c-tile__s{font-size:13px;color:rgba(255,255,255,.6);margin-top:auto}
-.c-tile--big{background:var(--brand);border-color:var(--brand)}
-.c-tile--big .status{align-self:flex-start;background:rgba(255,255,255,.95)}
-.c-mono{font-variant-numeric:tabular-nums}
-.c-spark{display:flex;align-items:flex-end;gap:3px;height:38px}
-.c-spark i{flex:1;background:rgba(124,211,227,.35);border-radius:2px 2px 0 0;min-height:3px}
-.c-spark i.is-now{background:var(--accent)}
-
-/* ── 03 rx label ──────────────────────────────────────────────────────── */
-.c-label__wrap{display:grid;gap:clamp(40px,6vw,96px);grid-template-columns:minmax(0,1fr);align-items:center}
-@media (min-width:1000px){.c-label__wrap{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr)}}
-.c-label__intro p:not(.c-tag){font-size:clamp(17px,1.5vw,19px);color:var(--ink2);margin-top:20px;max-width:40ch}
-.c-label{background:#FFFDF8;border-radius:10px;box-shadow:0 40px 80px -30px rgba(11,37,48,.35),0 0 0 1px rgba(11,37,48,.08);
-  transform:rotate(-1.4deg);font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace;color:#1B2A30;overflow:hidden;transition:transform .5s}
-.c-label:hover{transform:rotate(0)}
-.c-label__bar{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;background:var(--brand);color:#fff;padding:12px 22px;font:700 12px/1.4 var(--bf);letter-spacing:.08em;text-transform:uppercase}
-.c-label__meta{display:grid;grid-template-columns:repeat(2,1fr);border-bottom:1.5px dashed #C9D5D8}
-@media (min-width:600px){.c-label__meta{grid-template-columns:repeat(4,1fr)}}
-.c-label__meta div{padding:14px 22px;border-right:1px solid #E3EAEC}
-.c-label__meta small,.c-label__dir small{display:block;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#7A8C92;margin-bottom:3px}
-.c-label__meta b{font-size:14.5px}
-.c-label__dir{padding:16px 22px;font-size:15px;line-height:1.55;border-bottom:1.5px dashed #C9D5D8;background:#FFF7EE}
-.c-label__list{display:grid;grid-template-columns:minmax(0,1fr);padding:10px 22px 4px}
-@media (min-width:600px){.c-label__list{grid-template-columns:1fr 1fr;column-gap:26px}}
-.c-label__list li{padding:9px 0 9px 22px;border-bottom:1px dotted #CBD6D9;font-size:13.5px;line-height:1.45;position:relative}
-.c-label__list li::before{content:"✓";position:absolute;left:0;color:var(--good);font-weight:700}
-.c-label__list b{font-weight:700;color:var(--brand)}
-.c-label__foot{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:16px 22px 20px;font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:#7A8C92}
-.c-barcode{width:150px;height:32px}
-.c-barcode rect{fill:#1B2A30}
-
-/* ── 04 sync sim ──────────────────────────────────────────────────────── */
-.c-sync{display:grid;gap:clamp(40px,6vw,90px);grid-template-columns:minmax(0,1fr);align-items:center}
-@media (min-width:1000px){.c-sync{grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr)}}
-.c-sync__copy p:not(.c-tag){font-size:clamp(17px,1.5vw,19px);color:var(--ink2);margin-top:20px;max-width:42ch}
-.c-sync__try{font-weight:700;color:var(--accentink)!important}
-.c-sim{background:var(--paper);border-radius:24px;padding:clamp(22px,3vw,36px);box-shadow:0 30px 60px -30px rgba(11,37,48,.25),0 0 0 1px var(--line);position:relative}
-.c-sim__head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:18px}
-.c-sim__head h3{font:700 18px var(--hf)}
-.c-sim__trips{font-size:14px;color:var(--ink2)}
-.c-sim__trips b{font:700 30px var(--hf);color:var(--accent);margin-left:6px;transition:color .3s}
-.c-sim__axis,.c-sim__rows li{display:grid;grid-template-columns:120px 1fr;align-items:center}
-.c-sim__axis{grid-template-columns:120px repeat(4,1fr) auto;font-size:11.5px;color:var(--faint);font-weight:700;padding-bottom:6px;border-bottom:1px solid var(--line)}
-.c-sim__axis span:first-child{grid-column:2}
-.c-sim__rows li{padding:14px 0;border-bottom:1px solid var(--line)}
-.c-sim__rows span{font-size:14px;font-weight:700}
-.c-sim__rows i{position:relative;height:28px;background:repeating-linear-gradient(90deg,var(--line) 0 1px,transparent 1px calc(100%/29.0001))}
-.c-sim__rows em{position:absolute;top:50%;left:calc((var(--d) - 1) / 29 * 100%);width:30px;height:16px;margin:-8px 0 0 -15px;border-radius:99px;
-  background:linear-gradient(90deg,var(--brand) 50%,var(--accent) 50%);box-shadow:0 4px 10px rgba(11,37,48,.25);transition:left .9s cubic-bezier(.5,1.6,.4,1)}
-.c-sim__line{position:absolute;top:96px;bottom:96px;left:calc(var(--lx,0) * 1px);width:2px;background:var(--accent);opacity:0;transition:opacity .4s .5s;pointer-events:none}
-.c-sim__line span{position:absolute;top:-24px;left:50%;transform:translateX(-50%);font-size:11px;font-weight:800;color:var(--accentink);white-space:nowrap;letter-spacing:.06em;text-transform:uppercase}
-.c-sim.is-sync .c-sim__line{opacity:1}
-.c-sim.is-sync .c-sim__trips b{color:var(--good)}
-.c-sim__btn{margin-top:22px;min-height:52px;padding:0 26px;border-radius:99px;border:0;background:var(--brand);color:#fff;font:700 15.5px var(--bf);cursor:pointer}
-.c-sim__btn:hover{background:var(--ink)}
-.c-sim__btn[aria-pressed="true"]{background:var(--good)}
-.c-sim__note{font-size:12.5px;color:var(--faint);margin-top:12px}
-.c-progs{display:grid;gap:0;grid-template-columns:minmax(0,1fr);margin-top:clamp(64px,7vw,100px);border-top:2px solid var(--ink)}
-@media (min-width:760px){.c-progs{grid-template-columns:repeat(2,1fr);column-gap:40px}}
-@media (min-width:1100px){.c-progs{grid-template-columns:repeat(5,1fr);column-gap:28px}}
-.c-progs article{padding:26px 0;border-bottom:1px solid var(--line)}
-.c-progs__n{font:700 46px/1 var(--hf);color:var(--line2);display:block;margin-bottom:14px}
-.c-progs h3{font:700 19px var(--hf);margin-bottom:8px}
-.c-progs p{font-size:14.5px;color:var(--ink2);line-height:1.6}
-
-/* ── 05 shelf ─────────────────────────────────────────────────────────── */
-.c-shelf__head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:40px}
-.c-shelf__head h2{max-width:13ch}
-.c-aisle{display:flex;gap:6px;flex-wrap:wrap}
-.c-aisle button{border:1.5px solid var(--line2);background:none;border-radius:99px;padding:10px 18px;font:700 14px var(--bf);color:var(--ink2);cursor:pointer}
-.c-aisle button[aria-selected="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
-.c-shelf{display:flex;align-items:flex-end;gap:14px;overflow-x:auto;padding:30px 4px 0;scroll-snap-type:x mandatory;scrollbar-width:thin;min-height:330px}
-.c-box{flex:0 0 150px;scroll-snap-align:start;display:flex;flex-direction:column;align-items:stretch;transition:opacity .35s,transform .35s}
-.c-box.is-dim{opacity:.18;transform:translateY(8px)}
-.c-box__p{height:var(--h);background:var(--c);color:#fff;border-radius:10px 10px 3px 3px;padding:12px 12px 10px;display:flex;flex-direction:column;gap:3px;
-  position:relative;overflow:hidden;box-shadow:inset -10px 0 0 rgba(0,0,0,.08);transition:transform .3s}
-.c-box__p::after{content:"";position:absolute;left:12px;right:12px;bottom:10px;height:3px;background:rgba(255,255,255,.35);border-radius:2px}
-.c-box:hover .c-box__p{transform:translateY(-8px) rotate(-1deg)}
-.c-box__p small{font-size:10.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;opacity:.8}
-.c-box__p b{font:700 14px/1.15 var(--hf);letter-spacing:-.01em}
-.c-box__p span{font-size:11px;opacity:.8}
-.c-tagp{margin-top:14px;background:#FFF7D6;border:1px solid #E8D58A;border-radius:4px;padding:9px 10px;position:relative;min-height:96px}
-.c-tagp::before{content:"";position:absolute;top:-8px;left:50%;width:1px;height:8px;background:#B9A65A}
-.c-tagp b{display:block;font:700 18px var(--hf);color:var(--ink);font-variant-numeric:tabular-nums}
-.c-tagp span{font-size:12px;color:var(--ink2);line-height:1.4;display:block;margin-top:2px}
-.c-shelf__board{height:14px;background:linear-gradient(#D7E3E7,#BCCDD3);border-radius:2px;margin-top:-118px;position:relative;z-index:-1;display:none}
-.c-shelf__cta{margin-top:28px;font-size:16px;color:var(--ink2)}
-.c-shelf__cta a{color:var(--brand);font-weight:700}
-
-/* ── 06 delivery map ──────────────────────────────────────────────────── */
-.c-deliv{background:var(--brand);color:#fff;padding-block:clamp(80px,9vw,130px);overflow:hidden}
-.c-deliv h2{color:#fff}
-.c-deliv h2 em{color:#FFD7C7}
-.c-deliv__g{display:grid;gap:clamp(36px,5vw,80px);grid-template-columns:minmax(0,1fr);align-items:center}
-@media (min-width:1000px){.c-deliv__g{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)}}
-.c-deliv__copy>p{color:rgba(255,255,255,.86);font-size:clamp(16.5px,1.5vw,18.5px);margin-top:20px;max-width:46ch}
-.c-zip{margin-top:30px;background:rgba(0,0,0,.14);border-radius:20px;padding:20px}
-.c-zip label{display:block;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-bottom:10px}
-.c-zip div{display:flex;gap:8px}
-.c-zip input{flex:1;min-width:0;min-height:54px;border-radius:14px;border:0;padding:0 18px;font:700 22px var(--hf);letter-spacing:.08em;color:var(--ink)}
-.c-zip button{min-height:54px;padding:0 24px;border-radius:14px;border:0;background:var(--accent);color:#fff;font:700 16px var(--bf);cursor:pointer}
-.c-zip button:hover{background:var(--ink)}
-.c-zip p{margin-top:14px;font-size:15px;font-weight:600;color:#fff;min-height:1.5em}
-.c-map{margin:0;color:#fff}
-.c-map svg{width:100%;height:auto;display:block}
-.c-map__ring{fill:rgba(255,255,255,.1);stroke:#fff;stroke-width:1.5;stroke-dasharray:4 6}
-.c-map__ring--2{fill:rgba(255,255,255,.04);stroke-opacity:.45}
-.c-map__road{stroke:rgba(255,255,255,.55);stroke-width:10;fill:none;stroke-linecap:round}
-.c-map__road--s{stroke-width:4;stroke:rgba(255,255,255,.25)}
-.c-map__train{stroke:#FFD7C7;stroke-width:2.5;stroke-dasharray:14 6;fill:none}
-.c-map__t{font:800 11px var(--bf);letter-spacing:.2em;fill:rgba(255,255,255,.85)}
-.c-map__t--sm{font-size:9px;fill:#FFD7C7;letter-spacing:.1em}
-.c-map__n{font:700 10px var(--bf);letter-spacing:.18em;fill:rgba(255,255,255,.55)}
-.c-map__pin{fill:var(--accent)}
-.c-map__pulse{fill:var(--accent);opacity:.3;animation:c-pulse 2.2s ease-out infinite;transform-origin:center}
-@keyframes c-pulse{from{transform:scale(.6);opacity:.5}to{transform:scale(1.8);opacity:0}}
-.c-map__label{font:700 14px var(--hf);fill:#fff}
-.c-map__ringt{font:800 10px var(--bf);letter-spacing:.24em;fill:rgba(255,255,255,.6)}
-.c-map__ringt--a{fill:#fff}
-.c-map__bike circle{fill:#fff;stroke:var(--accent);stroke-width:3}
-.c-map__bike{offset-path:path("M250 230 m-120 0 a120 120 0 1 0 240 0 a120 120 0 1 0 -240 0");animation:c-ride 14s linear infinite}
-@keyframes c-ride{to{offset-distance:100%}}
-
-/* ── 07 vaccine finder ────────────────────────────────────────────────── */
-.c-vx{display:grid;gap:clamp(40px,6vw,90px);grid-template-columns:minmax(0,1fr);align-items:start}
-@media (min-width:1000px){.c-vx{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)}}
-.c-vx__ctl>p:not(.c-tag){font-size:clamp(17px,1.5vw,19px);color:var(--ink2);margin:20px 0 34px;max-width:40ch}
-.c-age label{display:flex;align-items:baseline;justify-content:space-between;font:700 13px var(--bf);letter-spacing:.12em;text-transform:uppercase;color:var(--ink2)}
-.c-age output{font:700 64px/1 var(--hf);letter-spacing:-.04em;color:var(--brand);text-transform:none}
-.c-age input{width:100%;margin-top:10px;accent-color:var(--brand);height:30px}
-.c-age__ticks{display:flex;justify-content:space-between;font-size:12px;color:var(--faint);font-weight:700}
-.c-why{border:0;padding:0;margin:30px 0 0;display:flex;flex-wrap:wrap;gap:8px}
-.c-why legend{font:700 13px var(--bf);letter-spacing:.12em;text-transform:uppercase;color:var(--ink2);margin-bottom:12px;padding:0;width:100%}
-.c-why legend small{text-transform:none;letter-spacing:0;font-weight:600;color:var(--faint)}
-.c-why label{position:relative}
-.c-why input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
-.c-why span{display:block;padding:11px 16px;border-radius:99px;border:1.5px solid var(--line2);font-size:14.5px;font-weight:700;color:var(--ink2);cursor:pointer}
-.c-why input:checked+span{background:var(--accent);border-color:var(--accent);color:#fff}
-.c-why input:focus-visible+span{outline:3px solid var(--brand);outline-offset:2px}
-.c-vx__out{background:var(--bg);border-radius:24px;padding:clamp(24px,3vw,40px)}
-.c-vx__count{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;padding-bottom:18px;border-bottom:2px solid var(--ink)}
-.c-vx__count b{font:700 64px/1 var(--hf);letter-spacing:-.04em;color:var(--ink)}
-.c-vx__count span{font-size:16px;font-weight:700;color:var(--ink2)}
-.c-vx__list li{display:grid;grid-template-columns:1fr auto;gap:2px 16px;padding:13px 0;border-bottom:1px solid var(--line);transition:opacity .3s}
-.c-vx__list b{font:700 16.5px var(--hf)}
-.c-vx__list small{grid-column:1;font-size:13.5px;color:var(--ink2)}
-.c-vx__list em{grid-column:2;grid-row:1/3;align-self:center;font-style:normal;font-size:12px;font-weight:800;padding:5px 11px;border-radius:99px;background:var(--goodsoft);color:var(--good);white-space:nowrap}
-.c-vx__list li.is-no{opacity:.4}
-.c-vx__list li.is-no em{background:var(--panel);color:var(--faint)}
-.c-vx__list li.is-hi{background:linear-gradient(90deg,rgba(226,102,60,.1),transparent);margin-inline:-12px;padding-inline:12px;border-radius:10px}
-.c-vx__list li.is-hi em{background:var(--accent);color:#fff}
-.c-vx__note{margin-top:18px;padding:14px 16px;border-radius:12px;background:var(--warnsoft);color:var(--ink);font-size:14.5px;line-height:1.55}
-.c-vx__note:empty{display:none}
-.c-vx__fine{font-size:13px;color:var(--faint);margin-top:16px}
-
-/* ── 08 which card ────────────────────────────────────────────────────── */
-.c-card__head{max-width:760px;margin-bottom:clamp(36px,4vw,56px)}
-.c-card__head p:not(.c-tag){font-size:clamp(17px,1.5vw,19px);color:var(--ink2);margin-top:20px}
-.c-cards{display:grid;gap:clamp(24px,4vw,60px);grid-template-columns:minmax(0,1fr);align-items:center}
-@media (min-width:980px){.c-cards{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr)}}
-.c-cov{display:grid;gap:8px}
-.c-cov button{text-align:left;padding:16px 20px;border-radius:16px;border:1.5px solid var(--line2);background:var(--paper);cursor:pointer;font:700 17px var(--hf);color:var(--ink);transition:border-color .2s,transform .2s}
-.c-cov button small{display:block;font:500 13px var(--bf);color:var(--faint);margin-top:3px}
-.c-cov button:hover{transform:translateX(4px)}
-.c-cov button[aria-checked="true"]{border-color:var(--brand);background:var(--brand);color:#fff}
-.c-cov button[aria-checked="true"] small{color:rgba(255,255,255,.75)}
-.c-wallet{background:var(--deep);color:#fff;border-radius:28px;padding:clamp(26px,3.6vw,48px);position:relative;overflow:hidden;min-height:420px}
-.c-wallet__cards{position:relative;height:190px;margin-bottom:30px}
-.c-ic{position:absolute;width:min(260px,64%);aspect-ratio:1.586;border-radius:16px;padding:16px 18px;display:flex;flex-direction:column;justify-content:space-between;
-  box-shadow:0 20px 40px rgba(0,0,0,.35);transition:transform .6s cubic-bezier(.4,1.4,.5,1),opacity .4s}
-.c-ic small{font-size:10.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;opacity:.75}
-.c-ic b{font:700 17px/1.15 var(--hf)}
-.c-ic i{font-style:normal;font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.14em;opacity:.8}
-.c-ic--state{background:#F4F4EF;color:#1B2A30;transform:rotate(-6deg) translate(0,10px)}
-.c-ic--state::after{content:"";position:absolute;right:18px;top:16px;width:38px;height:28px;border-radius:5px;background:linear-gradient(135deg,#D4AF37,#F1D97A)}
-.c-ic--plan{background:linear-gradient(135deg,var(--accent),#C24E26);color:#fff;transform:rotate(5deg) translate(50%,30px)}
-.c-ic--med{background:linear-gradient(135deg,#2E5E8E,#1D3F63);color:#fff;transform:rotate(-3deg) translate(30px,6px)}
-.c-ic--cash{background:linear-gradient(135deg,var(--good),#0A5944);color:#fff;transform:rotate(-4deg) translate(20px,10px)}
-.c-ic.is-in{animation:c-deal .6s cubic-bezier(.4,1.4,.5,1)}
-@keyframes c-deal{from{opacity:0;translate:0 40px}to{opacity:1;translate:0 0}}
-.c-wallet h3{font:700 clamp(24px,2.6vw,32px)/1.1 var(--hf);color:#fff;letter-spacing:-.025em}
-.c-wallet p{color:rgba(255,255,255,.8);margin-top:12px;font-size:16px;max-width:52ch}
-.c-plans{margin-top:clamp(36px,4vw,56px);font-size:14.5px;color:var(--ink2);line-height:1.8;max-width:900px}
-.c-plans b{color:var(--ink)}
-
-/* ── 09 hours ring ────────────────────────────────────────────────────── */
-.c-hrs{display:grid;gap:clamp(40px,6vw,96px);grid-template-columns:minmax(0,1fr);align-items:center}
-@media (min-width:980px){.c-hrs{grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr)}}
-.c-ring{position:relative;max-width:440px;width:100%;margin-inline:auto}
-.c-ring svg{width:100%;height:auto;display:block;overflow:visible}
-.c-ring__track{fill:none;stroke:var(--panel);stroke-width:26}
-.c-ring__arc{fill:none;stroke:var(--brand);stroke-width:26;stroke-linecap:round}
-.c-ring__hand{stroke:var(--accent);stroke-width:3;stroke-linecap:round;transform-origin:120px 120px}
-.c-ring__hub{fill:var(--accent)}
-#ring-ticks text{font:700 9px var(--bf);fill:var(--faint)}
-.c-ring__c{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-align:center;padding:0 28%}
-.c-ring__c b{font:700 clamp(15px,1.6vw,18px)/1.25 var(--hf);color:var(--ink)}
-.c-banner{display:block;background:var(--warnsoft);border-radius:14px;padding:14px 18px;font-size:15px;margin:22px 0 0}
-.c-banner b{color:var(--warn);display:block}
-.c-week{margin-top:30px;display:grid;gap:6px}
-.c-week div{display:grid;grid-template-columns:44px 1fr 56px;align-items:center;gap:14px;font-size:14px;color:var(--ink2);font-weight:700}
-.c-week i{position:relative;height:12px;border-radius:99px;background:var(--panel)}
-.c-week i::after{content:"";position:absolute;top:0;bottom:0;border-radius:99px;background:var(--line2);left:calc((var(--a) - 7) / 15 * 100%);right:calc((22 - var(--b)) / 15 * 100%)}
-.c-week b{text-align:right;color:var(--ink);font-variant-numeric:tabular-nums}
-.c-week div.is-today{color:var(--brand)}
-.c-week div.is-today i::after{background:var(--brand)}
-.c-hol .hol{display:grid;grid-template-columns:1fr auto;gap:0 14px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}
-.c-hol .hol__d{grid-row:2;font-size:13px;color:var(--faint);font-weight:600}
-.c-hol .hol__n{font:700 16px var(--hf)}
-.c-hol .hol__s{grid-column:2;grid-row:1/3;font-size:12.5px;font-weight:800;padding:5px 11px;border-radius:99px}
-
-/* ── 10 hello ─────────────────────────────────────────────────────────── */
-.c-hello{background:var(--deep);color:#fff;padding-block:clamp(80px,10vw,150px);text-align:center;overflow:hidden}
-.c-hello .c-tag{justify-content:center}
-.c-hello__big{font:600 clamp(64px,13vw,190px)/1.05 system-ui,"Noto Sans","Segoe UI",sans-serif;letter-spacing:-.02em;color:#fff;margin:10px 0 4px;min-height:1.2em;
-  background:linear-gradient(90deg,#fff,#7CD3E3);-webkit-background-clip:text;background-clip:text;color:transparent;transition:opacity .25s}
-.c-hello__big.is-out{opacity:0}
-.c-hello__sub{font-size:clamp(16px,1.5vw,19px);color:rgba(255,255,255,.75)}
-.c-hello__chips{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:40px auto 0;max-width:900px}
-.c-hello__chips button{border:1px solid rgba(255,255,255,.2);background:transparent;color:#fff;border-radius:99px;padding:11px 18px;font:500 17px system-ui,"Noto Sans",sans-serif;cursor:pointer}
-.c-hello__chips button:hover{border-color:#7CD3E3}
-.c-hello__chips button[aria-selected="true"]{background:#fff;color:var(--deep);border-color:#fff}
-.c-hello__fine{margin:34px auto 0;max-width:56ch;color:rgba(255,255,255,.6);font-size:15px}
-
-/* ── 11 story ─────────────────────────────────────────────────────────── */
-.c-story__head{max-width:1000px}
-.c-story__head h2{font-size:clamp(30px,4vw,54px);line-height:1.08}
-.c-story__by{margin-top:22px;font-weight:700;color:var(--brand)}
-.c-line{display:grid;grid-template-columns:minmax(0,1fr);gap:0;margin-top:clamp(56px,6vw,90px);position:relative}
-@media (min-width:900px){.c-line{grid-template-columns:repeat(6,1fr);gap:22px}
-  .c-line::before{content:"";position:absolute;left:0;right:0;top:9px;height:6px;border-radius:3px;background:repeating-linear-gradient(90deg,var(--brand) 0 22px,transparent 22px 30px)}}
-.c-line li{position:relative;padding:34px 0 24px 26px;border-left:3px solid var(--brand)}
-@media (min-width:900px){.c-line li{border-left:0;padding:40px 0 0}}
-.c-line li::before{content:"";position:absolute;left:-11px;top:34px;width:16px;height:16px;border-radius:50%;background:var(--paper);border:4px solid var(--accent)}
-@media (min-width:900px){.c-line li::before{left:0;top:2px}}
-.c-line b{font:700 15px var(--hf);color:var(--accentink);letter-spacing:.04em}
-.c-line h3{font:700 19px var(--hf);margin:6px 0 8px}
-.c-line p{font-size:14.5px;color:var(--ink2);line-height:1.6}
-.c-vows{display:grid;grid-template-columns:minmax(0,1fr);gap:12px;margin-top:clamp(56px,6vw,80px)}
-@media (min-width:760px){.c-vows{grid-template-columns:repeat(2,1fr)}}
-@media (min-width:1100px){.c-vows{grid-template-columns:repeat(4,1fr)}}
-.c-vows li{background:var(--bg);border-radius:18px;padding:22px;font-size:15px;color:var(--ink2);line-height:1.55}
-.c-vows b{display:block;font:700 18px var(--hf);color:var(--ink);margin-bottom:6px}
-
-/* ── 12 contact ───────────────────────────────────────────────────────── */
-.c-ct{display:grid;gap:clamp(40px,6vw,96px);grid-template-columns:minmax(0,1fr);align-items:center}
-@media (min-width:980px){.c-ct{grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr)}}
-.c-phone{width:min(340px,100%);margin-inline:auto;border-radius:44px;background:var(--deep);padding:12px;box-shadow:0 40px 80px -30px rgba(11,37,48,.5)}
-.c-phone__bar{background:#fff;border-radius:34px 34px 0 0;padding:26px 20px 14px;text-align:center;border-bottom:1px solid var(--line)}
-.c-phone__bar span{display:block;font:700 15px var(--hf)}
-.c-phone__bar small{font-size:12px;color:var(--faint)}
-.c-phone__msgs{background:#fff;border-radius:0 0 34px 34px;padding:18px 16px 26px;display:flex;flex-direction:column;gap:10px;min-height:360px}
-.c-msg{max-width:84%;padding:10px 14px;border-radius:18px 18px 18px 4px;background:var(--panel);font-size:14px;line-height:1.45;color:var(--ink)}
-.c-msg--me{align-self:flex-end;border-radius:18px 18px 4px 18px;background:var(--brand);color:#fff}
-.c-phone__ex{margin-top:auto;text-align:center;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);font-weight:700}
-.c-ct__copy>p:not(.c-tag){font-size:clamp(17px,1.5vw,19px);color:var(--ink2);margin-top:20px;max-width:48ch}
-.c-dial{display:grid;grid-template-columns:minmax(0,1fr);gap:10px;margin-top:30px}
-@media (min-width:620px){.c-dial{grid-template-columns:1fr 1fr}}
-.c-dial>*{display:flex;flex-direction:column;gap:4px;padding:18px 20px;border-radius:18px;background:var(--paper);box-shadow:0 0 0 1px var(--line);text-decoration:none;transition:transform .2s,box-shadow .2s}
-.c-dial a:hover{transform:translateY(-3px);box-shadow:0 0 0 2px var(--brand)}
-.c-dial a:first-child{background:var(--brand);box-shadow:none}
-.c-dial a:first-child small,.c-dial a:first-child b{color:#fff}
-.c-dial small{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--faint)}
-.c-dial b{font:700 24px var(--hf);letter-spacing:-.02em;color:var(--ink);font-variant-numeric:tabular-nums}
-.c-find{margin-top:26px;padding-top:22px;border-top:1px solid var(--line2)}
-.c-find p{font-size:15.5px;color:var(--ink2);line-height:1.65}
-.c-find b{color:var(--ink)}
-
-.c-911{background:var(--alert);color:#fff;padding-block:22px}
-.c-911__in{display:flex;align-items:center;justify-content:space-between;gap:16px 30px;flex-wrap:wrap}
-.c-911 p{font-size:15.5px;max-width:80ch}
-.c-911 a{display:inline-flex;align-items:center;min-height:48px;padding:0 24px;border-radius:99px;background:#fff;color:var(--alert);font-weight:800;text-decoration:none}
-
-/* reveal */
-.c-rv{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
-.c-rv.in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){.c-rv{opacity:1;transform:none}.c-map__bike,.c-map__pulse{animation:none}.c-sim__rows em,.c-ic{transition:none}}
-
-.c-ic b{font-size:15px}
-.c-wallet__cards{height:210px}
-body{overflow-x:clip}
-html{overflow-x:clip}
-</style>
-
-
-<style id="dh-chrome">
-/* ══ concept bar (presentation only) ═════════════════════════════════════ */
-.cbar{background:#0d1512;color:#e9efe9;font:500 12.5px/1.3 var(--bf)}
-.cbar__in{max-width:1320px;margin:0 auto;padding:6px clamp(16px,3vw,40px);display:flex;align-items:center;gap:14px;min-height:42px}
-.cbar__tag{font:700 10px/1 var(--bf);letter-spacing:.16em;text-transform:uppercase;color:#9fb0a8}
-.cbar__sw{display:flex;background:rgba(255,255,255,.08);border-radius:99px;padding:3px}
-.cbar__sw a{color:#cfd9d4;text-decoration:none;padding:6px 13px;border-radius:99px;font-weight:600}
-.cbar__sw a:hover{color:#fff}
-.cbar__sw a[aria-current]{background:#fff;color:#0d1512}
-.cbar__note{color:#9fb0a8;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.cbar__back{margin-left:auto;display:inline-flex;align-items:center;gap:6px;color:#fff;text-decoration:none;font-weight:600;white-space:nowrap;padding:6px 4px}
-.cbar__back:hover{text-decoration:underline;text-underline-offset:3px}
-
-/* ══ utility bar: safety line + live status ══════════════════════════════ */
-.util{background:var(--panel);border-bottom:1px solid var(--line);color:var(--ink2);font:500 13px/1.3 var(--bf)}
-.util__in{max-width:1320px;margin:0 auto;padding:0 clamp(16px,3vw,40px);min-height:40px;display:flex;align-items:center;gap:18px}
-.util__sos{margin:0;display:flex;align-items:center;gap:8px;white-space:nowrap;min-width:0}
-.util__dot{width:8px;height:8px;border-radius:50%;background:var(--alert);box-shadow:0 0 0 4px rgba(179,38,30,.14);flex:none}
-.util__sos b{color:var(--ink);font-weight:700}
-.util__sos a{color:var(--alert);font-weight:800;text-decoration:none;border-bottom:1.5px solid currentColor;padding:6px 0 1px}
-.util__pc{color:var(--faint)}
-.util__pc a{color:var(--ink2);border-color:var(--line2);font-weight:700}
-.util__info{margin:0 0 0 auto;display:flex;align-items:center;gap:18px;white-space:nowrap}
-.util__info span{display:inline-flex;align-items:center;gap:6px;color:var(--faint)}
-.util__info svg{width:15px;height:15px;color:var(--brand)}
-.util .status{padding:5px 11px;font-size:12.5px;background:var(--paper);border:1px solid var(--line)}
-.util .status.is-open{background:var(--goodsoft);border-color:transparent}
-@media (max-width:1180px){.util__addr{display:none!important}}
-@media (max-width:900px){.util__lang,.util__pc{display:none!important}}
-@media (max-width:420px){.util__long{display:none}.util__in{gap:10px}.util .status{font-size:12px;padding:4px 9px}}
-
-/* ══ header ══════════════════════════════════════════════════════════════ */
-.hdr{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.94);-webkit-backdrop-filter:saturate(1.6) blur(14px);backdrop-filter:saturate(1.6) blur(14px);border-bottom:1px solid var(--line);box-shadow:none;transition:box-shadow .25s ease}
-.hdr.is-stuck{box-shadow:0 8px 24px -16px rgba(0,0,0,.28)}
-.hdr__in{max-width:1320px;margin:0 auto;padding:0 clamp(16px,3vw,40px);min-height:76px;display:flex;align-items:center;gap:20px;flex-wrap:nowrap}
-.hdr .logo{min-height:56px}
-.hnav{display:none;align-items:stretch;gap:2px;margin:0 auto;align-self:stretch}
-.hnav a{position:relative;display:flex;align-items:center;padding:0 12px;border-radius:0;font:600 14.5px/1 var(--bf);color:var(--ink2);text-decoration:none;white-space:nowrap;background:none}
-.hnav a::after{content:"";position:absolute;left:12px;right:12px;bottom:-1px;height:2.5px;border-radius:2px;background:var(--brand);transform:scaleX(0);transform-origin:left;transition:transform .25s ease}
-.hnav a:hover{color:var(--ink);background:none}
-.hnav a:hover::after{transform:scaleX(.35)}
-.hnav a[aria-current="true"]{color:var(--brand)}
-.hnav a[aria-current="true"]::after{transform:scaleX(1)}
-.hact{display:flex;align-items:center;gap:10px;margin-left:auto;flex:none}
-.hnav + .hact{margin-left:0}
-.htel{display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);min-height:48px;padding:0 4px}
-.htel__i{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:var(--panel);color:var(--brand);flex:none;transition:background .2s}
-.htel:hover .htel__i{background:var(--panel2)}
-.htel__t{display:none;line-height:1.15}
-.htel__t small{display:block;font:600 11px/1.3 var(--bf);color:var(--faint);letter-spacing:.02em}
-.htel__t b{font:700 16.5px/1.2 var(--hf);color:var(--ink);font-variant-numeric:tabular-nums;letter-spacing:-.01em}
-.hcta{min-height:48px!important;padding:0 20px!important;font-size:14.5px!important;white-space:nowrap}
-.hcta__s{display:none}
-.mbtn{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 16px 0 14px;border-radius:99px;border:1.5px solid var(--line2);background:var(--paper);color:var(--ink);font:700 14.5px/1 var(--bf);cursor:pointer}
-.mbtn:hover{border-color:var(--ink)}
-.mbtn__i{position:relative;width:18px;height:12px;flex:none}
-.mbtn__i::before,.mbtn__i::after,.mbtn__i span{content:"";position:absolute;left:0;right:0;height:2px;border-radius:2px;background:currentColor}
-.mbtn__i::before{top:0}.mbtn__i span{top:5px;right:5px}.mbtn__i::after{bottom:0}
-@media (min-width:1100px){.hnav{display:flex}.mbtn{display:none}}
-@media (min-width:1300px){.htel__t{display:block}}
-@media (max-width:1099px){.hcta{display:none}.htel__t{display:block}}
-@media (max-width:640px){
-  .hdr__in{min-height:64px;gap:10px}
-  .hdr .logo__m{width:40px;height:40px}
-  .hdr .logo__t{font-size:17px}
-  .hdr .logo__t span{font-size:9px;letter-spacing:.11em}
-  .htel__t{display:none}
-  .htel__i{width:46px;height:46px;background:var(--brand);color:#fff}
-  .mbtn{padding:0 14px;min-height:46px}
-}
-@media (max-width:440px){.hdr .logo__t span{display:none}.hdr .logo__t{font-size:16.5px}.hdr .logo{gap:9px;min-width:0}}
-@media (max-width:350px){.mbtn__l{display:none}.mbtn{padding:0;width:46px;justify-content:center}}
-
-/* ══ mobile drawer ═══════════════════════════════════════════════════════ */
-.mnav{position:fixed;inset:0;z-index:90;display:flex;justify-content:flex-end;visibility:hidden;pointer-events:none}
-.mnav.is-open{visibility:visible;pointer-events:auto}
-.mnav__scrim{position:absolute;inset:0;background:rgba(10,20,18,.48);opacity:0;transition:opacity .3s ease;border:0;padding:0;cursor:pointer}
-.mnav.is-open .mnav__scrim{opacity:1}
-.mnav__p{position:relative;width:min(440px,100%);height:100%;background:var(--paper);display:flex;flex-direction:column;transform:translateX(100%);transition:transform .34s cubic-bezier(.2,.8,.2,1);box-shadow:-20px 0 60px -20px rgba(0,0,0,.35)}
-.mnav.is-open .mnav__p{transform:none}
-.mnav__top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px 12px 20px;border-bottom:1px solid var(--line);min-height:68px}
-.mnav__top .status{font-size:12.5px}
-.mnav__x{width:46px;height:46px;border-radius:50%;border:1.5px solid var(--line2);background:var(--paper);color:var(--ink);display:grid;place-items:center;cursor:pointer;flex:none}
-.mnav__body{flex:1;overflow-y:auto;overscroll-behavior:contain;padding:8px 20px 24px}
-.mnav__list{list-style:none;margin:0;padding:0}
-.mnav__list li+li{border-top:1px solid var(--line)}
-.mnav__list a{display:flex;align-items:center;gap:14px;padding:15px 2px;text-decoration:none;color:var(--ink)}
-.mnav__list b{display:block;font:700 20px/1.2 var(--hf);letter-spacing:-.015em}
-.mnav__list small{display:block;font:500 13.5px/1.35 var(--bf);color:var(--faint);margin-top:3px}
-.mnav__list svg{margin-left:auto;color:var(--brand);flex:none}
-.mnav__list a[aria-current="true"] b{color:var(--brand)}
-.mnav__q{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:18px 0}
-.mnav__q a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;min-height:78px;border-radius:var(--rs);background:var(--panel);color:var(--ink);text-decoration:none;font:700 13px/1.2 var(--bf);text-align:center;padding:10px 6px}
-.mnav__q a svg{color:var(--brand);width:22px;height:22px}
-.mnav__q a.is-p{background:var(--brand);color:#fff}
-.mnav__q a.is-p svg{color:#fff}
-.mnav__sos{display:flex;gap:12px;align-items:flex-start;border:1px solid #f0c9c4;background:var(--alertsoft);border-radius:var(--rs);padding:14px 16px;font:500 14px/1.45 var(--bf);color:var(--ink2);margin:0}
-.mnav__sos b{color:var(--alert)}
-.mnav__sos a{color:var(--alert);font-weight:800}
-.mnav__addr{margin:16px 0 0;font:500 14px/1.5 var(--bf);color:var(--faint)}
-body.is-locked{overflow:hidden}
-@media (prefers-reduced-motion:reduce){.mnav__p,.mnav__scrim,.hnav a::after{transition:none}}
-
-/* ══ safety card (above footer) ══════════════════════════════════════════ */
-.safe{padding:clamp(40px,6vw,72px) 0;background:var(--bg)}
-.safe__card{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:0 24px 50px -36px rgba(0,0,0,.35)}
-.safe__head{display:flex;gap:16px;align-items:flex-start;padding:clamp(22px,3vw,32px);border-bottom:1px solid var(--line)}
-.safe__ic{width:46px;height:46px;border-radius:14px;background:var(--alertsoft);color:var(--alert);display:grid;place-items:center;flex:none}
-.safe__head h2{font-size:clamp(22px,2.6vw,30px);margin:2px 0 6px}
-.safe__head p{margin:0;color:var(--ink2);max-width:60ch}
-.safe__g{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
-.safe__g li{padding:22px clamp(18px,2.4vw,28px) 24px;display:flex;flex-direction:column;gap:8px;border-left:1px solid var(--line)}
-.safe__g li:first-child{border-left:0;background:var(--alertsoft)}
-.safe__k{font:700 11px/1 var(--bf);letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
-.safe__g li:first-child .safe__k{color:var(--alert)}
-.safe__g b{font:700 21px/1.15 var(--hf);color:var(--ink);letter-spacing:-.015em}
-.safe__g p{margin:0;font-size:14.5px;line-height:1.5;color:var(--ink2);flex:1}
-.safe__g a{align-self:flex-start;display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 16px;border-radius:99px;border:1.5px solid var(--line2);color:var(--ink);text-decoration:none;font-weight:700;font-size:14.5px;margin-top:6px;font-variant-numeric:tabular-nums}
-.safe__g a:hover{border-color:var(--ink)}
-.safe__g li:first-child a{background:var(--alert);border-color:var(--alert);color:#fff}
-.safe__g li:first-child a:hover{background:#8f1e17}
-@media (max-width:980px){.safe__g{grid-template-columns:repeat(2,minmax(0,1fr))}.safe__g li:nth-child(3){border-left:0}.safe__g li:nth-child(n+3){border-top:1px solid var(--line)}}
-@media (max-width:560px){.safe__g{grid-template-columns:minmax(0,1fr)}.safe__g li{border-left:0!important}.safe__g li+li{border-top:1px solid var(--line)}.safe__head{flex-direction:column;gap:12px}}
-
-@media (max-width:760px){.cbar__note{display:none}}
-@media (max-width:420px){.cbar__in{gap:8px;padding:5px 12px}.cbar__tag{display:none}.cbar__sw a{padding:6px 11px}.cbar__back span{display:none}}
-</style>
+<title>Durán &amp; Hossain Pharmacy — Care direction</title>
+<meta name="description" content="Design direction “Care” for Durán &amp; Hossain, an independent pharmacy in Jackson Heights, Queens: refills by text, walk-in vaccines, free same-day delivery and nine languages at the counter.">
+<meta name="theme-color" content="#0B2530">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230D7085'/%3E%3Cpath d='M32 18v28M18 32h28' stroke='%23fff' stroke-width='7' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preload" href="fonts/outfit-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/manrope-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="shared.css">
+<link rel="stylesheet" href="care.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Pharmacy","name":"Durán & Hossain Pharmacy","telephone":"+1-718-555-0175","address":{"@type":"PostalAddress","streetAddress":"74-20 Roosevelt Ave","addressLocality":"Jackson Heights","addressRegion":"NY","postalCode":"11372","addressCountry":"US"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"19:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"17:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"10:00","closes":"14:00"}]}
+</script>
 </head>
 <body>
-<a class="skip" href="#main" style="background:#102A33;color:#fff">Skip to content</a><div class="cbar" role="region" aria-label="Design concept"><div class="cbar__in"><span class="cbar__tag">Concept</span><nav class="cbar__sw" aria-label="Design directions"><a href="neighbors.html">Neighbors</a><a href="care.html" aria-current="page">Care</a></nav><span class="cbar__note">Fictional pharmacy · names, numbers and reviews are placeholders</span><a class="cbar__back" href="../index.html#duran-hossain"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 6l-6 6 6 6"/></svg>All <span>concepts</span></a></div></div>
+<a class="skip" href="#main">Skip to content</a><div class="cbar" role="region" aria-label="Design concept"><div class="cbar__in"><span class="cbar__tag">Concept</span><nav class="cbar__sw" aria-label="Design directions"><a href="neighbors.html">Neighbors</a><a href="care.html" aria-current="page">Care</a></nav><span class="cbar__note">Fictional pharmacy · names and numbers are placeholders</span><a class="cbar__back" href="../index.html#duran-hossain"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 6l-6 6 6 6"/></svg>All <span>concepts</span></a></div></div>
 <div class="util"><div class="util__in"><p class="util__sos"><span class="util__dot" aria-hidden="true"></span><span><b>Emergency?</b> <span class="util__long">Call</span> <a href="tel:911">911</a></span><span class="util__pc">&nbsp;· Poison Control <a href="tel:18002221222">1-800-222-1222</a></span></p><p class="util__info"><span class="util__addr"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.1-7-11.4A7 7 0 0 1 19 9.6C19 14.9 12 21 12 21z"/><circle cx="12" cy="9.6" r="2.6"/></svg>74-20 Roosevelt Ave, Jackson Heights</span><span class="util__lang"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 10h8M8 13h5"/></svg>9 languages at the counter</span><span class="status" data-rx-status>Checking hours…</span></p></div></div>
-<header class="hdr"><div class="hdr__in"><a class="logo" href="care.html"><span class="logo__m"><svg viewBox="0 0 24 24" width="25" height="25" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M12 8v8M8 12h8"/></svg></span><span class="logo__t">Durán &amp; Hossain<span>Jackson Heights · Est 2009</span></span></a><nav class="hnav" aria-label="Main"><a href="#services" aria-current="false">Services</a><a href="#specialty" aria-current="false">Specialty</a><a href="#shop" aria-current="false">Shop</a><a href="#vaccines" aria-current="false">Vaccines</a><a href="#insurance" aria-current="false">Insurance</a><a href="#hours" aria-current="false">Hours</a><a href="#contact" aria-current="false">Contact</a></nav><div class="hact"><a class="htel" href="tel:+17185550175" aria-label="Call the pharmacy, (718) 555-0175"><span class="htel__i"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 3.5h3.2l1.6 4.3-2.1 1.4a12 12 0 0 0 7.1 7.1l1.4-2.1 4.3 1.6V19a1.6 1.6 0 0 1-1.7 1.6A17.2 17.2 0 0 1 3.4 5.2 1.6 1.6 0 0 1 5 3.5z"/></svg></span><span class="htel__t"><small>Pharmacy line</small><b>(718) 555-0175</b></span></a><a class="btn btn--sm hcta" href="#start">Refill a prescription</a><button class="mbtn" type="button" aria-expanded="false" aria-controls="mnav"><span class="mbtn__i" aria-hidden="true"><span></span></span><span class="mbtn__l">Menu</span></button></div></div></header>
-<div class="mnav" id="mnav" role="dialog" aria-modal="true" aria-label="Menu" hidden><button class="mnav__scrim" type="button" tabindex="-1" aria-label="Close menu"></button><div class="mnav__p"><div class="mnav__top"><span class="status" data-rx-status>Checking hours…</span><button class="mnav__x" type="button" aria-label="Close menu"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div><div class="mnav__body"><div class="mnav__q"><a class="is-p" href="tel:+17185550175"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 3.5h3.2l1.6 4.3-2.1 1.4a12 12 0 0 0 7.1 7.1l1.4-2.1 4.3 1.6V19a1.6 1.6 0 0 1-1.7 1.6A17.2 17.2 0 0 1 3.4 5.2 1.6 1.6 0 0 1 5 3.5z"/></svg>Call us</a><a href="sms:+17185550100"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 10h8M8 13h5"/></svg>Text a refill</a><a href="https://maps.google.com/?q=74-20+Roosevelt+Ave+Jackson+Heights+NY+11372"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.1-7-11.4A7 7 0 0 1 19 9.6C19 14.9 12 21 12 21z"/><circle cx="12" cy="9.6" r="2.6"/></svg>Directions</a></div><ul class="mnav__list"><li><a href="#services" aria-current="false"><span><b>Services</b><small>Prescriptions, refills, transfers</small></span><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 6l6 6-6 6"/></svg></a></li><li><a href="#specialty" aria-current="false"><span><b>Specialty</b><small>Compounding, adherence packs, equipment</small></span><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 6l6 6-6 6"/></svg></a></li><li><a href="#shop" aria-current="false"><span><b>Shop</b><small>Over-the-counter, vitamins, baby care</small></span><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 6l6 6-6 6"/></svg></a></li><li><a href="#vaccines" aria-current="false"><span><b>Vaccines</b><small>Walk-in shots, no appointment</small></span><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 6l6 6-6 6"/></svg></a></li><li><a href="#insurance" aria-current="false"><span><b>Insurance</b><small>NYRx, Medicare, work plans</small></span><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 6l6 6-6 6"/></svg></a></li><li><a href="#hours" aria-current="false"><span><b>Hours</b><small>Today, holidays, delivery cut-off</small></span><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 6l6 6-6 6"/></svg></a></li><li><a href="#contact" aria-current="false"><span><b>Contact</b><small>Call, text, visit</small></span><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 6l6 6-6 6"/></svg></a></li></ul><p class="mnav__sos"><span><b>In an emergency, call <a href="tel:911">911</a></b>, not the pharmacy. Poison Control: <a href="tel:18002221222">1-800-222-1222</a>.</span></p><p class="mnav__addr">74-20 Roosevelt Avenue, Jackson Heights, NY 11372</p></div></div></div><main id="main"><section class="hero hero--split"><div class="hero__bg"><svg width="100%" height="100%" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><circle cx="70" cy="60" r="110" fill="#E2663C" opacity=".22"/><circle cx="330" cy="200" r="130" fill="#09605D" opacity=".20"/><circle cx="210" cy="30" r="80" fill="#0D7085" opacity=".13"/></svg></div><div class="wrap hero__in"><div class="hero__g"><div><span class="kick"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#0E7A5F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 20.5S3.5 15 3.5 9.2A4.7 4.7 0 0 1 12 6.5a4.7 4.7 0 0 1 8.5 2.7c0 5.8-8.5 11.3-8.5 11.3z"/></svg>One shop on Roosevelt Avenue since 2009</span><h1>The pharmacy that has <em>time for you.</em></h1><p class="hero__l">An independent pharmacy in Jackson Heights. Nine languages at the counter, free same-day delivery, walk-in vaccinations, and a pharmacist who will go through every bottle with you — no appointment, no charge.</p><div class="cta cta--c"><a class="btn" href="tel:+17185550175">Call (718) 555-0175</a><a class="btn btn--o" href="#hours">Hours &amp; directions</a></div><div class="trust"><div><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="#0E7A5F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 2.5l8 3.2v6c0 5-3.4 9.2-8 10.3-4.6-1.1-8-5.3-8-10.3v-6z"/><path d="M8.8 12.2l2.2 2.2 4.2-4.4"/></svg>Licensed NYS pharmacy</div><div><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="#0E7A5F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 6.5h11v10H2zM13 10h4l3 3.2v3.3h-7z"/><circle cx="6.2" cy="18.5" r="2"/><circle cx="17" cy="18.5" r="2"/></svg>Free delivery, no minimum</div><div><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="#0E7A5F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3.2 9.5h17.6M3.2 14.5h17.6"/><path d="M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18z"/></svg>9 languages</div></div></div><div class="hero__art"><svg viewBox="0 0 680 520" role="img" aria-label="A pharmacy storefront on a Queens avenue, under the elevated train" style="width:100%;height:auto;display:block"><defs><clipPath id="carehero-win"><rect x="112" y="302" width="248" height="120" rx="14"/></clipPath><linearGradient id="carehero-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#DCEEF4"/><stop offset="1" stop-color="#EDF7FA"/></linearGradient></defs><rect x="0" y="0" width="680" height="520" rx="0" fill="url(#carehero-sky)"/><circle cx="120" cy="110" r="95" fill="#E2663C" opacity=".20"/><circle cx="575" cy="70" r="70" fill="#09605D" opacity=".22"/><rect x="0" y="150" width="86" height="300" rx="0" fill="#C6E0E8"/><rect x="612" y="128" width="68" height="322" rx="0" fill="#C6E0E8"/><rect x="16" y="176" width="18" height="24" rx="1" fill="#B0D2DD"/><rect x="16" y="216" width="18" height="24" rx="1" fill="#B0D2DD"/><rect x="16" y="256" width="18" height="24" rx="1" fill="#B0D2DD"/><rect x="46" y="176" width="18" height="24" rx="1" fill="#B0D2DD"/><rect x="46" y="216" width="18" height="24" rx="1" fill="#B0D2DD"/><rect x="46" y="256" width="18" height="24" rx="1" fill="#B0D2DD"/><rect x="632" y="154" width="18" height="24" rx="1" fill="#B0D2DD"/><rect x="632" y="194" width="18" height="24" rx="1" fill="#B0D2DD"/><rect x="632" y="234" width="18" height="24" rx="1" fill="#B0D2DD"/><rect x="632" y="274" width="18" height="24" rx="1" fill="#B0D2DD"/><rect x="62" y="96" width="22" height="338" rx="1" fill="#8EAAB5"/><rect x="62" y="96" width="22" height="338" fill="none" stroke="#102A33" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/><rect x="53" y="424" width="40" height="12" rx="2" fill="#6E8D99"/><rect x="58" y="130" width="30" height="9" rx="2" fill="#6E8D99"/><rect x="58" y="176" width="30" height="9" rx="2" fill="#6E8D99"/><rect x="58" y="222" width="30" height="9" rx="2" fill="#6E8D99"/><rect x="58" y="268" width="30" height="9" rx="2" fill="#6E8D99"/><rect x="58" y="314" width="30" height="9" rx="2" fill="#6E8D99"/><rect x="58" y="360" width="30" height="9" rx="2" fill="#6E8D99"/><rect x="58" y="406" width="30" height="9" rx="2" fill="#6E8D99"/><rect x="556" y="96" width="22" height="338" rx="1" fill="#8EAAB5"/><rect x="556" y="96" width="22" height="338" fill="none" stroke="#102A33" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/><rect x="547" y="424" width="40" height="12" rx="2" fill="#6E8D99"/><rect x="552" y="130" width="30" height="9" rx="2" fill="#6E8D99"/><rect x="552" y="176" width="30" height="9" rx="2" fill="#6E8D99"/><rect x="552" y="222" width="30" height="9" rx="2" fill="#6E8D99"/><rect x="552" y="268" width="30" height="9" rx="2" fill="#6E8D99"/><rect x="552" y="314" width="30" height="9" rx="2" fill="#6E8D99"/><rect x="552" y="360" width="30" height="9" rx="2" fill="#6E8D99"/><rect x="552" y="406" width="30" height="9" rx="2" fill="#6E8D99"/><rect x="0" y="62" width="680" height="38" rx="0" fill="#8EAAB5"/><rect x="0" y="62" width="680" height="38" fill="none" stroke="#102A33" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/><rect x="0" y="100" width="680" height="9" rx="0" fill="#6E8D99"/><path d="M84 100 L143 62 M84 62 L143 100 M143 100 L202 62 M143 62 L202 100 M202 100 L261 62 M202 62 L261 100 M261 100 L320 62 M261 62 L320 100 M320 100 L379 62 M320 62 L379 100 M379 100 L438 62 M379 62 L438 100 M438 100 L497 62 M438 62 L497 100 M497 100 L556 62 M497 62 L556 100" fill="none" stroke="#6E8D99" stroke-width="3" opacity=".85"/><rect x="138" y="14" width="404" height="50" rx="16" fill="#0D7085"/><rect x="138" y="14" width="404" height="50" rx="16" fill="none" stroke="#102A33" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/><rect x="138" y="36" width="404" height="7" rx="0" fill="#E2663C"/><rect x="158" y="22" width="34" height="13" rx="2" fill="#CFE8F0"/><rect x="212" y="22" width="34" height="13" rx="2" fill="#CFE8F0"/><rect x="266" y="22" width="34" height="13" rx="2" fill="#CFE8F0"/><rect x="320" y="22" width="34" height="13" rx="2" fill="#CFE8F0"/><rect x="374" y="22" width="34" height="13" rx="2" fill="#CFE8F0"/><rect x="428" y="22" width="34" height="13" rx="2" fill="#CFE8F0"/><rect x="482" y="22" width="34" height="13" rx="2" fill="#CFE8F0"/><circle cx="528" cy="54" r="6" fill="#FFD48A"/><rect x="72" y="150" width="540" height="284" rx="0" fill="#FFFFFF"/><rect x="72" y="150" width="540" height="284" fill="none" stroke="#102A33" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/><rect x="72" y="150" width="540" height="17" rx="1" fill="#E4F0F4"/><rect x="92" y="182" width="500" height="58" rx="14" fill="#0D7085"/><rect x="92" y="182" width="500" height="58" rx="14" fill="none" stroke="#102A33" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/><text x="342" y="221" text-anchor="middle" fill="#FFFFFF" font-family="'Outfit',sans-serif" font-size="31" font-weight="800" letter-spacing="1.5">DURÁN &amp; HOSSAIN</text><path d="M88 248 L506 248 L506 294 q -19.0 13 -38.0 0 q -19.0 13 -38.0 0 q -19.0 13 -38.0 0 q -19.0 13 -38.0 0 q -19.0 13 -38.0 0 q -19.0 13 -38.0 0 q -19.0 13 -38.0 0 q -19.0 13 -38.0 0 q -19.0 13 -38.0 0 q -19.0 13 -38.0 0 q -19.0 13 -38.0 0 L88 248" fill="#0D7085" stroke="#102A33" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/><clipPath id="carehero-aw"><path d="M88 248 L506 248 L506 294 q -19.0 13 -38.0 0 q -19.0 13 -38.0 0 q -19.0 13 -38.0 0 q -19.0 13 -38.0 0 q -19.0 13 -38.0 0 q -19.0 13 -38.0 0 q -19.0 13 -38.0 0 q -19.0 13 -38.0 0 q -19.0 13 -38.0 0 q -19.0 13 -38.0 0 q -19.0 13 -38.0 0 L88 248"/></clipPath><g clip-path="url(#carehero-aw)"><rect x="126.0" y="248" width="38.0" height="62" rx="0" fill="#F2F8FA"/><rect x="202.0" y="248" width="38.0" height="62" rx="0" fill="#F2F8FA"/><rect x="278.0" y="248" width="38.0" height="62" rx="0" fill="#F2F8FA"/><rect x="354.0" y="248" width="38.0" height="62" rx="0" fill="#F2F8FA"/><rect x="430.0" y="248" width="38.0" height="62" rx="0" fill="#F2F8FA"/></g><path d="M88 248 L506 248" stroke="#102A33" stroke-width="1.8" fill="none"/><rect x="112" y="302" width="248" height="120" rx="14" fill="#CFE8F0"/><g clip-path="url(#carehero-win)"><rect x="112" y="302" width="248" height="120" rx="0" fill="#F4FAFC"/><rect x="124" y="336" width="224" height="4" rx="1" fill="#B4D2DC"/><rect x="130" y="316" width="14" height="20" rx="1.5" fill="#0E7A5F"/><rect x="149" y="324" width="12" height="12" rx="1.5" fill="#E2663C"/><rect x="166" y="322" width="15" height="14" rx="1.5" fill="#5C93C7"/><rect x="186" y="319" width="12" height="17" rx="1.5" fill="#0E7A5F"/><rect x="203" y="322" width="9" height="14" rx="1.5" fill="#12938F"/><rect x="217" y="321" width="13" height="15" rx="1.5" fill="#0E7A5F"/><rect x="235" y="319" width="9" height="17" rx="1.5" fill="#0E7A5F"/><rect x="249" y="316" width="12" height="20" rx="1.5" fill="#E2663C"/><rect x="266" y="324" width="12" height="12" rx="1.5" fill="#0E7A5F"/><rect x="283" y="319" width="11" height="17" rx="1.5" fill="#12938F"/><rect x="299" y="322" width="14" height="14" rx="1.5" fill="#5C93C7"/><rect x="124" y="372" width="224" height="4" rx="1" fill="#B4D2DC"/><rect x="130" y="352" width="9" height="20" rx="1.5" fill="#0E7A5F"/><rect x="144" y="352" width="11" height="20" rx="1.5" fill="#12938F"/><rect x="160" y="360" width="10" height="12" rx="1.5" fill="#12938F"/><rect x="175" y="358" width="14" height="14" rx="1.5" fill="#0E7A5F"/><rect x="194" y="354" width="10" height="18" rx="1.5" fill="#12938F"/><rect x="209" y="358" width="10" height="14" rx="1.5" fill="#5C93C7"/><rect x="224" y="352" width="13" height="20" rx="1.5" fill="#E2663C"/><rect x="242" y="358" width="10" height="14" rx="1.5" fill="#0E7A5F"/><rect x="257" y="358" width="11" height="14" rx="1.5" fill="#12938F"/><rect x="273" y="359" width="11" height="13" rx="1.5" fill="#12938F"/><rect x="289" y="353" width="9" height="19" rx="1.5" fill="#5C93C7"/><rect x="124" y="408" width="224" height="4" rx="1" fill="#B4D2DC"/><rect x="130" y="388" width="15" height="20" rx="1.5" fill="#0E7A5F"/><rect x="150" y="396" width="11" height="12" rx="1.5" fill="#5C93C7"/><rect x="166" y="389" width="10" height="19" rx="1.5" fill="#12938F"/><rect x="181" y="390" width="13" height="18" rx="1.5" fill="#5C93C7"/><rect x="199" y="390" width="10" height="18" rx="1.5" fill="#5C93C7"/><rect x="214" y="395" width="14" height="13" rx="1.5" fill="#12938F"/><rect x="233" y="394" width="14" height="14" rx="1.5" fill="#0E7A5F"/><rect x="252" y="394" width="14" height="14" rx="1.5" fill="#5C93C7"/><rect x="271" y="396" width="13" height="12" rx="1.5" fill="#0E7A5F"/><rect x="289" y="393" width="11" height="15" rx="1.5" fill="#5C93C7"/><rect x="305" y="396" width="12" height="12" rx="1.5" fill="#E2663C"/></g><rect x="112" y="302" width="248" height="120" rx="14" fill="none" stroke="#102A33" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/><rect x="232" y="302" width="4" height="120" rx="0" fill="#5E8291"/><rect x="392" y="300" width="92" height="134" rx="14" fill="#12938F"/><rect x="392" y="300" width="92" height="134" rx="14" fill="none" stroke="#102A33" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/><rect x="404" y="312" width="68" height="62" rx="2" fill="#CFE8F0"/><circle cx="472" cy="372" r="5" fill="#5E8291"/><rect x="404" y="388" width="68" height="16" rx="2" fill="#E2663C"/><rect x="556" y="196" width="10" height="54" rx="0" fill="#6E8D99"/><rect x="528" y="250" width="66" height="66" rx="16" fill="#FFFFFF"/><rect x="528" y="250" width="66" height="66" rx="16" fill="none" stroke="#102A33" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/><path d="M554 264h14v15h15v14h-15v15h-14v-15h-15v-14h15z" fill="#0E7A5F"/><rect x="0" y="434" width="680" height="44" rx="0" fill="#D7E8EE"/><rect x="0" y="478" width="680" height="42" rx="0" fill="#9FB8C2"/><path d="M0 456 H680" stroke="#BBD4DD" stroke-width="2" opacity=".5"/><rect x="14" y="496" width="34" height="5" rx="2" fill="#F2F8FA"/><rect x="84" y="496" width="34" height="5" rx="2" fill="#F2F8FA"/><rect x="154" y="496" width="34" height="5" rx="2" fill="#F2F8FA"/><rect x="224" y="496" width="34" height="5" rx="2" fill="#F2F8FA"/><rect x="294" y="496" width="34" height="5" rx="2" fill="#F2F8FA"/><rect x="364" y="496" width="34" height="5" rx="2" fill="#F2F8FA"/><rect x="434" y="496" width="34" height="5" rx="2" fill="#F2F8FA"/><rect x="504" y="496" width="34" height="5" rx="2" fill="#F2F8FA"/><rect x="574" y="496" width="34" height="5" rx="2" fill="#F2F8FA"/><rect x="644" y="496" width="34" height="5" rx="2" fill="#F2F8FA"/><rect x="137.0" y="404.0" width="26.0" height="44.0" rx="9.0" fill="#12938F"/><rect x="140.0" y="446.0" width="8.0" height="20.0" rx="3" fill="#3A5560"/><rect x="152.0" y="446.0" width="8.0" height="20.0" rx="3" fill="#3A5560"/><circle cx="150" cy="400.0" r="11.0" fill="#D9A47C"/><rect x="184.82" y="416.68" width="22.36" height="37.839999999999996" rx="7.74" fill="#E2663C"/><rect x="187.4" y="452.8" width="6.88" height="17.2" rx="3" fill="#3A5560"/><rect x="197.72" y="452.8" width="6.88" height="17.2" rx="3" fill="#3A5560"/><circle cx="196" cy="413.24" r="9.459999999999999" fill="#AA7044"/><rect x="507.65" y="409.1" width="24.7" height="41.8" rx="8.549999999999999" fill="#0D7085"/><rect x="510.5" y="449.0" width="7.6" height="19.0" rx="3" fill="#3A5560"/><rect x="521.9" y="449.0" width="7.6" height="19.0" rx="3" fill="#3A5560"/><circle cx="520" cy="405.3" r="10.45" fill="#8C5A36"/><rect x="534" y="426" width="20" height="24" rx="3" fill="#0D7085"/><rect x="534" y="426" width="20" height="24" rx="3" fill="none" stroke="#102A33" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/><path d="M539 426v-5a5 5 0 0 1 10 0v5" fill="none" stroke="#102A33" stroke-width="2"/><rect x="626" y="404" width="16" height="34" rx="5" fill="#E2663C"/><rect x="620" y="400" width="28" height="7" rx="3" fill="#E2663C"/><rect x="36" y="396" width="30" height="42" rx="3" fill="#6E8D99"/><rect x="36" y="396" width="30" height="42" rx="3" fill="none" stroke="#102A33" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/></svg></div></div><div class="qa"><a href="tel:+17185550175"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#0D7085" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="8.5" width="19" height="7" rx="3.5" transform="rotate(-38 12 12)"/><path d="M9.6 7.2l4.8 4.8"/></svg><b>Refill a prescription</b><span>Call or text the Rx number</span></a><a href="tel:+17185550175"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#0D7085" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 8h16l-1.2 12.1A2 2 0 0 1 16.8 22H7.2a2 2 0 0 1-2-1.9z"/><path d="M8.5 8V6a3.5 3.5 0 0 1 7 0v2"/><path d="M12 12v5M9.5 14.5h5"/></svg><b>Transfer to us</b><span>One call — we do the rest</span></a><a href="#vaccines"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#0D7085" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 3l3 3M16.5 4.5l3 3M13 8l3 3M9.5 11.5L4 17v3h3l5.5-5.5"/><path d="M10.5 6.5l7 7"/></svg><b>Walk in for a shot</b><span>No appointment needed</span></a><a href="#delivery"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#0D7085" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 6.5h11v10H2zM13 10h4l3 3.2v3.3h-7z"/><circle cx="6.2" cy="18.5" r="2"/><circle cx="17" cy="18.5" r="2"/></svg><b>Free delivery</b><span>Order by 3 pm</span></a></div></div></section><!-- ═══ 01 CONCIERGE ═══════════════════════════════════════════════════════ -->
+<header class="hdr"><div class="hdr__in"><a class="logo" href="care.html"><span class="logo__m"><svg viewBox="0 0 24 24" width="25" height="25" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M12 8v8M8 12h8"/></svg></span><span class="logo__t">Durán &amp; Hossain<span>Jackson Heights · Est 2009</span></span></a><nav class="hnav" aria-label="Main"><a href="#services" aria-current="false">Services</a><a href="#specialty" aria-current="false">Specialty</a><a href="#shop" aria-current="false">Shop</a><a href="#vaccines" aria-current="false">Vaccines</a><a href="#insurance" aria-current="false">Insurance</a><a href="#hours" aria-current="false">Hours</a><a href="#contact" aria-current="false">Contact</a></nav><div class="hact"><a class="htel" href="tel:+17185550175" aria-label="Call the pharmacy, (718) 555-0175"><span class="htel__i"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 3.5h3.2l1.6 4.3-2.1 1.4a12 12 0 0 0 7.1 7.1l1.4-2.1 4.3 1.6V19a1.6 1.6 0 0 1-1.7 1.6A17.2 17.2 0 0 1 3.4 5.2 1.6 1.6 0 0 1 5 3.5z"/></svg></span><span class="htel__t"><small>Pharmacy line</small><b>(718) 555-0175</b></span></a><a class="btn btn--sm hcta" href="#start">Start a refill</a><button class="mbtn" type="button" aria-expanded="false" aria-controls="mnav"><span class="mbtn__i" aria-hidden="true"><span></span></span><span class="mbtn__l">Menu</span></button></div></div></header>
+<div class="mnav" id="mnav" role="dialog" aria-modal="true" aria-label="Menu" hidden><button class="mnav__scrim" type="button" tabindex="-1" aria-label="Close menu"></button><div class="mnav__p"><div class="mnav__top"><span class="status" data-rx-status>Checking hours…</span><button class="mnav__x" type="button" aria-label="Close menu"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div><div class="mnav__body"><div class="mnav__q"><a class="is-p" href="tel:+17185550175"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 3.5h3.2l1.6 4.3-2.1 1.4a12 12 0 0 0 7.1 7.1l1.4-2.1 4.3 1.6V19a1.6 1.6 0 0 1-1.7 1.6A17.2 17.2 0 0 1 3.4 5.2 1.6 1.6 0 0 1 5 3.5z"/></svg>Call us</a><a href="sms:+17185550100"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 10h8M8 13h5"/></svg>Text a refill</a><a href="https://maps.google.com/?q=74-20+Roosevelt+Ave+Jackson+Heights+NY+11372"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.1-7-11.4A7 7 0 0 1 19 9.6C19 14.9 12 21 12 21z"/><circle cx="12" cy="9.6" r="2.6"/></svg>Directions</a></div><ul class="mnav__list"><li><a href="#services" aria-current="false"><span><b>Services</b><small>Prescriptions, refills, transfers</small></span><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 6l6 6-6 6"/></svg></a></li><li><a href="#specialty" aria-current="false"><span><b>Specialty</b><small>Compounding, adherence packs, equipment</small></span><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 6l6 6-6 6"/></svg></a></li><li><a href="#shop" aria-current="false"><span><b>Shop</b><small>Over-the-counter, vitamins, baby care</small></span><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 6l6 6-6 6"/></svg></a></li><li><a href="#vaccines" aria-current="false"><span><b>Vaccines</b><small>Walk-in shots, no appointment</small></span><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 6l6 6-6 6"/></svg></a></li><li><a href="#insurance" aria-current="false"><span><b>Insurance</b><small>NYRx, Medicare, work plans</small></span><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 6l6 6-6 6"/></svg></a></li><li><a href="#hours" aria-current="false"><span><b>Hours</b><small>Today, holidays, delivery cut-off</small></span><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 6l6 6-6 6"/></svg></a></li><li><a href="#contact" aria-current="false"><span><b>Contact</b><small>Call, text, visit</small></span><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 6l6 6-6 6"/></svg></a></li></ul><p class="mnav__sos"><span><b>In an emergency, call <a href="tel:911">911</a></b>, not the pharmacy. Poison Control: <a href="tel:18002221222">1-800-222-1222</a>.</span></p><p class="mnav__addr">74-20 Roosevelt Avenue, Jackson Heights, NY 11372</p></div></div></div><main id="main"><section class="hero c-hero" aria-labelledby="hero-t">
+  <div class="wrap c-hero__g">
+    <div class="c-hero__copy">
+      <p class="c-hero__live"><span class="status" data-rx-status>Checking hours…</span><span class="c-hero__today" data-rx-today>Mon–Fri 9–7 · Sat 9–5 · Sun 10–2</span></p>
+      <h1 id="hero-t">Prescriptions, handled. <em>In your language.</em></h1>
+      <p class="c-hero__l">An independent pharmacy on Roosevelt Avenue in Jackson Heights. Text a refill, walk in for a vaccine, get it delivered free the same day — and a pharmacist who will go through every bottle with you.</p>
+      <div class="c-hero__cta"><a class="btn" href="#start">Start a refill</a><a class="btn btn--o" href="tel:+17185550175">Call (718) 555-0175</a></div>
+      <ul class="c-hero__facts">
+        <li><b>~15 min</b><span>for a new prescription</span></li>
+        <li><b>Free</b><span>same-day delivery, order by 3</span></li>
+        <li><b>9</b><span>languages at the counter</span></li>
+      </ul>
+    </div>
+    <figure class="c-hero__art">
+      <svg viewBox="0 0 680 520" role="img" aria-label="A pharmacy storefront on a Queens avenue, under the elevated train"><defs><clipPath id="carehero-win"><rect x="112" y="302" width="248" height="120" rx="14"/></clipPath><linearGradient id="carehero-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#DCEEF4"/><stop offset="1" stop-color="#EDF7FA"/></linearGradient></defs><rect x="0" y="0" width="680" height="520" rx="0" fill="url(#carehero-sky)"/><circle cx="120" cy="110" r="95" fill="#E2663C" opacity=".20"/><circle cx="575" cy="70" r="70" fill="#09605D" opacity=".22"/><rect x="0" y="150" width="86" height="300" rx="0" fill="#C6E0E8"/><rect x="612" y="128" width="68" height="322" rx="0" fill="#C6E0E8"/><rect x="16" y="176" width="18" height="24" rx="1" fill="#B0D2DD"/><rect x="16" y="216" width="18" height="24" rx="1" fill="#B0D2DD"/><rect x="16" y="256" width="18" height="24" rx="1" fill="#B0D2DD"/><rect x="46" y="176" width="18" height="24" rx="1" fill="#B0D2DD"/><rect x="46" y="216" width="18" height="24" rx="1" fill="#B0D2DD"/><rect x="46" y="256" width="18" height="24" rx="1" fill="#B0D2DD"/><rect x="632" y="154" width="18" height="24" rx="1" fill="#B0D2DD"/><rect x="632" y="194" width="18" height="24" rx="1" fill="#B0D2DD"/><rect x="632" y="234" width="18" height="24" rx="1" fill="#B0D2DD"/><rect x="632" y="274" width="18" height="24" rx="1" fill="#B0D2DD"/><rect x="62" y="96" width="22" height="338" rx="1" fill="#8EAAB5"/><rect x="62" y="96" width="22" height="338" fill="none" stroke="#102A33" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/><rect x="53" y="424" width="40" height="12" rx="2" fill="#6E8D99"/><rect x="58" y="130" width="30" height="9" rx="2" fill="#6E8D99"/><rect x="58" y="176" width="30" height="9" rx="2" fill="#6E8D99"/><rect x="58" y="222" width="30" height="9" rx="2" fill="#6E8D99"/><rect x="58" y="268" width="30" height="9" rx="2" fill="#6E8D99"/><rect x="58" y="314" width="30" height="9" rx="2" fill="#6E8D99"/><rect x="58" y="360" width="30" height="9" rx="2" fill="#6E8D99"/><rect x="58" y="406" width="30" height="9" rx="2" fill="#6E8D99"/><rect x="556" y="96" width="22" height="338" rx="1" fill="#8EAAB5"/><rect x="556" y="96" width="22" height="338" fill="none" stroke="#102A33" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/><rect x="547" y="424" width="40" height="12" rx="2" fill="#6E8D99"/><rect x="552" y="130" width="30" height="9" rx="2" fill="#6E8D99"/><rect x="552" y="176" width="30" height="9" rx="2" fill="#6E8D99"/><rect x="552" y="222" width="30" height="9" rx="2" fill="#6E8D99"/><rect x="552" y="268" width="30" height="9" rx="2" fill="#6E8D99"/><rect x="552" y="314" width="30" height="9" rx="2" fill="#6E8D99"/><rect x="552" y="360" width="30" height="9" rx="2" fill="#6E8D99"/><rect x="552" y="406" width="30" height="9" rx="2" fill="#6E8D99"/><rect x="0" y="62" width="680" height="38" rx="0" fill="#8EAAB5"/><rect x="0" y="62" width="680" height="38" fill="none" stroke="#102A33" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/><rect x="0" y="100" width="680" height="9" rx="0" fill="#6E8D99"/><path d="M84 100 L143 62 M84 62 L143 100 M143 100 L202 62 M143 62 L202 100 M202 100 L261 62 M202 62 L261 100 M261 100 L320 62 M261 62 L320 100 M320 100 L379 62 M320 62 L379 100 M379 100 L438 62 M379 62 L438 100 M438 100 L497 62 M438 62 L497 100 M497 100 L556 62 M497 62 L556 100" fill="none" stroke="#6E8D99" stroke-width="3" opacity=".85"/><rect x="138" y="14" width="404" height="50" rx="16" fill="#0D7085"/><rect x="138" y="14" width="404" height="50" rx="16" fill="none" stroke="#102A33" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/><rect x="138" y="36" width="404" height="7" rx="0" fill="#E2663C"/><rect x="158" y="22" width="34" height="13" rx="2" fill="#CFE8F0"/><rect x="212" y="22" width="34" height="13" rx="2" fill="#CFE8F0"/><rect x="266" y="22" width="34" height="13" rx="2" fill="#CFE8F0"/><rect x="320" y="22" width="34" height="13" rx="2" fill="#CFE8F0"/><rect x="374" y="22" width="34" height="13" rx="2" fill="#CFE8F0"/><rect x="428" y="22" width="34" height="13" rx="2" fill="#CFE8F0"/><rect x="482" y="22" width="34" height="13" rx="2" fill="#CFE8F0"/><circle cx="528" cy="54" r="6" fill="#FFD48A"/><rect x="72" y="150" width="540" height="284" rx="0" fill="#FFFFFF"/><rect x="72" y="150" width="540" height="284" fill="none" stroke="#102A33" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/><rect x="72" y="150" width="540" height="17" rx="1" fill="#E4F0F4"/><rect x="92" y="182" width="500" height="58" rx="14" fill="#0D7085"/><rect x="92" y="182" width="500" height="58" rx="14" fill="none" stroke="#102A33" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/><text x="342" y="221" text-anchor="middle" fill="#FFFFFF" font-family="'Outfit',sans-serif" font-size="31" font-weight="800" letter-spacing="1.5">DURÁN &amp; HOSSAIN</text><path d="M88 248 L506 248 L506 294 q -19.0 13 -38.0 0 q -19.0 13 -38.0 0 q -19.0 13 -38.0 0 q -19.0 13 -38.0 0 q -19.0 13 -38.0 0 q -19.0 13 -38.0 0 q -19.0 13 -38.0 0 q -19.0 13 -38.0 0 q -19.0 13 -38.0 0 q -19.0 13 -38.0 0 q -19.0 13 -38.0 0 L88 248" fill="#0D7085" stroke="#102A33" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/><clipPath id="carehero-aw"><path d="M88 248 L506 248 L506 294 q -19.0 13 -38.0 0 q -19.0 13 -38.0 0 q -19.0 13 -38.0 0 q -19.0 13 -38.0 0 q -19.0 13 -38.0 0 q -19.0 13 -38.0 0 q -19.0 13 -38.0 0 q -19.0 13 -38.0 0 q -19.0 13 -38.0 0 q -19.0 13 -38.0 0 q -19.0 13 -38.0 0 L88 248"/></clipPath><g clip-path="url(#carehero-aw)"><rect x="126.0" y="248" width="38.0" height="62" rx="0" fill="#F2F8FA"/><rect x="202.0" y="248" width="38.0" height="62" rx="0" fill="#F2F8FA"/><rect x="278.0" y="248" width="38.0" height="62" rx="0" fill="#F2F8FA"/><rect x="354.0" y="248" width="38.0" height="62" rx="0" fill="#F2F8FA"/><rect x="430.0" y="248" width="38.0" height="62" rx="0" fill="#F2F8FA"/></g><path d="M88 248 L506 248" stroke="#102A33" stroke-width="1.8" fill="none"/><rect x="112" y="302" width="248" height="120" rx="14" fill="#CFE8F0"/><g clip-path="url(#carehero-win)"><rect x="112" y="302" width="248" height="120" rx="0" fill="#F4FAFC"/><rect x="124" y="336" width="224" height="4" rx="1" fill="#B4D2DC"/><rect x="130" y="316" width="14" height="20" rx="1.5" fill="#0E7A5F"/><rect x="149" y="324" width="12" height="12" rx="1.5" fill="#E2663C"/><rect x="166" y="322" width="15" height="14" rx="1.5" fill="#5C93C7"/><rect x="186" y="319" width="12" height="17" rx="1.5" fill="#0E7A5F"/><rect x="203" y="322" width="9" height="14" rx="1.5" fill="#12938F"/><rect x="217" y="321" width="13" height="15" rx="1.5" fill="#0E7A5F"/><rect x="235" y="319" width="9" height="17" rx="1.5" fill="#0E7A5F"/><rect x="249" y="316" width="12" height="20" rx="1.5" fill="#E2663C"/><rect x="266" y="324" width="12" height="12" rx="1.5" fill="#0E7A5F"/><rect x="283" y="319" width="11" height="17" rx="1.5" fill="#12938F"/><rect x="299" y="322" width="14" height="14" rx="1.5" fill="#5C93C7"/><rect x="124" y="372" width="224" height="4" rx="1" fill="#B4D2DC"/><rect x="130" y="352" width="9" height="20" rx="1.5" fill="#0E7A5F"/><rect x="144" y="352" width="11" height="20" rx="1.5" fill="#12938F"/><rect x="160" y="360" width="10" height="12" rx="1.5" fill="#12938F"/><rect x="175" y="358" width="14" height="14" rx="1.5" fill="#0E7A5F"/><rect x="194" y="354" width="10" height="18" rx="1.5" fill="#12938F"/><rect x="209" y="358" width="10" height="14" rx="1.5" fill="#5C93C7"/><rect x="224" y="352" width="13" height="20" rx="1.5" fill="#E2663C"/><rect x="242" y="358" width="10" height="14" rx="1.5" fill="#0E7A5F"/><rect x="257" y="358" width="11" height="14" rx="1.5" fill="#12938F"/><rect x="273" y="359" width="11" height="13" rx="1.5" fill="#12938F"/><rect x="289" y="353" width="9" height="19" rx="1.5" fill="#5C93C7"/><rect x="124" y="408" width="224" height="4" rx="1" fill="#B4D2DC"/><rect x="130" y="388" width="15" height="20" rx="1.5" fill="#0E7A5F"/><rect x="150" y="396" width="11" height="12" rx="1.5" fill="#5C93C7"/><rect x="166" y="389" width="10" height="19" rx="1.5" fill="#12938F"/><rect x="181" y="390" width="13" height="18" rx="1.5" fill="#5C93C7"/><rect x="199" y="390" width="10" height="18" rx="1.5" fill="#5C93C7"/><rect x="214" y="395" width="14" height="13" rx="1.5" fill="#12938F"/><rect x="233" y="394" width="14" height="14" rx="1.5" fill="#0E7A5F"/><rect x="252" y="394" width="14" height="14" rx="1.5" fill="#5C93C7"/><rect x="271" y="396" width="13" height="12" rx="1.5" fill="#0E7A5F"/><rect x="289" y="393" width="11" height="15" rx="1.5" fill="#5C93C7"/><rect x="305" y="396" width="12" height="12" rx="1.5" fill="#E2663C"/></g><rect x="112" y="302" width="248" height="120" rx="14" fill="none" stroke="#102A33" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/><rect x="232" y="302" width="4" height="120" rx="0" fill="#5E8291"/><rect x="392" y="300" width="92" height="134" rx="14" fill="#12938F"/><rect x="392" y="300" width="92" height="134" rx="14" fill="none" stroke="#102A33" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/><rect x="404" y="312" width="68" height="62" rx="2" fill="#CFE8F0"/><circle cx="472" cy="372" r="5" fill="#5E8291"/><rect x="404" y="388" width="68" height="16" rx="2" fill="#E2663C"/><rect x="556" y="196" width="10" height="54" rx="0" fill="#6E8D99"/><rect x="528" y="250" width="66" height="66" rx="16" fill="#FFFFFF"/><rect x="528" y="250" width="66" height="66" rx="16" fill="none" stroke="#102A33" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/><path d="M554 264h14v15h15v14h-15v15h-14v-15h-15v-14h15z" fill="#0E7A5F"/><rect x="0" y="434" width="680" height="44" rx="0" fill="#D7E8EE"/><rect x="0" y="478" width="680" height="42" rx="0" fill="#9FB8C2"/><path d="M0 456 H680" stroke="#BBD4DD" stroke-width="2" opacity=".5"/><rect x="14" y="496" width="34" height="5" rx="2" fill="#F2F8FA"/><rect x="84" y="496" width="34" height="5" rx="2" fill="#F2F8FA"/><rect x="154" y="496" width="34" height="5" rx="2" fill="#F2F8FA"/><rect x="224" y="496" width="34" height="5" rx="2" fill="#F2F8FA"/><rect x="294" y="496" width="34" height="5" rx="2" fill="#F2F8FA"/><rect x="364" y="496" width="34" height="5" rx="2" fill="#F2F8FA"/><rect x="434" y="496" width="34" height="5" rx="2" fill="#F2F8FA"/><rect x="504" y="496" width="34" height="5" rx="2" fill="#F2F8FA"/><rect x="574" y="496" width="34" height="5" rx="2" fill="#F2F8FA"/><rect x="644" y="496" width="34" height="5" rx="2" fill="#F2F8FA"/><rect x="137.0" y="404.0" width="26.0" height="44.0" rx="9.0" fill="#12938F"/><rect x="140.0" y="446.0" width="8.0" height="20.0" rx="3" fill="#3A5560"/><rect x="152.0" y="446.0" width="8.0" height="20.0" rx="3" fill="#3A5560"/><circle cx="150" cy="400.0" r="11.0" fill="#D9A47C"/><rect x="184.82" y="416.68" width="22.36" height="37.839999999999996" rx="7.74" fill="#E2663C"/><rect x="187.4" y="452.8" width="6.88" height="17.2" rx="3" fill="#3A5560"/><rect x="197.72" y="452.8" width="6.88" height="17.2" rx="3" fill="#3A5560"/><circle cx="196" cy="413.24" r="9.459999999999999" fill="#AA7044"/><rect x="507.65" y="409.1" width="24.7" height="41.8" rx="8.549999999999999" fill="#0D7085"/><rect x="510.5" y="449.0" width="7.6" height="19.0" rx="3" fill="#3A5560"/><rect x="521.9" y="449.0" width="7.6" height="19.0" rx="3" fill="#3A5560"/><circle cx="520" cy="405.3" r="10.45" fill="#8C5A36"/><rect x="534" y="426" width="20" height="24" rx="3" fill="#0D7085"/><rect x="534" y="426" width="20" height="24" rx="3" fill="none" stroke="#102A33" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/><path d="M539 426v-5a5 5 0 0 1 10 0v5" fill="none" stroke="#102A33" stroke-width="2"/><rect x="626" y="404" width="16" height="34" rx="5" fill="#E2663C"/><rect x="620" y="400" width="28" height="7" rx="3" fill="#E2663C"/><rect x="36" y="396" width="30" height="42" rx="3" fill="#6E8D99"/><rect x="36" y="396" width="30" height="42" rx="3" fill="none" stroke="#102A33" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/></svg>
+      <figcaption class="c-hero__tag"><b>74-20 Roosevelt Ave</b><span>Under the 7 at 74 St–Broadway</span></figcaption>
+    </figure>
+  </div>
+</section><!-- ═══ 01 CONCIERGE ═══════════════════════════════════════════════════════ -->
 <section class="c-con" id="start" aria-labelledby="con-t">
   <div class="wrap">
     <div class="c-con__top">
@@ -867,19 +48,19 @@ body.is-locked{overflow:hidden}
     </div>
     <div class="c-con__g">
       <div class="c-intents" role="tablist" aria-label="What brings you in">
-        <button role="tab" aria-selected="true" aria-controls="c-path" data-i="refill"><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="9" y="9" width="14" height="19" rx="3"/><path d="M8 5h16v4H8zM12 16h8M12 20h5"/></svg><b>A refill</b><small>2 min</small></button>
-        <button role="tab" aria-selected="false" aria-controls="c-path" data-i="new" tabindex="-1"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M8 4h12l5 5v19H8z"/><path d="M20 4v5h5M12 15h9M12 19h9M12 23h5"/></svg><b>A new prescription</b><small>15 min</small></button>
-        <button role="tab" aria-selected="false" aria-controls="c-path" data-i="shot" tabindex="-1"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M22 4l6 6M25 7l-12 12-5-5 12-12M10 16l-6 6v6h6l6-6M14 12l3 3M17 9l3 3"/></svg><b>A vaccine</b><small>10 min</small></button>
-        <button role="tab" aria-selected="false" aria-controls="c-path" data-i="switch" tabindex="-1"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 11h19l-5-5M27 21H8l5 5"/></svg><b>Switching to you</b><small>1 call</small></button>
-        <button role="tab" aria-selected="false" aria-controls="c-path" data-i="unwell" tabindex="-1"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 27s-10-6-10-14a6 6 0 0 1 10-4 6 6 0 0 1 10 4c0 8-10 14-10 14z"/><path d="M10 15h4l2-4 2 7 2-3h2"/></svg><b>I’m not feeling well</b><small>Ask first</small></button>
-        <button role="tab" aria-selected="false" aria-controls="c-path" data-i="shop" tabindex="-1"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M6 10h20l-2 17H8zM11 10a5 5 0 0 1 10 0"/></svg><b>Just shopping</b><small>6 aisles</small></button>
+        <button type="button" role="tab" aria-selected="true" aria-controls="c-path" data-i="refill"><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="9" y="9" width="14" height="19" rx="3"/><path d="M8 5h16v4H8zM12 16h8M12 20h5"/></svg><b>A refill</b><small>2 min</small></button>
+        <button type="button" role="tab" aria-selected="false" aria-controls="c-path" data-i="new" tabindex="-1"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M8 4h12l5 5v19H8z"/><path d="M20 4v5h5M12 15h9M12 19h9M12 23h5"/></svg><b>A new prescription</b><small>15 min</small></button>
+        <button type="button" role="tab" aria-selected="false" aria-controls="c-path" data-i="shot" tabindex="-1"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M22 4l6 6M25 7l-12 12-5-5 12-12M10 16l-6 6v6h6l6-6M14 12l3 3M17 9l3 3"/></svg><b>A vaccine</b><small>10 min</small></button>
+        <button type="button" role="tab" aria-selected="false" aria-controls="c-path" data-i="switch" tabindex="-1"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 11h19l-5-5M27 21H8l5 5"/></svg><b>Switching to you</b><small>1 call</small></button>
+        <button type="button" role="tab" aria-selected="false" aria-controls="c-path" data-i="unwell" tabindex="-1"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 27s-10-6-10-14a6 6 0 0 1 10-4 6 6 0 0 1 10 4c0 8-10 14-10 14z"/><path d="M10 15h4l2-4 2 7 2-3h2"/></svg><b>I’m not feeling well</b><small>Ask first</small></button>
+        <button type="button" role="tab" aria-selected="false" aria-controls="c-path" data-i="shop" tabindex="-1"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M6 10h20l-2 17H8zM11 10a5 5 0 0 1 10 0"/></svg><b>Just shopping</b><small>6 aisles</small></button>
       </div>
-      <article class="c-path" id="c-path" role="tabpanel" aria-live="polite">
+      <div class="c-path" id="c-path" role="tabpanel" aria-live="polite">
         <p class="c-path__time"><span id="cp-time">About 2 minutes of your time</span></p>
         <h3 id="cp-title">Refills, without the phone tree.</h3>
         <ol class="c-path__steps" id="cp-steps"></ol>
         <div class="c-path__acts" id="cp-acts"></div>
-      </article>
+      </div>
     </div>
   </div>
 </section>
@@ -958,7 +139,7 @@ body.is-locked{overflow:hidden}
           <li data-d="26" data-s="15"><span>Thyroid</span><i><em></em></i></li>
         </ul>
         <div class="c-sim__line" id="sim-line" aria-hidden="true"><span>Pickup day</span></div>
-        <button class="c-sim__btn" id="sim-btn" aria-pressed="false">Synchronize</button>
+        <button class="c-sim__btn" id="sim-btn" type="button" aria-pressed="false">Synchronize</button>
         <p class="c-sim__note">Illustration only. Your pharmacist sets this up with you and your prescriber.</p>
       </div>
     </div>
@@ -979,10 +160,10 @@ body.is-locked{overflow:hidden}
     <div class="c-shelf__head">
       <div><p class="c-tag"><span>05</span> The shop</p><h2 id="sh-t">Stocked by <em>what the block asks for.</em></h2></div>
       <div class="c-aisle" role="tablist" aria-label="Aisles">
-        <button role="tab" aria-selected="true" data-a="all">Popular</button>
-        <button role="tab" aria-selected="false" data-a="health" tabindex="-1">Health</button>
-        <button role="tab" aria-selected="false" data-a="baby" tabindex="-1">Mother &amp; baby</button>
-        <button role="tab" aria-selected="false" data-a="skin" tabindex="-1">Skin &amp; hair</button>
+        <button type="button" role="tab" aria-selected="true" data-a="all">Popular</button>
+        <button type="button" role="tab" aria-selected="false" data-a="health" tabindex="-1">Health</button>
+        <button type="button" role="tab" aria-selected="false" data-a="baby" tabindex="-1">Mother &amp; baby</button>
+        <button type="button" role="tab" aria-selected="false" data-a="skin" tabindex="-1">Skin &amp; hair</button>
       </div>
     </div>
     <div class="c-shelf" id="c-shelf">
@@ -997,7 +178,7 @@ body.is-locked{overflow:hidden}
       <div class="c-box" data-a="skin" style="--h:124px;--c:#6B4E8C"><div class="c-box__p"><small>Hair care</small><b>Scalp &amp; hair oils</b><span>Amla · castor · argan</span></div><div class="c-tagp"><b>$7–19</b><span>For every hair type on this avenue.</span></div></div>
       <div class="c-box" data-a="skin" style="--h:100px;--c:#0E7A5F"><div class="c-box__p"><small>Sun care</small><b>Mineral SPF 30+</b><span>Face &amp; body</span></div><div class="c-tagp"><b>$11–24</b><span>Including tinted, for darker skin.</span></div></div>
     </div>
-    <div class="c-shelf__board" aria-hidden="true"></div>
+    
     <p class="c-shelf__cta">Can’t see it? <a href="sms:+17185550100">Text us a photo</a> — we’ll check the stockroom and put it aside.</p>
   </div>
 </section>
@@ -1009,11 +190,27 @@ body.is-locked{overflow:hidden}
       <p class="c-tag c-tag--dark"><span>06</span> Free delivery</p>
       <h2 id="dl-t">Order by three. <em>At your door by eight.</em></h2>
       <p>No minimum, no fee, no tip expected. Our own staff ride the bags out — so whoever rings your bell can answer a question about what’s inside. Insulin travels cold. Controlled medicines need an ID and a signature.</p>
-      <form class="c-zip" id="c-zip" onsubmit="return false" aria-label="Check delivery for your ZIP code">
-        <label for="zip">Your ZIP code</label>
-        <div><input id="zip" inputmode="numeric" maxlength="5" placeholder="11372" autocomplete="postal-code"><button type="submit">Check</button></div>
-        <p id="zip-out" aria-live="polite">Same-day covers Jackson Heights, Elmhurst, Corona, East Elmhurst and Woodside.</p>
-      </form>
+      <div class="c-zip" role="group" aria-labelledby="zip-l">
+        <p class="c-zip__l" id="zip-l">Where should we deliver?</p>
+        <div class="c-zip__g" id="c-zip">
+          <button type="button" aria-pressed="false" data-z="same">Jackson Heights</button>
+          <button type="button" aria-pressed="false" data-z="same">Elmhurst</button>
+          <button type="button" aria-pressed="false" data-z="same">Corona</button>
+          <button type="button" aria-pressed="false" data-z="same">East Elmhurst</button>
+          <button type="button" aria-pressed="false" data-z="same">Woodside</button>
+          <button type="button" aria-pressed="false" data-z="next">Astoria</button>
+          <button type="button" aria-pressed="false" data-z="next">Sunnyside</button>
+          <button type="button" aria-pressed="false" data-z="next">Long Island City</button>
+          <button type="button" aria-pressed="false" data-z="next">Flushing</button>
+          <button type="button" aria-pressed="false" data-z="next">Rego Park</button>
+          <button type="button" aria-pressed="false" data-z="next">Forest Hills</button>
+          <button type="button" aria-pressed="false" data-z="next">Maspeth</button>
+          <button type="button" aria-pressed="false" data-z="next">Middle Village</button>
+          <button type="button" aria-pressed="false" data-z="next">Kew Gardens Hills</button>
+          <button type="button" aria-pressed="false" data-z="out">Somewhere else</button>
+        </div>
+        <p class="c-zip__out" id="zip-out" aria-live="polite">Same-day covers Jackson Heights, Elmhurst, Corona, East Elmhurst and Woodside. Tap yours.</p>
+      </div>
     </div>
     <figure class="c-map" aria-label="Delivery map of the neighborhood around the pharmacy">
       <svg viewBox="0 0 520 440" role="img" aria-labelledby="map-t">
@@ -1051,22 +248,30 @@ body.is-locked{overflow:hidden}
     <div class="c-vx__ctl">
       <p class="c-tag"><span>07</span> Vaccinations</p>
       <h2 id="vx-t">What can you get <em>here, today?</em></h2>
-      <p>New York sets exactly which vaccines a pharmacist may give, and from what age. Tell us who it’s for.</p>
-      <div class="c-age">
-        <label for="vx-age">Age <output id="vx-age-o">34</output></label>
-        <input type="range" id="vx-age" min="0" max="90" value="34">
-        <div class="c-age__ticks" aria-hidden="true"><span>0</span><span>18</span><span>50</span><span>90</span></div>
+      <p>New York sets exactly which vaccines a pharmacist may give, and from what age. Pick an age group — nothing you tap leaves this page.</p>
+      <div class="c-age" role="group" aria-labelledby="vx-age-l">
+        <p class="c-pick__l" id="vx-age-l">Who is it for?</p>
+        <div class="c-age__g" id="vx-age">
+          <button type="button" aria-pressed="false" data-age="1" data-lbl="under 2">Under 2</button>
+          <button type="button" aria-pressed="false" data-age="2" data-lbl="age 2">Age 2</button>
+          <button type="button" aria-pressed="false" data-age="10" data-lbl="ages 3–17">3–17</button>
+          <button type="button" aria-pressed="true" data-age="34" data-lbl="ages 18–49">18–49</button>
+          <button type="button" aria-pressed="false" data-age="55" data-lbl="ages 50–64">50–64</button>
+          <button type="button" aria-pressed="false" data-age="70" data-lbl="65 and over">65+</button>
+        </div>
       </div>
-      <fieldset class="c-why">
-        <legend>Any of these? <small>(optional)</small></legend>
-        <label><input type="checkbox" value="college"><span>Starting college</span></label>
-        <label><input type="checkbox" value="cut"><span>Just had a deep cut</span></label>
-        <label><input type="checkbox" value="travel"><span>Traveling abroad</span></label>
-        <label><input type="checkbox" value="season"><span>It’s flu season</span></label>
-      </fieldset>
+      <div class="c-why" role="group" aria-labelledby="vx-why-l">
+        <p class="c-pick__l" id="vx-why-l">Any of these? <small>Optional</small></p>
+        <div class="c-why__g" id="vx-why">
+          <button type="button" aria-pressed="false" data-v="college">Starting college</button>
+          <button type="button" aria-pressed="false" data-v="cut">Just had a deep cut</button>
+          <button type="button" aria-pressed="false" data-v="travel">Traveling abroad</button>
+          <button type="button" aria-pressed="false" data-v="season">It’s flu season</button>
+        </div>
+      </div>
     </div>
     <div class="c-vx__out">
-      <p class="c-vx__count" aria-live="polite"><b id="vx-n">11</b> <span id="vx-lbl">vaccines we can give at 34</span></p>
+      <p class="c-vx__count" aria-live="polite"><b id="vx-n">11</b> <span id="vx-lbl">vaccines we can give, ages 18–49</span></p>
       <ul class="c-vx__list" id="vx-list"></ul>
       <p class="c-vx__note" id="vx-note"></p>
       <p class="c-vx__fine">Walk in, no appointment. Bring ID and your insurance card. This is a guide to what we’re permitted to give — your pharmacist will check what’s right for you.</p>
@@ -1084,11 +289,11 @@ body.is-locked{overflow:hidden}
     </div>
     <div class="c-cards">
       <div class="c-cov" role="radiogroup" aria-label="Your coverage">
-        <button role="radio" aria-checked="true" data-c="mmc">Medicaid plan<small>Healthfirst, Fidelis, MetroPlus, EmblemHealth…</small></button>
-        <button role="radio" aria-checked="false" data-c="partd" tabindex="-1">Medicare<small>Part D or Medicare Advantage</small></button>
-        <button role="radio" aria-checked="false" data-c="ep" tabindex="-1">Essential Plan<small>or Child Health Plus</small></button>
-        <button role="radio" aria-checked="false" data-c="work" tabindex="-1">Work or union plan<small>Aetna, Cigna, UHC, 1199SEIU…</small></button>
-        <button role="radio" aria-checked="false" data-c="none" tabindex="-1">No insurance<small>or between plans</small></button>
+        <button type="button" role="radio" aria-checked="true" data-c="mmc">Medicaid plan<small>Healthfirst, Fidelis, MetroPlus, EmblemHealth…</small></button>
+        <button type="button" role="radio" aria-checked="false" data-c="partd" tabindex="-1">Medicare<small>Part D or Medicare Advantage</small></button>
+        <button type="button" role="radio" aria-checked="false" data-c="ep" tabindex="-1">Essential Plan<small>or Child Health Plus</small></button>
+        <button type="button" role="radio" aria-checked="false" data-c="work" tabindex="-1">Work or union plan<small>Aetna, Cigna, UHC, 1199SEIU…</small></button>
+        <button type="button" role="radio" aria-checked="false" data-c="none" tabindex="-1">No insurance<small>or between plans</small></button>
       </div>
       <div class="c-wallet" aria-live="polite">
         <div class="c-wallet__cards" id="wallet"></div>
@@ -1141,15 +346,15 @@ body.is-locked{overflow:hidden}
     <p class="c-hello__big" id="hello-big" lang="es">Hola</p>
     <p class="c-hello__sub" id="hello-sub">Spanish — your directions go home written in Spanish.</p>
     <div class="c-hello__chips" role="tablist" aria-label="Choose a language">
-      <button role="tab" data-l="en" data-w="Hello" data-n="English" lang="en">English</button>
-      <button role="tab" data-l="es" data-w="Hola" data-n="Spanish" lang="es" aria-selected="true">Español</button>
-      <button role="tab" data-l="bn" data-w="নমস্কার" data-n="Bengali" lang="bn">বাংলা</button>
-      <button role="tab" data-l="hi" data-w="नमस्ते" data-n="Hindi" lang="hi">हिन्दी</button>
-      <button role="tab" data-l="ur" data-w="السلام علیکم" data-n="Urdu" lang="ur" dir="rtl">اردو</button>
-      <button role="tab" data-l="pa" data-w="ਸਤ ਸ੍ਰੀ ਅਕਾਲ" data-n="Punjabi" lang="pa">ਪੰਜਾਬੀ</button>
-      <button role="tab" data-l="ne" data-w="नमस्ते" data-n="Nepali" lang="ne">नेपाली</button>
-      <button role="tab" data-l="bo" data-w="བཀྲ་ཤིས་བདེ་ལེགས།" data-n="Tibetan" lang="bo">བོད་སྐད་</button>
-      <button role="tab" data-l="tl" data-w="Kumusta" data-n="Tagalog" lang="tl">Tagalog</button>
+      <button type="button" role="tab" data-l="en" data-w="Hello" data-n="English" lang="en">English</button>
+      <button type="button" role="tab" data-l="es" data-w="Hola" data-n="Spanish" lang="es" aria-selected="true">Español</button>
+      <button type="button" role="tab" data-l="bn" data-w="নমস্কার" data-n="Bengali" lang="bn">বাংলা</button>
+      <button type="button" role="tab" data-l="hi" data-w="नमस्ते" data-n="Hindi" lang="hi">हिन्दी</button>
+      <button type="button" role="tab" data-l="ur" data-w="السلام علیکم" data-n="Urdu" lang="ur" dir="rtl">اردو</button>
+      <button type="button" role="tab" data-l="pa" data-w="ਸਤ ਸ੍ਰੀ ਅਕਾਲ" data-n="Punjabi" lang="pa">ਪੰਜਾਬੀ</button>
+      <button type="button" role="tab" data-l="ne" data-w="नमस्ते" data-n="Nepali" lang="ne">नेपाली</button>
+      <button type="button" role="tab" data-l="bo" data-w="བཀྲ་ཤིས་བདེ་ལེགས།" data-n="Tibetan" lang="bo">བོད་སྐད་</button>
+      <button type="button" role="tab" data-l="tl" data-w="Kumusta" data-n="Tagalog" lang="tl">Tagalog</button>
     </div>
     <p class="c-hello__fine">Nobody should have to bring their child along to translate. If your language isn’t here, say its name — we’ll find someone, usually the same day.</p>
   </div>
@@ -1213,508 +418,10 @@ body.is-locked{overflow:hidden}
 </section>
 
 <section class="safe" aria-labelledby="safe-t"><div class="wrap"><div class="safe__card"><div class="safe__head"><span class="safe__ic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 2.5l8 3.2v6c0 5-3.4 9.2-8 10.3-4.6-1.1-8-5.3-8-10.3v-6z"/><path d="M12 8v4.5M12 16h.01"/></svg></span><div><h2 id="safe-t">Who to call, and when</h2><p>We’re a pharmacy, not an emergency room. If someone is in danger, don’t call us first. Call 911.</p></div></div><ul class="safe__g"><li><span class="safe__k">Emergency</span><b>911</b><p>Chest pain, trouble breathing, a severe allergic reaction, an overdose, or someone who won’t wake up.</p><a href="tel:911">Call 911</a></li><li><span class="safe__k">Poisoning</span><b>Poison Control</b><p>Took the wrong medicine or a double dose? Free and confidential, 24 hours a day.</p><a href="tel:18002221222">1-800-222-1222</a></li><li><span class="safe__k">Crisis</span><b>988 Lifeline</b><p>Suicide and mental-health crisis support. Call or text any time, in English or Spanish.</p><a href="tel:988">Call or text 988</a></li><li><span class="safe__k">Questions</span><b>Your pharmacist</b><p>Side effects, a missed dose, or whether two medicines mix. A pharmacist picks up.</p><a href="tel:+17185550175">(718) 555-0175</a></li></ul></div></div></section>
-</main><footer class="ft"><div class="wrap"><div class="ft__g"><div><a class="logo" href="care.html" style="color:#fff"><span class="logo__m" style="background:#fff"><svg viewBox="0 0 24 24" width="25" height="25" fill="none" stroke="#0D7085" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M12 8v8M8 12h8"/></svg></span><span class="logo__t">Durán &amp; Hossain<span style="color:rgba(255,255,255,.62)">Jackson Heights · Est 2009</span></span></a><p style="margin-top:16px;opacity:.82;font-size:15px;max-width:34ch">74-20 Roosevelt Avenue<br>Jackson Heights, NY 11372</p><a class="ft__tel" href="tel:+17185550175">(718) 555-0175</a></div><div><h4>Sections</h4><ul><li><a href="#services">Services</a></li><li><a href="#specialty">Specialty</a></li><li><a href="#shop">Shop</a></li><li><a href="#vaccines">Vaccines</a></li><li><a href="#insurance">Insurance</a></li><li><a href="#hours">Hours</a></li><li><a href="#contact">Contact</a></li></ul></div><div><h4>Reach us</h4><ul><li><a href="tel:+17185550175">Pharmacy · (718) 555-0175</a></li><li><a href="tel:+17185550174">Front of store · (718) 555-0174</a></li><li><a href="sms:+17185550100">Text · (718) 555-0100</a></li><li><span style="opacity:.84;font-size:15px">Fax · (718) 555-0176</span></li><li><a href="tel:911">Emergency · 911</a></li></ul></div></div><div class="ft__b"><p><b>Design concept.</b> Durán &amp; Hossain is an invented pharmacy. The name, address, phone numbers, license numbers and reviews are placeholders. The vaccine list, the ages, the NYRx rules and the federal-holiday dates are real.</p><p>NYS Pharmacy Establishment License 000000 · NPI 0000000000 — placeholders in this concept. Supervising pharmacists Luz Durán, PharmD · Nasir Hossain, PharmD.</p><p>We handle protected health information under HIPAA. We do not collect any of it through this website, which is why there are no forms on it.</p><p>Nothing here is medical advice. Talk to a pharmacist or your doctor about your own medicines. Vaccine ages, NYRx details and federal holiday dates follow current policy. © <span data-rx-year>2026</span> Durán &amp; Hossain Pharmacy.</p></div></div></footer>
-<script>
-window.RX_HOURS = [["Sunday", "10:00", "14:00"], ["Monday", "09:00", "19:00"], ["Tuesday", "09:00", "19:00"], ["Wednesday", "09:00", "19:00"], ["Thursday", "09:00", "19:00"], ["Friday", "09:00", "19:00"], ["Saturday", "09:00", "17:00"]];
-window.RX_HOLIDAYS = {"newyear": ["New Year's Day", "closed", "", "Back to regular hours the next day."], "mlk": ["Martin Luther King Jr. Day", "open", "", "Open regular hours."], "presidents": ["Presidents' Day", "open", "", "Open regular hours."], "memorial": ["Memorial Day", "short", "10:00-14:00", "Short day — the pharmacist is in all morning."], "juneteenth": ["Juneteenth", "open", "", "Open regular hours."], "independence": ["Independence Day", "closed", "", "Order refills the day before — we are busy on the 3rd."], "labor": ["Labor Day", "short", "10:00-14:00", "Delivery runs as usual in the afternoon."], "columbus": ["Indigenous Peoples' Day", "open", "", "Open regular hours."], "veterans": ["Veterans Day", "open", "", "Open regular hours."], "thanksgiving": ["Thanksgiving Day", "closed", "", "We deliver the Wednesday before — call Tuesday to get on the run."], "christmas": ["Christmas Day", "closed", "", "Open again on the 26th at regular hours."], "xmaseve": ["Christmas Eve", "short", "09:00-15:00", "Last delivery run leaves at 1 pm."], "nyeve": ["New Year's Eve", "short", "09:00-17:00", "Back to regular hours on the 2nd."]};
-</script>
-<script>/* ═══════════════════════════════════════════════════════════════════════════
-   Store hours, and the federal holidays — computed, not listed.
-
-   The point of this file is that nobody ever has to edit it. Every US federal
-   holiday is defined by a rule ("third Monday of January", "fourth Thursday of
-   November"), so the page works the dates out for whatever year it happens to
-   be. A hardcoded list would be wrong by next January.
-
-   It does three things:
-     1. says whether the pharmacy is open right now, against today's real hours
-     2. applies the holiday policy to today if today is one
-     3. shows the next few schedule changes so people can plan around them
-
-   No forms, no network, no storage. Pure computation on the visitor's clock.
-   ═══════════════════════════════════════════════════════════════════════════ */
-(function () {
-  "use strict";
-
-  var REG = window.RX_HOURS;        // [[label, "09:00", "19:00"] ...] index 0 = Sunday
-  var POLICY = window.RX_HOLIDAYS;  // { key: [name, kind, "HH:MM-HH:MM", note] }
-  if (!REG || !POLICY) return;
-
-  /* ── date helpers ──────────────────────────────────────────────────────── */
-  function d(y, m, day) { return new Date(y, m, day); }      // m is 0-indexed
-
-  // the nth given weekday of a month, e.g. nth(2026, 10, 4, 4) = 4th Thursday of November
-  function nth(y, m, weekday, n) {
-    var first = new Date(y, m, 1);
-    var shift = (weekday - first.getDay() + 7) % 7;
-    return new Date(y, m, 1 + shift + (n - 1) * 7);
-  }
-
-  // the last given weekday of a month, e.g. Memorial Day
-  function last(y, m, weekday) {
-    var endOfMonth = new Date(y, m + 1, 0);
-    var shift = (endOfMonth.getDay() - weekday + 7) % 7;
-    return new Date(y, m + 1, 0 - shift);
-  }
-
-  // federal rule: a fixed-date holiday falling on Saturday is observed on the
-  // Friday before, and one falling on Sunday on the Monday after
-  function observed(dt) {
-    var g = dt.getDay();
-    if (g === 6) return new Date(dt.getFullYear(), dt.getMonth(), dt.getDate() - 1);
-    if (g === 0) return new Date(dt.getFullYear(), dt.getMonth(), dt.getDate() + 1);
-    return dt;
-  }
-
-  /* ── the eleven federal holidays, plus the two eves every pharmacy posts ── */
-  function holidaysFor(y) {
-    return [
-      { key: "newyear",      date: observed(d(y, 0, 1)),   actual: d(y, 0, 1) },
-      { key: "mlk",          date: nth(y, 0, 1, 3) },                 // 3rd Monday, January
-      { key: "presidents",   date: nth(y, 1, 1, 3) },                 // 3rd Monday, February
-      { key: "memorial",     date: last(y, 4, 1) },                   // last Monday, May
-      { key: "juneteenth",   date: observed(d(y, 5, 19)),  actual: d(y, 5, 19) },
-      { key: "independence", date: observed(d(y, 6, 4)),   actual: d(y, 6, 4) },
-      { key: "labor",        date: nth(y, 8, 1, 1) },                 // 1st Monday, September
-      { key: "columbus",     date: nth(y, 9, 1, 2) },                 // 2nd Monday, October
-      { key: "veterans",     date: observed(d(y, 10, 11)), actual: d(y, 10, 11) },
-      { key: "thanksgiving", date: nth(y, 10, 4, 4) },                // 4th Thursday, November
-      { key: "xmaseve",      date: d(y, 11, 24) },
-      { key: "christmas",    date: observed(d(y, 11, 25)), actual: d(y, 11, 25) },
-      { key: "nyeve",        date: d(y, 11, 31) }
-    ].filter(function (h) { return POLICY[h.key]; });
-  }
-
-  /* ── formatting ────────────────────────────────────────────────────────── */
-  var MON = ["January", "February", "March", "April", "May", "June", "July",
-             "August", "September", "October", "November", "December"];
-  var DAY = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-
-  function pretty(dt) { return DAY[dt.getDay()] + " " + MON[dt.getMonth()] + " " + dt.getDate(); }
-  function key(dt) { return dt.getFullYear() + "-" + dt.getMonth() + "-" + dt.getDate(); }
-  function mins(hhmm) { var p = hhmm.split(":"); return (+p[0]) * 60 + (+p[1]); }
-  function clock(hhmm) {
-    var p = hhmm.split(":"), h = +p[0], m = p[1];
-    var ap = h >= 12 ? "pm" : "am", hr = h % 12 === 0 ? 12 : h % 12;
-    return hr + (m === "00" ? "" : ":" + m) + " " + ap;
-  }
-  function span(range) {
-    var p = range.split("-");
-    return clock(p[0]) + " – " + clock(p[1]);
-  }
-
-  /* ── what applies on a given day ───────────────────────────────────────── */
-  function scheduleFor(dt) {
-    var list = holidaysFor(dt.getFullYear());
-    var k = key(dt);
-    for (var i = 0; i < list.length; i++) {
-      if (key(list[i].date) === k) {
-        var pol = POLICY[list[i].key];
-        return { holiday: pol[0], kind: pol[1], range: pol[2], note: pol[3] };
-      }
-    }
-    var reg = REG[dt.getDay()];
-    if (!reg || !reg[1]) return { kind: "closed", holiday: null, note: "" };
-    return { kind: "open", holiday: null, range: reg[1] + "-" + reg[2], note: "" };
-  }
-
-  /* ── render ────────────────────────────────────────────────────────────── */
-  var now = (function(){try{var p={};new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',year:'numeric',month:'numeric',day:'numeric',hour:'numeric',minute:'numeric',hour12:false}).formatToParts(new Date()).forEach(function(x){p[x.type]=x.value});return new Date(+p.year,+p.month-1,+p.day,(+p.hour)%24,+p.minute);}catch(e){return new Date();}})(); // New York time
-  var today = scheduleFor(now);
-  var nowMins = now.getHours() * 60 + now.getMinutes();
-  var openNow = false, until = "";
-
-  if (today.kind !== "closed" && today.range) {
-    var a = mins(today.range.split("-")[0]), b = mins(today.range.split("-")[1]);
-    openNow = nowMins >= a && nowMins < b;
-    until = openNow ? clock(today.range.split("-")[1]) : clock(today.range.split("-")[0]);
-  }
-
-  // 1. the live status pill
-  var statusEls = document.querySelectorAll("[data-rx-status]");
-  for (var s = 0; s < statusEls.length; s++) {
-    var el = statusEls[s];
-    el.classList.toggle("is-open", openNow);
-    el.classList.toggle("is-shut", !openNow);
-    var label = openNow
-      ? "Open now · until " + until
-      : (today.kind === "closed"
-          ? "Closed today" + (today.holiday ? " · " + today.holiday : "")
-          : (nowMins < mins(today.range.split("-")[0])
-              ? "Closed · opens " + until
-              : "Closed · opens tomorrow"));
-    el.textContent = label;
-  }
-
-  // 2. today's line under the hours table
-  var todayEls = document.querySelectorAll("[data-rx-today]");
-  for (var t = 0; t < todayEls.length; t++) {
-    todayEls[t].textContent = today.holiday
-      ? today.holiday + " — " + (today.kind === "closed" ? "closed all day" : span(today.range))
-      : (today.kind === "closed" ? "Closed today" : "Today " + span(today.range));
-  }
-
-  // 3. highlight the current weekday in the hours list
-  var rows = document.querySelectorAll("[data-rx-day]");
-  for (var r = 0; r < rows.length; r++) {
-    if (+rows[r].getAttribute("data-rx-day") === now.getDay()) rows[r].classList.add("is-today");
-  }
-
-  // 4. a banner when a special day is today or close
-  var banner = document.querySelector("[data-rx-banner]");
-  if (banner) {
-    var upcoming = null, soon = holidaysFor(now.getFullYear())
-      .concat(holidaysFor(now.getFullYear() + 1));
-    for (var u = 0; u < soon.length; u++) {
-      var diff = Math.round((soon[u].date - new Date(now.getFullYear(), now.getMonth(), now.getDate())) / 86400000);
-      var pol2 = POLICY[soon[u].key];
-      if (diff >= 0 && diff <= 14 && pol2[1] !== "open") { upcoming = { h: soon[u], diff: diff, pol: pol2 }; break; }
-    }
-    if (upcoming) {
-      var when = upcoming.diff === 0 ? "Today" : upcoming.diff === 1 ? "Tomorrow" : pretty(upcoming.h.date);
-      banner.innerHTML =
-        '<b>' + when + ' · ' + upcoming.pol[0] + '</b> ' +
-        (upcoming.pol[1] === "closed"
-          ? "We are closed all day."
-          : "Open " + span(upcoming.pol[2]) + ".") +
-        (upcoming.pol[3] ? " " + upcoming.pol[3] : "");
-      banner.hidden = false;
-    }
-  }
-
-  // 5. the upcoming-changes list
-  var listEl = document.querySelector("[data-rx-upcoming]");
-  if (listEl) {
-    var all = holidaysFor(now.getFullYear()).concat(holidaysFor(now.getFullYear() + 1));
-    var midnight = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-    var out = [];
-    for (var i2 = 0; i2 < all.length && out.length < 5; i2++) {
-      if (all[i2].date < midnight) continue;
-      var pol3 = POLICY[all[i2].key];
-      if (pol3[1] === "open") continue;
-      out.push(
-        '<div class="hol"><span class="hol__d">' + pretty(all[i2].date) + '</span>' +
-        '<span class="hol__n">' + pol3[0] + '</span>' +
-        '<span class="hol__s ' + (pol3[1] === "closed" ? "is-shut" : "is-short") + '">' +
-        (pol3[1] === "closed" ? "Closed" : span(pol3[2])) + '</span></div>');
-    }
-    listEl.innerHTML = out.join("") ||
-      '<p class="hol__none">No changes to the schedule in the next few months.</p>';
-  }
-
-  // 6. the year, so the footer never goes stale either
-  var yrs = document.querySelectorAll("[data-rx-year]");
-  for (var y2 = 0; y2 < yrs.length; y2++) yrs[y2].textContent = now.getFullYear();
-})();
-</script>
-<script>
-/* ══ Care — interactive layer below the hero ═══════════════════════════════ */
-(function () {
-  "use strict";
-  var $ = function (s, r) { return (r || document).querySelector(s); };
-  var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
-  var reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-  /* New York clock */
-  function ny() {
-    var o = {};
-    try {
-      new Intl.DateTimeFormat("en-US", { timeZone: "America/New_York", year: "numeric", month: "numeric", day: "numeric", hour: "numeric", minute: "numeric", second: "numeric", hour12: false, weekday: "short" })
-        .formatToParts(new Date()).forEach(function (p) { o[p.type] = p.value; });
-      return { h: (+o.hour) % 24, m: +o.minute, s: +o.second, dow: { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 }[o.weekday] };
-    } catch (e) { var d = new Date(); return { h: d.getHours(), m: d.getMinutes(), s: d.getSeconds(), dow: d.getDay() }; }
-  }
-  function ampm(h, m) { return ((h % 12) || 12) + (m ? ":" + String(m).padStart(2, "0") : "") + (h >= 12 ? " pm" : " am"); }
-  var HRS = (window.RX_HOURS || []).map(function (r) { return r[1] ? [parseInt(r[1], 10) + (+r[1].split(":")[1]) / 60, parseInt(r[2], 10) + (+r[2].split(":")[1]) / 60] : null; });
-
-  /* ── 01 concierge ─────────────────────────────────────────────────────── */
-  var PATHS = {
-    refill: { t: "About 2 minutes of your time", h: "Refills, without the phone tree.",
-      s: ["Text your Rx number — or just the medicine’s name and your date of birth — to (718) 555-0100.",
-          "We reply when it’s in the bag, usually within the hour, with the price before we charge you.",
-          "Pick it up, or say “delivery” and it’s on today’s 4–8 pm run if you text by 3."],
-      a: [["sms:+17185550100?&body=" + encodeURIComponent("Refill please — Rx #: ____ , date of birth: ____"), "Text a refill"], ["tel:+17185550175", "Or call the counter"]] },
-    "new": { t: "Ready in about 15 minutes", h: "New prescription? Have it sent here.",
-      s: ["Ask your doctor to send it electronically to Durán & Hossain, 74-20 Roosevelt Avenue.",
-          "We check your coverage and tell you the price — and whether cash would be cheaper — before we fill it.",
-          "A pharmacist walks you through it at the counter, in your language, without rushing."],
-      a: [["tel:+17185550175", "Call to check it arrived"], ["#insurance", "Which card do I bring?"]] },
-    shot: { t: "Walk in · about 10 minutes", h: "No appointment. Just come in.",
-      s: ["Check what we’re permitted to give at your age — the finder below does it in a second.",
-          "Bring a photo ID and your insurance card. Most vaccines are $0 with insurance.",
-          "Ten minutes in the chair, fifteen sitting with us afterwards, and a record for your doctor."],
-      a: [["#vaccines", "Open the vaccine finder"], ["#hours", "Today’s hours"]] },
-    "switch": { t: "One phone call — yours", h: "Switching? We do the moving.",
-      s: ["Call or stop by with your name, date of birth, and the pharmacy you use now.",
-          "We call them, move every prescription with refills left, and check your insurance.",
-          "Usually done the same day. Nothing for you to sign, nothing to chase."],
-      a: [["tel:+17185550175", "Call to switch"], ["sms:+17185550100?&body=" + encodeURIComponent("I’d like to transfer my prescriptions. My current pharmacy is: ____"), "Start by text"]] },
-    unwell: { t: "Talk to a pharmacist first", h: "Not sure what to take? Ask before you buy.",
-      s: ["A pharmacist can talk through over-the-counter options and check them against everything else you take.",
-          "We’ll be honest when it’s something for your doctor or urgent care instead — and say which.",
-          "Chest pain, trouble breathing, a severe reaction or an overdose: call 911 first, then us."],
-      a: [["tel:+17185550175", "Call a pharmacist"], ["tel:911", "Emergency: 911"]] },
-    shop: { t: "Six aisles · free delivery", h: "Everything on the shelf rides along free.",
-      s: ["Browse the shelf below — prices are typical ranges; brands vary.",
-          "Can’t find it? Text a photo of the box and we’ll check the stockroom.",
-          "Add it to a prescription delivery, or have it delivered on its own. No minimum."],
-      a: [["#shop", "See the shelf"], ["sms:+17185550100", "Text us a photo"]] }
-  };
-  var intents = $$(".c-intents button"), path = $("#c-path");
-  function pick(btn, focus) {
-    intents.forEach(function (b) { var on = b === btn; b.setAttribute("aria-selected", String(on)); b.tabIndex = on ? 0 : -1; });
-    var p = PATHS[btn.getAttribute("data-i")];
-    $("#cp-time").textContent = p.t; $("#cp-title").textContent = p.h;
-    $("#cp-steps").innerHTML = p.s.map(function (x) { return "<li>" + x + "</li>"; }).join("");
-    $("#cp-acts").innerHTML = p.a.map(function (x) { return '<a href="' + x[0] + '">' + x[1] + "</a>"; }).join("");
-    if (!reduce) { path.classList.remove("is-swap"); void path.offsetWidth; path.classList.add("is-swap"); }
-    if (focus) btn.focus();
-  }
-  intents.forEach(function (b, i) {
-    b.addEventListener("click", function () { pick(b); });
-    b.addEventListener("keydown", function (e) {
-      var n = null, k = e.key;
-      if (k === "ArrowRight" || k === "ArrowDown") n = intents[(i + 1) % intents.length];
-      if (k === "ArrowLeft" || k === "ArrowUp") n = intents[(i - 1 + intents.length) % intents.length];
-      if (n) { e.preventDefault(); pick(n, true); }
-    });
-  });
-  if (intents[0]) pick(intents[0]);
-
-  /* ── 02 right-now board ───────────────────────────────────────────────── */
-  var DUTY = ["Luz Durán", "Luz Durán", "Nasir Hossain", "Luz Durán", "Nasir Hossain", "Nasir Hossain", "Luz & Nasir"];
-  var DUTYL = ["Español · English", "Español · English", "বাংলা · हिन्दी · English", "Español · English", "বাংলা · हिन्दी · English", "বাংলা · हिन्दी · English", "Both owners in on Saturdays"];
-  var WAIT = { 9: 5, 10: 8, 11: 10, 12: 18, 13: 15, 14: 10, 15: 8, 16: 12, 17: 20, 18: 14 };
-  function board() {
-    var n = ny(), t = n.h + n.m / 60, today = HRS[n.dow];
-    $("#c-clock").textContent = "New York · " + ampm(n.h, n.m) + " · " + ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"][n.dow];
-    var open = today && t >= today[0] && t < today[1];
-    var back = (today && t < today[0]) ? ["today", today[0]] : ["tomorrow", (HRS[(n.dow + 1) % 7] || [9])[0]];
-    $("#c-duty").textContent = open ? DUTY[n.dow] : "Back " + back[0] + ", " + ampm(Math.floor(back[1]), 0);
-    $("#c-duty-s").textContent = open ? DUTYL[n.dow] : "The pharmacy line still takes voicemail overnight.";
-    var runDay = n.dow !== 0;
-    if (runDay && t < 15) {
-      var left = Math.round((15 - t) * 60), hh = Math.floor(left / 60), mm = left % 60;
-      $("#c-run").textContent = (hh ? hh + "h " : "") + String(mm).padStart(2, "0") + "m left";
-      $("#c-run-s").textContent = "Order by 3 pm · at your door 4–8 pm today";
-    } else {
-      $("#c-run").textContent = "Next: " + (n.dow === 6 ? "Monday" : "tomorrow");
-      $("#c-run-s").textContent = "Order by 3 pm for same-day · runs Mon–Sat";
-    }
-    var w = WAIT[n.h];
-    $("#c-wait").textContent = open && w ? "~" + w + " min" : "Closed now";
-  }
-  var spark = $("#c-spark");
-  if (spark) {
-    var nn = ny();
-    spark.innerHTML = Object.keys(WAIT).map(function (k) { return '<i style="height:' + Math.round(WAIT[k] / 20 * 100) + '%"' + (+k === nn.h ? ' class="is-now"' : "") + "></i>"; }).join("");
-  }
-  board(); setInterval(board, 30000);
-
-  /* ── 03 barcode ───────────────────────────────────────────────────────── */
-  var bc = $(".c-barcode");
-  if (bc) {
-    var seed = 74201137, x = 0, out = "";
-    while (x < 160) { seed = (seed * 9301 + 49297) % 233280; var w2 = 1 + Math.floor(seed / 233280 * 3); out += '<rect x="' + x + '" y="0" width="' + w2 + '" height="34"/>'; x += w2 + 1 + (seed % 3); }
-    bc.innerHTML = out;
-  }
-
-  /* ── 04 med sync simulator ────────────────────────────────────────────── */
-  var sim = $(".c-sim"), sbtn = $("#sim-btn"), rows = $$("#sim-rows li"), line = $("#sim-line");
-  rows.forEach(function (li) { li.querySelector("em").style.setProperty("--d", li.getAttribute("data-d")); });
-  function placeLine() {
-    var track = rows[0] && rows[0].querySelector("i"); if (!track) return;
-    var r = track.getBoundingClientRect(), s = sim.getBoundingClientRect();
-    line.style.left = (r.left - s.left + (14 / 29) * r.width) + "px";
-    line.style.top = (rows[0].getBoundingClientRect().top - s.top) + "px";
-    line.style.bottom = (s.bottom - rows[rows.length - 1].getBoundingClientRect().bottom) + "px";
-  }
-  if (sbtn) {
-    sbtn.addEventListener("click", function () {
-      var on = sbtn.getAttribute("aria-pressed") !== "true";
-      sbtn.setAttribute("aria-pressed", String(on));
-      sbtn.textContent = on ? "Undo — show it unsynced" : "Synchronize";
-      sim.classList.toggle("is-sync", on);
-      rows.forEach(function (li) { li.querySelector("em").style.setProperty("--d", on ? li.getAttribute("data-s") : li.getAttribute("data-d")); });
-      $("#sim-trips").textContent = on ? "1" : "4";
-      placeLine();
-    });
-    addEventListener("resize", placeLine); placeLine();
-  }
-
-  /* ── 05 shelf aisles ──────────────────────────────────────────────────── */
-  var aisleTabs = $$(".c-aisle button"), boxes = $$(".c-box");
-  aisleTabs.forEach(function (b, i) {
-    b.addEventListener("click", function () {
-      aisleTabs.forEach(function (x) { x.setAttribute("aria-selected", String(x === b)); x.tabIndex = x === b ? 0 : -1; });
-      var a = b.getAttribute("data-a");
-      boxes.forEach(function (bx) { bx.classList.toggle("is-dim", a !== "all" && bx.getAttribute("data-a") !== a); });
-    });
-    b.addEventListener("keydown", function (e) {
-      var n = null;
-      if (e.key === "ArrowRight") n = aisleTabs[(i + 1) % aisleTabs.length];
-      if (e.key === "ArrowLeft") n = aisleTabs[(i - 1 + aisleTabs.length) % aisleTabs.length];
-      if (n) { e.preventDefault(); n.click(); n.focus(); }
-    });
-  });
-
-  /* ── 06 zip check ─────────────────────────────────────────────────────── */
-  var SAME = { "11372": "Jackson Heights", "11373": "Elmhurst", "11368": "Corona", "11369": "East Elmhurst", "11370": "East Elmhurst", "11377": "Woodside" };
-  var NEXT = { "11354": "Flushing", "11355": "Flushing", "11374": "Rego Park", "11375": "Forest Hills", "11378": "Maspeth", "11379": "Middle Village", "11104": "Sunnyside", "11101": "Long Island City", "11103": "Astoria", "11105": "Astoria", "11106": "Astoria", "11367": "Kew Gardens Hills", "11371": "LaGuardia area" };
-  var zf = $("#c-zip");
-  if (zf) zf.addEventListener("submit", function () {
-    var z = $("#zip").value.trim(), o = $("#zip-out");
-    if (!/^\d{5}$/.test(z)) { o.textContent = "Five digits, please — for example 11372."; return; }
-    if (SAME[z]) o.textContent = "✓ " + SAME[z] + " is same-day. Order by 3 pm, at your door 4–8 pm.";
-    else if (NEXT[z]) o.textContent = NEXT[z] + " is next-morning delivery — still free.";
-    else o.textContent = "That’s outside our delivery area. Call us — we can usually arrange something.";
-  });
-
-  /* ── 07 vaccine finder ────────────────────────────────────────────────── */
-  var VX = [
-    ["Influenza (flu)", 2, "Yearly, September through March", ["season"]],
-    ["COVID-19", 3, "Current formulation", ["season"]],
-    ["Tdap", 18, "Tetanus, diphtheria, pertussis", ["cut", "travel"]],
-    ["Meningococcal", 18, "Often asked for before a dorm move-in", ["college"]],
-    ["MMR", 18, "If you’re unsure you had it as a child", ["college", "travel"]],
-    ["HPV", 18, "Two or three doses over six months", ["college"]],
-    ["Hepatitis A", 18, "Two doses, six months apart", ["travel"]],
-    ["Hepatitis B", 18, "Two or three doses, by brand", ["travel", "college"]],
-    ["Shingles", 18, "Two doses, two to six months apart", ["50"]],
-    ["Pneumococcal", 18, "Usually once, sometimes twice", ["50"]],
-    ["Varicella (chickenpox)", 18, "Two doses, four weeks apart", []]
-  ];
-  var age = $("#vx-age");
-  function vx() {
-    var a = +age.value, why = $$(".c-why input:checked").map(function (c) { return c.value; });
-    if (a >= 50) why.push("50");
-    $("#vx-age-o").textContent = a === 0 ? "<1" : a;
-    var ok = 0;
-    $("#vx-list").innerHTML = VX.map(function (v) {
-      var can = a >= v[1]; if (can) ok++;
-      var hi = can && v[3].some(function (t) { return why.indexOf(t) > -1; });
-      return '<li class="' + (can ? (hi ? "is-hi" : "") : "is-no") + '"><b>' + v[0] + "</b><small>" + v[2] + "</small><em>" +
-        (can ? (hi ? "Ask about this" : "We can give") : "From " + v[1]) + "</em></li>";
-    }).join("");
-    $("#vx-n").textContent = ok;
-    $("#vx-lbl").textContent = (ok === 1 ? "vaccine" : "vaccines") + " we can give at " + (a === 0 ? "under 1" : a);
-    var note = "";
-    if (a < 18) note = "Under 19, most vaccines are free through the Vaccines for Children program at a doctor’s office. We can do flu from age 2 and COVID-19 from 3.";
-    if (why.indexOf("travel") > -1) note += (note ? " " : "") + "Yellow fever, typhoid, rabies and Japanese encephalitis aren’t allowed at New York pharmacies — we’ll name a travel clinic nearby.";
-    $("#vx-note").textContent = note;
-  }
-  if (age) { age.addEventListener("input", vx); $$(".c-why input").forEach(function (c) { c.addEventListener("change", vx); }); vx(); }
-
-  /* ── 08 which card ────────────────────────────────────────────────────── */
-  var CARDS = {
-    mmc: { c: [["state", "New York State", "Benefit Identification Card", "NYRx · prescriptions"], ["plan", "Your Medicaid plan", "Healthfirst · Fidelis · MetroPlus…", "Doctor & hospital"]],
-      h: "Bring both cards.", b: "Your plan card still covers your doctor, hospital and specialists. Your medicines are billed to NYRx using the white New York State Benefit card. You don’t need the plan’s permission to use us. (Managed Long-Term Care members: prescriptions still go through the plan.)" },
-    partd: { c: [["med", "Medicare", "Part D or Advantage plan", "Your drug plan card"]],
-      h: "Your Part D or Advantage card.", b: "We bill the drug plan on that card. Bring your red, white and blue Medicare card on your first visit too, and we’ll keep both on file. Many Part D members qualify for a free medication review." },
-    ep: { c: [["plan", "Essential Plan", "or Child Health Plus", "Prescriptions through the plan"]],
-      h: "Just your plan card.", b: "The Essential Plan and Child Health Plus didn’t move to NYRx — prescriptions still run through your plan, so the plan card is all you need." },
-    work: { c: [["med", "Your insurer", "Aetna · Cigna · UHC · 1199SEIU…", "Rx BIN · PCN · Group"]],
-      h: "The card with “Rx BIN” on it.", b: "Some plans issue a separate pharmacy card; it’s the one with Rx BIN and PCN numbers. Not sure? Bring whatever you have and we’ll work it out at the counter." },
-    none: { c: [["cash", "No insurance", "Ask for the cash price", "Quoted before we fill"]],
-      h: "Ask for the cash price.", b: "We quote before we fill, and for many common generics the cash price beats a copay anyway. If you might qualify for coverage, we’ll point you to free enrollment help nearby." }
-  };
-  var covs = $$(".c-cov button");
-  function cov(btn, focus) {
-    covs.forEach(function (b) { var on = b === btn; b.setAttribute("aria-checked", String(on)); b.tabIndex = on ? 0 : -1; });
-    var d = CARDS[btn.getAttribute("data-c")];
-    $("#wallet").innerHTML = d.c.map(function (c) { return '<div class="c-ic c-ic--' + c[0] + ' is-in"><small>' + c[1] + "</small><b>" + c[2] + "</b><i>" + c[3] + "</i></div>"; }).join("");
-    $("#w-title").textContent = d.h; $("#w-body").textContent = d.b;
-    if (focus) btn.focus();
-  }
-  covs.forEach(function (b, i) {
-    b.addEventListener("click", function () { cov(b); });
-    b.addEventListener("keydown", function (e) {
-      var n = null;
-      if (e.key === "ArrowDown" || e.key === "ArrowRight") n = covs[(i + 1) % covs.length];
-      if (e.key === "ArrowUp" || e.key === "ArrowLeft") n = covs[(i - 1 + covs.length) % covs.length];
-      if (n) { e.preventDefault(); cov(n, true); }
-    });
-  });
-  if (covs[0]) cov(covs[0]);
-
-  /* ── 09 hours ring ────────────────────────────────────────────────────── */
-  function pt(h, r) { var a = (h / 24) * 2 * Math.PI - Math.PI / 2; return [120 + r * Math.cos(a), 120 + r * Math.sin(a)]; }
-  var arc = $("#ring-arc");
-  if (arc) {
-    var n2 = ny(), td = HRS[n2.dow];
-    if (td) { var p1 = pt(td[0], 96), p2 = pt(td[1], 96), large = (td[1] - td[0]) > 12 ? 1 : 0;
-      arc.setAttribute("d", "M" + p1[0] + " " + p1[1] + " A96 96 0 " + large + " 1 " + p2[0] + " " + p2[1]); }
-    var tk = "";
-    [[0, "12a"], [6, "6a"], [12, "noon"], [18, "6p"]].forEach(function (q) { var p = pt(q[0], 120); tk += '<text x="' + p[0] + '" y="' + (p[1] + 3) + '" text-anchor="middle">' + q[1] + "</text>"; });
-    $("#ring-ticks").innerHTML = tk;
-    var hand = $("#ring-hand");
-    function tickHand() { var n3 = ny(); hand.style.transform = "rotate(" + ((n3.h + n3.m / 60) / 24 * 360) + "deg)"; }
-    tickHand(); setInterval(tickHand, 60000);
-  }
-
-  /* ── 10 hello ─────────────────────────────────────────────────────────── */
-  var chips = $$(".c-hello__chips button"), big = $("#hello-big"), sub = $("#hello-sub");
-  chips.forEach(function (c) {
-    c.addEventListener("click", function () {
-      chips.forEach(function (x) { x.setAttribute("aria-selected", String(x === c)); });
-      big.classList.add("is-out");
-      setTimeout(function () {
-        big.textContent = c.getAttribute("data-w"); big.setAttribute("lang", c.getAttribute("data-l"));
-        big.setAttribute("dir", c.getAttribute("data-l") === "ur" ? "rtl" : "ltr");
-        sub.textContent = c.getAttribute("data-n") + " — your directions go home written in " + c.getAttribute("data-n") + ".";
-        big.classList.remove("is-out");
-      }, reduce ? 0 : 200);
-    });
-  });
-  var auto = 0, autoT = !reduce && setInterval(function () { auto = (auto + 1) % chips.length; chips[auto].click(); }, 3200);
-  chips.forEach(function (c) { c.addEventListener("pointerdown", function () { clearInterval(autoT); }); c.addEventListener("keydown", function () { clearInterval(autoT); }); });
-  var helloSec = $(".c-hello");
-  if (helloSec) helloSec.addEventListener("focusin", function () { clearInterval(autoT); });
-
-  /* ── reveals ──────────────────────────────────────────────────────────── */
-  if ("IntersectionObserver" in window && !reduce) {
-    var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }); }, { rootMargin: "0px 0px -8% 0px" });
-    $$(".c-tile, .c-label, .c-sim, .c-progs article, .c-box, .c-map, .c-vx__out, .c-wallet, .c-ring, .c-line li, .c-vows li, .c-phone, .c-dial > *").forEach(function (el) { el.classList.add("c-rv"); io.observe(el); });
-  }
-})();
-</script>
-
-<script>
-/* header: scroll shadow, scroll-spy, mobile drawer */
-(function(){
-  var hdr=document.querySelector(".hdr"), links=[].slice.call(document.querySelectorAll(".hnav a, .mnav__list a"));
-  function onScroll(){hdr.classList.toggle("is-stuck",window.scrollY>8);}
-  window.addEventListener("scroll",onScroll,{passive:true});onScroll();
-  if("IntersectionObserver" in window){
-    var ids=["services","specialty","shop","vaccines","insurance","hours","contact"],vis={};
-    var io=new IntersectionObserver(function(es){
-      es.forEach(function(e){vis[e.target.id]=e.isIntersecting?e.intersectionRatio:0;});
-      var best=null,bv=0;ids.forEach(function(id){if((vis[id]||0)>bv){bv=vis[id];best=id;}});
-      links.forEach(function(a){a.setAttribute("aria-current",best&&a.getAttribute("href")==="#"+best?"true":"false");});
-    },{rootMargin:"-30% 0px -55% 0px",threshold:[0,.01,.25,.5,1]});
-    ids.forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});
-  }
-  var m=document.getElementById("mnav"),btn=document.querySelector(".mbtn"),last;
-  if(!m||!btn)return;
-  function focusables(){return m.querySelectorAll("a[href],button");}
-  function open(){last=document.activeElement;m.hidden=false;requestAnimationFrame(function(){m.classList.add("is-open");});
-    btn.setAttribute("aria-expanded","true");document.body.classList.add("is-locked");
-    setTimeout(function(){m.querySelector(".mnav__x").focus();},60);}
-  function close(go){m.classList.remove("is-open");btn.setAttribute("aria-expanded","false");document.body.classList.remove("is-locked");
-    setTimeout(function(){if(!m.classList.contains("is-open"))m.hidden=true;},360);if(!go&&last)last.focus();}
-  btn.addEventListener("click",open);
-  m.querySelector(".mnav__x").addEventListener("click",function(){close();});
-  m.querySelector(".mnav__scrim").addEventListener("click",function(){close();});
-  m.addEventListener("click",function(e){var a=e.target.closest("a[href^='#']");if(a)close(true);});
-  document.addEventListener("keydown",function(e){
-    if(!m.classList.contains("is-open"))return;
-    if(e.key==="Escape")close();
-    if(e.key==="Tab"){var f=focusables(),a=f[0],z=f[f.length-1];
-      if(e.shiftKey&&document.activeElement===a){e.preventDefault();z.focus();}
-      else if(!e.shiftKey&&document.activeElement===z){e.preventDefault();a.focus();}}
-  });
-  window.matchMedia("(min-width:1100px)").addEventListener("change",function(q){if(q.matches&&m.classList.contains("is-open"))close();});
-})();
-</script>
+</main><footer class="ft"><div class="wrap"><div class="ft__g"><div><a class="logo" href="care.html"><span class="logo__m"><svg viewBox="0 0 24 24" width="25" height="25" fill="none" stroke="#0D7085" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M12 8v8M8 12h8"/></svg></span><span class="logo__t">Durán &amp; Hossain<span>Jackson Heights · Est 2009</span></span></a><p class="ft__addr">74-20 Roosevelt Avenue<br>Jackson Heights, NY 11372</p><a class="ft__tel" href="tel:+17185550175">(718) 555-0175</a></div><div><h2 class="ft__h">Sections</h2><ul><li><a href="#services">Services</a></li><li><a href="#specialty">Specialty</a></li><li><a href="#shop">Shop</a></li><li><a href="#vaccines">Vaccines</a></li><li><a href="#insurance">Insurance</a></li><li><a href="#hours">Hours</a></li><li><a href="#contact">Contact</a></li></ul></div><div><h2 class="ft__h">Reach us</h2><ul><li><a href="tel:+17185550175">Pharmacy · (718) 555-0175</a></li><li><a href="tel:+17185550174">Front of store · (718) 555-0174</a></li><li><a href="sms:+17185550100">Text · (718) 555-0100</a></li><li><span class="ft__fax">Fax · (718) 555-0176</span></li><li><a href="tel:911">Emergency · 911</a></li></ul></div></div><div class="ft__b"><p><b>Design concept.</b> Durán &amp; Hossain is an invented pharmacy. The name, people, address, phone numbers and license numbers are placeholders. The vaccine list, the ages, the NYRx rules and the federal-holiday dates are real.</p><p>NYS Pharmacy Establishment License 000000 · NPI 0000000000 — placeholders in this concept. Supervising pharmacists Luz Durán, PharmD · Nasir Hossain, PharmD.</p><p>We handle protected health information under HIPAA. We do not collect any of it through this website, which is why there are no forms on it.</p><p>Nothing here is medical advice. Talk to a pharmacist or your doctor about your own medicines. Vaccine ages, NYRx details and federal holiday dates follow current policy. © <span data-rx-year>2026</span> Durán &amp; Hossain Pharmacy.</p></div></div></footer>
+<nav class="dock" id="dock" aria-label="Quick actions"><p class="dock__s"><span class="status" data-rx-status>Checking hours…</span></p><a class="dock__a" href="sms:+17185550100">Text</a><a class="dock__a dock__a--p" href="tel:+17185550175">Call</a></nav>
+<script src="hours.js"></script>
+<script src="chrome.js"></script>
+<script src="care.js"></script>
 </body>
 </html>

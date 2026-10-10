@@ -1,77 +1,150 @@
+/* Ferro & Sons — live status, wait timetable, "in today" markers, mobile dock.
+   Data lives in window.SHOP (index.html). Everything degrades to static HTML without JS. */
 (function () {
   'use strict';
-  function ny() {
-    var o = {};
-    new Intl.DateTimeFormat('en-US', { timeZone: 'America/New_York', hour: 'numeric', minute: 'numeric', hour12: false, weekday: 'short' })
-      .formatToParts(new Date()).forEach(function (p) { o[p.type] = p.value; });
-    return { h: (+o.hour) % 24, m: +o.minute, dow: { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 }[o.weekday] };
-  }
-  var now = ny(), t = now.h + now.m / 60;
-  var HRS = { 2: [9, 19], 3: [9, 19], 4: [9, 19], 5: [9, 19], 6: [8, 17] };
+  var SHOP = window.SHOP || {};
+  var HOURS = SHOP.hours || {}, WAITS = SHOP.waits || {};
   var DN = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
   var DL = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
-  /* typical waits (minutes) — shop's own estimates */
-  var W = {
-    2: { 9: 5, 10: 10, 11: 10, 12: 20, 13: 15, 14: 10, 15: 10, 16: 20, 17: 30, 18: 20 },
-    3: { 9: 5, 10: 10, 11: 15, 12: 20, 13: 15, 14: 10, 15: 15, 16: 25, 17: 35, 18: 20 },
-    4: { 9: 10, 10: 10, 11: 15, 12: 25, 13: 20, 14: 15, 15: 15, 16: 25, 17: 40, 18: 25 },
-    5: { 9: 15, 10: 20, 11: 25, 12: 30, 13: 25, 14: 25, 15: 30, 16: 40, 17: 45, 18: 30 },
-    6: { 8: 20, 9: 40, 10: 55, 11: 60, 12: 45, 13: 35, 14: 30, 15: 25, 16: 15 }
-  };
-
-  /* hours + open */
-  var tr = document.querySelector('#hrs tr[data-d="' + now.dow + '"]');
-  if (tr) tr.classList.add('today');
-  var op = document.getElementById('open'), h = HRS[now.dow];
-  function nextOpen() { var d = now.dow, i = 0; do { d = (d + 1) % 7; i++; } while (!HRS[d] && i < 8); return (i === 1 ? 'tomorrow' : DL[d]) + ' at ' + HRS[d][0] + ' am'; }
-  if (h && t >= h[0] && t < h[1]) { op.classList.add('is-open'); op.textContent = 'Open now — chairs are turning'; }
-  else if (h && t < h[0]) op.textContent = 'Opens today at ' + h[0] + ' am';
-  else op.textContent = 'Closed — back ' + nextOpen();
-
-  /* nav */
-  var nb = document.querySelector('.navbtn'), nav = document.getElementById('nav');
-  nb.addEventListener('click', function () { var o = !nav.classList.contains('open'); nav.classList.toggle('open', o); nb.setAttribute('aria-expanded', String(o)); nb.textContent = o ? 'Close ▴' : 'Menu ▾'; });
-  nav.addEventListener('click', function (e) { if (e.target.closest('a')) { nav.classList.remove('open'); nb.setAttribute('aria-expanded', 'false'); nb.textContent = 'Menu ▾'; } });
-
-  /* wait chart */
-  var days = document.getElementById('days'), chart = document.getElementById('chart'), wn = document.getElementById('waitNow');
-  var sel = W[now.dow] ? now.dow : 2;
-  [2, 3, 4, 5, 6].forEach(function (d) {
-    var b = document.createElement('button');
-    b.type = 'button'; b.setAttribute('role', 'tab'); b.dataset.d = d;
-    b.textContent = DN[d] + (d === now.dow ? ' · today' : '');
-    b.addEventListener('click', function () { draw(d); });
-    days.appendChild(b);
-  });
-  function fmt(hh) { return ((hh % 12) || 12) + (hh >= 12 ? 'p' : 'a'); }
-  function draw(d) {
-    sel = d;
-    days.querySelectorAll('button').forEach(function (b) { b.setAttribute('aria-selected', String(+b.dataset.d === d)); });
-    chart.innerHTML = '';
-    var data = W[d], max = 60, desc = [];
-    Object.keys(data).forEach(function (k) {
-      var hh = +k, v = data[k], pct = Math.round(v / max * 100);
-      var bar = document.createElement('div');
-      bar.className = 'bar' + (d === now.dow && now.h === hh ? ' is-now' : '');
-      bar.style.setProperty('--h', pct + '%');
-      bar.innerHTML = '<span class="bar__min">' + v + 'm</span><span class="bar__fill" style="height:0"></span><span class="bar__lbl">' + fmt(hh) + '</span>';
-      chart.appendChild(bar);
-      requestAnimationFrame(function () { bar.querySelector('.bar__fill').style.height = pct + '%'; });
-      desc.push(fmt(hh) + ' about ' + v + ' minutes');
-    });
-    chart.setAttribute('aria-label', 'Typical wait on ' + DL[d] + ': ' + desc.join(', '));
-    if (d === now.dow && data[now.h] !== undefined) wn.textContent = 'Right about now: usually a ' + data[now.h] + '-minute wait.';
-    else {
-      var best = Object.keys(data).reduce(function (a, b) { return data[a] <= data[b] ? a : b; });
-      wn.textContent = 'Quietest on ' + DL[d] + ': around ' + fmt(+best) + 'm, usually ' + data[best] + ' minutes or less.';
-    }
+  /* Current time in New York, whatever the visitor's time zone. */
+  function nyNow() {
+    var o = {};
+    new Intl.DateTimeFormat('en-US', { timeZone: 'America/New_York', hour: 'numeric', minute: 'numeric', hour12: false, weekday: 'short' })
+      .formatToParts(new Date()).forEach(function (p) { o[p.type] = p.value; });
+    var h = (+o.hour) % 24, m = +o.minute;
+    return { dow: DN.indexOf(o.weekday), h: h, min: h * 60 + m };
   }
-  draw(sel);
+  function clock(mins) {
+    var h = Math.floor(mins / 60), m = mins % 60;
+    return ((h % 12) || 12) + (m ? ':' + ('0' + m).slice(-2) : '') + (h >= 12 ? ' pm' : ' am');
+  }
+  function hourLabel(h) { return ((h % 12) || 12) + (h >= 12 ? ' pm' : ' am'); }
+  function nextOpenDay(dow) {
+    for (var i = 1; i <= 7; i++) { var d = (dow + i) % 7; if (HOURS[d]) return { d: d, inDays: i }; }
+    return null;
+  }
 
-  /* reveal */
-  if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }); }, { rootMargin: '0px 0px -8% 0px' });
-    document.querySelectorAll('.chair, .tl li, .cert, .first__text, .shave li').forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
+  var now = nyNow();
+  var today = HOURS[now.dow];
+  var isOpen = !!(today && now.min >= today[0] && now.min < today[1]);
+  var state = isOpen ? 'open' : 'closed';
+
+  /* Status line, shared by the ticket, the hours block and the dock. */
+  var statusText, statusHead, statusSub, shortText, waitText;
+  if (isOpen) {
+    statusHead = 'Open now'; statusSub = 'until ' + clock(today[1]);
+    statusText = 'Open now · until ' + clock(today[1]);
+    shortText = 'Open · until ' + clock(today[1]);
+    var w = (WAITS[now.dow] || {})[now.h];
+    waitText = w !== undefined ? 'About ' + w + ' min' : 'Short';
+  } else if (today && now.min < today[0]) {
+    statusText = 'Opens today at ' + clock(today[0]);
+    statusHead = 'Opens at ' + clock(today[0]); statusSub = 'today';
+    shortText = statusText;
+    waitText = 'Quiet at opening';
+  } else {
+    var n = nextOpenDay(now.dow);
+    var when = n.inDays === 1 ? 'tomorrow' : DL[n.d];
+    statusText = 'Closed · back ' + when + ' at ' + clock(HOURS[n.d][0]);
+    statusHead = 'Closed now'; statusSub = 'back ' + when + ' at ' + clock(HOURS[n.d][0]);
+    shortText = 'Closed · back ' + (n.inDays === 1 ? 'tomorrow' : DN[n.d]) + ' ' + clock(HOURS[n.d][0]);
+    waitText = 'Shop’s closed';
+  }
+
+  function setStatus(id, txt) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    el.textContent = txt;
+    var p = el.closest('#status,#dockS,#heroS') || el.parentNode;
+    p.classList.add('is-' + state);
+  }
+  setStatus('statusTxt', statusHead);
+  var ss = document.getElementById('statusSub'); if (ss) ss.textContent = statusSub;
+  setStatus('dockTxt', shortText);
+  setStatus('heroTxt', shortText);
+  var wt = document.getElementById('waitTxt'); if (wt) wt.textContent = waitText;
+
+  var op = document.getElementById('open');
+  if (op) {
+    op.innerHTML = '<span class="dot" aria-hidden="true"></span><span></span>';
+    op.lastChild.textContent = statusText;
+    op.classList.add('is-' + state);
+  }
+
+  /* Hours table: mark today and closed days. */
+  [].forEach.call(document.querySelectorAll('#hrs tr'), function (tr) {
+    var d = +tr.getAttribute('data-d');
+    if (d === now.dow) tr.classList.add('today');
+    if (!HOURS[d]) tr.classList.add('is-closed-day');
+  });
+
+  /* Wait timetable. */
+  var days = document.getElementById('days'), tt = document.getElementById('tt'), wn = document.getElementById('waitNow');
+  if (days && tt) {
+    var openDays = Object.keys(WAITS).map(Number);
+    var doneToday = !today || now.min >= today[1];
+    var sel = (WAITS[now.dow] && !doneToday) ? now.dow : (nextOpenDay(now.dow) || { d: openDays[0] }).d;
+    openDays.forEach(function (d) {
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.setAttribute('data-d', d);
+      b.setAttribute('aria-pressed', 'false');
+      b.innerHTML = DN[d] + '<span class="vh">' + DL[d].slice(3) + '</span>' + (d === now.dow ? '<small><span class="vh">, </span>Today</small>' : '');
+      b.addEventListener('click', function () { draw(d); });
+      days.appendChild(b);
+    });
+
+    var MAX = 60;
+    function draw(d) {
+      [].forEach.call(days.children, function (b) { b.setAttribute('aria-pressed', String(+b.getAttribute('data-d') === d)); });
+      var data = WAITS[d], hrs = Object.keys(data).map(Number);
+      tt.innerHTML = '';
+      hrs.forEach(function (h) {
+        var li = document.createElement('li');
+        var live = d === now.dow && isOpen;
+        if (live && h === now.h) li.className = 'is-now';
+        else if (live && h < now.h) li.className = 'is-past';
+        li.innerHTML = '<span class="tt__h">' + hourLabel(h) + '</span>' +
+          '<span class="tt__bar" aria-hidden="true"><i style="--v:' + Math.max(4, Math.round(data[h] / MAX * 100)) + '%"></i></span>' +
+          '<span class="tt__m">' + data[h] + ' min</span>';
+        li.setAttribute('aria-label', hourLabel(h) + ': usually about ' + data[h] + ' minutes' + (li.className === 'is-now' ? ' (right now)' : ''));
+        tt.appendChild(li);
+      });
+      tt.setAttribute('aria-label', 'Typical wait on ' + DL[d] + ', by hour');
+      var best = hrs.reduce(function (a, b) { return data[a] <= data[b] ? a : b; });
+      var worst = hrs.reduce(function (a, b) { return data[a] >= data[b] ? a : b; });
+      if (d === now.dow && isOpen && data[now.h] !== undefined) {
+        wn.textContent = 'Right about now: usually a ' + data[now.h] + '-minute wait.';
+      } else {
+        wn.textContent = DL[d] + ': quietest around ' + hourLabel(best) + ', busiest around ' + hourLabel(worst) + '.';
+      }
+    }
+    draw(sel);
+  }
+
+  /* "In today" on each chair. */
+  [].forEach.call(document.querySelectorAll('.chair[data-days]'), function (c) {
+    var el = c.querySelector('.chair__in'); if (!el) return;
+    var on = c.getAttribute('data-days').split(',').map(Number).indexOf(now.dow) > -1;
+    var when = (now.dow === 6 && c.getAttribute('data-sat')) || c.getAttribute('data-when');
+    var afterClose = today && now.min >= today[1];
+    if (on && today && afterClose) { el.textContent = 'Done for today'; el.classList.add('is-off'); }
+    else if (on && today) el.textContent = 'In today' + (when && when !== 'all day' ? ', ' + when : '');
+    else { el.textContent = 'Off today'; el.classList.add('is-off'); }
+    el.hidden = false;
+  });
+
+  /* Mobile dock: appears once the hero's own buttons are off screen, hides over the visit section and footer. */
+  var dock = document.getElementById('dock');
+  if (dock && 'IntersectionObserver' in window) {
+    var seen = { hero: true, end: false };
+    var update = function () { dock.classList.toggle('is-on', !seen.hero && !seen.end); };
+    var watch = function (el, key) {
+      if (!el) return;
+      new IntersectionObserver(function (es) { seen[key] = es[0].isIntersecting; update(); }).observe(el);
+    };
+    watch(document.getElementById('heroCta'), 'hero');
+    watch(document.querySelector('.visit__cta'), 'end');
   }
 })();

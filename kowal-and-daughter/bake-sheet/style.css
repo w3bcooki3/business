@@ -28,7 +28,7 @@
   /* Space & grid */
   --gutter: clamp(16px, 3.2vw, 40px);
   --max: 1380px;
-  --section: clamp(88px, 7rem + 4vw, 184px);
+  --section: clamp(72px, 2rem + 9vw, 176px);
 
   --ease: cubic-bezier(0.22, 0.7, 0.18, 1);
 }
@@ -293,7 +293,7 @@ a {
   gap: 4px;
   padding: 44px 16px 16px;
   font-family: var(--mono);
-  font-size: 0.6875rem;
+  font-size: 0.75rem;
   line-height: 1.45;
   letter-spacing: 0.04em;
   background: linear-gradient(to top, rgba(28, 16, 9, 0.6), transparent);
@@ -375,7 +375,7 @@ a {
   display: flex;
   align-items: center;
   gap: 0;
-  min-height: 36px;
+  min-height: 40px;
 }
 .strip__status {
   display: flex;
@@ -392,6 +392,9 @@ a {
   color: var(--on-rye-muted);
 }
 .strip__item {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
   padding: 0 18px;
   border-left: 1px solid rgba(243, 236, 223, 0.22);
   text-decoration: none;
@@ -438,7 +441,7 @@ a.strip__item:hover {
   align-items: center;
   gap: 8px;
   font-family: var(--mono);
-  font-size: 0.6875rem;
+  font-size: 0.75rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--muted);
@@ -466,7 +469,7 @@ a.strip__item:hover {
 }
 .index__no {
   color: var(--muted);
-  font-size: 0.6875rem;
+  font-size: 0.75rem;
 }
 .index a::after {
   content: '';
@@ -496,7 +499,7 @@ a.strip__item:hover {
 }
 .masthead__call-kicker {
   font-family: var(--mono);
-  font-size: 0.6875rem;
+  font-size: 0.75rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--muted);
@@ -712,6 +715,43 @@ a.strip__item:hover {
   width: 22px;
 }
 
+/* Live one-liner under the headline: shown only while the ticket sits below the copy. */
+.hero__now {
+  display: none;
+  align-items: center;
+  gap: 12px;
+  min-height: 52px;
+  margin-top: 26px;
+  padding: 10px 0;
+  border-block: 1px solid var(--rule-strong);
+  font-family: var(--mono);
+  font-size: 0.8125rem;
+  letter-spacing: 0.04em;
+  line-height: 1.35;
+  color: var(--ink);
+  text-decoration: none;
+}
+.hero__now-dot {
+  flex: none;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--muted);
+}
+.hero__now.is-live .hero__now-dot {
+  background: var(--stamp);
+  box-shadow: 0 0 0 4px rgba(195, 54, 31, 0.16);
+  animation: ember 1.6s ease-in-out infinite;
+}
+.hero__now-go {
+  margin-left: auto;
+  color: var(--stamp);
+}
+.hero__now:hover .js-hero-now {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 /* ─── The ticket ─────────────────────────────────── */
 .hero__ticket {
   position: relative;
@@ -763,7 +803,7 @@ a.strip__item:hover {
 }
 .ticket__kicker {
   font-family: var(--mono);
-  font-size: 0.6875rem;
+  font-size: 0.75rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--muted);
@@ -825,13 +865,13 @@ a.strip__item:hover {
 }
 .ticket__gloss {
   font-family: var(--mono);
-  font-size: 0.6875rem;
+  font-size: 0.75rem;
   letter-spacing: 0.02em;
   color: var(--muted);
 }
 .ticket__status {
   font-family: var(--mono);
-  font-size: 0.6875rem;
+  font-size: 0.75rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   white-space: nowrap;
@@ -890,7 +930,7 @@ a.strip__item:hover {
   flex-wrap: wrap;
   padding-top: 16px;
   font-family: var(--mono);
-  font-size: 0.6875rem;
+  font-size: 0.75rem;
   letter-spacing: 0.02em;
   color: var(--muted);
 }
@@ -921,6 +961,10 @@ a.strip__item:hover {
   .hero__title {
     font-size: min(17vw, 10rem);
   }
+  .hero__now {
+    display: flex;
+    max-width: 620px;
+  }
   .hero__ticket {
     max-width: 620px;
     margin-left: auto;
@@ -944,6 +988,7 @@ a.strip__item:hover {
     display: none;
   }
   .hero__lede {
+    margin-top: 22px;
     font-size: 1.125rem;
   }
   .hero__actions {
@@ -961,9 +1006,9 @@ a.strip__item:hover {
     transform: rotate(-0.8deg);
   }
   .ticket__stamp {
-    top: -10px;
-    right: -6px;
-    width: 96px;
+    top: -14px;
+    right: 6px;
+    width: 92px;
   }
   .ticket__title {
     padding-right: 72px;
@@ -1312,7 +1357,7 @@ html:not(.can-reveal) .section-head__rule {
 .order__fine {
   margin-top: 16px;
   font-family: var(--mono);
-  font-size: 0.6875rem;
+  font-size: 0.75rem;
   line-height: 1.55;
   color: var(--muted);
   overflow-wrap: anywhere;
@@ -1406,7 +1451,7 @@ html:not(.can-reveal) .section-head__rule {
   padding: 0 7px;
   border: 1.5px solid var(--rye);
   font-family: var(--mono);
-  font-size: 0.6875rem;
+  font-size: 0.75rem;
   font-weight: 500;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -1495,7 +1540,7 @@ html:not(.can-reveal) .section-head__rule {
   justify-items: end;
 }
 .hours__note {
-  font-size: 0.6875rem;
+  font-size: 0.75rem;
   color: var(--muted);
 }
 .visit__photo {
@@ -1669,13 +1714,15 @@ html:not(.can-reveal) .section-head__rule {
 .site-footer__h {
   margin-bottom: 10px;
   font-family: var(--mono);
-  font-size: 0.6875rem;
+  font-size: 0.75rem;
   font-weight: 400;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--on-rye-muted);
 }
 .site-footer a {
+  display: inline-block;
+  padding-block: 10px;
   text-decoration-color: rgba(243, 236, 223, 0.4);
   overflow-wrap: anywhere;
 }
@@ -1691,7 +1738,7 @@ html:not(.can-reveal) .section-head__rule {
   padding-top: 24px;
   border-top: 1px solid rgba(243, 236, 223, 0.2);
   font-family: var(--mono);
-  font-size: 0.6875rem;
+  font-size: 0.75rem;
   letter-spacing: 0.04em;
   color: var(--on-rye-muted);
 }
@@ -1716,8 +1763,8 @@ html:not(.can-reveal) .section-head__rule {
 }
 
 @media (max-width: 640px) {
-  body {
-    padding-bottom: calc(68px + env(safe-area-inset-bottom));
+  .site-footer {
+    padding-bottom: calc(40px + 66px + env(safe-area-inset-bottom));
   }
   .site-footer__top {
     flex-direction: column;
@@ -1772,6 +1819,7 @@ html:not(.can-reveal) .section-head__rule {
     opacity: 0.75;
   }
   .actionbar__v {
+    white-space: nowrap;
     font-size: 1.05rem;
     font-weight: 540;
     line-height: 1.1;
@@ -1799,10 +1847,14 @@ html.is-locked .actionbar {
 
 /* Small-phone polish (≤480px): keep the door strip and call buttons on one tidy line */
 @media (max-width: 480px) {
-  .strip__status span:last-child { display: none; }
   .strip__item { padding: 0 12px; white-space: nowrap; }
   .btn { flex-wrap: wrap; row-gap: 2px; padding: 10px 18px; }
   .btn__meta { white-space: nowrap; }
+}
+@media (max-width: 360px) {
+  .strip__status span:last-child { display: none; }
+  .actionbar a { padding-inline: 10px; }
+  .actionbar__v { font-size: 0.94rem; }
 }
 @media (max-width: 380px) {
   .btn__meta { border-left: 0; padding-left: 0; flex-basis: 100%; }

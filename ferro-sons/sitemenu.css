@@ -30,11 +30,12 @@
 html.sm-lock,html.sm-lock body{overflow:hidden}
 @media (prefers-reduced-motion:reduce){.sm,.sm__list li{transition:none}}
 
-/* site theme */
-:root{--sm-bg:#fbf6ea;--sm-fg:#1d2a44;--sm-mut:#6c6152;--sm-line:rgba(29,42,68,.16);--sm-line2:rgba(29,42,68,.4);--sm-acc:#b3262d;--sm-accfg:#fbf6ea;
---sm-disp:"Ultra",Georgia,serif;--sm-body:"Old Standard TT",Georgia,serif;--sm-r:0px;
---sm-btn-bg:#1d2a44;--sm-btn-fg:#fbf6ea;--sm-btn-bd:#1d2a44;--sm-btn-font:700 14px/1 "Old Standard TT",Georgia,serif;--sm-btn-tt:uppercase;--sm-btn-ls:.14em;
---sm-link-font:400 30px/1.1 "Ultra",Georgia,serif;--sm-name-font:400 24px/1 "Ultra",Georgia,serif;--sm-chip:#f4ecd8;--sm-open:#b8913a;}
-@media (max-width:980px){.sm-btn{display:inline-flex}.navbtn{display:none!important}}
-@media (max-width:360px){.sm-btn__l{display:none}.sm-btn{padding:0;width:46px;justify-content:center}}
-@media (max-width:980px){header .sm-btn{display:flex;margin:0 auto 12px}}
+/* site theme: Ferro & Sons */
+:root{--sm-bg:#fbf6ea;--sm-fg:#1d2a44;--sm-mut:#62584b;--sm-line:rgba(29,42,68,.16);--sm-line2:rgba(29,42,68,.4);--sm-acc:#b3262d;--sm-accfg:#fff;
+--sm-disp:"Ultra",Georgia,serif;--sm-body:"Barlow Condensed","Arial Narrow",sans-serif;--sm-r:0px;--sm-pad:14px;
+--sm-btn-bg:transparent;--sm-btn-fg:#fbf6ea;--sm-btn-bd:rgba(236,211,143,.7);--sm-btn-font:700 16px/1 "Barlow Condensed","Arial Narrow",sans-serif;--sm-btn-tt:uppercase;--sm-btn-ls:.12em;
+--sm-link-font:400 28px/1.1 "Ultra",Georgia,serif;--sm-name-font:400 24px/1 "Ultra",Georgia,serif;--sm-chip:#f4ecd8;--sm-open:#2e8b4e;}
+.sm__a{font-size:17px;letter-spacing:.08em;text-transform:uppercase}
+.sm__info{font-family:"Source Serif 4",Georgia,serif}
+@media (max-width:1099px){.sm-btn{display:inline-flex}}
+@media (max-width:359px){.sm-btn__l{display:none}.sm-btn{padding:0;width:46px;justify-content:center}}

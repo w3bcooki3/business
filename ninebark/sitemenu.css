@@ -31,10 +31,9 @@ html.sm-lock,html.sm-lock body{overflow:hidden}
 @media (prefers-reduced-motion:reduce){.sm,.sm__list li{transition:none}}
 
 /* site theme */
-:root{--sm-bg:#efe9df;--sm-fg:#312a24;--sm-mut:#776b5e;--sm-line:rgba(49,42,36,.16);--sm-line2:rgba(49,42,36,.35);--sm-acc:#7a5236;--sm-accfg:#fff;
+:root{--sm-bg:#efe9df;--sm-fg:#312a24;--sm-mut:#675b4f;--sm-line:rgba(49,42,36,.16);--sm-line2:rgba(49,42,36,.35);--sm-acc:#7a5236;--sm-accfg:#fff;
 --sm-disp:"Fraunces",Georgia,serif;--sm-body:"Karla",system-ui,sans-serif;--sm-r:99px;
 --sm-btn-bg:transparent;--sm-btn-fg:#312a24;--sm-btn-bd:#312a24;--sm-btn-bw:1px;
---sm-link-font:400 36px/1.1 "Fraunces",Georgia,serif;--sm-name-font:500 24px/1 "Fraunces",Georgia,serif;--sm-chip:#e3dacb;--sm-open:#6d7a3f;}
-@media (max-width:1100px){.sm-btn{display:inline-flex}.nav-btn{display:none!important}}
-@media (max-width:360px){.sm-btn__l{display:none}.sm-btn{padding:0;width:46px;justify-content:center}}
-@media (max-width:520px){.head .sm-btn{margin-left:auto}}
+--sm-link-font:400 36px/1.1 "Fraunces",Georgia,serif;--sm-name-font:500 24px/1 "Fraunces",Georgia,serif;--sm-chip:#e3dacb;--sm-open:#56622b;}
+@media (max-width:1099px){.sm-btn{display:inline-flex}}
+@media (max-width:360px){.sm-btn__l{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}.sm-btn{padding:0;width:46px;justify-content:center}}

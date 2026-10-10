@@ -2,17 +2,18 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Feldman &amp; Daughters — Bagels &amp; Babka on Grand Street since 1958</title>
 <meta name="description" content="Hand-rolled, kettle-boiled bagels out of the oven every twenty minutes from 6 am, seven kinds of babka, and the third generation behind the counter. 377 Grand Street, Lower East Side.">
 <meta name="theme-color" content="#c62026">
+<meta property="og:type" content="website">
 <meta property="og:title" content="Feldman &amp; Daughters — Lower East Side">
 <meta property="og:description" content="Bagels every twenty minutes. Babka in seven flavors. Since 1958.">
-<meta property="og:image" content="https://images.unsplash.com/photo-1585445490387-f47934b73b54?auto=format&fit=crop&w=1600&q=80">
+<meta property="og:image" content="https://images.unsplash.com/photo-1585445490387-f47934b73b54?auto=format&amp;fit=crop&amp;w=1200&amp;h=630&amp;q=75">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23c62026'/%3E%3Ccircle cx='32' cy='32' r='20' fill='%23e3a72f'/%3E%3Ccircle cx='32' cy='32' r='7' fill='%23c62026'/%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Libre+Franklin:ital,wght@0,400;0,600;0,800;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preload" href="fonts/bowlby-one-sc-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/libre-franklin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="sitemenu.css">
 <script type="application/ld+json">
@@ -23,130 +24,190 @@
 <a class="skip" href="#main">Skip to content</a>
 
 <header class="top">
-  <a class="logo" href="#top" aria-label="Feldman and Daughters home"><span>Feldman</span><i>&amp;</i><span>Daughters</span></a>
-  <nav class="nav" id="nav" aria-label="Main">
-    <a href="#counter">The counter</a>
-    <a href="#dozen">Build a dozen</a>
-    <a href="#babka">Babka</a>
-    <a href="#family">Since 1958</a>
-    <a href="#catering">Catering</a>
-  </nav>
-  <a class="top__call" href="tel:+12125550158">(212) 555-0158</a>
-  <button class="burger" aria-expanded="false" aria-controls="nav">Menu</button>
+  <div class="top__in">
+    <a class="logo" href="#top"><span>Feldman</span> <i>&amp;</i> <span>Daughters</span></a>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="#counter">The counter</a>
+      <a href="#dozen">Build a dozen</a>
+      <a href="#babka">Babka</a>
+      <a href="#family">Since 1958</a>
+      <a href="#catering">Catering</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <a class="top__call" href="tel:+12125550158"><span class="vh">Call </span>(212) 555-0158</a>
+    <div class="top__menu"></div>
+  </div>
 </header>
 
 <main id="main">
+  <!-- Hero: the shop window -->
   <section class="hero" id="top" aria-labelledby="h1">
     <div class="hero__sign">
       <p class="neon" aria-hidden="true">Hot bagels</p>
-      <h1 id="h1">Boiled. Baked.<br>Gone in twenty minutes.</h1>
-      <p class="hero__sub">Hand-rolled bagels out of the oven every twenty minutes from 6 am, seven kinds of babka, and a schmear counter that hasn’t changed its pickles since Eisenhower.</p>
+      <h1 id="h1"><span>Boiled.</span> <span>Baked.</span> <span class="hero__gone">Gone in twenty minutes.</span></h1>
+      <p class="hero__sub">Hand-rolled bagels out of the oven every twenty minutes from 6&nbsp;am, seven kinds of babka, and a schmear counter that hasn’t changed its pickles since Eisenhower.</p>
       <div class="hero__btns">
         <a class="btn btn--red" href="#dozen">Build a baker’s dozen</a>
-        <a class="btn" href="#babka">See the babka</a>
+        <a class="btn btn--ghost" href="#counter">See the counter</a>
       </div>
+    </div>
+<!-- Today strip: status, address, phone -->
+    
+    <div class="today" role="group" aria-label="Hours and location">
+      <p class="today__item today__status"><span class="dot" aria-hidden="true"></span><span><b id="liveTxt">Sun–Fri 6 am–3 pm · Sat 7 am–2 pm</b><small id="liveSub">Every day of the week</small></span></p>
+      <a class="today__item" href="https://www.google.com/maps/search/?api=1&amp;query=377+Grand+St+New+York+NY+10002" target="_blank" rel="noopener"><span><b>377 Grand Street</b><small>At Suffolk St · F/J/M/Z Delancey–Essex</small></span><span class="today__go" aria-hidden="true">↗</span><span class="vh"> (opens Google Maps)</span></a>
+      <a class="today__item" href="tel:+12125550158"><span><b>(212) 555-0158</b><small>Call ahead for big orders</small></span><span class="today__go" aria-hidden="true">→</span></a>
     </div>
     <div class="hero__photo">
-      <img src="https://images.unsplash.com/photo-1585445490387-f47934b73b54?auto=format&fit=crop&w=1300&q=80" alt="A close-up of a seeded everything bagel" width="1300" height="1300">
-      <div class="next" aria-live="polite"><span>Next tray out</span><b id="nextTray">—</b></div>
+      <picture>
+        <source media="(max-width: 899px)" sizes="100vw"
+          srcset="https://images.unsplash.com/photo-1585445490387-f47934b73b54?auto=format&amp;fit=crop&amp;w=600&amp;h=450&amp;q=70 600w, https://images.unsplash.com/photo-1585445490387-f47934b73b54?auto=format&amp;fit=crop&amp;w=900&amp;h=675&amp;q=65 900w, https://images.unsplash.com/photo-1585445490387-f47934b73b54?auto=format&amp;fit=crop&amp;w=1300&amp;h=975&amp;q=60 1300w">
+        <img src="https://images.unsplash.com/photo-1585445490387-f47934b73b54?auto=format&amp;fit=crop&amp;w=1000&amp;h=1100&amp;q=75"
+          srcset="https://images.unsplash.com/photo-1585445490387-f47934b73b54?auto=format&amp;fit=crop&amp;w=700&amp;h=770&amp;q=75 700w, https://images.unsplash.com/photo-1585445490387-f47934b73b54?auto=format&amp;fit=crop&amp;w=1000&amp;h=1100&amp;q=75 1000w, https://images.unsplash.com/photo-1585445490387-f47934b73b54?auto=format&amp;fit=crop&amp;w=1400&amp;h=1540&amp;q=65 1400w"
+          sizes="(min-width: 900px) 44vw, 100vw" width="1000" height="1100" fetchpriority="high"
+          alt="A close-up of a seeded everything bagel">
+      </picture>
+      <p class="next"><span>Next tray out</span><b id="nextTray">every 20 min</b></p>
     </div>
   </section>
 
-  <div class="string" aria-hidden="true"></div>
 
+  <!-- Counter / menu boards -->
   <section class="counter" id="counter" aria-labelledby="ct-t">
-    <div class="counter__head">
-      <h2 id="ct-t">At the counter</h2>
-      <div class="ticketbox">
-        <button class="dispenser" id="dispenser" aria-describedby="ticketTip"><span class="dispenser__lbl">Take a number</span><span class="ticket" id="ticket"><small>Now serving</small><b id="num">47</b></span></button>
-        <p class="ticketbox__tip" id="ticketTip" aria-live="polite">Pull a ticket. It’s how it worked in 1958.</p>
+    <div class="wrap">
+      <div class="counter__head">
+        <div>
+          <p class="eyebrow">The menu boards</p>
+          <h2 id="ct-t">At the counter</h2>
+        </div>
+        <div class="ticketbox">
+          <button class="dispenser" id="dispenser" type="button" aria-describedby="ticketTip"><span class="dispenser__lbl">Take a number</span><span class="ticket"><small>Now serving</small><b id="num">47</b></span></button>
+          <p class="ticketbox__tip" id="ticketTip" aria-live="polite">Pull a ticket. It’s how it worked in 1958.</p>
+        </div>
       </div>
+      <div class="boards">
+        <div class="board">
+          <h3>Bagels</h3>
+          <ul>
+            <li><span>Plain · Sesame · Poppy</span><b>2.25</b></li>
+            <li><span>Everything</span><b>2.25</b></li>
+            <li><span>Salt · Onion · Garlic</span><b>2.25</b></li>
+            <li><span>Pumpernickel · Rye</span><b>2.50</b></li>
+            <li><span>Cinnamon raisin</span><b>2.50</b></li>
+            <li><span>Bialy, Grandpa Abe’s recipe</span><b>2.50</b></li>
+            <li class="em"><span>Baker’s dozen (13)</span><b>26.00</b></li>
+          </ul>
+        </div>
+        <div class="board">
+          <h3>Schmears <small>per ½ lb</small></h3>
+          <ul>
+            <li><span>Plain cream cheese</span><b>7.00</b></li>
+            <li><span>Scallion</span><b>8.00</b></li>
+            <li><span>Lox spread</span><b>11.00</b></li>
+            <li><span>Vegetable</span><b>8.00</b></li>
+            <li><span>Honey walnut</span><b>9.00</b></li>
+            <li><span>Tofu scallion (vegan)</span><b>9.00</b></li>
+          </ul>
+        </div>
+        <div class="board board--red">
+          <h3>On a bagel</h3>
+          <ul>
+            <li><span>Butter, toasted</span><b>3.75</b></li>
+            <li><span>Cream cheese</span><b>5.25</b></li>
+            <li><span>Nova, cream cheese, tomato, onion, capers</span><b>17.50</b></li>
+            <li><span>Whitefish salad</span><b>15.00</b></li>
+            <li><span>Egg salad, the Miriam</span><b>10.50</b></li>
+            <li><span>Pastrami egg &amp; cheese</span><b>13.50</b></li>
+          </ul>
+        </div>
+      </div>
+      <p class="note">Cash, card, tap. No substitutions on the Nova, Rachel says, and she means it.</p>
     </div>
-    <div class="boards">
-      <div class="board">
-        <h3>Bagels</h3>
-        <ul>
-          <li><span>Plain · Sesame · Poppy</span><b>2.25</b></li>
-          <li><span>Everything</span><b>2.25</b></li>
-          <li><span>Salt · Onion · Garlic</span><b>2.25</b></li>
-          <li><span>Pumpernickel · Rye</span><b>2.50</b></li>
-          <li><span>Cinnamon raisin</span><b>2.50</b></li>
-          <li><span>Bialy, Grandpa Abe’s recipe</span><b>2.50</b></li>
-          <li class="em"><span>Baker’s dozen (13)</span><b>26.00</b></li>
-        </ul>
-      </div>
-      <div class="board">
-        <h3>Schmears <small>per ½ lb</small></h3>
-        <ul>
-          <li><span>Plain cream cheese</span><b>7.00</b></li>
-          <li><span>Scallion</span><b>8.00</b></li>
-          <li><span>Lox spread</span><b>11.00</b></li>
-          <li><span>Vegetable</span><b>8.00</b></li>
-          <li><span>Honey walnut</span><b>9.00</b></li>
-          <li><span>Tofu scallion (vegan)</span><b>9.00</b></li>
-        </ul>
-      </div>
-      <div class="board board--red">
-        <h3>On a bagel</h3>
-        <ul>
-          <li><span>Butter, toasted</span><b>3.75</b></li>
-          <li><span>Cream cheese</span><b>5.25</b></li>
-          <li><span>Nova, cream cheese, tomato, onion, capers</span><b>17.50</b></li>
-          <li><span>Whitefish salad</span><b>15.00</b></li>
-          <li><span>Egg salad, the Miriam</span><b>10.50</b></li>
-          <li><span>Pastrami egg &amp; cheese</span><b>13.50</b></li>
-        </ul>
-      </div>
-    </div>
-    <p class="counter__note">Cash, card, tap. No substitutions on the Nova, Rachel says, and she means it.</p>
   </section>
 
+  <div class="awning" aria-hidden="true"></div>
+
+  <!-- Baker's dozen builder (buttons only; composes an email) -->
   <section class="dozen" id="dozen" aria-labelledby="dz-t">
-    <div class="dozen__head">
-      <h2 id="dz-t">Build a baker’s dozen</h2>
-      <p>Pick thirteen. We’ll have them bagged and waiting — call it in or send it by email.</p>
-    </div>
-    <form id="dozenForm" class="dz" novalidate>
-      <ul class="dz__list" id="dzList"></ul>
-      <div class="dz__side">
-        <div class="meter" aria-hidden="true"><div class="meter__fill" id="meter"></div></div>
-        <p class="dz__count"><b id="count">0</b> / 13 bagels</p>
-        <fieldset class="dz__schmear">
-          <legend>Add a schmear?</legend>
-          <label><input type="checkbox" name="schmear" value="Plain cream cheese ½ lb"> Plain ½ lb <small>$7</small></label>
-          <label><input type="checkbox" name="schmear" value="Scallion ½ lb"> Scallion ½ lb <small>$8</small></label>
-          <label><input type="checkbox" name="schmear" value="Lox spread ½ lb"> Lox spread ½ lb <small>$11</small></label>
-        </fieldset>
-        <label class="dz__name"><span>Name for the bag</span><input name="name" autocomplete="name"></label>
-        <label class="dz__name"><span>Pickup time</span><select name="time"><option>7:00 am</option><option>7:30 am</option><option selected>8:00 am</option><option>8:30 am</option><option>9:00 am</option><option>10:00 am</option><option>11:00 am</option><option>Noon</option></select></label>
-        <p class="dz__total">Total <b id="dzTotal">$0.00</b></p>
-        <p class="dz__msg" id="dzMsg" role="status"></p>
-        <button type="submit" class="btn btn--red btn--block">Send order by email</button>
-        <a class="btn btn--block" href="tel:+12125550158">Or call it in</a>
+    <div class="wrap">
+      <div class="dozen__head">
+        <p class="eyebrow">Pickup orders</p>
+        <h2 id="dz-t">Build a baker’s dozen</h2>
+        <p>Pick thirteen and we’ll have them bagged and waiting. Thirteen of anything is $26 — the thirteenth is on us.</p>
       </div>
-    </form>
-  </section>
-
-  <section class="babka" id="babka" aria-labelledby="bk-t">
-    <header class="babka__head">
-      <h2 id="bk-t">Babka</h2>
-      <p>Miriam’s addition, 2019. Twisted, folded, twisted again, baked in a loaf pan and brushed with syrup while it’s hot. $16 a loaf, $9 a half.</p>
-      <div class="babka__ctrl"><button class="arr" id="prev" aria-label="Previous babka">←</button><button class="arr" id="next" aria-label="Next babka">→</button></div>
-    </header>
-    <div class="rail" id="rail" tabindex="0" aria-label="Babka flavors, scroll horizontally">
-      <article class="bk" style="--c1:#3b2219;--c2:#8a5a3c"><svg viewBox="0 0 200 120" aria-hidden="true"><path class="sw" d="M10 60c20-40 40 40 60 0s40 40 60 0 40 40 60 0"/><path class="sw sw2" d="M10 80c20-40 40 40 60 0s40 40 60 0 40 40 60 0"/><path class="sw" d="M10 40c20-40 40 40 60 0s40 40 60 0 40 40 60 0"/></svg><h3>Chocolate</h3><p>Dark chocolate, 66%, and a cocoa streusel. The original.</p><span class="tag">Every day</span></article>
-      <article class="bk" style="--c1:#7a4a22;--c2:#d29b5b"><svg viewBox="0 0 200 120" aria-hidden="true"><path class="sw" d="M10 60c20-40 40 40 60 0s40 40 60 0 40 40 60 0"/><path class="sw sw2" d="M10 80c20-40 40 40 60 0s40 40 60 0 40 40 60 0"/><path class="sw" d="M10 40c20-40 40 40 60 0s40 40 60 0 40 40 60 0"/></svg><h3>Cinnamon</h3><p>Ceylon cinnamon, brown butter, raisins only if you ask.</p><span class="tag">Every day</span></article>
-      <article class="bk" style="--c1:#8c7a5c;--c2:#e9dcc0"><svg viewBox="0 0 200 120" aria-hidden="true"><path class="sw" d="M10 60c20-40 40 40 60 0s40 40 60 0 40 40 60 0"/><path class="sw sw2" d="M10 80c20-40 40 40 60 0s40 40 60 0 40 40 60 0"/><path class="sw" d="M10 40c20-40 40 40 60 0s40 40 60 0 40 40 60 0"/></svg><h3>Halvah</h3><p>Sesame halvah crumbled through tahini swirl. Miriam’s favorite.</p><span class="tag">Thu–Sun</span></article>
-      <article class="bk" style="--c1:#5b3a24;--c2:#b98a5e"><svg viewBox="0 0 200 120" aria-hidden="true"><path class="sw" d="M10 60c20-40 40 40 60 0s40 40 60 0 40 40 60 0"/><path class="sw sw2" d="M10 80c20-40 40 40 60 0s40 40 60 0 40 40 60 0"/><path class="sw" d="M10 40c20-40 40 40 60 0s40 40 60 0 40 40 60 0"/></svg><h3>Hazelnut</h3><p>House-made hazelnut-cocoa spread, toasted hazelnuts on top.</p><span class="tag">Fri–Sun</span></article>
-      <article class="bk" style="--c1:#55692e;--c2:#a9bd6a"><svg viewBox="0 0 200 120" aria-hidden="true"><path class="sw" d="M10 60c20-40 40 40 60 0s40 40 60 0 40 40 60 0"/><path class="sw sw2" d="M10 80c20-40 40 40 60 0s40 40 60 0 40 40 60 0"/><path class="sw" d="M10 40c20-40 40 40 60 0s40 40 60 0 40 40 60 0"/></svg><h3>Pistachio</h3><p>Pistachio cream, white chocolate, a little rose water.</p><span class="tag">Weekends</span></article>
-      <article class="bk" style="--c1:#2b2b2b;--c2:#c9b28f"><svg viewBox="0 0 200 120" aria-hidden="true"><path class="sw" d="M10 60c20-40 40 40 60 0s40 40 60 0 40 40 60 0"/><path class="sw sw2" d="M10 80c20-40 40 40 60 0s40 40 60 0 40 40 60 0"/><path class="sw" d="M10 40c20-40 40 40 60 0s40 40 60 0 40 40 60 0"/></svg><h3>Everything (savory)</h3><p>Scallion cream cheese, everything seasoning, sharp cheddar. Toast it.</p><span class="tag">Every day</span></article>
-      <article class="bk bk--season" style="--c1:#a3361d;--c2:#e8b04a"><svg viewBox="0 0 200 120" aria-hidden="true"><path class="sw" d="M10 60c20-40 40 40 60 0s40 40 60 0 40 40 60 0"/><path class="sw sw2" d="M10 80c20-40 40 40 60 0s40 40 60 0 40 40 60 0"/><path class="sw" d="M10 40c20-40 40 40 60 0s40 40 60 0 40 40 60 0"/></svg><h3>Apple honey</h3><p>For the new year: roasted apples, buckwheat honey, a round loaf instead of a long one.</p><span class="tag">Fall holidays</span></article>
+      <div class="dz">
+        <div class="dz__pick">
+          <h3 class="dz__h">1 · Choose your bagels</h3>
+          <ul class="dz__list" id="dzList"></ul>
+        </div>
+        <div class="dz__side" id="dzSide">
+          <div class="dz__meter">
+            <p class="dz__count"><b id="count">0</b><span>/ 13 bagels</span></p>
+            <div class="meter" aria-hidden="true"><div class="meter__fill" id="meter"></div></div>
+            <p class="dz__hint" id="dzHint">Thirteen for $26, or $2.25–$2.50 each.</p>
+          </div>
+          <h3 class="dz__h">2 · Add a schmear <small>½ lb tubs</small></h3>
+          <div class="chips" id="schmears">
+            <button type="button" class="chip" aria-pressed="false" data-name="Plain cream cheese ½ lb" data-price="7">Plain <small>$7</small></button>
+            <button type="button" class="chip" aria-pressed="false" data-name="Scallion ½ lb" data-price="8">Scallion <small>$8</small></button>
+            <button type="button" class="chip" aria-pressed="false" data-name="Lox spread ½ lb" data-price="11">Lox spread <small>$11</small></button>
+            <button type="button" class="chip" aria-pressed="false" data-name="Honey walnut ½ lb" data-price="9">Honey walnut <small>$9</small></button>
+          </div>
+          <h3 class="dz__h" id="pt-l">3 · Pickup time</h3>
+          <div class="chips chips--time" id="times" role="group" aria-labelledby="pt-l">
+            <button type="button" class="chip" aria-pressed="false">7:00</button>
+            <button type="button" class="chip" aria-pressed="false">7:30</button>
+            <button type="button" class="chip" aria-pressed="true">8:00</button>
+            <button type="button" class="chip" aria-pressed="false">8:30</button>
+            <button type="button" class="chip" aria-pressed="false">9:00</button>
+            <button type="button" class="chip" aria-pressed="false">10:00</button>
+            <button type="button" class="chip" aria-pressed="false">11:00</button>
+            <button type="button" class="chip" aria-pressed="false">Noon</button>
+          </div>
+          <div class="dz__total"><span>Estimated total</span><b id="dzTotal">$0.00</b></div>
+          <p class="dz__msg" id="dzMsg" role="status"></p>
+          <a class="btn btn--red btn--block" id="dzSend" href="mailto:orders@feldmananddaughters.com">Email this order</a>
+          <a class="btn btn--block" href="tel:+12125550158">Or call it in</a>
+          <p class="dz__fine">Opens your email app with the order written out — add the name for the bag and hit send. We reply to confirm. Prices are estimates; we charge at the counter.</p>
+          <button type="button" class="dz__clear" id="dzClear">Start over</button>
+        </div>
+      </div>
     </div>
   </section>
 
+  <!-- Babka -->
+  <section class="babka" id="babka" aria-labelledby="bk-t">
+    <svg width="0" height="0" class="vh" aria-hidden="true" focusable="false"><symbol id="swirl" viewBox="0 0 200 120"><path class="sw" d="M10 40c20-40 40 40 60 0s40 40 60 0 40 40 60 0"/><path class="sw" d="M10 60c20-40 40 40 60 0s40 40 60 0 40 40 60 0"/><path class="sw sw2" d="M10 80c20-40 40 40 60 0s40 40 60 0 40 40 60 0"/><path class="sw" d="M10 100c20-40 40 40 60 0s40 40 60 0 40 40 60 0"/></symbol></svg>
+    <div class="babka__head">
+      <h2 id="bk-t">Babka</h2>
+      <p>Miriam’s addition, 2019. Twisted, folded, twisted again, baked in a loaf pan and brushed with syrup while it’s hot. <b>$16 a loaf, $9 a half.</b></p>
+      <div class="babka__ctrl"><button type="button" class="arr" id="prev" aria-label="Previous babka">←</button><button type="button" class="arr" id="next" aria-label="Next babka">→</button></div>
+    </div>
+    <ul class="rail" id="rail" tabindex="0" aria-label="Babka flavors (scrolls sideways)">
+      <li class="bk" style="--c1:#3b2219;--c2:#8a5a3c"><svg aria-hidden="true"><use href="#swirl"/></svg><h3>Chocolate</h3><p>Dark chocolate, 66%, and a cocoa streusel. The original.</p><span class="tag">Every day</span></li>
+      <li class="bk" style="--c1:#7a4a22;--c2:#d29b5b"><svg aria-hidden="true"><use href="#swirl"/></svg><h3>Cinnamon</h3><p>Ceylon cinnamon, brown butter, raisins only if you ask.</p><span class="tag">Every day</span></li>
+      <li class="bk" style="--c1:#8c7a5c;--c2:#e9dcc0"><svg aria-hidden="true"><use href="#swirl"/></svg><h3>Halvah</h3><p>Sesame halvah crumbled through tahini swirl. Miriam’s favorite.</p><span class="tag">Thu–Sun</span></li>
+      <li class="bk" style="--c1:#5b3a24;--c2:#b98a5e"><svg aria-hidden="true"><use href="#swirl"/></svg><h3>Hazelnut</h3><p>House-made hazelnut-cocoa spread, toasted hazelnuts on top.</p><span class="tag">Fri–Sun</span></li>
+      <li class="bk" style="--c1:#55692e;--c2:#a9bd6a"><svg aria-hidden="true"><use href="#swirl"/></svg><h3>Pistachio</h3><p>Pistachio cream, white chocolate, a little rose water.</p><span class="tag">Weekends</span></li>
+      <li class="bk" style="--c1:#2b2b2b;--c2:#c9b28f"><svg aria-hidden="true"><use href="#swirl"/></svg><h3>Everything</h3><p>The savory one: scallion cream cheese, everything seasoning, sharp cheddar. Toast it.</p><span class="tag">Every day</span></li>
+      <li class="bk bk--season" style="--c1:#a3361d;--c2:#e8b04a"><svg aria-hidden="true"><use href="#swirl"/></svg><h3>Apple honey</h3><p>For the new year: roasted apples, buckwheat honey, a round loaf instead of a long one.</p><span class="tag">Fall holidays</span></li>
+    </ul>
+  </section>
+
+  <!-- Family -->
   <section class="family" id="family" aria-labelledby="fm-t">
-    <div class="family__photo"><img src="https://images.unsplash.com/photo-1612240498936-65f5101365d2?auto=format&fit=crop&w=1100&q=80" alt="Bagels tumbling against a dark background" loading="lazy" width="1100" height="1300"></div>
+    <div class="family__photo">
+      <picture>
+        <source media="(max-width: 899px)" sizes="100vw"
+          srcset="https://images.unsplash.com/photo-1612240498936-65f5101365d2?auto=format&amp;fit=crop&amp;w=600&amp;h=420&amp;q=70 600w, https://images.unsplash.com/photo-1612240498936-65f5101365d2?auto=format&amp;fit=crop&amp;w=900&amp;h=630&amp;q=65 900w, https://images.unsplash.com/photo-1612240498936-65f5101365d2?auto=format&amp;fit=crop&amp;w=1300&amp;h=910&amp;q=60 1300w">
+        <img src="https://images.unsplash.com/photo-1612240498936-65f5101365d2?auto=format&amp;fit=crop&amp;w=900&amp;h=1100&amp;q=75"
+          srcset="https://images.unsplash.com/photo-1612240498936-65f5101365d2?auto=format&amp;fit=crop&amp;w=700&amp;h=860&amp;q=75 700w, https://images.unsplash.com/photo-1612240498936-65f5101365d2?auto=format&amp;fit=crop&amp;w=900&amp;h=1100&amp;q=75 900w, https://images.unsplash.com/photo-1612240498936-65f5101365d2?auto=format&amp;fit=crop&amp;w=1300&amp;h=1590&amp;q=65 1300w"
+          sizes="(min-width: 900px) 42vw, 100vw" width="900" height="1100" loading="lazy" decoding="async"
+          alt="Bagels tumbling against a dark background">
+      </picture>
+    </div>
     <div class="family__text">
+      <p class="eyebrow">Since 1958</p>
       <h2 id="fm-t">Three generations. One kettle.</h2>
       <ol class="yrs">
         <li><b>1958</b><p>Abe Feldman, a baker from Białystok by way of the Bronx, rents a storefront on Grand Street. Bagels are three cents. He sleeps on the flour sacks the first winter.</p></li>
@@ -157,39 +218,102 @@
     </div>
   </section>
 
+  <!-- Catering -->
   <section class="catering" id="catering" aria-labelledby="cat-t">
-    <h2 id="cat-t">Trays for every occasion</h2>
-    <div class="trays">
-      <div class="tray"><h3>Office breakfast</h3><p>Two dozen bagels, three schmears, butter, OJ. Feeds 20.</p><b>$120</b></div>
-      <div class="tray"><h3>Shiva tray</h3><p>Bagels, Nova, whitefish, egg salad, rugelach. Delivered with care, no charge below 14th St.</p><b>from $18 pp</b></div>
-      <div class="tray"><h3>Bris &amp; simcha</h3><p>The full spread, platters and all. We’ll talk through quantities on the phone.</p><b>from $22 pp</b></div>
-      <div class="tray"><h3>Babka by the dozen</h3><p>Weddings, wrapped favors, thank-yous. Ribbon in your colors.</p><b>$180</b></div>
+    <div class="wrap">
+      <div class="catering__head">
+        <div>
+          <p class="eyebrow">Catering</p>
+          <h2 id="cat-t">Trays for every occasion</h2>
+        </div>
+        <p>48 hours’ notice for most trays; same-day for shiva when we possibly can.</p>
+      </div>
+      <ul class="trays">
+        <li class="tray"><h3>Office breakfast</h3><p>Two dozen bagels, three schmears, butter, OJ. Feeds 20.</p><b>$120</b></li>
+        <li class="tray"><h3>Shiva tray</h3><p>Bagels, Nova, whitefish, egg salad, rugelach. Delivered with care, no charge below 14th St.</p><b>from $18 pp</b></li>
+        <li class="tray"><h3>Bris &amp; simcha</h3><p>The full spread, platters and all. We’ll talk through quantities on the phone.</p><b>from $22 pp</b></li>
+        <li class="tray"><h3>Babka by the dozen</h3><p>Weddings, wrapped favors, thank-yous. Ribbon in your colors.</p><b>$180</b></li>
+      </ul>
+      <div class="catering__cta">
+        <a class="btn btn--red" href="mailto:orders@feldmananddaughters.com?subject=Catering%20inquiry&amp;body=Date%3A%0AOccasion%3A%0AHow%20many%20people%3A%0APickup%20or%20delivery%3A">Email about catering</a>
+        <a class="btn btn--ghost" href="tel:+12125550158">Call (212) 555-0158</a>
+      </div>
     </div>
-    <a class="btn btn--red" href="mailto:orders@feldmananddaughters.com?subject=Catering%20inquiry&body=Date%3A%0AOccasion%3A%0AHow%20many%20people%3A%0ADelivery%20address%3A">Email for catering</a>
-    <p class="catering__note">48 hours’ notice for most trays; same-day for shiva when we possibly can.</p>
   </section>
 
-  <section class="visit" aria-labelledby="vs-t">
-    <div class="visit__map" aria-hidden="true"><img src="https://images.unsplash.com/photo-1534430480872-3498386e7856?auto=format&fit=crop&w=1400&q=70" alt="" loading="lazy" width="1400" height="800"></div>
-    <div class="visit__card">
-      <h2 id="vs-t">377 Grand Street</h2>
-      <p>At Suffolk Street · Lower East Side<br>F/J/M/Z to Delancey–Essex</p>
-      <ul class="hrs" id="hrs">
-        <li data-d="wk"><span>Sun – Fri</span><span>6 am – 3 pm</span></li>
-        <li data-d="sat"><span>Saturday</span><span>7 am – 2 pm</span></li>
-      </ul>
-      <p class="live" id="live"></p>
-      <p><a href="tel:+12125550158">(212) 555-0158</a> · <a href="https://www.google.com/maps/search/?api=1&query=377+Grand+St+New+York+NY+10002" target="_blank" rel="noopener">Map ↗</a></p>
+  <!-- Visit -->
+  <section class="visit" id="visit" aria-labelledby="vs-t">
+    <div class="wrap visit__in">
+      <div class="visit__card">
+        <p class="eyebrow">Visit</p>
+        <h2 id="vs-t">377 Grand Street</h2>
+        <p class="visit__where">At Suffolk Street · Lower East Side<br>F/J/M/Z to Delancey St–Essex St</p>
+        <ul class="hrs" id="hrs">
+          <li data-days="0,1,2,3,4,5"><span>Sun – Fri</span><span>6 am – 3 pm</span></li>
+          <li data-days="6"><span>Saturday</span><span>7 am – 2 pm</span></li>
+        </ul>
+        <p class="live" id="live"></p>
+        <div class="visit__btns">
+          <a class="btn btn--red" href="https://www.google.com/maps/search/?api=1&amp;query=377+Grand+St+New+York+NY+10002" target="_blank" rel="noopener">Directions<span class="vh"> (opens Google Maps)</span></a>
+          <a class="btn btn--ghost" href="tel:+12125550158">Call</a>
+        </div>
+        <p class="visit__fine">Day-olds half price after 1 pm. Sunday before 8 am, no line.</p>
+      </div>
+      <figure class="map" aria-hidden="true">
+        <svg viewBox="0 0 480 340" focusable="false">
+          <rect width="480" height="340" fill="#e6d8b8"/>
+          <g fill="#fbf7ec" stroke="#161412" stroke-width="2.5">
+            <rect x="-10" y="48" width="500" height="30"/><rect x="-10" y="160" width="500" height="20"/><rect x="-10" y="258" width="500" height="30"/>
+            <rect x="30" y="-10" width="22" height="360"/><rect x="170" y="-10" width="22" height="360"/><rect x="310" y="-10" width="22" height="360"/><rect x="450" y="-10" width="22" height="360"/>
+          </g>
+          <g fill="#fbf7ec"><rect x="32" y="50" width="18" height="26"/><rect x="172" y="50" width="18" height="26"/><rect x="312" y="50" width="18" height="26"/><rect x="452" y="50" width="18" height="26"/><rect x="32" y="162" width="18" height="16"/><rect x="172" y="162" width="18" height="16"/><rect x="312" y="162" width="18" height="16"/><rect x="452" y="162" width="18" height="16"/><rect x="32" y="260" width="18" height="26"/><rect x="172" y="260" width="18" height="26"/><rect x="312" y="260" width="18" height="26"/><rect x="452" y="260" width="18" height="26"/></g>
+          <rect x="-10" y="258" width="500" height="30" fill="#e3a72f" opacity=".55"/>
+          <g font-family="Libre Franklin, Arial, sans-serif" font-weight="800" font-size="15" fill="#161412" letter-spacing="1.5" text-anchor="middle">
+            <text x="111" y="68">DELANCEY</text><text x="251" y="68">DELANCEY</text>
+            <text x="251" y="175" font-size="13">BROOME</text>
+            <text x="111" y="279">GRAND ST</text><text x="391" y="279">GRAND ST</text>
+            <text transform="translate(186 120) rotate(-90)">NORFOLK</text>
+            <text transform="translate(326 120) rotate(-90)">SUFFOLK</text>
+            <text transform="translate(466 120) rotate(-90)">CLINTON</text>
+            <text transform="translate(46 220) rotate(-90)">ESSEX</text>
+          </g>
+          <circle cx="41" cy="63" r="14" fill="#161412"/><text x="41" y="68" text-anchor="middle" font-family="Libre Franklin, Arial, sans-serif" font-weight="800" font-size="14" fill="#fbf7ec">F</text>
+          <text x="62" y="104" font-family="Libre Franklin, Arial, sans-serif" font-weight="700" font-size="13" fill="#161412">Delancey–Essex</text>
+          <text x="62" y="121" font-family="Libre Franklin, Arial, sans-serif" font-weight="700" font-size="13" fill="#62574b">F · J · M · Z</text>
+          <circle cx="352" cy="300" r="15" fill="#c62026" stroke="#161412" stroke-width="3"/><circle cx="352" cy="300" r="5" fill="#e3a72f"/>
+          <rect x="226" y="306" width="104" height="24" fill="#161412"/><text x="278" y="323" text-anchor="middle" font-family="Libre Franklin, Arial, sans-serif" font-weight="800" font-size="13" fill="#fbf7ec" letter-spacing="1">WE’RE HERE</text>
+        </svg>
+      </figure>
     </div>
   </section>
 </main>
 
 <footer class="foot">
-  <p class="foot__big">Feldman <i>&amp;</i> Daughters</p>
-  <p class="foot__fine"><span>A design concept. Feldman &amp; Daughters is a fictional business.</span><a href="mailto:orders@feldmananddaughters.com">orders@feldmananddaughters.com</a><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram ↗</a><a href="../index.html">← All concepts</a></p>
+  <div class="wrap">
+    <p class="foot__big" aria-hidden="true"><span>Feldman</span><span><i>&amp;</i> Daughters</span></p>
+    <div class="foot__cols">
+      <p><b>Feldman &amp; Daughters</b><br>Bagels &amp; babka since 1958<br>377 Grand St, New York, NY 10002</p>
+      <p>Sun–Fri 6 am–3 pm<br>Saturday 7 am–2 pm</p>
+      <p><a href="tel:+12125550158">(212) 555-0158</a><br><a href="mailto:orders@feldmananddaughters.com">orders@feldmananddaughters.com</a><br><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram ↗</a></p>
+    </div>
+    <p class="foot__fine"><span>A design concept. Feldman &amp; Daughters is a fictional business.</span><a href="../index.html">← All concepts</a></p>
+  </div>
 </footer>
+
+<!-- Mobile quick-action dock -->
+<nav class="dock" id="dock" aria-label="Quick actions">
+  <a class="dock__a dock__a--p" href="tel:+12125550158">Call</a>
+  <a class="dock__a" href="https://www.google.com/maps/search/?api=1&amp;query=377+Grand+St+New+York+NY+10002" target="_blank" rel="noopener">Directions<span class="vh"> (opens Google Maps)</span></a>
+  <a class="dock__a" href="#dozen">Order</a>
+</nav>
+<!-- Mobile tally while building a dozen -->
+<div class="tally" id="tally" aria-hidden="true">
+  <p class="tally__n"><b id="tallyN">0</b> / 13 <span id="tallyT">$0.00</span></p>
+  <a class="tally__a" href="#dzSide" tabindex="-1">Review order ↓</a>
+</div>
+
 <script src="main.js"></script>
-<script>window.SITEMENU={"name": "Feldman & Daughters", "sub": "Bagels & babka since 1958", "bp": 1100, "nav": "#nav", "mount": ".burger", "actions": [{"label": "Call ahead", "href": "tel:+12125550158", "primary": true}, {"label": "Directions", "href": "https://www.google.com/maps/search/?api=1&query=377+Grand+St+New+York+NY+10002"}], "info": ["377 Grand St, Lower East Side", "Sun–Fri 6 am–3 pm · Sat 7 am–2 pm"], "hours": {"0": [360, 900], "1": [360, 900], "2": [360, 900], "3": [360, 900], "4": [360, 900], "5": [360, 900], "6": [420, 840]}};</script>
+<script>window.SITEMENU={"name": "Feldman & Daughters", "sub": "Bagels & babka since 1958", "bp": 1099, "nav": "#nav", "mount": ".top__menu", "mountMode": "append", "actions": [{"label": "Call ahead", "href": "tel:+12125550158", "primary": true}, {"label": "Directions", "href": "https://www.google.com/maps/search/?api=1&query=377+Grand+St+New+York+NY+10002"}], "info": ["377 Grand St at Suffolk, Lower East Side", "Sun–Fri 6 am–3 pm · Sat 7 am–2 pm"], "hours": {"0": [360, 900], "1": [360, 900], "2": [360, 900], "3": [360, 900], "4": [360, 900], "5": [360, 900], "6": [420, 840]}};</script>
 <script src="sitemenu.js"></script>
 </body>
 </html>

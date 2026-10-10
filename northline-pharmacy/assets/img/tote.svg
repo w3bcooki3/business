@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 360" role="img"><title>Northline delivery tote bag with a prescription bag inside</title><rect width="400" height="360" fill="none"/>
+<path d="M140 120c0-50 20-70 60-70s60 20 60 70" fill="none" stroke="#1B2A4A" stroke-width="10" stroke-linecap="round"/>
+<path d="M140 120c0-50 20-70 60-70s60 20 60 70" fill="none" stroke="#7FD1C1" stroke-width="4" stroke-linecap="round"/>
+<path d="M90 110h220l-18 210H108z" fill="#FFFFFF" stroke="#1B2A4A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M90 110h220l-4 40H94z" fill="#7FD1C1" stroke="#1B2A4A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<g transform="translate(168 180) scale(1)"><rect width="64" height="64" rx="18" fill="#1B2A4A"/>
+<path d="M18 48V18l20 26V14" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M38 8l7 10h-14z" fill="#7FD1C1"/><circle cx="46" cy="48" r="4" fill="#FF7A59"/></g>
+<text x="200" y="278" fill="#1B2A4A" font-size="20" text-anchor="middle" font-family="Outfit, Avenir Next, Arial, sans-serif" font-weight="700">NORTHLINE</text>
+<rect x="250" y="70" width="44" height="58" rx="6" fill="#FF7A59" stroke="#1B2A4A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="246" y="60" width="52" height="16" rx="4" fill="#FFFFFF" stroke="#1B2A4A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="104" y="84" width="40" height="40" rx="8" fill="#FFE3A3" stroke="#1B2A4A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><path d="M112 98h24M112 108h16" stroke="#1B2A4A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M300 300q30-10 60 0" fill="none" stroke="#FF7A59" stroke-width="4" stroke-linecap="round"/><path d="M310 318q24-8 48 0" fill="none" stroke="#FF7A59" stroke-width="4" stroke-linecap="round" opacity=".6"/></svg>

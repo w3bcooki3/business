@@ -2,17 +2,18 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Strivers Row Barbers — Harlem, Frederick Douglass Blvd</title>
 <meta name="description" content="Six barbers, one standard. Skin fades, tapers, sponge twists, beard sculpting, designs and locs maintenance at 2381 Frederick Douglass Blvd, Harlem. Text to book; walk-ins welcome.">
 <meta name="theme-color" content="#1a1418">
+<meta property="og:type" content="website">
 <meta property="og:title" content="Strivers Row Barbers — Harlem">
 <meta property="og:description" content="Six barbers. One standard. Text to book.">
-<meta property="og:image" content="https://images.unsplash.com/photo-1567894340315-735d7c361db0?auto=format&fit=crop&w=1600&q=80">
+<meta property="og:image" content="https://images.unsplash.com/photo-1567894340315-735d7c361db0?auto=format&amp;fit=crop&amp;w=1200&amp;h=630&amp;q=75">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%231a1418'/%3E%3Ctext x='32' y='46' font-size='36' font-weight='900' text-anchor='middle' fill='%23c9a45c' font-family='Arial Narrow,Arial'%3ESR%3C/text%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;900&family=Figtree:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="preload" href="fonts/big-shoulders-display.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/figtree.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
 <link rel="stylesheet" href="styles.css">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"HairSalon","name":"Strivers Row Barbers","telephone":"+1-212-555-0149","email":"book@striversrowbarbers.com","address":{"@type":"PostalAddress","streetAddress":"2381 Frederick Douglass Blvd","addressLocality":"New York","addressRegion":"NY","postalCode":"10027","addressCountry":"US"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday","Friday"],"opens":"10:00","closes":"20:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"08:00","closes":"19:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"11:00","closes":"16:00"}]}
@@ -21,166 +22,250 @@
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
-<header class="mast">
+<header class="mast" id="mast">
   <div class="mast__top">
-    <span>Issue No. 07 — Fall 2026</span>
-    <span class="mast__live" id="live">—</span>
-    <span>Harlem, New York</span>
+    <span class="mast__issue">Issue No. 07 — Fall 2026</span>
+    <span class="mast__live" id="live"><i class="dot" aria-hidden="true"></i><span id="liveTxt">Tue–Sun · Closed Mondays</span></span>
+    <span class="mast__city">Harlem, New York</span>
   </div>
   <div class="mast__main">
-    <a class="logo" href="#top" aria-label="Strivers Row Barbers home">Strivers Row<span>Barbers</span></a>
+    <a class="logo" href="#top">Strivers Row<span>Barbers</span></a>
     <nav class="nav" aria-label="Main">
       <a href="#roster"><b>01</b>The Roster</a>
       <a href="#menu"><b>02</b>Services</a>
-      <a href="#walkin"><b>03</b>Walk-ins</a>
-      <a href="#block"><b>04</b>The Block</a>
-      <a href="#visit"><b>05</b>Visit</a>
+      <a href="#book"><b>03</b>Book</a>
+      <a href="#walkin"><b>04</b>Walk-ins</a>
+      <a href="#block"><b>05</b>The Block</a>
+      <a href="#visit"><b>06</b>Visit</a>
     </nav>
-    <button class="book-btn" data-open-book>Book</button>
-    <button class="menu-btn" aria-expanded="false" aria-controls="full">Menu</button>
+    <a class="book-btn" href="#book">Book</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="full"><span class="menu-btn__i" aria-hidden="true"><i></i><i></i></span><span class="menu-btn__l">Menu</span></button>
   </div>
 </header>
 <div class="full" id="full" hidden>
-  <nav aria-label="Mobile">
-    <a href="#roster"><b>01</b>The Roster</a><a href="#menu"><b>02</b>Services</a><a href="#walkin"><b>03</b>Walk-ins</a><a href="#block"><b>04</b>The Block</a><a href="#visit"><b>05</b>Visit</a>
+  <nav aria-label="Sections">
+    <a href="#roster"><b>01</b>The Roster</a>
+    <a href="#menu"><b>02</b>Services</a>
+    <a href="#book"><b>03</b>Book a chair</a>
+    <a href="#walkin"><b>04</b>Walk-ins</a>
+    <a href="#block"><b>05</b>The Block</a>
+    <a href="#visit"><b>06</b>Visit</a>
   </nav>
-  <a class="full__sms" href="sms:+12125550149">Text (212) 555-0149</a>
+  <div class="full__foot">
+    <p>2381 Frederick Douglass Blvd at 128th<br>Tue–Fri 10 am–8 pm · Sat 8 am–7 pm · Sun 11 am–4 pm</p>
+    <div class="full__acts"><a class="btn" href="sms:+12125550149">Text to book</a><a class="btn btn--line" href="tel:+12125550149">Call</a></div>
+  </div>
 </div>
 
 <main id="main">
+  <!-- Cover -->
   <section class="cover" id="top" aria-labelledby="h1">
-    <figure class="cover__img"><img src="https://images.unsplash.com/photo-1567894340315-735d7c361db0?auto=format&fit=crop&w=1800&q=80" alt="A barber carefully cutting a client's textured hair in a warmly lit shop" width="1800" height="1200"></figure>
+    <figure class="cover__img">
+      <picture>
+        <source media="(max-width: 819px)" sizes="100vw"
+          srcset="https://images.unsplash.com/photo-1567894340315-735d7c361db0?auto=format&amp;fit=crop&amp;w=600&amp;h=720&amp;q=70 600w, https://images.unsplash.com/photo-1567894340315-735d7c361db0?auto=format&amp;fit=crop&amp;w=900&amp;h=1080&amp;q=65 900w, https://images.unsplash.com/photo-1567894340315-735d7c361db0?auto=format&amp;fit=crop&amp;w=1200&amp;h=1440&amp;q=60 1200w">
+        <img src="https://images.unsplash.com/photo-1567894340315-735d7c361db0?auto=format&amp;fit=crop&amp;w=1200&amp;h=1100&amp;q=75"
+          srcset="https://images.unsplash.com/photo-1567894340315-735d7c361db0?auto=format&amp;fit=crop&amp;w=900&amp;h=825&amp;q=75 900w, https://images.unsplash.com/photo-1567894340315-735d7c361db0?auto=format&amp;fit=crop&amp;w=1200&amp;h=1100&amp;q=75 1200w, https://images.unsplash.com/photo-1567894340315-735d7c361db0?auto=format&amp;fit=crop&amp;w=1700&amp;h=1560&amp;q=65 1700w"
+          sizes="(min-width: 820px) 55vw, 100vw" width="1200" height="1100" fetchpriority="high"
+          alt="A barber carefully cutting a client's textured hair in a warmly lit shop">
+      </picture>
+    </figure>
     <div class="cover__text">
       <p class="cover__kicker">The Cut Issue</p>
-      <h1 id="h1">Sharp<br>is a<br><span>standard.</span></h1>
+      <h1 id="h1"><span>Sharp</span> <span>is a</span> <em>standard.</em></h1>
       <ul class="cover__lines">
-        <li><b>6</b> barbers, 6 specialties</li>
-        <li><b>p.02</b> The skin fade, explained</li>
-        <li><b>p.04</b> Why Saturday starts at 8</li>
+        <li><b>6</b>barbers, 6 specialties</li>
+        <li><b>p.02</b>The skin fade, explained</li>
+        <li><b>p.04</b>Why Saturday starts at 8</li>
       </ul>
-      <div class="cover__cta"><button class="btn" data-open-book>Book a chair</button><a class="btn btn--line" href="#walkin">Walk-in board</a></div>
+      <div class="cover__cta"><a class="btn" href="#book">Book a chair</a><a class="btn btn--line" href="#walkin">Walk-in board</a></div>
+      <p class="cover__where"><span>2381 Frederick Douglass Blvd at 128th</span><span id="todayHrs">Tue–Fri 10–8 · Sat 8–7 · Sun 11–4</span></p>
     </div>
   </section>
 
+  <!-- Editor's letter -->
   <section class="intro" aria-labelledby="in-t">
-    <p class="intro__no">Editor’s letter</p>
-    <h2 id="in-t" class="sr">From the owner</h2>
-    <blockquote>
-      <p>“My grandfather got his hair cut on 125th every Saturday for fifty years. He said a barbershop is where a neighborhood holds its meetings. We cut hair. We also hold the meetings.”</p>
-      <footer>— Marcus Bell, owner since 2016</footer>
-    </blockquote>
-    <p class="intro__body">Strivers Row Barbers sits on Frederick Douglass Boulevard at 128th, ten blocks from the row houses that gave us the name. Six chairs, a wall that changes artists every season, and a standard that doesn’t change at all: you leave looking like the best version of yourself.</p>
-  </section>
-
-  <section class="roster" id="roster" aria-labelledby="ro-t">
-    <header class="sec"><span>01</span><h2 id="ro-t">The Roster</h2><p>Pick your barber. Text them directly — they answer between cuts.</p></header>
-    <div class="roster__wrap">
-      <div class="roster__list" role="tablist" aria-label="Barbers" id="barbers"></div>
-      <article class="profile" role="tabpanel" id="profile" aria-live="polite">
-        <figure class="profile__img"><img id="pImg" src="https://images.unsplash.com/photo-1593702275687-f8b402bf1fb5?auto=format&fit=crop&w=900&q=80" alt="" loading="lazy" width="900" height="1100"></figure>
-        <div class="profile__text">
-          <p class="profile__no" id="pNo">—</p>
-          <h3 id="pName">—</h3>
-          <p class="profile__spec" id="pSpec">—</p>
-          <p id="pBio"></p>
-          <dl class="profile__meta"><div><dt>In the chair</dt><dd id="pDays">—</dd></div><div><dt>Instagram</dt><dd><a id="pIg" href="https://www.instagram.com/" target="_blank" rel="noopener">—</a></dd></div></dl>
-          <a class="btn" id="pSms" href="sms:+12125550149">Text —</a>
-        </div>
-      </article>
+    <div class="intro__in">
+      <p class="intro__no">Editor’s letter</p>
+      <h2 id="in-t" class="vh">From the owner</h2>
+      <blockquote>
+        <p>“My grandfather got his hair cut on 125th every Saturday for fifty years. He said a barbershop is where a neighborhood holds its meetings. We cut hair. We also hold the meetings.”</p>
+        <footer>— Marcus Bell, owner since 2016</footer>
+      </blockquote>
+      <p class="intro__body">Strivers Row Barbers sits on Frederick Douglass Boulevard at 128th, ten blocks from the row houses that gave us the name. Six chairs, a wall that changes artists every season, and a standard that doesn’t change at all: you leave looking like the best version of yourself.</p>
     </div>
   </section>
 
-  <section class="menu" id="menu" aria-labelledby="mn-t">
-    <header class="sec sec--light"><span>02</span><h2 id="mn-t">Services</h2><p>Prices include a hot towel and a line-up. Kids 12 and under, $10 off any cut.</p></header>
-    <ol class="svc">
-      <li><h3>The Cut</h3><p>Any classic cut — taper, Caesar, temple fade.</p><span>45 min</span><b>$45</b></li>
-      <li><h3>Skin Fade</h3><p>Bald to blended. Foil shaver finish.</p><span>50 min</span><b>$50</b></li>
-      <li><h3>Cut + Beard</h3><p>Full cut plus beard shaping, line-up and hot towel.</p><span>70 min</span><b>$65</b></li>
-      <li><h3>Beard Sculpt</h3><p>Shape, define, condition. Straight-razor edges.</p><span>30 min</span><b>$30</b></li>
-      <li><h3>Sponge Twists</h3><p>Cut, shape and twist. Product recommendations included.</p><span>60 min</span><b>$60</b></li>
-      <li><h3>Design / Part</h3><p>Hard parts to freehand designs. Add to any cut.</p><span>+15 min</span><b>+$15</b></li>
-      <li><h3>Locs Maintenance</h3><p>Retwist, shape-up of edges, scalp care.</p><span>90 min</span><b>$85</b></li>
-      <li><h3>Line-Up Only</h3><p>Between cuts. In and out.</p><span>15 min</span><b>$20</b></li>
-    </ol>
-  </section>
-
-  <section class="spread" aria-label="Photo spread">
-    <figure class="s1"><img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=900&q=80" alt="The back of a client's head showing a clean textured crop" loading="lazy" width="900" height="1100"><figcaption>Textured crop, chair 4</figcaption></figure>
-    <figure class="s2"><img src="https://images.unsplash.com/photo-1584316712724-f5d4b188fee2?auto=format&fit=crop&w=900&q=80" alt="A smiling man in a coat against a bright yellow wall" loading="lazy" width="900" height="1100"><figcaption>Fresh out the chair, 3:40 pm</figcaption></figure>
-    <figure class="s3"><img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=900&q=80" alt="A barber trimming and combing a beard" loading="lazy" width="900" height="900"><figcaption>Beard sculpt</figcaption></figure>
-    <p class="spread__pull">“A fade is math. A good fade is music.”<span>— Andre, chair 1</span></p>
-  </section>
-
-  <section class="walkin" id="walkin" aria-labelledby="wk-t">
-    <header class="sec"><span>03</span><h2 id="wk-t">Walk-in board</h2></header>
-    <div class="wk">
-      <div class="wk__board" id="wkBoard"></div>
-      <div class="wk__text">
-        <p>Two chairs every day are kept for walk-ins. Sign the clipboard by the door, grab a seat, and we’ll call your name. Typical waits:</p>
-        <ul>
-          <li><b>Tue–Thu</b> 10–20 minutes</li>
-          <li><b>Friday after 4</b> 30–45 minutes</li>
-          <li><b>Saturday</b> doors at 8, list is full by 11</li>
-          <li><b>Sunday</b> appointments only</li>
-        </ul>
-        <p class="small">Estimates, not promises. Text and we’ll tell you how it looks right now.</p>
+  <!-- Roster -->
+  <section class="roster" id="roster" aria-labelledby="ro-t">
+    <div class="wrap">
+      <header class="sec"><span aria-hidden="true">01</span><h2 id="ro-t">The Roster</h2><p>Pick your barber. Text them directly — they answer between cuts.</p></header>
+      <div class="roster__wrap">
+        <div class="roster__list" role="tablist" aria-label="Barbers" id="barbers"></div>
+        <div class="profile" role="tabpanel" id="profile" aria-labelledby="tab0">
+          <figure class="profile__img" id="pFig"><img id="pImg" src="https://images.unsplash.com/photo-1593702275687-f8b402bf1fb5?auto=format&amp;fit=crop&amp;w=800&amp;h=1000&amp;q=75" alt="A close-up of a skin fade being blended with clippers" loading="lazy" decoding="async" width="800" height="1000"></figure>
+          <div class="profile__text">
+            <p class="profile__no" id="pNo">Chair 1</p>
+            <h3 id="pName">Andre Wallace</h3>
+            <p class="profile__spec" id="pSpec">Skin fades</p>
+            <p id="pBio"></p>
+            <dl class="profile__meta"><div><dt>In the chair</dt><dd id="pDays">Tue–Sat</dd></div><div><dt>Instagram</dt><dd><a id="pIg" href="https://www.instagram.com/" target="_blank" rel="noopener">@striversrowbarbers</a></dd></div></dl>
+            <div class="profile__cta"><a class="btn" id="pSms" href="sms:+12125550149">Text Andre</a><a class="btn btn--line" id="pBook" href="#book">Book with Andre</a></div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="block" id="block" aria-labelledby="bl-t">
-    <header class="sec sec--light"><span>04</span><h2 id="bl-t">The Block</h2></header>
-    <div class="block__grid">
-      <article><h3>Back-to-school cuts</h3><p>Every year on the last Saturday of August, the shop opens at 7 and every kid with a backpack gets a free cut. Last year: 212 heads. Volunteers from three barbershops uptown help us keep up.</p></article>
-      <article><h3>The wall</h3><p>Each season, a Harlem artist takes over the long wall. This fall: large-scale linocut portraits of Strivers’ Row residents, 1919–1940. Prints for sale, all proceeds to the artist.</p></article>
-      <article><h3>Why the name</h3><p>The townhouses on 138th and 139th Streets were nicknamed Strivers’ Row for the doctors, musicians and lawyers who lived there. Marcus’s grandfather delivered their mail. We aim to keep the standard.</p></article>
+  <!-- Services -->
+  <section class="menu" id="menu" aria-labelledby="mn-t">
+    <div class="wrap">
+      <header class="sec sec--light"><span aria-hidden="true">02</span><h2 id="mn-t">Services</h2><p>Prices include a hot towel and a line-up. Kids 12 and under, $10 off any cut.</p></header>
+      <ol class="svc" id="svc">
+        <li><h3>The Cut</h3><p>Any classic cut — taper, Caesar, temple fade.</p><span>45 min</span><b>$45</b></li>
+        <li><h3>Skin Fade</h3><p>Bald to blended. Foil shaver finish.</p><span>50 min</span><b>$50</b></li>
+        <li><h3>Cut + Beard</h3><p>Full cut plus beard shaping, line-up and hot towel.</p><span>70 min</span><b>$65</b></li>
+        <li><h3>Beard Sculpt</h3><p>Shape, define, condition. Straight-razor edges.</p><span>30 min</span><b>$30</b></li>
+        <li><h3>Sponge Twists</h3><p>Cut, shape and twist. Product recommendations included.</p><span>60 min</span><b>$60</b></li>
+        <li><h3>Design / Part</h3><p>Hard parts to freehand designs. Add to any cut.</p><span>+15 min</span><b>+$15</b></li>
+        <li><h3>Locs Maintenance</h3><p>Retwist, shape-up of edges, scalp care.</p><span>90 min</span><b>$85</b></li>
+        <li><h3>Line-Up Only</h3><p>Between cuts. In and out.</p><span>15 min</span><b>$20</b></li>
+      </ol>
     </div>
-    <figure class="block__img"><img src="https://images.unsplash.com/photo-1622287162716-f311baa1a2b8?auto=format&fit=crop&w=1600&q=80" alt="A tattooed barber cutting hair in a colorful shop" loading="lazy" width="1600" height="900"></figure>
   </section>
 
+  <!-- Book a chair: button-driven request builder (composes a text or email) -->
+  <section class="book" id="book" aria-labelledby="bk-t">
+    <div class="wrap">
+      <header class="sec"><span aria-hidden="true">03</span><h2 id="bk-t">Book a chair</h2><p>Tap your way through. We’ll write the text — you send it, we confirm a time by reply.</p></header>
+      <div class="bk">
+        <div class="bk__steps">
+          <div class="bk__step">
+            <h3 class="bk__h" id="q-svc"><b>A</b>Service</h3>
+            <div class="chips" id="cSvc" role="group" aria-labelledby="q-svc"></div>
+          </div>
+          <div class="bk__step">
+            <h3 class="bk__h" id="q-bar"><b>B</b>Barber</h3>
+            <div class="chips" id="cBar" role="group" aria-labelledby="q-bar"></div>
+          </div>
+          <div class="bk__step">
+            <h3 class="bk__h" id="q-day"><b>C</b>Day</h3>
+            <div class="chips chips--days" id="cDay" role="group" aria-labelledby="q-day"></div>
+            <p class="bk__note" id="dayNote" aria-live="polite"></p>
+          </div>
+          <div class="bk__step">
+            <h3 class="bk__h" id="q-time"><b>D</b>Time</h3>
+            <div class="chips chips--time" id="cTime" role="group" aria-labelledby="q-time"></div>
+          </div>
+        </div>
+        <aside class="ticket" aria-labelledby="tk-t">
+          <p class="ticket__k" id="tk-t">Your request</p>
+          <p class="ticket__msg" id="bMsg" aria-live="polite"></p>
+          <p class="ticket__fine">Add your name at the end before you send.</p>
+          <a class="btn btn--full" id="bSms" href="sms:+12125550149">Text the shop</a>
+          <div class="ticket__alt"><a id="bMail" href="mailto:book@striversrowbarbers.com">Email instead</a><a href="tel:+12125550149">Call (212) 555-0149</a></div>
+          <p class="ticket__fine">24-hour cancellation, please. Late more than 10 minutes, we’ll do our best to fit you in.</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- Photo spread -->
+  <section class="spread" aria-label="Photo spread">
+    <div class="wrap spread__in">
+      <figure class="s1"><img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&amp;fit=crop&amp;w=700&amp;h=930&amp;q=70" srcset="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&amp;fit=crop&amp;w=450&amp;h=600&amp;q=70 450w, https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&amp;fit=crop&amp;w=700&amp;h=930&amp;q=70 700w" sizes="(min-width: 820px) 32vw, 50vw" alt="The back of a client's head showing a clean textured crop" loading="lazy" decoding="async" width="700" height="930"><figcaption>Textured crop, chair 4</figcaption></figure>
+      <figure class="s2"><img src="https://images.unsplash.com/photo-1584316712724-f5d4b188fee2?auto=format&amp;fit=crop&amp;w=800&amp;h=920&amp;q=70" srcset="https://images.unsplash.com/photo-1584316712724-f5d4b188fee2?auto=format&amp;fit=crop&amp;w=450&amp;h=520&amp;q=70 450w, https://images.unsplash.com/photo-1584316712724-f5d4b188fee2?auto=format&amp;fit=crop&amp;w=800&amp;h=920&amp;q=70 800w" sizes="(min-width: 820px) 40vw, 50vw" alt="A smiling man in a coat against a bright yellow wall" loading="lazy" decoding="async" width="800" height="920"><figcaption>Fresh out the chair, 3:40 pm</figcaption></figure>
+      <figure class="s3"><img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&amp;fit=crop&amp;w=900&amp;h=600&amp;q=70" srcset="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&amp;fit=crop&amp;w=600&amp;h=400&amp;q=70 600w, https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&amp;fit=crop&amp;w=900&amp;h=600&amp;q=70 900w" sizes="(min-width: 820px) 24vw, 100vw" alt="A barber trimming and combing a beard" loading="lazy" decoding="async" width="900" height="600"><figcaption>Beard sculpt</figcaption></figure>
+      <p class="spread__pull">“A fade is math. A good fade is music.”<span>— Andre, chair 1</span></p>
+    </div>
+  </section>
+
+  <!-- Walk-ins -->
+  <section class="walkin" id="walkin" aria-labelledby="wk-t">
+    <div class="wrap">
+      <header class="sec"><span aria-hidden="true">04</span><h2 id="wk-t"><span class="nw">Walk-ins</span></h2><p>Two chairs every day are kept for walk-ins.</p></header>
+      <div class="wk">
+        <div class="wk__board">
+          <h3 class="wk__head"><span>Who’s cutting</span><span id="wkWhen">Today</span></h3>
+          <ul id="wkBoard"></ul>
+          <p class="wk__fine">From the schedule, not a live feed.</p>
+        </div>
+        <div class="wk__text">
+          <p>Sign the clipboard by the door, grab a seat, and we’ll call your name. Typical waits:</p>
+          <ul>
+            <li><b>Tue–Thu</b><span>10–20 minutes</span></li>
+            <li><b>Friday after 4</b><span>30–45 minutes</span></li>
+            <li><b>Saturday</b><span>Doors at 8, list is full by 11</span></li>
+            <li><b>Sunday</b><span>Appointments only</span></li>
+          </ul>
+          <p class="small">Estimates, not promises. <a href="sms:+12125550149?&amp;body=Hi%20Strivers%20Row%20%E2%80%94%20how%20long%20is%20the%20walk-in%20wait%20right%20now%3F">Text us</a> and we’ll tell you how it looks right now.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Block -->
+  <section class="block" id="block" aria-labelledby="bl-t">
+    <div class="wrap">
+      <header class="sec sec--light"><span aria-hidden="true">05</span><h2 id="bl-t">The Block</h2></header>
+      <div class="block__grid">
+        <article><h3>Back-to-school cuts</h3><p>Every year on the last Saturday of August, the shop opens at 7 and every kid with a backpack gets a free cut. Last year: 212 heads. Volunteers from three barbershops uptown help us keep up.</p></article>
+        <article><h3>The wall</h3><p>Each season, a Harlem artist takes over the long wall. This fall: large-scale linocut portraits of Strivers’ Row residents, 1919–1940. Prints for sale, all proceeds to the artist.</p></article>
+        <article><h3>Why the name</h3><p>The townhouses on 138th and 139th Streets were nicknamed Strivers’ Row for the doctors, musicians and lawyers who lived there. Marcus’s grandfather delivered their mail. We aim to keep the standard.</p></article>
+      </div>
+    </div>
+    <figure class="block__img">
+      <picture>
+        <source media="(max-width: 819px)" sizes="100vw" srcset="https://images.unsplash.com/photo-1622287162716-f311baa1a2b8?auto=format&amp;fit=crop&amp;w=600&amp;h=400&amp;q=70 600w, https://images.unsplash.com/photo-1622287162716-f311baa1a2b8?auto=format&amp;fit=crop&amp;w=1000&amp;h=667&amp;q=65 1000w">
+        <img src="https://images.unsplash.com/photo-1622287162716-f311baa1a2b8?auto=format&amp;fit=crop&amp;w=1600&amp;h=610&amp;q=70" srcset="https://images.unsplash.com/photo-1622287162716-f311baa1a2b8?auto=format&amp;fit=crop&amp;w=1200&amp;h=457&amp;q=70 1200w, https://images.unsplash.com/photo-1622287162716-f311baa1a2b8?auto=format&amp;fit=crop&amp;w=1600&amp;h=610&amp;q=70 1600w, https://images.unsplash.com/photo-1622287162716-f311baa1a2b8?auto=format&amp;fit=crop&amp;w=2200&amp;h=838&amp;q=60 2200w" sizes="100vw" alt="A tattooed barber cutting hair in a colorful shop" loading="lazy" decoding="async" width="1600" height="610">
+      </picture>
+    </figure>
+  </section>
+
+  <!-- Visit -->
   <section class="visit" id="visit" aria-labelledby="vs-t">
-    <header class="sec"><span>05</span><h2 id="vs-t">Visit</h2></header>
-    <div class="visit__grid">
-      <div><h3>2381 Frederick Douglass Blvd</h3><p>At West 128th Street, Harlem<br>A/B/C/D to 125th St · 2/3 to 125th St · M10 bus</p><a class="lnk" href="https://www.google.com/maps/search/?api=1&query=2381+Frederick+Douglass+Blvd+New+York+NY+10027" target="_blank" rel="noopener">Directions ↗</a></div>
-      <ul class="hrs" id="hrs">
-        <li data-d="2,3,4,5"><span>Tue – Fri</span><span>10 – 8</span></li>
-        <li data-d="6"><span>Saturday</span><span>8 – 7</span></li>
-        <li data-d="0"><span>Sunday</span><span>11 – 4 · appts</span></li>
-        <li data-d="1"><span>Monday</span><span>Closed</span></li>
-      </ul>
-      <div><p><a class="big" href="sms:+12125550149">Text (212) 555-0149</a></p><p><a href="tel:+12125550149">Call</a> · <a href="mailto:book@striversrowbarbers.com">book@striversrowbarbers.com</a></p><p class="small">24-hour cancellation, please. Late more than 10 minutes, we’ll do our best to fit you in.</p></div>
+    <div class="wrap">
+      <header class="sec"><span aria-hidden="true">06</span><h2 id="vs-t">Visit</h2></header>
+      <div class="visit__grid">
+        <div class="visit__where">
+          <h3>2381 Frederick Douglass Blvd</h3>
+          <p>At West 128th Street, Harlem<br>A/B/C/D or 2/3 to 125th St · M10 bus</p>
+          <a class="btn btn--line" href="https://www.google.com/maps/search/?api=1&amp;query=2381+Frederick+Douglass+Blvd+New+York+NY+10027" target="_blank" rel="noopener">Directions ↗<span class="vh"> (opens Google Maps)</span></a>
+        </div>
+        <div>
+          <h3 class="visit__k">Hours</h3>
+          <ul class="hrs" id="hrs">
+            <li data-d="2,3,4,5"><span>Tue – Fri</span><span>10 am – 8 pm</span></li>
+            <li data-d="6"><span>Saturday</span><span>8 am – 7 pm</span></li>
+            <li data-d="0"><span>Sunday</span><span>11 am – 4 pm · appts</span></li>
+            <li data-d="1"><span>Monday</span><span>Closed</span></li>
+          </ul>
+        </div>
+        <div class="visit__contact">
+          <h3 class="visit__k">Book</h3>
+          <a class="big" href="sms:+12125550149">Text (212) 555-0149</a>
+          <p><a href="tel:+12125550149">Call the shop</a><br><a href="mailto:book@striversrowbarbers.com">book@striversrowbarbers.com</a></p>
+          <p class="small">24-hour cancellation, please. Late more than 10 minutes, we’ll do our best to fit you in.</p>
+        </div>
+      </div>
     </div>
   </section>
 </main>
 
-<div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="dr-t" hidden>
-  <div class="drawer__panel">
-    <button class="drawer__x" aria-label="Close booking">×</button>
-    <p class="drawer__k">Book a chair</p>
-    <h2 id="dr-t">Send us a request</h2>
-    <form id="bookForm" novalidate>
-      <label><span>Service</span><select name="service" id="bService"></select></label>
-      <label><span>Barber</span><select name="barber" id="bBarber"><option value="First available">First available</option></select></label>
-      <div class="row">
-        <label><span>Day</span><select name="day"><option>Tuesday</option><option>Wednesday</option><option>Thursday</option><option>Friday</option><option>Saturday</option><option>Sunday</option></select></label>
-        <label><span>Time</span><select name="time"><option>Morning</option><option selected>Afternoon</option><option>Evening</option></select></label>
-      </div>
-      <label><span>Your name</span><input name="name" autocomplete="name"></label>
-      <fieldset><legend>Send by</legend>
-        <label class="ch"><input type="radio" name="via" value="sms" checked><span>Text</span></label>
-        <label class="ch"><input type="radio" name="via" value="email"><span>Email</span></label>
-      </fieldset>
-      <p class="err" id="bErr" role="status"></p>
-      <button class="btn btn--full" type="submit">Write my request</button>
-      <p class="small">Opens your messages or email app with the request written out. We confirm a time by reply.</p>
-    </form>
-  </div>
-</div>
-
 <footer class="foot">
-  <p class="foot__big">Strivers Row</p>
-  <p class="foot__fine"><span>A design concept. Strivers Row Barbers is a fictional business.</span><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram ↗</a><a href="../index.html">← All concepts</a></p>
+  <div class="wrap">
+    <p class="foot__big" aria-hidden="true">Strivers Row</p>
+    <p class="foot__fine"><span>A design concept. Strivers Row Barbers is a fictional business.</span><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram ↗</a><a href="../index.html">← All concepts</a></p>
+  </div>
 </footer>
+
+<nav class="dock" id="dock" aria-label="Quick actions">
+  <a class="dock__a dock__a--p" href="#book">Book</a>
+  <a class="dock__a" href="sms:+12125550149">Text</a>
+  <a class="dock__a" href="tel:+12125550149">Call</a>
+  <a class="dock__a" href="https://www.google.com/maps/search/?api=1&amp;query=2381+Frederick+Douglass+Blvd+New+York+NY+10027" target="_blank" rel="noopener">Map<span class="vh"> (opens Google Maps)</span></a>
+</nav>
+
 <script src="main.js"></script>
 </body>
 </html>

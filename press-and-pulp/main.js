@@ -11,7 +11,7 @@
     { n: 'Turmeric Shot', t: 'shot', c: '#f29e0c', i: ['Turmeric', 'Orange', 'Black pepper'], d: '2 oz. Warm, peppery, gone in one sip.', p: 4, s: 1 }
   ];
   function bottle(j, fill) {
-    return '<span class="b' + (j.s ? ' b--s' : '') + '" style="--c:' + j.c + ';--fill:' + (fill || 88) + '%" aria-hidden="true"><span class="b__cap"></span><span class="b__neck"></span><span class="b__body"><span class="b__liq"></span><span class="b__lab">' + j.n + '</span></span></span>';
+    return '<span class="b' + (j.s ? ' b--s' : '') + '" style="--c:' + j.c + ';--fill:' + (fill || 88) + '%" aria-hidden="true"><span class="b__cap"></span><span class="b__neck"></span><span class="b__body"><span class="b__liq"></span><span class="b__lab"></span></span></span>';
   }
 
   /* hero shelf */
@@ -31,7 +31,7 @@
       '<p class="detail__note">' + j.d + '</p><p class="detail__price"><span>Price</span><b>$' + j.p + '</b></p>';
     [].forEach.call(grid.querySelectorAll('button'), function (b) { b.setAttribute('aria-pressed', b.dataset.k == k); });
   }
-  grid.addEventListener('click', function (e) { var b = e.target.closest('button'); if (!b) return; show(+b.dataset.k); if (window.innerWidth < 980) det.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); });
+  grid.addEventListener('click', function (e) { var b = e.target.closest('button'); if (!b) return; show(+b.dataset.k); if (window.innerWidth < 980) det.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'nearest' }); });
   show(0);
   document.querySelector('.filters').addEventListener('click', function (e) {
     var b = e.target.closest('button'); if (!b) return;
@@ -47,7 +47,7 @@
     var b = e.target.closest('button'); if (!b) return;
     b.setAttribute('aria-pressed', b.getAttribute('aria-pressed') !== 'true');
     var n = dots.querySelectorAll('[aria-pressed="true"]').length;
-    msg.textContent = n === 5 ? 'Five! Your next juice is on us.' : 'Tap to try it: ' + n + ' of 5';
+    msg.textContent = n === 5 ? 'Five! Your next juice is on us.' : 'Try it — tap a circle: ' + n + ' of 5';
   });
 
   /* live: open status + freshness clock (New York time) */
@@ -60,16 +60,20 @@
       .formatToParts(new Date()).forEach(function (p) { o[p.type] = p.value; });
     var dow = DAYS.indexOf(o.weekday), t = ((+o.hour) % 24) * 60 + (+o.minute), h = H[dow], open = t >= h[0] && t < h[1], txt;
     if (open) txt = 'Open · until ' + clk(h[1]);
-    else if (t < h[0]) txt = 'Opens ' + clk(h[0]);
+    else if (t < h[0]) txt = 'Closed · opens ' + clk(h[0]);
     else txt = 'Closed · opens ' + clk(H[(dow + 1) % 7][0]) + ' tomorrow';
-    [].forEach.call(document.querySelectorAll('[data-status]'), function (el) { el.textContent = txt; });
-    document.querySelector('.hdr__live').classList.toggle('is-open', open);
+    [].forEach.call(document.querySelectorAll('[data-status]'), function (el) { el.textContent = txt; el.parentNode.classList.toggle('is-open', open); });
     var ago = document.getElementById('ago'), sub = document.getElementById('agoSub'), press = 330;
     if (t >= press && t < h[1]) { var m = t - press; ago.textContent = (Math.floor(m / 60) ? Math.floor(m / 60) + ' hr ' : '') + (m % 60) + ' min ago'; sub.textContent = 'pressed at 5:30 am, sold today'; }
     else if (t < press) { var w = press - t; ago.textContent = 'Pressing in ' + (Math.floor(w / 60) ? Math.floor(w / 60) + ' hr ' : '') + (w % 60) + ' min'; sub.textContent = 'today’s batch starts at 5:30 am'; }
-    else { ago.textContent = 'Sold through'; sub.textContent = 'next batch pressed at 5:30 am'; }
+    else { ago.textContent = 'Closed for today'; sub.textContent = 'next batch pressed at 5:30 am'; }
     var row = document.querySelector('#hrs tr[data-d="' + dow + '"]');
     [].forEach.call(document.querySelectorAll('#hrs tr'), function (r) { r.classList.toggle('today', r === row); });
   }
   tick(); setInterval(tick, 30000);
+
+  /* mobile quick-action dock: appears once the hero has scrolled away */
+  var dock = document.querySelector('.dock'), hero = document.querySelector('.hero');
+  function dockUpd() { dock.classList.toggle('is-on', (window.scrollY || 0) > hero.offsetHeight * 0.7); }
+  addEventListener('scroll', dockUpd, { passive: true }); dockUpd();
 })();
